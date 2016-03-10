@@ -15,6 +15,7 @@ namespace iVM.Views
     private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
     {
       mainMenu.IsPaneOpen = !mainMenu.IsPaneOpen;
+      var str = 1;
     }
   }
 }
