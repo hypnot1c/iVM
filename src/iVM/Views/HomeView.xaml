@@ -7,10 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <StackPanel Orientation="Vertical" Margin="20">
-      <TextBox x:Name="MyMessage" />
-      <Button x:Name="SayHello" Content="Say hello" Margin="0,10" />
-    </StackPanel>
-  </Grid>
+  <SplitView DisplayMode="CompactOverlay" CompactPaneLength="50" OpenPaneLength="150" IsPaneOpen="True">
+    <SplitView.Pane>
+      <StackPanel>
+        <Button>Click me</Button>
+        <TextBlock Text="Icon" />
+      </StackPanel>
+    </SplitView.Pane>
+    <SplitView.Content>
+      <StackPanel Orientation="Vertical" Margin="20">
+        <TextBox x:Name="MyMessage" />
+        <TextBlock x:Name="Title" Text="11111111111111" />
+        <Button x:Name="SayHello" Content="Say hello" Margin="0,10" />
+        </StackPanel>
+    </SplitView.Content>
+  </SplitView>
 </Page>

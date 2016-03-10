@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using iVM.Model;
+
 namespace iVM.Data
 {
-    public class Class1
-    {
-    }
+  public interface IDataRepository
+  {
+    IQueryable<User> Users { get; set; }
+  }
 }

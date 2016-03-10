@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace iVM.Model
 {
-    public class Class1
-    {
-    }
+  public class User
+  {
+    public int ID { get; set; }
+    public string Login { get; set; }
+  }
 }

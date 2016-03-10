@@ -128,6 +128,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\iVM.Data.SQLdatabase\iVM.Data.SQLdatabase.csproj">
+      <Project>{a7670dfe-322d-412d-bceb-756b8049c348}</Project>
+      <Name>iVM.Data.SQLdatabase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\iVM.Data\iVM.Data.csproj">
       <Project>{571fda0f-0482-4ba8-885c-65951a4d3991}</Project>
       <Name>iVM.Data</Name>

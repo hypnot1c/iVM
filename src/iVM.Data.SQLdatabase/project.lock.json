@@ -3,38 +3,6 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
-      "Caliburn.Micro/3.0.0-beta2": {
-        "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
-        },
-        "compile": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        }
-      },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
-        "compile": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "EntityFramework.Commands/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational.Design": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "dependencies": {
           "Ix-Async": "[1.2.5, )",
@@ -87,17 +55,6 @@
           "lib/netcore50/EntityFramework.Relational.dll": {}
         }
       },
-      "EntityFramework.Relational.Design/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.SQLite/7.0.0-rc1-final": {
         "dependencies": {
           "EntityFramework.Relational": "[7.0.0-rc1-final, )",
@@ -117,37 +74,6 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.2.3": {
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, )"
-        },
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, 1.2.3]",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3, 1.2.3]"
-        },
-        "compile": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.0": {
@@ -571,16 +497,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-        "compile": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -1974,38 +1890,6 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
-      "Caliburn.Micro/3.0.0-beta2": {
-        "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
-        },
-        "compile": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        }
-      },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
-        "compile": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "EntityFramework.Commands/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational.Design": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "dependencies": {
           "Ix-Async": "[1.2.5, )",
@@ -2058,17 +1942,6 @@
           "lib/netcore50/EntityFramework.Relational.dll": {}
         }
       },
-      "EntityFramework.Relational.Design/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.SQLite/7.0.0-rc1-final": {
         "dependencies": {
           "EntityFramework.Relational": "[7.0.0-rc1-final, )",
@@ -2088,37 +1961,6 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.2.3": {
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, )"
-        },
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, 1.2.3]",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3, 1.2.3]"
-        },
-        "compile": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.0": {
@@ -2585,16 +2427,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-        "compile": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -4035,38 +3867,6 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
-      "Caliburn.Micro/3.0.0-beta2": {
-        "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
-        },
-        "compile": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        }
-      },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
-        "compile": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "EntityFramework.Commands/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational.Design": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "dependencies": {
           "Ix-Async": "[1.2.5, )",
@@ -4119,17 +3919,6 @@
           "lib/netcore50/EntityFramework.Relational.dll": {}
         }
       },
-      "EntityFramework.Relational.Design/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.SQLite/7.0.0-rc1-final": {
         "dependencies": {
           "EntityFramework.Relational": "[7.0.0-rc1-final, )",
@@ -4149,37 +3938,6 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.2.3": {
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, )"
-        },
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, 1.2.3]",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3, 1.2.3]"
-        },
-        "compile": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.0": {
@@ -4632,16 +4390,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-        "compile": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -6068,38 +5816,6 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
-      "Caliburn.Micro/3.0.0-beta2": {
-        "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
-        },
-        "compile": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        }
-      },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
-        "compile": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "EntityFramework.Commands/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational.Design": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "dependencies": {
           "Ix-Async": "[1.2.5, )",
@@ -6152,17 +5868,6 @@
           "lib/netcore50/EntityFramework.Relational.dll": {}
         }
       },
-      "EntityFramework.Relational.Design/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.SQLite/7.0.0-rc1-final": {
         "dependencies": {
           "EntityFramework.Relational": "[7.0.0-rc1-final, )",
@@ -6182,37 +5887,6 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.2.3": {
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, )"
-        },
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, 1.2.3]",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3, 1.2.3]"
-        },
-        "compile": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.0": {
@@ -6687,16 +6361,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-        "compile": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -8137,38 +7801,6 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
-      "Caliburn.Micro/3.0.0-beta2": {
-        "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
-        },
-        "compile": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        }
-      },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
-        "compile": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "EntityFramework.Commands/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational.Design": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "dependencies": {
           "Ix-Async": "[1.2.5, )",
@@ -8221,17 +7853,6 @@
           "lib/netcore50/EntityFramework.Relational.dll": {}
         }
       },
-      "EntityFramework.Relational.Design/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.SQLite/7.0.0-rc1-final": {
         "dependencies": {
           "EntityFramework.Relational": "[7.0.0-rc1-final, )",
@@ -8251,37 +7872,6 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.2.3": {
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, )"
-        },
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, 1.2.3]",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3, 1.2.3]"
-        },
-        "compile": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.0": {
@@ -8737,16 +8327,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-        "compile": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -10173,38 +9753,6 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
-      "Caliburn.Micro/3.0.0-beta2": {
-        "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
-        },
-        "compile": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        }
-      },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
-        "compile": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "EntityFramework.Commands/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational.Design": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "dependencies": {
           "Ix-Async": "[1.2.5, )",
@@ -10257,17 +9805,6 @@
           "lib/netcore50/EntityFramework.Relational.dll": {}
         }
       },
-      "EntityFramework.Relational.Design/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.SQLite/7.0.0-rc1-final": {
         "dependencies": {
           "EntityFramework.Relational": "[7.0.0-rc1-final, )",
@@ -10287,37 +9824,6 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.2.3": {
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, )"
-        },
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, 1.2.3]",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3, 1.2.3]"
-        },
-        "compile": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.0": {
@@ -10792,16 +10298,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-        "compile": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -12242,38 +11738,6 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
-      "Caliburn.Micro/3.0.0-beta2": {
-        "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
-        },
-        "compile": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
-          "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
-        }
-      },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
-        "compile": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "EntityFramework.Commands/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational.Design": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "dependencies": {
           "Ix-Async": "[1.2.5, )",
@@ -12326,17 +11790,6 @@
           "lib/netcore50/EntityFramework.Relational.dll": {}
         }
       },
-      "EntityFramework.Relational.Design/7.0.0-rc1-final": {
-        "dependencies": {
-          "EntityFramework.Relational": "[7.0.0-rc1-final, )"
-        },
-        "compile": {
-          "lib/netcore50/_._": {}
-        },
-        "runtime": {
-          "lib/netcore50/_._": {}
-        }
-      },
       "EntityFramework.SQLite/7.0.0-rc1-final": {
         "dependencies": {
           "EntityFramework.Relational": "[7.0.0-rc1-final, )",
@@ -12356,37 +11809,6 @@
         },
         "runtime": {
           "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.2.3": {
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, )"
-        },
-        "compile": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        },
-        "runtime": {
-          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
-        "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.2.3, 1.2.3]",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3, 1.2.3]"
-        },
-        "compile": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.0": {
@@ -12842,16 +12264,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-        "compile": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
-          "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
         }
       },
       "Remotion.Linq/2.0.1": {
@@ -14279,109 +13691,6 @@
     }
   },
   "libraries": {
-    "Caliburn.Micro/3.0.0-beta2": {
-      "sha512": "rf40GoX0Q8zc7p+KoIybY0vynSrAFHFrMDbK4fvBLZLP7N3nSm1AymzEH9zvdxZjSyW9eWvJcqmmQEAgHeJcKQ==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "Caliburn.Micro.nuspec",
-        "lib/MonoAndroid10/Caliburn.Micro.Platform.Core.dll",
-        "lib/MonoAndroid10/Caliburn.Micro.Platform.Core.xml",
-        "lib/MonoAndroid10/Caliburn.Micro.Platform.dll",
-        "lib/MonoAndroid10/Caliburn.Micro.Platform.xml",
-        "lib/MonoTouch10/Caliburn.Micro.Platform.Core.dll",
-        "lib/MonoTouch10/Caliburn.Micro.Platform.Core.xml",
-        "lib/MonoTouch10/Caliburn.Micro.Platform.dll",
-        "lib/MonoTouch10/Caliburn.Micro.Platform.xml",
-        "lib/net40/Caliburn.Micro.Platform.dll",
-        "lib/net40/Caliburn.Micro.Platform.xml",
-        "lib/net40/System.Windows.Interactivity.dll",
-        "lib/net40/System.Windows.Interactivity.xml",
-        "lib/net45/Caliburn.Micro.Platform.Core.dll",
-        "lib/net45/Caliburn.Micro.Platform.Core.xml",
-        "lib/net45/Caliburn.Micro.Platform.dll",
-        "lib/net45/Caliburn.Micro.Platform.xml",
-        "lib/net45/System.Windows.Interactivity.dll",
-        "lib/sl5/Caliburn.Micro.Platform.dll",
-        "lib/sl5/Caliburn.Micro.Platform.xml",
-        "lib/sl5/System.Windows.Interactivity.dll",
-        "lib/uap10.0/Caliburn.Micro.Platform.Core.dll",
-        "lib/uap10.0/Caliburn.Micro.Platform.Core.xml",
-        "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll",
-        "lib/uap10.0/Caliburn.Micro.Platform.UWP.pri",
-        "lib/uap10.0/Caliburn.Micro.Platform.UWP.XML",
-        "lib/uap10.0/Caliburn.Micro.Platform.UWP/Properties/Caliburn.Micro.Platform.UWP.rd.xml",
-        "lib/win81/Caliburn.Micro.Platform.Core.dll",
-        "lib/win81/Caliburn.Micro.Platform.Core.xml",
-        "lib/win81/Caliburn.Micro.Platform.dll",
-        "lib/win81/Caliburn.Micro.Platform.pri",
-        "lib/win81/Caliburn.Micro.Platform.XML",
-        "lib/win81/Microsoft.Xaml.Interactions.dll",
-        "lib/win81/Microsoft.Xaml.Interactivity.dll",
-        "lib/wp8/Caliburn.Micro.Platform.Core.dll",
-        "lib/wp8/Caliburn.Micro.Platform.Core.xml",
-        "lib/wp8/Caliburn.Micro.Platform.dll",
-        "lib/wp8/Caliburn.Micro.Platform.xml",
-        "lib/wp8/System.Windows.Interactivity.dll",
-        "lib/wpa81/Caliburn.Micro.Platform.Core.dll",
-        "lib/wpa81/Caliburn.Micro.Platform.Core.xml",
-        "lib/wpa81/Caliburn.Micro.Platform.dll",
-        "lib/wpa81/Caliburn.Micro.Platform.pri",
-        "lib/wpa81/Caliburn.Micro.Platform.xml",
-        "lib/wpa81/Microsoft.Xaml.Interactions.dll",
-        "lib/wpa81/Microsoft.Xaml.Interactivity.dll",
-        "lib/Xamarin.iOS10/Caliburn.Micro.Platform.Core.dll",
-        "lib/Xamarin.iOS10/Caliburn.Micro.Platform.Core.xml",
-        "lib/Xamarin.iOS10/Caliburn.Micro.Platform.dll",
-        "lib/Xamarin.iOS10/Caliburn.Micro.Platform.xml",
-        "package/services/metadata/core-properties/14314bd46366446293893612c8762e6f.psmdcp"
-      ]
-    },
-    "Caliburn.Micro.Core/3.0.0-beta2": {
-      "sha512": "GQEFMq99TW4F9d7l7OMgnp35yytruwV80+BQlap0DbMqWQ/Fn9G/wSj4SzrOlWvNW6JdYKjZdPAcsfF8O/lzSw==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "Caliburn.Micro.Core.nuspec",
-        "lib/net40/Caliburn.Micro.dll",
-        "lib/net40/Caliburn.Micro.XML",
-        "lib/net45/Caliburn.Micro.dll",
-        "lib/net45/Caliburn.Micro.xml",
-        "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll",
-        "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.XML",
-        "lib/sl5/Caliburn.Micro.dll",
-        "lib/sl5/Caliburn.Micro.XML",
-        "package/services/metadata/core-properties/ac492022aace4cac91c04b78c70fbfae.psmdcp"
-      ]
-    },
-    "EntityFramework.Commands/7.0.0-rc1-final": {
-      "sha512": "+wa2VWX3/vDkOpeCeIotMevqpIISimGqeYNTGYRLRhv+8HzsCLeymLzmmYpjav6zYQVvuJiJodapQvijAIfRrA==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "app/ef",
-        "app/ef.cmd",
-        "app/project.json",
-        "build/netcore50/EntityFramework.Commands.props",
-        "EntityFramework.Commands.nuspec",
-        "lib/dnx451/EntityFramework.Commands.dll",
-        "lib/dnx451/EntityFramework.Commands.xml",
-        "lib/dnxcore50/EntityFramework.Commands.dll",
-        "lib/dnxcore50/EntityFramework.Commands.xml",
-        "lib/net451/EntityFramework.Commands.dll",
-        "lib/net451/EntityFramework.Commands.xml",
-        "lib/netcore50/_._",
-        "tools/about_EntityFramework.help.txt",
-        "tools/EntityFramework.psd1",
-        "tools/EntityFramework.psm1",
-        "tools/init.ps1",
-        "tools/install.ps1",
-        "tools/OperationHandlers.cs"
-      ]
-    },
     "EntityFramework.Core/7.0.0-rc1-final": {
       "sha512": "afwsjOF4xM5KiwAxKMz9R0H8TigWE/jX0FwGBO/QtuA1ElEVLqlQVH4+7PyZaA35HguYRm0wOCmUq9RVTmiAfA==",
       "type": "Package",
@@ -14414,23 +13723,6 @@
         "lib/netcore50/EntityFramework.Relational.xml"
       ]
     },
-    "EntityFramework.Relational.Design/7.0.0-rc1-final": {
-      "sha512": "sXAqOxpHmbqOELC21vAzKlsjqgNCrk3jEjyJxjGnn1+j4hazxiqgSBTl8ZofqYzLO6ias9WfeXJy8HcXOl7waw==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "build/netcore50/EntityFramework.Relational.Design.props",
-        "EntityFramework.Relational.Design.nuspec",
-        "lib/dnx451/EntityFramework.Relational.Design.dll",
-        "lib/dnx451/EntityFramework.Relational.Design.xml",
-        "lib/dnxcore50/EntityFramework.Relational.Design.dll",
-        "lib/dnxcore50/EntityFramework.Relational.Design.xml",
-        "lib/net451/EntityFramework.Relational.Design.dll",
-        "lib/net451/EntityFramework.Relational.Design.xml",
-        "lib/netcore50/_._"
-      ]
-    },
     "EntityFramework.SQLite/7.0.0-rc1-final": {
       "sha512": "B+h4HHUnCSN/d4DIxW89B6q4efcZzQjajQb1yrlALEeZuCBDIzO0nrEdRZsRSNqJaNzmxRu/OsYqrZVOORUrGw==",
       "type": "Package",
@@ -14460,58 +13752,6 @@
         "lib/portable-windows8+net45+wp8/System.Interactive.Async.dll",
         "lib/portable-windows8+net45+wp8/System.Interactive.Async.XML",
         "package/services/metadata/core-properties/549f8a68026f4c6d88ab4dc623e03d5b.psmdcp"
-      ]
-    },
-    "Microsoft.ApplicationInsights/1.2.3": {
-      "sha512": "a34atobxpucCTTX9VCD7aIu6Ydzry+Va7TxK2tTQcfaMvefGW4kUKtg9GHKIn19IaXe+A4oZt/GBqsOt5vQrBA==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/net40/Microsoft.ApplicationInsights.dll",
-        "lib/net40/Microsoft.ApplicationInsights.XML",
-        "lib/net45/Microsoft.ApplicationInsights.dll",
-        "lib/net45/Microsoft.ApplicationInsights.XML",
-        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll",
-        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.XML",
-        "lib/wp8/Microsoft.ApplicationInsights.dll",
-        "lib/wp8/Microsoft.ApplicationInsights.XML",
-        "Microsoft.ApplicationInsights.nuspec",
-        "package/services/metadata/core-properties/3b36eef276524f5d883c618d5fd8c500.psmdcp"
-      ]
-    },
-    "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
-      "sha512": "5MGcvPQVaGlGyAVh9adg4sSkIVSYDKn+H3+YnZa9hi1gH/g6UsRt4HLc8vp/IxjlbmXbJyAB7dYJV/NHmAGAgA==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.dll",
-        "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.XML",
-        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.dll",
-        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.XML",
-        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll",
-        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.XML",
-        "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.dll",
-        "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.XML",
-        "Microsoft.ApplicationInsights.PersistenceChannel.nuspec",
-        "package/services/metadata/core-properties/f973733421c14c3594986b3f2c22213a.psmdcp"
-      ]
-    },
-    "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
-      "sha512": "Orj0UQrjQ2z0aWZZoexl734Ge7Q4oVev3VFSsk6t8l2kImrfJ1eygkJWtQ1d7u0kF6MLLrvUvsMSxo+0rgPiMQ==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
-        "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
-        "lib/wp8/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
-        "lib/wp8/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
-        "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
-        "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
-        "Microsoft.ApplicationInsights.WindowsApps.nuspec",
-        "package/services/metadata/core-properties/8265b8c93c244c80b4e8bce27f31849d.psmdcp"
       ]
     },
     "Microsoft.CSharp/4.0.0": {
@@ -15352,26 +14592,6 @@
         "ref/net46/Microsoft.Win32.Primitives.dll",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
-      ]
-    },
-    "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-      "sha512": "naPuhYn3Igeohe8MVQhqzNRZo2Xt0D6+KpDbaaODSchqjsyj9lUqReKDLq9s5ffOJZehELjMIIW6Fx8AJOrgQw==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/uap10.0/Design/Microsoft.Xaml.Interactions.Design.dll",
-        "lib/uap10.0/Design/Microsoft.Xaml.Interactivity.Design.dll",
-        "lib/uap10.0/Microsoft.Xaml.Interactions.dll",
-        "lib/uap10.0/Microsoft.Xaml.Interactions.pri",
-        "lib/uap10.0/Microsoft.Xaml.Interactions.xml",
-        "lib/uap10.0/Microsoft.Xaml.Interactions/Properties/Microsoft.Xaml.Interactions.rd.xml",
-        "lib/uap10.0/Microsoft.Xaml.Interactivity.dll",
-        "lib/uap10.0/Microsoft.Xaml.Interactivity.pri",
-        "lib/uap10.0/Microsoft.Xaml.Interactivity.xml",
-        "lib/uap10.0/Microsoft.Xaml.Interactivity/Properties/Microsoft.Xaml.Interactivity.rd.xml",
-        "Microsoft.Xaml.Behaviors.Uwp.Managed.nuspec",
-        "package/services/metadata/core-properties/e091ec76f6a6467e90828900723ae8af.psmdcp"
       ]
     },
     "Remotion.Linq/2.0.1": {
@@ -18168,12 +17388,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Caliburn.Micro >= 3.0.0-beta2",
-      "Caliburn.Micro.Core >= 3.0.0-beta2",
-      "EntityFramework.Commands >= 7.0.0-rc1-final",
-      "Microsoft.ApplicationInsights >= 1.2.3",
-      "Microsoft.ApplicationInsights.PersistenceChannel >= 1.2.3",
-      "Microsoft.ApplicationInsights.WindowsApps >= 1.1.1",
+      "EntityFramework.SQLite >= 7.0.0-rc1-final",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0"
     ],
     "UAP,Version=v10.0": []
