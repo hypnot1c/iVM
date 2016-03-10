@@ -46,3 +46,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .vs/iVM/v14/.suo
+
+# Compile items
+src/iVM*/bin/
+src/iVM*/obj/
