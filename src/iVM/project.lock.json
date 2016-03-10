@@ -3,9 +3,10 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
-      "Caliburn.Micro/3.0.0-beta2": {
+      "Caliburn.Micro/3.0.0": {
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
+          "Caliburn.Micro.Core": "[3.0.0, 3.0.0]",
+          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.1.0, )"
         },
         "compile": {
           "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
@@ -16,7 +17,7 @@
           "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
         }
       },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
+      "Caliburn.Micro.Core/3.0.0": {
         "compile": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         },
@@ -109,6 +110,14 @@
         },
         "runtime": {
           "lib/netcore50/EntityFramework.Sqlite.dll": {}
+        }
+      },
+      "FontAwesome.UWP/4.5.0.8": {
+        "compile": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -573,7 +582,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -1974,9 +1983,10 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
-      "Caliburn.Micro/3.0.0-beta2": {
+      "Caliburn.Micro/3.0.0": {
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
+          "Caliburn.Micro.Core": "[3.0.0, 3.0.0]",
+          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.1.0, )"
         },
         "compile": {
           "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
@@ -1987,7 +1997,7 @@
           "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
         }
       },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
+      "Caliburn.Micro.Core/3.0.0": {
         "compile": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         },
@@ -2080,6 +2090,14 @@
         },
         "runtime": {
           "lib/netcore50/EntityFramework.Sqlite.dll": {}
+        }
+      },
+      "FontAwesome.UWP/4.5.0.8": {
+        "compile": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -2587,7 +2605,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -4035,9 +4053,10 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
-      "Caliburn.Micro/3.0.0-beta2": {
+      "Caliburn.Micro/3.0.0": {
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
+          "Caliburn.Micro.Core": "[3.0.0, 3.0.0]",
+          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.1.0, )"
         },
         "compile": {
           "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
@@ -4048,7 +4067,7 @@
           "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
         }
       },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
+      "Caliburn.Micro.Core/3.0.0": {
         "compile": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         },
@@ -4141,6 +4160,14 @@
         },
         "runtime": {
           "lib/netcore50/EntityFramework.Sqlite.dll": {}
+        }
+      },
+      "FontAwesome.UWP/4.5.0.8": {
+        "compile": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -4634,7 +4661,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -6068,9 +6095,10 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
-      "Caliburn.Micro/3.0.0-beta2": {
+      "Caliburn.Micro/3.0.0": {
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
+          "Caliburn.Micro.Core": "[3.0.0, 3.0.0]",
+          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.1.0, )"
         },
         "compile": {
           "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
@@ -6081,7 +6109,7 @@
           "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
         }
       },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
+      "Caliburn.Micro.Core/3.0.0": {
         "compile": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         },
@@ -6174,6 +6202,14 @@
         },
         "runtime": {
           "lib/netcore50/EntityFramework.Sqlite.dll": {}
+        }
+      },
+      "FontAwesome.UWP/4.5.0.8": {
+        "compile": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -6689,7 +6725,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -8137,9 +8173,10 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
-      "Caliburn.Micro/3.0.0-beta2": {
+      "Caliburn.Micro/3.0.0": {
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
+          "Caliburn.Micro.Core": "[3.0.0, 3.0.0]",
+          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.1.0, )"
         },
         "compile": {
           "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
@@ -8150,7 +8187,7 @@
           "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
         }
       },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
+      "Caliburn.Micro.Core/3.0.0": {
         "compile": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         },
@@ -8243,6 +8280,14 @@
         },
         "runtime": {
           "lib/netcore50/EntityFramework.Sqlite.dll": {}
+        }
+      },
+      "FontAwesome.UWP/4.5.0.8": {
+        "compile": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -8739,7 +8784,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -10173,9 +10218,10 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
-      "Caliburn.Micro/3.0.0-beta2": {
+      "Caliburn.Micro/3.0.0": {
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
+          "Caliburn.Micro.Core": "[3.0.0, 3.0.0]",
+          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.1.0, )"
         },
         "compile": {
           "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
@@ -10186,7 +10232,7 @@
           "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
         }
       },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
+      "Caliburn.Micro.Core/3.0.0": {
         "compile": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         },
@@ -10279,6 +10325,14 @@
         },
         "runtime": {
           "lib/netcore50/EntityFramework.Sqlite.dll": {}
+        }
+      },
+      "FontAwesome.UWP/4.5.0.8": {
+        "compile": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -10794,7 +10848,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -12242,9 +12296,10 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
-      "Caliburn.Micro/3.0.0-beta2": {
+      "Caliburn.Micro/3.0.0": {
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.0.2, )"
+          "Caliburn.Micro.Core": "[3.0.0, 3.0.0]",
+          "Microsoft.Xaml.Behaviors.Uwp.Managed": "[1.1.0, )"
         },
         "compile": {
           "lib/uap10.0/Caliburn.Micro.Platform.Core.dll": {},
@@ -12255,7 +12310,7 @@
           "lib/uap10.0/Caliburn.Micro.Platform.UWP.dll": {}
         }
       },
-      "Caliburn.Micro.Core/3.0.0-beta2": {
+      "Caliburn.Micro.Core/3.0.0": {
         "compile": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         },
@@ -12348,6 +12403,14 @@
         },
         "runtime": {
           "lib/netcore50/EntityFramework.Sqlite.dll": {}
+        }
+      },
+      "FontAwesome.UWP/4.5.0.8": {
+        "compile": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -12844,7 +12907,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
+      "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Xaml.Interactions.dll": {},
           "lib/uap10.0/Microsoft.Xaml.Interactivity.dll": {}
@@ -14279,8 +14342,8 @@
     }
   },
   "libraries": {
-    "Caliburn.Micro/3.0.0-beta2": {
-      "sha512": "rf40GoX0Q8zc7p+KoIybY0vynSrAFHFrMDbK4fvBLZLP7N3nSm1AymzEH9zvdxZjSyW9eWvJcqmmQEAgHeJcKQ==",
+    "Caliburn.Micro/3.0.0": {
+      "sha512": "T1zB9MKeK6T1cEsWk6eZOn/gUbPXREN77naMw0kersIIssSQVhxnic6CxtAd65G2mUDq8rdKpMfPbwxNWYYwxQ==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -14290,7 +14353,9 @@
         "lib/MonoAndroid10/Caliburn.Micro.Platform.Core.xml",
         "lib/MonoAndroid10/Caliburn.Micro.Platform.dll",
         "lib/MonoAndroid10/Caliburn.Micro.Platform.xml",
+        "lib/MonoTouch10/Caliburn.Micro.dll.mdb",
         "lib/MonoTouch10/Caliburn.Micro.Platform.Core.dll",
+        "lib/MonoTouch10/Caliburn.Micro.Platform.Core.dll.mdb",
         "lib/MonoTouch10/Caliburn.Micro.Platform.Core.xml",
         "lib/MonoTouch10/Caliburn.Micro.Platform.dll",
         "lib/MonoTouch10/Caliburn.Micro.Platform.xml",
@@ -14331,15 +14396,17 @@
         "lib/wpa81/Caliburn.Micro.Platform.xml",
         "lib/wpa81/Microsoft.Xaml.Interactions.dll",
         "lib/wpa81/Microsoft.Xaml.Interactivity.dll",
+        "lib/Xamarin.iOS10/Caliburn.Micro.dll.mdb",
         "lib/Xamarin.iOS10/Caliburn.Micro.Platform.Core.dll",
+        "lib/Xamarin.iOS10/Caliburn.Micro.Platform.Core.dll.mdb",
         "lib/Xamarin.iOS10/Caliburn.Micro.Platform.Core.xml",
         "lib/Xamarin.iOS10/Caliburn.Micro.Platform.dll",
         "lib/Xamarin.iOS10/Caliburn.Micro.Platform.xml",
-        "package/services/metadata/core-properties/14314bd46366446293893612c8762e6f.psmdcp"
+        "package/services/metadata/core-properties/217bdd2e9ab14a8dbd5040d21ae64ff3.psmdcp"
       ]
     },
-    "Caliburn.Micro.Core/3.0.0-beta2": {
-      "sha512": "GQEFMq99TW4F9d7l7OMgnp35yytruwV80+BQlap0DbMqWQ/Fn9G/wSj4SzrOlWvNW6JdYKjZdPAcsfF8O/lzSw==",
+    "Caliburn.Micro.Core/3.0.0": {
+      "sha512": "HEbJwHbK9ExB1tHgFijKlij7yAyIFqMSsDlhQwp2nssOUhUE9iOBMLXTYhO9wsTu2+yvkvjkca77BUXKsmoR+w==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -14350,10 +14417,11 @@
         "lib/net45/Caliburn.Micro.dll",
         "lib/net45/Caliburn.Micro.xml",
         "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll",
+        "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll.mdb",
         "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.XML",
         "lib/sl5/Caliburn.Micro.dll",
         "lib/sl5/Caliburn.Micro.XML",
-        "package/services/metadata/core-properties/ac492022aace4cac91c04b78c70fbfae.psmdcp"
+        "package/services/metadata/core-properties/80d8377fe7944c85acfd74a5df38358a.psmdcp"
       ]
     },
     "EntityFramework.Commands/7.0.0-rc1-final": {
@@ -14444,6 +14512,25 @@
         "lib/net451/EntityFramework.Sqlite.xml",
         "lib/netcore50/EntityFramework.Sqlite.dll",
         "lib/netcore50/EntityFramework.Sqlite.xml"
+      ]
+    },
+    "FontAwesome.UWP/4.5.0.8": {
+      "sha512": "HVoUY9gvrYRMxiyt+UyM8fM1SagiXVjmfyXYWCbcXwx4ydugGukf2fOoEXXfaFU4Se9TPNLTD4cp4FEHLXq6og==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "FontAwesome.UWP.nuspec",
+        "lib/net35/FontAwesome.WPF.dll",
+        "lib/net35/FontAwesome.WPF.xml",
+        "lib/net40/FontAwesome.WPF.dll",
+        "lib/net40/FontAwesome.WPF.xml",
+        "lib/uap10.0/FontAwesome.UWP.dll",
+        "lib/uap10.0/FontAwesome.UWP.pri",
+        "lib/uap10.0/FontAwesome.UWP.XML",
+        "lib/uap10.0/FontAwesome.UWP/FontAwesome.otf",
+        "package/services/metadata/core-properties/d9d18cfe2f574830ab1b15a85448a166.psmdcp",
+        "tools/install.ps1"
       ]
     },
     "Ix-Async/1.2.5": {
@@ -15354,8 +15441,8 @@
         "ref/xamarinmac20/_._"
       ]
     },
-    "Microsoft.Xaml.Behaviors.Uwp.Managed/1.0.2": {
-      "sha512": "naPuhYn3Igeohe8MVQhqzNRZo2Xt0D6+KpDbaaODSchqjsyj9lUqReKDLq9s5ffOJZehELjMIIW6Fx8AJOrgQw==",
+    "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
+      "sha512": "Qxe4fblviCn2oFf7C4ahCsZHC0GzRa7Tz5z+L1QUHUljY3Oj/TMoT1O0jJ+ru6RcJ9qS8yFw/jIvstg2dxxpGA==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -15365,13 +15452,11 @@
         "lib/uap10.0/Microsoft.Xaml.Interactions.dll",
         "lib/uap10.0/Microsoft.Xaml.Interactions.pri",
         "lib/uap10.0/Microsoft.Xaml.Interactions.xml",
-        "lib/uap10.0/Microsoft.Xaml.Interactions/Properties/Microsoft.Xaml.Interactions.rd.xml",
         "lib/uap10.0/Microsoft.Xaml.Interactivity.dll",
         "lib/uap10.0/Microsoft.Xaml.Interactivity.pri",
         "lib/uap10.0/Microsoft.Xaml.Interactivity.xml",
-        "lib/uap10.0/Microsoft.Xaml.Interactivity/Properties/Microsoft.Xaml.Interactivity.rd.xml",
         "Microsoft.Xaml.Behaviors.Uwp.Managed.nuspec",
-        "package/services/metadata/core-properties/e091ec76f6a6467e90828900723ae8af.psmdcp"
+        "package/services/metadata/core-properties/aa8a385ed5b94b29a44c3a4ace39232c.psmdcp"
       ]
     },
     "Remotion.Linq/2.0.1": {
@@ -18168,9 +18253,10 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Caliburn.Micro >= 3.0.0-beta2",
-      "Caliburn.Micro.Core >= 3.0.0-beta2",
+      "Caliburn.Micro >= 3.0.0",
+      "Caliburn.Micro.Core >= 3.0.0",
       "EntityFramework.Commands >= 7.0.0-rc1-final",
+      "FontAwesome.UWP >= 4.5.0.8",
       "Microsoft.ApplicationInsights >= 1.2.3",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.2.3",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.1.1",

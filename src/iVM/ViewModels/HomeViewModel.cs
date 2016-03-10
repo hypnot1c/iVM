@@ -40,7 +40,7 @@ namespace iVM.ViewModels
 
     public void SayHello()
     {
-      MyMessage = "Hello World!1111111111";
+      MyMessage = "Hello World!111";
     }
   }
 }
