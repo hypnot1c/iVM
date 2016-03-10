@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace iVM.Model
 {
-  public class User: BaseModel
+  public class EventScheduled: Event
   {
-    public string Login { get; set; }
+
   }
 }

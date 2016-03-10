@@ -29,6 +29,8 @@ namespace iVM.Data.SQLdatabase
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       modelBuilder.Entity<User>(UserModelConfiguration.Configure);
+      modelBuilder.Entity<EventType>(EventTypeModelConfiguration.Configure);
+      modelBuilder.Entity<EventOccured>(EventOccuredModelConfiguration.Configure);
     }
   }
 }

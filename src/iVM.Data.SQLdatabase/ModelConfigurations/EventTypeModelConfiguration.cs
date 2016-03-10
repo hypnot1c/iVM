@@ -9,12 +9,13 @@ using iVM.Model;
 
 namespace iVM.Data.SQLdatabase.ModelConfigurations
 {
-  public class UserModelConfiguration
+  public class EventTypeModelConfiguration
   {
-    public static void Configure(EntityTypeBuilder<User> builder)
+    public static void Configure(EntityTypeBuilder<EventType> builder)
     {
       builder.HasKey(p => p.ID);
-      builder.Property(p => p.Login).IsRequired();
+      builder.HasMany<EventOccured>(x => x.EventsOccured);
+      builder.Property(p => p.Name).IsRequired();
     }
   }
 }

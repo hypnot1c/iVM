@@ -116,7 +116,13 @@
     <Compile Include="Migrations\20160310124407_AddUserLogin.designer.cs">
       <DependentUpon>20160310124407_AddUserLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160310214018_EventsInitial.cs" />
+    <Compile Include="Migrations\20160310214018_EventsInitial.designer.cs">
+      <DependentUpon>20160310214018_EventsInitial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MainContextModelSnapshot.cs" />
+    <Compile Include="ModelConfigurations\EventTypeModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\EventOccuredModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\UserModelConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\iVM.Data.SQLdatabase.rd.xml" />

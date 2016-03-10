@@ -39,10 +39,10 @@ namespace iVM
     {
       using (var db = new MainContext())
       {
-        db.Database.MigrateAsync();
+        db.Database.Migrate();
       }
 
-        WindowsAppInitializer.InitializeAsync();
+      WindowsAppInitializer.InitializeAsync();
       this.InitializeComponent();
       this.Suspending += OnSuspending;
     }
