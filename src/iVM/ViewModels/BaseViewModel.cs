@@ -4,31 +4,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace iVM.ViewModels
 {
   public class BaseViewModel: Screen
   {
-    protected readonly INavigationService PageNavigationService;
+    private readonly WinRTContainer _container;
+    private readonly IEventAggregator _eventAggregator;
+    protected INavigationService _navigationService;
 
-    protected BaseViewModel(INavigationService pageNavigationService)
+    protected BaseViewModel(WinRTContainer container, IEventAggregator eventAggregator)
     {
-      PageNavigationService = pageNavigationService;
+      _container = container;
+      _eventAggregator = eventAggregator;
     }
 
-    public bool CanGoBack
+    protected override void OnActivate()
     {
-      get { return PageNavigationService.CanGoBack; }
+      _eventAggregator.Subscribe(this);
     }
 
-    protected void NavigateTo<T>()
+    protected override void OnDeactivate(bool close)
     {
-      PageNavigationService.Navigate<T>();
+      _eventAggregator.Unsubscribe(this);
     }
 
-    public void GoBack()
+    public void SetupNavigationService(Frame frame)
     {
-      PageNavigationService.GoBack();
+      _navigationService = _container.RegisterNavigationService(frame);
+
+      //if (_resume)
+      //  _navigationService.ResumeState();
     }
   }
 }

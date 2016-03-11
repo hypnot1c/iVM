@@ -9,38 +9,13 @@ namespace iVM.ViewModels
 {
   public class HomeViewModel : BaseViewModel
   {
-    private INavigationService _pageNavigationService;
-
-    public HomeViewModel(INavigationService pageNavigationService) : base(pageNavigationService)
+    public HomeViewModel(WinRTContainer container, IEventAggregator eventAggregator) : base(container, eventAggregator)
     {
-      _pageNavigationService = pageNavigationService;
     }
 
-    private string _myMessage;
-    public string MyMessage
+    public void NavigateTo()
     {
-      get { return _myMessage; }
-      set
-      {
-        _myMessage = value;
-        NotifyOfPropertyChange(() => MyMessage);
-      }
-    }
-
-    private string _title;
-    public string Title
-    {
-      get { return _title; }
-      set
-      {
-        _title = value;
-        NotifyOfPropertyChange(() => Title);
-      }
-    }
-
-    public void SayHello()
-    {
-      MyMessage = "Hello World!111";
+      this._navigationService.For<EventsViewModel>().Navigate();
     }
   }
 }

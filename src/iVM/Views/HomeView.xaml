@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:fa="using:FontAwesome.UWP"
+  xmlns:cm="using:Caliburn.Micro"
     mc:Ignorable="d">
   <Page.Resources>
     <ResourceDictionary>
@@ -22,7 +23,7 @@
     </Grid.RowDefinitions>
     <SplitView Grid.Row="0" Name="mainMenu" DisplayMode="CompactOverlay" CompactPaneLength="0" OpenPaneLength="150" PanePlacement="Right">
       <SplitView.Pane>
-        <ListBox VerticalAlignment="Bottom" >
+        <ListBox x:Name="NavigateTo" VerticalAlignment="Bottom">
           <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
             <Grid HorizontalAlignment="Stretch">
               <Grid.ColumnDefinitions >
@@ -56,7 +57,7 @@
         </ListBox>
       </SplitView.Pane>
       <SplitView.Content>
-        <Frame x:Name="MainFrame" />
+        <Frame cm:Message.Attach="[Event Loaded] = [SetupNavigationService($source)]" DataContext="{x:Null}" />
       </SplitView.Content>
     </SplitView>
     <Button Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Width="50">
