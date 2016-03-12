@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace iVM.ViewModels
 {
-  public class EventsViewModel: Screen
+  public class ShellViewModel: Screen
   {
     private readonly WinRTContainer _container;
     private readonly IEventAggregator _eventAggregator;
     protected INavigationService _navigationService;
 
-    public EventsViewModel(WinRTContainer container, IEventAggregator eventAggregator, INavigationService navigationService)
+    public ShellViewModel(WinRTContainer container, IEventAggregator eventAggregator)
     {
       _container = container;
       _eventAggregator = eventAggregator;
-      this._navigationService = navigationService;
     }
 
     protected override void OnActivate()
@@ -29,9 +29,18 @@ namespace iVM.ViewModels
     {
       _eventAggregator.Unsubscribe(this);
     }
-    public void EventAdd()
+
+    public void SetupNavigationService(Frame frame)
     {
-      _navigationService.For<EventAddViewModel>().Navigate();
+      _navigationService = _container.RegisterNavigationService(frame);
+
+      //if (_resume)
+      //  _navigationService.ResumeState();
+    }
+
+    public void NavigateTo()
+    {
+      _navigationService.For<EventsViewModel>().Navigate();
     }
   }
 }

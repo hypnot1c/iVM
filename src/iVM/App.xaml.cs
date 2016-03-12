@@ -29,6 +29,7 @@ namespace iVM
   sealed partial class App
   {
     private WinRTContainer _container;
+    private IEventAggregator _eventAggregator;
 
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
@@ -42,9 +43,9 @@ namespace iVM
         db.Database.Migrate();
       }
 
-      WindowsAppInitializer.InitializeAsync();
+      //WindowsAppInitializer.InitializeAsync();
       this.InitializeComponent();
-      this.Suspending += OnSuspending;
+      //this.Suspending += OnSuspending;
     }
 
     protected override void Configure()
@@ -54,7 +55,12 @@ namespace iVM
       _container.RegisterWinRTServices();
 
       // Make sure to register your containers here
-      _container.PerRequest<HomeViewModel>();
+      _container
+                .PerRequest<ShellViewModel>()
+                .PerRequest<EventsViewModel>()
+                .PerRequest<EventAddViewModel>();
+
+      _eventAggregator = _container.GetInstance<IEventAggregator>();
     }
 
     /// <summary> 
@@ -66,7 +72,12 @@ namespace iVM
     protected override void OnLaunched(LaunchActivatedEventArgs e)
     {
       // I am launching my main view here
-      DisplayRootViewFor<HomeViewModel>();
+      DisplayRootViewFor<ShellViewModel>();
+
+      //if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
+      //{
+      //  _eventAggregator.PublishOnUIThread(new ResumeStateMessage());
+      //}
     }
 
     /// <summary>
@@ -79,14 +90,9 @@ namespace iVM
     /// <param name="e">Details about the suspend request.</param>
     protected override void OnSuspending(object sender, SuspendingEventArgs e)
     {
-      var deferral = e.SuspendingOperation.GetDeferral();
+      //var deferral = e.SuspendingOperation.GetDeferral();
       //TODO: Save application state and stop any background activity
-      deferral.Complete();
-    }
-
-    protected override void PrepareViewFirst(Frame rootFrame)
-    {
-      _container.RegisterNavigationService(rootFrame);
+      //deferral.Complete();
     }
 
     protected override object GetInstance(Type service, string key)

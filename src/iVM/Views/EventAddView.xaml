@@ -9,6 +9,6 @@
   xmlns:fa="using:FontAwesome.UWP">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+    <TextBlock  Text="EventAdd"/>
+  </Grid>
 </Page>

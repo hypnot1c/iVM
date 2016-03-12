@@ -1,13 +1,14 @@
 ﻿<Page
-    x:Class="iVM.Views.HomeView"
+    x:Class="iVM.Views.ShellView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:iVM"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
   xmlns:fa="using:FontAwesome.UWP"
-  xmlns:cm="using:Caliburn.Micro"
-    mc:Ignorable="d">
+  xmlns:cm="using:Caliburn.Micro">
+
   <Page.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
@@ -21,7 +22,7 @@
       <RowDefinition Height="1*" />
       <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
-    <SplitView Grid.Row="0" Name="mainMenu" DisplayMode="CompactOverlay" CompactPaneLength="0" OpenPaneLength="150" PanePlacement="Right">
+    <SplitView Grid.Row="0" x:Name="mainMenu" DisplayMode="CompactOverlay" CompactPaneLength="0" OpenPaneLength="150" PanePlacement="Right">
       <SplitView.Pane>
         <ListBox x:Name="NavigateTo" VerticalAlignment="Bottom">
           <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
@@ -60,10 +61,10 @@
         <Frame cm:Message.Attach="[Event Loaded] = [SetupNavigationService($source)]" DataContext="{x:Null}" />
       </SplitView.Content>
     </SplitView>
-    <Button Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Width="50">
+    <!--<Button Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Width="50">
       <fa:FontAwesome Icon="Automobile" />
     </Button>
-    <TextBlock Grid.Row="1" Text="Peugeot 406" VerticalAlignment="Center" Margin="55,0,0,0" FontSize="14" />
+    <TextBlock Grid.Row="1" Text="Peugeot 406" VerticalAlignment="Center" Margin="55,0,0,0" FontSize="14" />-->
     <Button Grid.Row="1" HorizontalAlignment="Right" Style="{StaticResource btnMenuItem}" Width="50" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="Button_Click"></Button>
   </Grid>
 </Page>
