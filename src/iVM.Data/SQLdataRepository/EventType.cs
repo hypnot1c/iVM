@@ -1,20 +1,19 @@
-﻿using System;
+﻿using iVM.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using iVM.Model;
-
 namespace iVM.Data
 {
   public partial class SQLdataRepository : IDataRepository
   {
-    public IQueryable<User> Users
+    public IQueryable<EventType> EventTypes
     {
       get
       {
-        throw new NotImplementedException();
+        return this.db.EventTypes;
       }
     }
   }

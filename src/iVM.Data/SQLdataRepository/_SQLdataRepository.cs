@@ -12,5 +12,10 @@ namespace iVM.Data
   {
     public MainContext db { get; set; }
 
+    public SQLdataRepository()
+    {
+      this.db = new MainContext();
+    }
+
   }
 }

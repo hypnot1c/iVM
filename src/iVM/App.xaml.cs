@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using iVM.Data;
 using iVM.Data.SQLdatabase;
 using iVM.ViewModels;
 using Microsoft.ApplicationInsights;
@@ -38,10 +39,10 @@ namespace iVM
 
     public App()
     {
-      //using (var db = new MainContext())
-      //{
-      //  db.Database.Migrate();
-      //}
+      using (var db = new MainContext())
+      {
+        db.Database.Migrate();
+      }
 
       //WindowsAppInitializer.InitializeAsync();
       this.InitializeComponent();
@@ -56,6 +57,7 @@ namespace iVM
 
       // Make sure to register your containers here
       _container
+                .PerRequest<IDataRepository, SQLdataRepository>()
                 .PerRequest<ShellViewModel>()
                 .PerRequest<EventsViewModel>()
                 .PerRequest<EventAddViewModel>();

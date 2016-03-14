@@ -13,6 +13,9 @@ namespace iVM.Data.SQLdatabase
 {
   public class MainContext : DbContext
   {
+
+    public DbSet<EventType> EventTypes { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       string databaseFilePath = "iVM.db";

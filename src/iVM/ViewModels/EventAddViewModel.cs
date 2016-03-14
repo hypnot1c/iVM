@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using iVM.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,15 @@ namespace iVM.ViewModels
   {
     private readonly WinRTContainer _container;
     private readonly IEventAggregator _eventAggregator;
+    private readonly IDataRepository _dbRepository;
     protected INavigationService _navigationService;
 
-    public EventAddViewModel(WinRTContainer container, IEventAggregator eventAggregator, INavigationService navigationService)
+    public EventAddViewModel(WinRTContainer container, IEventAggregator eventAggregator, INavigationService navigationService, IDataRepository dbRepository)
     {
       _container = container;
       _eventAggregator = eventAggregator;
       this._navigationService = navigationService;
+      this._dbRepository = dbRepository;
     }
 
     protected override void OnActivate()
@@ -30,6 +33,12 @@ namespace iVM.ViewModels
       _eventAggregator.Unsubscribe(this);
     }
 
-    public List<string> lstType { get; set; } = new List<string> { "Repair", "Fuel", "Other" };
+    public List<string> lstType
+    {
+      get
+      {
+        return this._dbRepository.EventTypes.Select(et => et.Name).ToList();
+      }
+    }
   }
 }
