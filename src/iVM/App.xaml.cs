@@ -38,10 +38,10 @@ namespace iVM
 
     public App()
     {
-      using (var db = new MainContext())
-      {
-        db.Database.Migrate();
-      }
+      //using (var db = new MainContext())
+      //{
+      //  db.Database.Migrate();
+      //}
 
       //WindowsAppInitializer.InitializeAsync();
       this.InitializeComponent();

@@ -8,7 +8,38 @@
     mc:Ignorable="d"
   xmlns:fa="using:FontAwesome.UWP">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <TextBlock  Text="EventAdd"/>
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Orientation="Horizontal">
+      <TextBlock Text="Event type" />
+      <ComboBox ItemsSource="{Binding lstType}"></ComboBox>
+    </StackPanel>
+    <Grid Grid.Row="1">
+      <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <StackPanel Grid.Row="0">
+        <TextBlock Text="Litres" />
+        <TextBox InputScope="Number" />
+      </StackPanel>
+      <StackPanel Grid.Row="1">
+        <TextBlock Text="Expense" />
+        <TextBox InputScope="Number" />
+      </StackPanel>
+      <StackPanel Grid.Row="2">
+        <TextBlock Text="Litre cost" />
+        <TextBox InputScope="Number" />
+      </StackPanel>
+      <StackPanel Grid.Row="3">
+        <TextBlock Text="Mileage" />
+        <TextBox InputScope="Number" />
+      </StackPanel>
+    </Grid>
   </Grid>
 </Page>

@@ -29,5 +29,7 @@ namespace iVM.ViewModels
     {
       _eventAggregator.Unsubscribe(this);
     }
+
+    public List<string> lstType { get; set; } = new List<string> { "Repair", "Fuel", "Other" };
   }
 }
