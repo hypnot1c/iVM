@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using iVM.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace iVM.ViewModels
 
     protected override void OnActivate()
     {
+      _eventAggregator.PublishOnCurrentThread(new ViewActionButtonsEvent());
       _eventAggregator.Subscribe(this);
     }
 

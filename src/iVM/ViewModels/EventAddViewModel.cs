@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using iVM.Data;
+using iVM.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;

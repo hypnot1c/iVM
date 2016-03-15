@@ -16,7 +16,6 @@ namespace iVM.Data
     public SQLdataRepository()
     {
       this.db = new MainContext();
-      this.Migrate();
     }
 
     public void Migrate()

@@ -17,8 +17,5 @@
   
   <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <TextBlock Text="Event list" />
-    <Button Name="EventAdd" Grid.Row="1" HorizontalAlignment="Right" Style="{StaticResource btnMenuItem}" Width="50">
-      <fa:FontAwesome Icon="Edit" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    </Button>
   </Grid>
 </Page>

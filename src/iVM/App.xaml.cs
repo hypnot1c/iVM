@@ -56,6 +56,9 @@ namespace iVM
                 .PerRequest<EventAddViewModel>();
 
       _eventAggregator = _container.GetInstance<IEventAggregator>();
+
+      var db = new SQLdataRepository();
+      db.Migrate();
     }
 
     /// <summary> 

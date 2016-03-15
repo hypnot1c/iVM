@@ -98,6 +98,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Events\ViewActionButtonsEvent.cs" />
     <Compile Include="IDataRepository.cs" />
     <Compile Include="MainContext.cs" />
     <Compile Include="Migrations\20160310122259_CreateDataBase.cs" />
