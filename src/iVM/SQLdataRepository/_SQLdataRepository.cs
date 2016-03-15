@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace iVM.Data
     public SQLdataRepository()
     {
       this.db = new MainContext();
+      this.Migrate();
+    }
+
+    public void Migrate()
+    {
+      this.db.Database.Migrate();
     }
 
   }

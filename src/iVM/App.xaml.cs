@@ -1,9 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Data;
-using iVM.Data.SQLdatabase;
 using iVM.ViewModels;
 using Microsoft.ApplicationInsights;
-using Microsoft.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -39,11 +37,6 @@ namespace iVM
 
     public App()
     {
-      using (var db = new MainContext())
-      {
-        db.Database.Migrate();
-      }
-
       //WindowsAppInitializer.InitializeAsync();
       this.InitializeComponent();
       //this.Suspending += OnSuspending;

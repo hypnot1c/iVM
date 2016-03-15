@@ -98,7 +98,28 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IDataRepository.cs" />
+    <Compile Include="MainContext.cs" />
+    <Compile Include="Migrations\20160310122259_CreateDataBase.cs" />
+    <Compile Include="Migrations\20160310122259_CreateDataBase.Designer.cs">
+      <DependentUpon>20160310122259_CreateDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20160310124407_AddUserLogin.cs" />
+    <Compile Include="Migrations\20160310124407_AddUserLogin.Designer.cs">
+      <DependentUpon>20160310124407_AddUserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20160310214018_EventsInitial.cs" />
+    <Compile Include="Migrations\20160310214018_EventsInitial.Designer.cs">
+      <DependentUpon>20160310214018_EventsInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\MainContextModelSnapshot.cs" />
+    <Compile Include="ModelConfigurations\EventOccuredModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\EventTypeModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\UserModelConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLdataRepository\EventType.cs" />
+    <Compile Include="SQLdataRepository\User.cs" />
+    <Compile Include="SQLdataRepository\_SQLdataRepository.cs" />
     <Compile Include="ViewModels\EventAddViewModel.cs" />
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -135,20 +156,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iVM.Data.SQLdatabase\iVM.Data.SQLdatabase.csproj">
-      <Project>{a7670dfe-322d-412d-bceb-756b8049c348}</Project>
-      <Name>iVM.Data.SQLdatabase</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Data\iVM.Data.csproj">
-      <Project>{571fda0f-0482-4ba8-885c-65951a4d3991}</Project>
-      <Name>iVM.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Model\iVM.Model.csproj">
-      <Project>{3658ca07-30af-4d78-bfb0-7fcd5bdfb811}</Project>
-      <Name>iVM.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="Resources\style\mainPageStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -167,7 +174,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\iVM.Model\iVM.Model.csproj">
+      <Project>{93002a41-7618-456b-afff-d8850a45b845}</Project>
+      <Name>iVM.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

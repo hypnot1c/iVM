@@ -12,5 +12,7 @@ namespace iVM.Data
   {
     IQueryable<User> Users { get; }
     IQueryable<EventType> EventTypes { get; }
+
+    void Migrate();
   }
 }
