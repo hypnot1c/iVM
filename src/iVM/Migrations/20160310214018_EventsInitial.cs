@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Data.Entity.Migrations;
+using System;
+using System.Linq;
 
 namespace iVM.Data.SQLdatabase.Migrations
 {

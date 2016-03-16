@@ -1,10 +1,6 @@
 ﻿using Caliburn.Micro;
 using iVM.Events;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
 namespace iVM.ViewModels
@@ -65,9 +61,9 @@ namespace iVM.ViewModels
       this.ActionButtons = message.ActionButtons;
     }
 
-    public void GenerateActionButtons()
+    private void onActionButton_Click(ActionButton source)
     {
-
+      source.OnClick();
     }
   }
 }

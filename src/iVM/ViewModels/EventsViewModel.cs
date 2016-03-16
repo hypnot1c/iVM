@@ -1,10 +1,7 @@
 ﻿using Caliburn.Micro;
+using FontAwesome.UWP;
 using iVM.Events;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iVM.ViewModels
 {
@@ -14,16 +11,23 @@ namespace iVM.ViewModels
     private readonly IEventAggregator _eventAggregator;
     protected INavigationService _navigationService;
 
+    public List<ActionButton> ActionButtons { get; private set; }
+
     public EventsViewModel(WinRTContainer container, IEventAggregator eventAggregator, INavigationService navigationService)
     {
       _container = container;
       _eventAggregator = eventAggregator;
       this._navigationService = navigationService;
+      this.ActionButtons = new List<ActionButton>
+      {
+        new ActionButton() { Icon = FontAwesomeIcon.CheckSquareOutline, OnClick = this.EventAdd },
+        new ActionButton() { Icon = FontAwesomeIcon.PlusSquare, OnClick = this.EventAdd }
+      };
     }
 
     protected override void OnActivate()
     {
-      _eventAggregator.PublishOnCurrentThread(new ViewActionButtonsEvent());
+      _eventAggregator.PublishOnCurrentThread(new ViewActionButtonsEvent(this.ActionButtons));
       _eventAggregator.Subscribe(this);
     }
 

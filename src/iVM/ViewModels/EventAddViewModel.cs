@@ -1,11 +1,9 @@
 ﻿using Caliburn.Micro;
+using FontAwesome.UWP;
 using iVM.Data;
 using iVM.Events;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iVM.ViewModels
 {
@@ -15,6 +13,7 @@ namespace iVM.ViewModels
     private readonly IEventAggregator _eventAggregator;
     private readonly IDataRepository _dbRepository;
     protected INavigationService _navigationService;
+    public List<ActionButton> ActionButtons { get; private set; }
 
     public EventAddViewModel(WinRTContainer container, IEventAggregator eventAggregator, INavigationService navigationService, IDataRepository dbRepository)
     {
@@ -22,10 +21,15 @@ namespace iVM.ViewModels
       _eventAggregator = eventAggregator;
       this._navigationService = navigationService;
       this._dbRepository = dbRepository;
+      this.ActionButtons = new List<ActionButton>
+      {
+        new ActionButton { Icon = FontAwesomeIcon.Save }
+      };
     }
 
     protected override void OnActivate()
     {
+      _eventAggregator.PublishOnCurrentThread(new ViewActionButtonsEvent(this.ActionButtons));
       _eventAggregator.Subscribe(this);
     }
 

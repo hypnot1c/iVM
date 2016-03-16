@@ -1,10 +1,8 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
 
 namespace iVM.Data.SQLdatabase.Migrations
 {
-    public partial class AddUserLogin : Migration
+  public partial class AddUserLogin : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iVM.Events
 {
   public class ActionButton
   {
+    public string Name { get; set; }
     public FontAwesome.UWP.FontAwesomeIcon Icon { get; set; }
+    public Action OnClick { get; set; }
   }
 
 
   public class ViewActionButtonsEvent
   {
-    public List<ActionButton> ActionButtons
+    public List<ActionButton> ActionButtons { get; set; }
+
+    public ViewActionButtonsEvent(IEnumerable<ActionButton> actionButtons)
     {
-      get
-      {
-        return new List<ActionButton> {
-          new ActionButton { Icon = FontAwesome.UWP.FontAwesomeIcon.Edit },
-          new ActionButton { Icon = FontAwesome.UWP.FontAwesomeIcon.Lock }
-        };
-      }
+      this.ActionButtons = actionButtons.ToList();
     }
+
   }
 }

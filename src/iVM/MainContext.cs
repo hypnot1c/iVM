@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using iVM.Data.SQLdatabase.ModelConfigurations;
+using iVM.Model;
 using Microsoft.Data.Entity;
+using System;
 using System.IO;
 using Windows.Storage;
-using iVM.Model;
-using iVM.Data.SQLdatabase.ModelConfigurations;
 
 namespace iVM.Data.SQLdatabase
 {

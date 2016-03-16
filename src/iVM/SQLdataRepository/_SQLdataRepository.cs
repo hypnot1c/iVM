@@ -1,11 +1,5 @@
-﻿using Microsoft.Data.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using iVM.Data.SQLdatabase;
+﻿using iVM.Data.SQLdatabase;
+using Microsoft.Data.Entity;
 
 namespace iVM.Data
 {
