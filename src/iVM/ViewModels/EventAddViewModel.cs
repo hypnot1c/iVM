@@ -2,6 +2,7 @@
 using FontAwesome.UWP;
 using iVM.Data;
 using iVM.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,7 +14,29 @@ namespace iVM.ViewModels
     private readonly IEventAggregator _eventAggregator;
     private readonly IDataRepository _dbRepository;
     protected INavigationService _navigationService;
+
+    private bool _isFillUp;
+    public bool IsFillUp
+    {
+      get
+      {
+        return this._isFillUp;
+      }
+      set
+      {
+        this._isFillUp = value;
+        this.NotifyOfPropertyChange(() => this.IsFillUp);
+      }
+    }
     public List<ActionButton> ActionButtons { get; private set; }
+
+    public List<string> lstType
+    {
+      get
+      {
+        return this._dbRepository.EventTypes.Select(et => et.Name).ToList();
+      }
+    }
 
     public EventAddViewModel(WinRTContainer container, IEventAggregator eventAggregator, INavigationService navigationService, IDataRepository dbRepository)
     {
@@ -23,9 +46,10 @@ namespace iVM.ViewModels
       this._dbRepository = dbRepository;
       this.ActionButtons = new List<ActionButton>
       {
-        new ActionButton { Icon = FontAwesomeIcon.Save }
+        new ActionButton { Icon = FontAwesomeIcon.Save, OnClick = this.Save }
       };
     }
+
 
     protected override void OnActivate()
     {
@@ -38,12 +62,21 @@ namespace iVM.ViewModels
       _eventAggregator.Unsubscribe(this);
     }
 
-    public List<string> lstType
+    protected void onEventType_selectionChange(object source)
     {
-      get
-      {
-        return this._dbRepository.EventTypes.Select(et => et.Name).ToList();
-      }
+      var eventType = source as string;
+      eventType = String.IsNullOrEmpty(eventType) ? String.Empty : eventType.ToLower();
+      this.IsFillUp = eventType == "fillup";
+    }
+
+    private void Save()
+    {
+      // this._dbRepository.Events.Add();
+      if (this._navigationService.CanGoBack)
+        this._navigationService.GoBack();
+      else
+        this._navigationService.For<EventsViewModel>().Navigate();
+      //throw new NotImplementedException();
     }
   }
 }
