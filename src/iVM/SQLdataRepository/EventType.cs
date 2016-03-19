@@ -1,4 +1,5 @@
-﻿using iVM.Model;
+﻿using iVM.Core;
+using iVM.Model;
 using System.Linq;
 
 namespace iVM.Data

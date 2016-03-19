@@ -1,4 +1,5 @@
-﻿using iVM.Data.SQLdatabase;
+﻿using iVM.Core;
+using iVM.Data.SQLdatabase;
 using Microsoft.Data.Entity;
 
 namespace iVM.Data

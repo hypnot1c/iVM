@@ -12,6 +12,8 @@ namespace iVM.Data.SQLdatabase
 
     public DbSet<EventType> EventTypes { get; set; }
 
+    public DbSet<EventOccured> EventsOccured { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       string databaseFilePath = "iVM.db";

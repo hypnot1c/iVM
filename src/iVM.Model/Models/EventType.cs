@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace iVM.Model
 {
@@ -7,6 +7,6 @@ namespace iVM.Model
     public string Name { get; set; }
     public byte[] Icon { get; set; }
 
-    public IQueryable<EventOccured> EventsOccured { get; set; }
+    public ICollection<EventOccured> EventsOccured { get; set; }
   }
 }

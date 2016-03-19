@@ -1,4 +1,6 @@
 ﻿using Caliburn.Micro;
+using iVM.Core;
+using iVM.Core.UWP;
 using iVM.Data;
 using iVM.ViewModels;
 using System;
@@ -36,10 +38,11 @@ namespace iVM
 
       // Make sure to register your containers here
       _container
-                .PerRequest<IDataRepository, SQLdataRepository>()
-                .PerRequest<ShellViewModel>()
-                .PerRequest<EventsViewModel>()
-                .PerRequest<EventAddViewModel>();
+        .PerRequest<IDataRepository, SQLdataRepository>()
+        .PerRequest<IEventManager, EventManager>()
+        .PerRequest<ShellViewModel>()
+        .PerRequest<EventsViewModel>()
+        .PerRequest<EventAddViewModel>();
 
       _eventAggregator = _container.GetInstance<IEventAggregator>();
 

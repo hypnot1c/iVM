@@ -1,6 +1,6 @@
 ﻿using Caliburn.Micro;
 using FontAwesome.UWP;
-using iVM.Data;
+using iVM.Core;
 using iVM.Events;
 using System;
 using System.Collections.Generic;
@@ -10,9 +10,8 @@ namespace iVM.ViewModels
 {
   public class EventAddViewModel : Screen
   {
-    private readonly WinRTContainer _container;
     private readonly IEventAggregator _eventAggregator;
-    private readonly IDataRepository _dbRepository;
+    private readonly IEventManager _eventManager;
     protected INavigationService _navigationService;
 
     private bool _isFillUp;
@@ -34,16 +33,15 @@ namespace iVM.ViewModels
     {
       get
       {
-        return this._dbRepository.EventTypes.Select(et => et.Name).ToList();
+        return this._eventManager.EventTypes.Select(et => et.Name).ToList();
       }
     }
 
-    public EventAddViewModel(WinRTContainer container, IEventAggregator eventAggregator, INavigationService navigationService, IDataRepository dbRepository)
+    public EventAddViewModel(IEventManager eventManager, IEventAggregator eventAggregator, INavigationService navigationService)
     {
-      _container = container;
+      _eventManager = eventManager;
       _eventAggregator = eventAggregator;
       this._navigationService = navigationService;
-      this._dbRepository = dbRepository;
       this.ActionButtons = new List<ActionButton>
       {
         new ActionButton { Icon = FontAwesomeIcon.Save, OnClick = this.Save }
@@ -71,7 +69,15 @@ namespace iVM.ViewModels
 
     private void Save()
     {
-      // this._dbRepository.Events.Add();
+      //var ev = new Model.EventOccured();
+      //ev.Mileage = 180000;
+      //ev.Name = "Заправка Газпром";
+      //ev.EventTypeID = 1;
+      //ev.Expense = 1000;
+      //ev.Date = DateTime.Now;
+      //ev.Description = "Очередная";
+      //this._eventManager.EventOccuredAdd(ev);
+
       if (this._navigationService.CanGoBack)
         this._navigationService.GoBack();
       else

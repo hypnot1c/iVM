@@ -1,18 +1,14 @@
 ﻿using iVM.Core;
 using iVM.Model;
-using System;
-using System.Linq;
 
 namespace iVM.Data
 {
   public partial class SQLdataRepository : IDataRepository
   {
-    public IQueryable<User> Users
+    public void EventOccuredAdd(EventOccured eventOccured)
     {
-      get
-      {
-        throw new NotImplementedException();
-      }
+      this.db.EventsOccured.Add(eventOccured);
+      this.db.SaveChanges();
     }
   }
 }
