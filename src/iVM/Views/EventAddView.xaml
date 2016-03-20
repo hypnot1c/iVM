@@ -19,7 +19,7 @@
     </Grid.RowDefinitions>
     <StackPanel Grid.Row="0" Orientation="Horizontal">
       <TextBlock Text="Event type" />
-      <ComboBox Name="eventType" ItemsSource="{Binding lstType}" cm:Message.Attach="[Event SelectionChanged] = [onEventType_selectionChange($this)]"></ComboBox>
+      <ComboBox Name="SelectedEventType" ItemsSource="{Binding lstType}" cm:Message.Attach="[Event SelectionChanged] = [onEventType_selectionChange($this)]"></ComboBox>
     </StackPanel>
     <Grid Name="fillUpForm" Grid.Row="1" Visibility="{Binding IsFillUp, Converter={StaticResource boolToVis}}">
       <Grid.RowDefinitions>
@@ -30,19 +30,19 @@
       </Grid.RowDefinitions>
       <StackPanel Grid.Row="0">
         <TextBlock Text="Litres" />
-        <TextBox InputScope="Number" />
+        <TextBox Grid.Row="1" InputScope="Number" Text="{Binding Litres}" />
       </StackPanel>
       <StackPanel Grid.Row="1">
         <TextBlock Text="Expense" />
-        <TextBox InputScope="Number" />
+        <TextBox Name="Expense" InputScope="Number" />
       </StackPanel>
       <StackPanel Grid.Row="2">
         <TextBlock Text="Litre cost" />
-        <TextBox InputScope="Number" />
+        <TextBox Name="LiterCost" InputScope="Number" />
       </StackPanel>
       <StackPanel Grid.Row="3">
         <TextBlock Text="Mileage" />
-        <TextBox InputScope="Number" />
+        <TextBox Name="Mileage" InputScope="Number" />
       </StackPanel>
     </Grid>
   </Grid>

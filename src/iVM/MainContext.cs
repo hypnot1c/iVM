@@ -32,6 +32,7 @@ namespace iVM.Data.SQLdatabase
       modelBuilder.Entity<User>(UserModelConfiguration.Configure);
       modelBuilder.Entity<EventType>(EventTypeModelConfiguration.Configure);
       modelBuilder.Entity<EventOccured>(EventOccuredModelConfiguration.Configure);
+      modelBuilder.Entity<FillUp>(FillUpModelConfiguration.Configure);
     }
   }
 }

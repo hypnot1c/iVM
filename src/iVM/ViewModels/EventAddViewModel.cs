@@ -37,6 +37,21 @@ namespace iVM.ViewModels
       }
     }
 
+    private decimal litres;
+    public decimal Litres
+    {
+      get { return litres; }
+      set
+      {
+        litres = value;
+        NotifyOfPropertyChange(() => Litres);
+      }
+    }
+    public decimal Expense { get; set; }
+    public decimal LiterCost { get; set; }
+    public decimal Mileage { get; set; }
+    public int SelectedEventType { get; set; }
+
     public EventAddViewModel(IEventManager eventManager, IEventAggregator eventAggregator, INavigationService navigationService)
     {
       _eventManager = eventManager;

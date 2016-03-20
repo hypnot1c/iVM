@@ -113,13 +113,19 @@
     <Compile Include="Migrations\20160310214018_EventsInitial.Designer.cs">
       <DependentUpon>20160310214018_EventsInitial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160320194255_FillUpInitial.cs" />
+    <Compile Include="Migrations\20160320194255_FillUpInitial.designer.cs">
+      <DependentUpon>20160320194255_FillUpInitial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MainContextModelSnapshot.cs" />
+    <Compile Include="ModelConfigurations\FillUpModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\EventOccuredModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\EventTypeModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\UserModelConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLdataRepository\EventOccured.cs" />
     <Compile Include="SQLdataRepository\EventType.cs" />
+    <Compile Include="SQLdataRepository\FillUp.cs" />
     <Compile Include="SQLdataRepository\User.cs" />
     <Compile Include="SQLdataRepository\_SQLdataRepository.cs" />
     <Compile Include="ViewModels\EventAddViewModel.cs" />

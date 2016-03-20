@@ -28,7 +28,7 @@ namespace iVM.Core.UWP
 
     public void EventOccuredAdd(EventOccured ivmEvent)
     {
-      this.dataRepository.EventOccuredAdd(ivmEvent);
+      this.dataRepository.AddObject<EventOccured>(ivmEvent);
     }
   }
 }

@@ -112,6 +112,7 @@
     <Compile Include="Models\EventOccured.cs" />
     <Compile Include="Models\EventScheduled.cs" />
     <Compile Include="Models\EventType.cs" />
+    <Compile Include="Models\FillUp.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\iVM.Model.rd.xml" />

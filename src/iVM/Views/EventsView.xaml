@@ -14,8 +14,11 @@
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Page.Resources>
-  
+
   <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <TextBlock Text="Event list" />
+    <StackPanel>
+      <TextBlock Text="Event list" />
+      <TextBox x:Name="Litres" />
+    </StackPanel>
   </Grid>
 </Page>

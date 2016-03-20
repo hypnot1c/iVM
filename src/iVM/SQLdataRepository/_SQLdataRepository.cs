@@ -18,5 +18,15 @@ namespace iVM.Data
       this.db.Database.Migrate();
     }
 
+    public void AddObject<TEntity>(TEntity entity) where TEntity : class
+    {
+      this.db.Add(entity);
+    }
+
+    public void UpdateObject<TEntity>(TEntity entity) where TEntity : class
+    {
+      this.db.Update(entity);
+    }
+
   }
 }

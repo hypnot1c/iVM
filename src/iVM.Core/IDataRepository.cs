@@ -7,8 +7,10 @@ namespace iVM.Core
   {
     IQueryable<User> Users { get; }
     IQueryable<EventType> EventTypes { get; }
+    IQueryable<FillUp> FillUps { get; }
 
-    void EventOccuredAdd(EventOccured eventOccured);
+    void AddObject<TEntity>(TEntity entity) where TEntity : class;
+    void UpdateObject<TEntity>(TEntity entity) where TEntity : class;
 
     void Migrate();
   }
