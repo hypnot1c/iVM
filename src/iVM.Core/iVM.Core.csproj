@@ -34,17 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <ProjectReference Include="..\iVM.Data.Model\iVM.Data.Model.csproj">
-      <Project>{c510242c-989b-45da-b779-9e47c47d7bca}</Project>
-      <Name>iVM.Data.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="EventManager.cs" />
     <Compile Include="IDataRepository.cs" />
     <Compile Include="IEventManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iVM.Data.Model\iVM.Data.Model.csproj">
+      <Project>{c510242c-989b-45da-b779-9e47c47d7bca}</Project>
+      <Name>iVM.Data.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
