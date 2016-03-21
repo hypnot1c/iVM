@@ -12,6 +12,8 @@ namespace iVM.Data.SQLdatabase.ModelConfigurations
       builder.Property(p => p.EventTypeID).IsRequired();
       builder.HasOne<EventType>(eo => eo.Type);
       builder.Property(p => p.Name).IsRequired();
+
+      builder.HasMany<FillUp>(eo => eo.FillUps).WithOne(fu => fu.EventOccured);
     }
   }
 }
