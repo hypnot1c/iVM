@@ -33,7 +33,7 @@ namespace iVM
     protected override void Configure()
     {
       _container = new WinRTContainer();
-
+      
       _container.RegisterWinRTServices();
 
       // Make sure to register your containers here
