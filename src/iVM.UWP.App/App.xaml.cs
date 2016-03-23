@@ -2,7 +2,7 @@
 using iVM.Core;
 using iVM.Core.UWP;
 using iVM.Data;
-using iVM.ViewModels;
+using iVM.UWP.App.ViewModels;
 using System;
 using System.Collections.Generic;
 using Windows.ApplicationModel;
@@ -35,14 +35,15 @@ namespace iVM
       _container = new WinRTContainer();
       
       _container.RegisterWinRTServices();
-
+ 
       // Make sure to register your containers here
       _container
         .PerRequest<IDataRepository, SQLdataRepository>()
         .PerRequest<IEventManager, EventManager>()
         .PerRequest<ShellViewModel>()
         .PerRequest<EventsViewModel>()
-        .PerRequest<EventAddViewModel>();
+        .PerRequest<EventTypeSelectViewModel>()
+        .PerRequest<FillUpAddViewModel>();
 
       _eventAggregator = _container.GetInstance<IEventAggregator>();
 

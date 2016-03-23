@@ -3,7 +3,7 @@ using iVM.Events;
 using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
 
-namespace iVM.ViewModels
+namespace iVM.UWP.App.ViewModels
 {
   public class ShellViewModel : Screen, IHandle<ViewActionButtonsEvent>
   {

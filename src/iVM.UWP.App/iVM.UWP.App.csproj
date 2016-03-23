@@ -131,14 +131,18 @@
     <Compile Include="SQLdataRepository\FillUp.cs" />
     <Compile Include="SQLdataRepository\User.cs" />
     <Compile Include="SQLdataRepository\_SQLdataRepository.cs" />
-    <Compile Include="ViewModels\EventAddViewModel.cs" />
-    <Compile Include="ViewModels\EventsViewModel.cs" />
+    <Compile Include="ViewModels\Events\EventsViewModel.cs" />
+    <Compile Include="ViewModels\Events\EventTypeSelectViewModel.cs" />
+    <Compile Include="ViewModels\Events\FillUpAddViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
-    <Compile Include="Views\EventAddView.xaml.cs">
-      <DependentUpon>EventAddView.xaml</DependentUpon>
+    <Compile Include="Views\FillUpAddView.xaml.cs">
+      <DependentUpon>FillUpAddView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EventsView.xaml.cs">
       <DependentUpon>EventsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EventTypeSelectView.xaml.cs">
+      <DependentUpon>EventTypeSelectView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -177,13 +181,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\EventAddView.xaml">
+    <Page Include="Views\FillUpAddView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\EventsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EventTypeSelectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ShellView.xaml">
       <Generator>MSBuild:Compile</Generator>

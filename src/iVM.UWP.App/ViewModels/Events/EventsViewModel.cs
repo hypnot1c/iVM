@@ -3,7 +3,7 @@ using FontAwesome.UWP;
 using iVM.Events;
 using System.Collections.Generic;
 
-namespace iVM.ViewModels
+namespace iVM.UWP.App.ViewModels
 {
   public class EventsViewModel: Screen
   {
@@ -37,7 +37,7 @@ namespace iVM.ViewModels
     }
     public void EventAdd()
     {
-      _navigationService.For<EventAddViewModel>().Navigate();
+      _navigationService.For<EventTypeSelectViewModel>().Navigate();
     }
   }
 }
