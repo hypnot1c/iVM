@@ -1,8 +1,8 @@
 ﻿using iVM.Core;
-using iVM.Data.SQLdatabase;
+using iVM.Data.SQL.EF.SQLdatabase;
 using Microsoft.Data.Entity;
 
-namespace iVM.Data
+namespace iVM.Data.SQL.EF
 {
   public partial class SQLdataRepository : IDataRepository
   {

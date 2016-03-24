@@ -1,16 +1,17 @@
 ﻿using iVM.Core;
 using iVM.Model;
+using System;
 using System.Linq;
 
-namespace iVM.Data
+namespace iVM.Data.SQL.EF
 {
   public partial class SQLdataRepository : IDataRepository
   {
-    public IQueryable<EventType> EventTypes
+    public IQueryable<FillUp> FillUps
     {
       get
       {
-        return this.db.EventTypes;
+        throw new NotImplementedException();
       }
     }
   }

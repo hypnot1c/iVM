@@ -1,11 +1,11 @@
-﻿using iVM.Data.SQLdatabase.ModelConfigurations;
+﻿using iVM.Data.SQL.EF.SQLdatabase.ModelConfigurations;
 using iVM.Model;
 using Microsoft.Data.Entity;
 using System;
 using System.IO;
 using Windows.Storage;
 
-namespace iVM.Data.SQLdatabase
+namespace iVM.Data.SQL.EF.SQLdatabase
 {
   public class MainContext : DbContext
   {

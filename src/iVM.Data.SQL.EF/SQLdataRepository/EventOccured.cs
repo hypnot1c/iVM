@@ -1,6 +1,6 @@
 ﻿using iVM.Core;
 
-namespace iVM.Data
+namespace iVM.Data.SQL.EF
 {
   public partial class SQLdataRepository : IDataRepository
   {

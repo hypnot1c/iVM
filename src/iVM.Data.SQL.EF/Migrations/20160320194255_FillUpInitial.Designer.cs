@@ -3,14 +3,15 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
-using iVM.Data.SQLdatabase;
+using iVM.Data.SQL.EF.SQLdatabase;
 
-namespace iVM.Data.SQLdatabase.Migrations
+namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
 {
     [DbContext(typeof(MainContext))]
-    partial class MainContextModelSnapshot : ModelSnapshot
+    [Migration("20160320194255_FillUpInitial")]
+    partial class FillUpInitial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");

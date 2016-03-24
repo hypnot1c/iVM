@@ -1,7 +1,7 @@
 ﻿using iVM.Model;
 using Microsoft.Data.Entity.Metadata.Builders;
 
-namespace iVM.Data.SQLdatabase.ModelConfigurations
+namespace iVM.Data.SQL.EF.SQLdatabase.ModelConfigurations
 {
   public class UserModelConfiguration
   {

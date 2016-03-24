@@ -1,7 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Core;
 using iVM.Core.UWP;
-using iVM.Data;
+using iVM.Data.SQL.EF;
 using iVM.UWP.App.ViewModels;
 using System;
 using System.Collections.Generic;

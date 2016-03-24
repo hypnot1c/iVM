@@ -3,11 +3,11 @@ using iVM.Model;
 using System;
 using System.Linq;
 
-namespace iVM.Data
+namespace iVM.Data.SQL.EF
 {
   public partial class SQLdataRepository : IDataRepository
   {
-    public IQueryable<FillUp> FillUps
+    public IQueryable<User> Users
     {
       get
       {
