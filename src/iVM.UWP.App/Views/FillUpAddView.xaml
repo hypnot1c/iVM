@@ -16,10 +16,11 @@
         <RowDefinition />
         <RowDefinition />
         <RowDefinition />
+        <RowDefinition />
       </Grid.RowDefinitions>
       <StackPanel Grid.Row="0">
         <TextBlock Text="Litres" />
-        <TextBox Grid.Row="1" InputScope="Number" Text="{Binding Litres}" />
+        <TextBox Name="Litres" InputScope="Number" />
       </StackPanel>
       <StackPanel Grid.Row="1">
         <TextBlock Text="Expense" />
@@ -30,6 +31,10 @@
         <TextBox Name="LiterCost" InputScope="Number" />
       </StackPanel>
       <StackPanel Grid.Row="3">
+        <TextBlock Text="Date" />
+        <DatePicker x:Name="DateOffset" />
+      </StackPanel>
+      <StackPanel Grid.Row="4">
         <TextBlock Text="Mileage" />
         <TextBox Name="Mileage" InputScope="Number" />
       </StackPanel>

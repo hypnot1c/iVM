@@ -31,7 +31,7 @@ namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
             Description = table.Column<string>(nullable: true),
             EventTypeID = table.Column<int>(nullable: false),
             Expense = table.Column<uint>(nullable: false),
-            Mileage = table.Column<long>(nullable: false),
+            Mileage = table.Column<ulong>(nullable: false),
             Name = table.Column<string>(nullable: false),
             Profit = table.Column<uint>(nullable: false)
           },

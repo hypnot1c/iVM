@@ -1,13 +1,17 @@
+using System;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
-using System;
+using Microsoft.Data.Entity.Metadata;
+using Microsoft.Data.Entity.Migrations;
+using iVM.Data.SQL.EF.SQLdatabase;
 
 namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
 {
-  [DbContext(typeof(MainContext))]
-    partial class MainContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(MainContext))]
+    [Migration("20160328110629_Sync")]
+    partial class Sync
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
@@ -25,7 +29,7 @@ namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
 
                     b.Property<decimal>("Expense");
 
-                    b.Property<ulong>("Mileage");
+                    b.Property<decimal>("Mileage");
 
                     b.Property<string>("Name")
                         .IsRequired();

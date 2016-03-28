@@ -41,7 +41,7 @@ namespace iVM
         .PerRequest<IDataRepository, SQLdataRepository>()
         .PerRequest<IEventManager, EventManager>()
         .PerRequest<ShellViewModel>()
-        .PerRequest<EventsViewModel>()
+        .PerRequest<EventListViewModel>()
         .PerRequest<EventTypeSelectViewModel>()
         .PerRequest<FillUpAddViewModel>();
 

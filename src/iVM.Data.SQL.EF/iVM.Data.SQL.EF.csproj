@@ -124,6 +124,10 @@
     <Compile Include="Migrations\20160320194255_FillUpInitial.Designer.cs">
       <DependentUpon>20160320194255_FillUpInitial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160328110629_Sync.cs" />
+    <Compile Include="Migrations\20160328110629_Sync.designer.cs">
+      <DependentUpon>20160328110629_Sync.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MainContextModelSnapshot.cs" />
     <Compile Include="ModelConfigurations\EventOccuredModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\EventTypeModelConfiguration.cs" />

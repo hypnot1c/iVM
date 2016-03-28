@@ -5,7 +5,9 @@ namespace iVM.Core
 {
   public interface IEventManager
   {
-    void EventOccuredAdd(EventOccured ivmEvent);
+    IEnumerable<EventOccured> EventsOccured { get; set; }
     IEnumerable<EventType> EventTypes { get; }
+
+    void FillUpAdd(EventOccured _evOccured, FillUp _fillUp);
   }
 }

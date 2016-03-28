@@ -53,7 +53,7 @@ namespace iVM.UWP.App.ViewModels
 
     public void NavigateTo()
     {
-      _navigationService.For<EventsViewModel>().Navigate();
+      _navigationService.For<EventListViewModel>().Navigate();
     }
 
     public void Handle(ViewActionButtonsEvent message)

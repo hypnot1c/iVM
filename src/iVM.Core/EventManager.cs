@@ -13,6 +13,19 @@ namespace iVM.Core.UWP
       this.dataRepository = dataRepository;
     }
 
+    public IEnumerable<EventOccured> EventsOccured
+    {
+      get
+      {
+        return this.dataRepository.EventsOccured;
+      }
+
+      set
+      {
+        throw new NotImplementedException();
+      }
+    }
+
     public IEnumerable<EventType> EventTypes
     {
       get
@@ -26,9 +39,10 @@ namespace iVM.Core.UWP
       }
     }
 
-    public void EventOccuredAdd(EventOccured ivmEvent)
+    public void FillUpAdd(EventOccured _evOccured, FillUp _fillUp)
     {
-      this.dataRepository.AddObject<EventOccured>(ivmEvent);
+      this.dataRepository.FillUpAdd(_evOccured, _fillUp);
+      this.dataRepository.SaveChanges();
     }
   }
 }

@@ -13,7 +13,7 @@ namespace iVM.Data.SQL.EF.SQLdatabase.ModelConfigurations
       builder.HasOne<EventType>(eo => eo.Type);
       builder.Property(p => p.Name).IsRequired();
 
-      //builder.HasMany<FillUp>(eo => eo.FillUps).WithOne(fu => fu.EventOccured);
+      builder.HasMany<FillUp>(eo => eo.FillUps).WithOne(fu => fu.EventOccured);
     }
   }
 }

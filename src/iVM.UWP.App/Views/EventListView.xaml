@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="iVM.UWP.App.Views.EventsView"
+    x:Class="iVM.UWP.App.Views.EventListView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:iVM.UWP.App.Views"
@@ -16,6 +16,15 @@
   </Page.Resources>
 
   <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <TextBlock Text="Event list" />
+    <ListView x:Name="Events">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <StackPanel>
+            <TextBlock Text="{Binding Date}" />
+            <TextBlock Text="{Binding Name}" />
+          </StackPanel>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
   </Grid>
 </Page>

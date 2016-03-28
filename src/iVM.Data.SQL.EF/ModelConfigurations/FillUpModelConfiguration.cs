@@ -10,7 +10,7 @@ namespace iVM.Data.SQL.EF.SQLdatabase.ModelConfigurations
       builder.HasKey(p => p.ID);
       builder.Property(p => p.LitresValue).IsRequired();
       builder.Property(p => p.EventOccuredID).IsRequired();
-      //builder.HasOne<EventOccured>(eo => eo.EventOccured).WithMany(fu => fu.FillUps);
+      builder.HasOne<EventOccured>(eo => eo.EventOccured).WithMany(fu => fu.FillUps);
     }
   }
 }

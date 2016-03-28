@@ -3,6 +3,7 @@ using FontAwesome.UWP;
 using iVM.Core;
 using iVM.Core.UI.ViewModels;
 using iVM.Events;
+using System;
 using System.Collections.Generic;
 
 namespace iVM.UWP.App.ViewModels
@@ -13,6 +14,16 @@ namespace iVM.UWP.App.ViewModels
     protected INavigationService _navigationService;
 
     public List<ActionButton> ActionButtons { get; private set; }
+
+    private DateTimeOffset _dateOffset;
+    public DateTimeOffset DateOffset {
+      get { return this._dateOffset; }
+      set
+      {
+        this._dateOffset = value;
+        this.Date = DateOffset.DateTime;
+      }
+    }
 
     public FillUpAddViewModel(IEventManager eventManager, IEventAggregator eventAggregator, INavigationService navigationService): base(eventAggregator)
     {
@@ -32,19 +43,13 @@ namespace iVM.UWP.App.ViewModels
 
     protected override void Save()
     {
-      //var ev = new Model.EventOccured();
-      //ev.Mileage = 180000;
-      //ev.Name = "Заправка Газпром";
-      //ev.EventTypeID = 1;
-      //ev.Expense = 1000;
-      //ev.Date = DateTime.Now;
-      //ev.Description = "Очередная";
-      //this._eventManager.EventOccuredAdd(ev);
+      this._evOccured.Name = "Заправка";
+      this._eventManager.FillUpAdd(this._evOccured, this._fillUp);
 
       if (this._navigationService.CanGoBack)
         this._navigationService.GoBack();
       else
-        this._navigationService.For<EventsViewModel>().Navigate();
+        this._navigationService.For<EventListViewModel>().Navigate();
       //throw new NotImplementedException();
     }
   }
