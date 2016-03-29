@@ -39,6 +39,13 @@
     <Compile Include="ViewModels\Events\EventListViewModelBase.cs" />
     <Compile Include="ViewModels\Events\EventTypeSelectViewModelBase.cs" />
     <Compile Include="ViewModels\Events\FillUpAddViewModelBase.cs" />
+    <Compile Include="ViewModels\Events\OtherAddViewModelBase.cs" />
+    <Compile Include="ViewModels\Events\RepairAddViewModelBase.cs" />
+    <Compile Include="ViewModels\Security\ProfileEditViewModelBase.cs" />
+    <Compile Include="ViewModels\Security\SignInViewModelBase.cs" />
+    <Compile Include="ViewModels\Security\SignUpViewModelBase.cs" />
+    <Compile Include="ViewModels\Vehicle\MaintenanceAddViewModelBase.cs" />
+    <Compile Include="ViewModels\Vehicle\VehicleAddViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Caliburn.Micro, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
@@ -55,6 +62,7 @@
       <Name>iVM.Data.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

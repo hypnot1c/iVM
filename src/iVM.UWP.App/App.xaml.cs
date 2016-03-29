@@ -61,7 +61,7 @@ namespace iVM
     {
       // I am launching my main view here
       DisplayRootViewFor<ShellViewModel>();
-
+      //SystemNavigationManager.GetForCurrentView().BackRequested += MainPage_BackRequested;
       //if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
       //{
       //  _eventAggregator.PublishOnUIThread(new ResumeStateMessage());

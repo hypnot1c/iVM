@@ -8,16 +8,18 @@
     mc:Ignorable="d"
   xmlns:cm="using:Caliburn.Micro">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <StackPanel Orientation="Horizontal">
-      <TextBlock Text="Event type" />
-      <ComboBox x:Name="EventTypes" SelectedItem="{Binding SelectedEventTypes, Mode=TwoWay}">
-        <ComboBox.ItemTemplate>
-          <DataTemplate>
-            <TextBlock Text="{Binding Name}" />
-          </DataTemplate>
-        </ComboBox.ItemTemplate>
-      </ComboBox>
-    </StackPanel>
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ListBox x:Name="EventTypes" SelectedItem="{Binding SelectedEventTypes, Mode=TwoWay}" VerticalAlignment="Center">
+      <ListBox.ItemContainerStyle>
+        <Style TargetType="ListBoxItem">
+          <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+      </ListBox.ItemContainerStyle>
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
   </Grid>
 </Page>
