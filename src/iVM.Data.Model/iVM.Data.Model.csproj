@@ -35,16 +35,24 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="Diagrams\EntitiesDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
+    <Compile Include="Models\Bicycle.cs" />
+    <Compile Include="Models\Maintenance.cs" />
+    <Compile Include="Models\Car.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Models\EventOccured.cs" />
     <Compile Include="Models\EventScheduled.cs" />
     <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\FillUp.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Motorcycle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\RepairType.cs" />
+    <Compile Include="Repair.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
