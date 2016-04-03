@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iVM.iOS.App", "src\iVM.iOS.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iVM.Data.SQL.EF", "src\iVM.Data.SQL.EF\iVM.Data.SQL.EF.csproj", "{43164BA4-1966-4A16-8FE1-0879237ECE4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iVM.UWP.Localization", "iVM.UWP.Localization\iVM.UWP.Localization.csproj", "{AA879603-53F7-4928-9918-F3F7A05A5993}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iVM.UWP.Localization", "src\iVM.UWP.Localization\iVM.UWP.Localization.csproj", "{AA879603-53F7-4928-9918-F3F7A05A5993}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -52,6 +52,9 @@ namespace iVM.UWP.App.ViewModels
             case "fillup":
               this._navService.For<FillUpAddViewModel>().Navigate();
               break;
+            case "repair":
+              this._navService.For<RepairAddViewModel>().Navigate();
+              break;
           }
           break;
       }

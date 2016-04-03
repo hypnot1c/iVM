@@ -5,7 +5,7 @@ using System.Text;
 
 namespace iVM.Data.Model
 {
-  public class Maintenance : MaintenanceBase
+  public class RepairScheduled : RepairBase
   {
   }
 }

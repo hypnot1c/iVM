@@ -43,7 +43,8 @@ namespace iVM
         .PerRequest<ShellViewModel>()
         .PerRequest<EventListViewModel>()
         .PerRequest<EventTypeSelectViewModel>()
-        .PerRequest<FillUpAddViewModel>();
+        .PerRequest<FillUpAddViewModel>()
+        .PerRequest<RepairAddViewModel>();
 
       _eventAggregator = _container.GetInstance<IEventAggregator>();
 

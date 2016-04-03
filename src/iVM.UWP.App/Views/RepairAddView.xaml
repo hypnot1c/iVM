@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="iVM.UWP.App.Views.FillUpAddView"
+    x:Class="iVM.UWP.App.Views.RepairAddView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:iVM.UWP.App.Views"
@@ -8,7 +8,7 @@
     mc:Ignorable="d"
   xmlns:fa="using:FontAwesome.UWP"
   xmlns:cm="using:Caliburn.Micro">
-  
+
   <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid>
       <Grid.RowDefinitions>
@@ -19,16 +19,16 @@
         <RowDefinition />
       </Grid.RowDefinitions>
       <StackPanel Grid.Row="0">
-        <TextBlock Text="Litres" />
-        <TextBox Name="Litres" InputScope="Number" />
+        <TextBlock Text="Title" />
+        <TextBox Name="Title" />
       </StackPanel>
       <StackPanel Grid.Row="1">
         <TextBlock Text="Expense" />
         <TextBox Name="Expense" InputScope="Number" />
       </StackPanel>
       <StackPanel Grid.Row="2">
-        <TextBlock Text="Litre cost" />
-        <TextBox Name="LiterCost" InputScope="Number" />
+        <TextBlock Text="Service station name" />
+        <TextBox Name="ServiceStationName" InputScope="Number" />
       </StackPanel>
       <StackPanel Grid.Row="3">
         <TextBlock Text="Date" />

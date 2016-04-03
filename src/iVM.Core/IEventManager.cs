@@ -1,5 +1,6 @@
 ﻿using iVM.Model;
 using System.Collections.Generic;
+using iVM.Data.Model;
 
 namespace iVM.Core
 {
@@ -9,5 +10,6 @@ namespace iVM.Core
     IEnumerable<EventType> EventTypes { get; }
 
     void FillUpAdd(EventOccured _evOccured, FillUp _fillUp);
+    void RepairAdd(EventOccured _evOccured, Repair _repair);
   }
 }

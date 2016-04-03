@@ -1,4 +1,5 @@
-﻿using iVM.Model;
+﻿using iVM.Data.Model;
+using iVM.Model;
 using System;
 using System.Collections.Generic;
 
@@ -43,6 +44,11 @@ namespace iVM.Core.UWP
     {
       this.dataRepository.FillUpAdd(_evOccured, _fillUp);
       this.dataRepository.SaveChanges();
+    }
+
+    public void RepairAdd(EventOccured _evOccured, Repair _repair)
+    {
+      throw new NotImplementedException();
     }
   }
 }
