@@ -19,8 +19,8 @@
         <RowDefinition />
       </Grid.RowDefinitions>
       <StackPanel Grid.Row="0">
-        <TextBlock Text="Title" />
-        <TextBox Name="Title" />
+        <TextBlock Text="Name" />
+        <TextBox Name="Name" />
       </StackPanel>
       <StackPanel Grid.Row="1">
         <TextBlock Text="Expense" />

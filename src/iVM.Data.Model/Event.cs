@@ -1,4 +1,4 @@
-﻿namespace iVM.Model
+﻿namespace iVM.Data.Model
 {
   public abstract class Event: BaseModel
   {

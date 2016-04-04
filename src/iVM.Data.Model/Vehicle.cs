@@ -1,6 +1,6 @@
 ﻿namespace iVM.Data.Model
 {
-  public abstract class Vehicle : iVM.Model.BaseModel
+  public abstract class Vehicle : BaseModel
   {
   }
 }

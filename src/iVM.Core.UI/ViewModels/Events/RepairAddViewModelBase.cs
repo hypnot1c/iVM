@@ -1,6 +1,5 @@
 ﻿using Caliburn.Micro;
 using iVM.Data.Model;
-using iVM.Model;
 using System;
 using System.ComponentModel;
 
@@ -22,6 +21,13 @@ namespace iVM.Core.UI.ViewModels
     {
       get { return this._date; }
       set { this._date = value; NotifyOfPropertyChange(() => this.Date); }
+    }
+
+    private string _name;
+    public string Name
+    {
+      get { return this._name; }
+      set { this._name = value; NotifyOfPropertyChange(() => this.Name); }
     }
 
     private string _expense;
@@ -52,6 +58,9 @@ namespace iVM.Core.UI.ViewModels
       base.viewModel_PropertyChanged(sender, e);
       switch (e.PropertyName)
       {
+        case nameof(this.Name):
+          this._evOccured.Name = this.Name;
+          break;
         case nameof(this.Date):
           this._evOccured.Date = this.Date;
           break;

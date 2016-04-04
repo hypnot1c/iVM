@@ -1,5 +1,5 @@
 ﻿using Caliburn.Micro;
-using iVM.Model;
+using iVM.Data.Model;
 
 namespace iVM.Core.UI.ViewModels
 {

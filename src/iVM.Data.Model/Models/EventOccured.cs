@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace iVM.Model
+namespace iVM.Data.Model
 {
   public class EventOccured: Event
   {
@@ -10,10 +10,11 @@ namespace iVM.Model
     public decimal Expense { get; set; }
     public decimal Profit { get; set; }
     public ICollection<FillUp> FillUps { get; set; }
-
+    public ICollection<Repair> Repairs { get; set; }
     public EventOccured()
     {
       this.FillUps = new List<FillUp>();
+      this.Repairs = new List<Repair>();
     }
   }
 }

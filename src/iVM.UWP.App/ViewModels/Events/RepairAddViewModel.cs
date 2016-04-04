@@ -44,7 +44,7 @@ namespace iVM.UWP.App.ViewModels
 
     protected override void Save()
     {
-      this._evOccured.Name = "Ремонт";
+      //this._evOccured.Name = "Ремонт";
       this._eventManager.RepairAdd(this._evOccured, this._repair);
 
       if (this._navigationService.CanGoBack)

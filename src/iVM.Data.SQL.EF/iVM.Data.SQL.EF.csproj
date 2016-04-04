@@ -128,14 +128,20 @@
     <Compile Include="Migrations\20160328110629_Sync.designer.cs">
       <DependentUpon>20160328110629_Sync.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160404202440_RepairInitial.cs" />
+    <Compile Include="Migrations\20160404202440_RepairInitial.designer.cs">
+      <DependentUpon>20160404202440_RepairInitial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MainContextModelSnapshot.cs" />
     <Compile Include="ModelConfigurations\EventOccuredModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\EventTypeModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\RepairModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\FillUpModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\UserModelConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLdataRepository\EventOccured.cs" />
     <Compile Include="SQLdataRepository\EventType.cs" />
+    <Compile Include="SQLdataRepository\Repair.cs" />
     <Compile Include="SQLdataRepository\FillUp.cs" />
     <Compile Include="SQLdataRepository\User.cs" />
     <Compile Include="SQLdataRepository\_SQLdataRepository.cs" />

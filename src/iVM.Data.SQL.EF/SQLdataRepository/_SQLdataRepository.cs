@@ -1,6 +1,6 @@
 ﻿using iVM.Core;
+using iVM.Data.Model;
 using iVM.Data.SQL.EF.SQLdatabase;
-using iVM.Model;
 using Microsoft.Data.Entity;
 using System.Linq;
 
@@ -43,5 +43,12 @@ namespace iVM.Data.SQL.EF
       this.AddObject(_evOccured);
     }
 
+    public void RepairAdd(EventOccured _evOccured, Repair _repair)
+    {
+      _evOccured.EventTypeID = this.db.EventTypes.Where(et => et.Name == "Repair").Select(et => et.ID).FirstOrDefault();
+      _evOccured.Repairs.Add(_repair);
+      _repair.EventOccured = _evOccured;
+      this.AddObject(_evOccured);
+    }
   }
 }

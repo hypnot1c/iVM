@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace iVM.Model
+namespace iVM.Data.Model
 {
   public class EventType: BaseModel
   {

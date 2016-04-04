@@ -1,4 +1,4 @@
-﻿using iVM.Model;
+﻿using iVM.Data.Model;
 using Microsoft.Data.Entity.Metadata.Builders;
 
 namespace iVM.Data.SQL.EF.SQLdatabase.ModelConfigurations

@@ -1,6 +1,5 @@
-﻿using iVM.Model;
+﻿using iVM.Data.Model;
 using System.Collections.Generic;
-using iVM.Data.Model;
 
 namespace iVM.Core
 {

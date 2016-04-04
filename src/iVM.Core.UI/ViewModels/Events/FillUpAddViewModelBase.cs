@@ -1,5 +1,5 @@
 ﻿using Caliburn.Micro;
-using iVM.Model;
+using iVM.Data.Model;
 using System;
 using System.ComponentModel;
 

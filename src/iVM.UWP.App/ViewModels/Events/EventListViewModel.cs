@@ -2,8 +2,8 @@
 using FontAwesome.UWP;
 using iVM.Core;
 using iVM.Core.UI.ViewModels.Events;
+using iVM.Data.Model;
 using iVM.Events;
-using iVM.Model;
 using System.Collections.Generic;
 
 namespace iVM.UWP.App.ViewModels

@@ -8,9 +8,10 @@ using iVM.Data.SQL.EF.SQLdatabase;
 namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
 {
     [DbContext(typeof(MainContext))]
-    partial class MainContextModelSnapshot : ModelSnapshot
+    [Migration("20160404202440_RepairInitial")]
+    partial class RepairInitial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");

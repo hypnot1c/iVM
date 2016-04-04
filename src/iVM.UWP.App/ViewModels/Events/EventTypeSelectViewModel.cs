@@ -1,8 +1,8 @@
 ﻿using Caliburn.Micro;
 using iVM.Core;
 using iVM.Core.UI.ViewModels;
+using iVM.Data.Model;
 using iVM.Events;
-using iVM.Model;
 using System.Collections.Generic;
 
 namespace iVM.UWP.App.ViewModels

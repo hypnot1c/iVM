@@ -1,5 +1,5 @@
-﻿using iVM.Data.SQL.EF.SQLdatabase.ModelConfigurations;
-using iVM.Model;
+﻿using iVM.Data.Model;
+using iVM.Data.SQL.EF.SQLdatabase.ModelConfigurations;
 using Microsoft.Data.Entity;
 using System;
 using System.IO;
@@ -33,6 +33,7 @@ namespace iVM.Data.SQL.EF.SQLdatabase
       modelBuilder.Entity<EventType>(EventTypeModelConfiguration.Configure);
       modelBuilder.Entity<EventOccured>(EventOccuredModelConfiguration.Configure);
       modelBuilder.Entity<FillUp>(FillUpModelConfiguration.Configure);
+      modelBuilder.Entity<Repair>(RepairModelConfiguration.Configure);
     }
   }
 }

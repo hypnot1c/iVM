@@ -1,5 +1,4 @@
 ﻿using iVM.Data.Model;
-using iVM.Model;
 using System;
 using System.Collections.Generic;
 
@@ -48,7 +47,8 @@ namespace iVM.Core.UWP
 
     public void RepairAdd(EventOccured _evOccured, Repair _repair)
     {
-      throw new NotImplementedException();
+      this.dataRepository.RepairAdd(_evOccured, _repair);
+      this.dataRepository.SaveChanges();
     }
   }
 }

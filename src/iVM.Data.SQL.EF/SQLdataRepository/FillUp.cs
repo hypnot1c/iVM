@@ -1,5 +1,5 @@
 ﻿using iVM.Core;
-using iVM.Model;
+using iVM.Data.Model;
 using System;
 using System.Linq;
 
