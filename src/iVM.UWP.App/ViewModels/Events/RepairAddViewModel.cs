@@ -47,10 +47,10 @@ namespace iVM.UWP.App.ViewModels
       //this._evOccured.Name = "Ремонт";
       this._eventManager.RepairAdd(this._evOccured, this._repair);
 
-      if (this._navigationService.CanGoBack)
-        this._navigationService.GoBack();
-      else
-        this._navigationService.For<EventListViewModel>().Navigate();
+      //if (this._navigationService.CanGoBack)
+      //  this._navigationService.GoBack();
+      //else
+      this._navigationService.For<EventListViewModel>().Navigate();
       //throw new NotImplementedException();
     }
   }

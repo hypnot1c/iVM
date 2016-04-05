@@ -46,7 +46,7 @@ namespace iVM.UWP.App.ViewModels
     public void SetupNavigationService(Frame frame)
     {
       _navigationService = _container.RegisterNavigationService(frame);
-
+      _navigationService.For<EventListViewModel>().Navigate();
       //if (_resume)
       //  _navigationService.ResumeState();
     }

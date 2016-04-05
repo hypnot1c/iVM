@@ -61,6 +61,7 @@ namespace iVM
     protected override void OnLaunched(LaunchActivatedEventArgs e)
     {
       // I am launching my main view here
+      //DisplayRootViewFor<ShellViewModel>();
       DisplayRootViewFor<ShellViewModel>();
       //SystemNavigationManager.GetForCurrentView().BackRequested += MainPage_BackRequested;
       //if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)

@@ -46,10 +46,10 @@ namespace iVM.UWP.App.ViewModels
       this._evOccured.Name = "Заправка";
       this._eventManager.FillUpAdd(this._evOccured, this._fillUp);
 
-      if (this._navigationService.CanGoBack)
-        this._navigationService.GoBack();
-      else
-        this._navigationService.For<EventListViewModel>().Navigate();
+      //if (this._navigationService.CanGoBack)
+      //  this._navigationService.GoBack();
+      //else
+      this._navigationService.For<EventListViewModel>().Navigate();
       //throw new NotImplementedException();
     }
   }
