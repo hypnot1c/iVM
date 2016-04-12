@@ -108,36 +108,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainContext.cs" />
-    <Compile Include="Migrations\20160310122259_CreateDataBase.cs" />
-    <Compile Include="Migrations\20160310122259_CreateDataBase.Designer.cs">
+    <Compile Include="Migrations\Vehicle\20160410095418_VehileInitial.cs" />
+    <Compile Include="Migrations\Vehicle\20160410095418_VehileInitial.designer.cs">
+      <DependentUpon>20160410095418_VehileInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Main\20160310122259_CreateDataBase.cs" />
+    <Compile Include="Migrations\Main\20160310122259_CreateDataBase.Designer.cs">
       <DependentUpon>20160310122259_CreateDataBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160310124407_AddUserLogin.cs" />
-    <Compile Include="Migrations\20160310124407_AddUserLogin.Designer.cs">
+    <Compile Include="Migrations\Main\20160310124407_AddUserLogin.cs" />
+    <Compile Include="Migrations\Main\20160310124407_AddUserLogin.Designer.cs">
       <DependentUpon>20160310124407_AddUserLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160310214018_EventsInitial.cs" />
-    <Compile Include="Migrations\20160310214018_EventsInitial.Designer.cs">
+    <Compile Include="Migrations\Main\20160310214018_EventsInitial.cs" />
+    <Compile Include="Migrations\Main\20160310214018_EventsInitial.Designer.cs">
       <DependentUpon>20160310214018_EventsInitial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160320194255_FillUpInitial.cs" />
-    <Compile Include="Migrations\20160320194255_FillUpInitial.Designer.cs">
+    <Compile Include="Migrations\Main\20160320194255_FillUpInitial.cs" />
+    <Compile Include="Migrations\Main\20160320194255_FillUpInitial.Designer.cs">
       <DependentUpon>20160320194255_FillUpInitial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160328110629_Sync.cs" />
-    <Compile Include="Migrations\20160328110629_Sync.designer.cs">
+    <Compile Include="Migrations\Main\20160328110629_Sync.cs" />
+    <Compile Include="Migrations\Main\20160328110629_Sync.designer.cs">
       <DependentUpon>20160328110629_Sync.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160404202440_RepairInitial.cs" />
-    <Compile Include="Migrations\20160404202440_RepairInitial.designer.cs">
+    <Compile Include="Migrations\Main\20160404202440_RepairInitial.cs" />
+    <Compile Include="Migrations\Main\20160404202440_RepairInitial.designer.cs">
       <DependentUpon>20160404202440_RepairInitial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MainContextModelSnapshot.cs" />
+    <Compile Include="Migrations\VehicleContextModelSnapshot.cs" />
     <Compile Include="ModelConfigurations\EventOccuredModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\EventTypeModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\RepairModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\FillUpModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\UserModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\Vehicle\CategoryToTypeModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\Vehicle\TypeModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\Vehicle\ModelModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\Vehicle\CategoryModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\Vehicle\BrandModelConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLdataRepository\EventOccured.cs" />
     <Compile Include="SQLdataRepository\EventType.cs" />
@@ -145,6 +155,7 @@
     <Compile Include="SQLdataRepository\FillUp.cs" />
     <Compile Include="SQLdataRepository\User.cs" />
     <Compile Include="SQLdataRepository\_SQLdataRepository.cs" />
+    <Compile Include="VehicleContext.cs" />
     <EmbeddedResource Include="Properties\iVM.Data.SQL.EF.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +168,7 @@
       <Name>iVM.Data.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

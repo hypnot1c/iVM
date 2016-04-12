@@ -9,15 +9,18 @@ namespace iVM.Data.SQL.EF
   public partial class SQLdataRepository : IDataRepository
   {
     public MainContext db { get; set; }
+    public VehicleContext vehicleDB { get; set; }
 
     public SQLdataRepository()
     {
       this.db = new MainContext();
+      this.vehicleDB = new VehicleContext();
     }
 
     public void Migrate()
     {
       this.db.Database.Migrate();
+      this.vehicleDB.Database.Migrate();
     }
 
     public void SaveChanges()

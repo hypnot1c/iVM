@@ -1,15 +1,13 @@
-using System;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
-using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
-using iVM.Data.SQL.EF.SQLdatabase;
+using System;
 
-namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
+namespace iVM.Data.SQL.EF.SQLdatabase.Migrations.Main
 {
-    [DbContext(typeof(MainContext))]
-    [Migration("20160320194255_FillUpInitial")]
-    partial class FillUpInitial
+  [DbContext(typeof(MainContext))]
+    [Migration("20160310214018_EventsInitial")]
+    partial class EventsInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,7 +27,7 @@ namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
 
                     b.Property<uint>("Expense");
 
-                    b.Property<decimal>("Mileage");
+                    b.Property<long>("Mileage");
 
                     b.Property<string>("Name")
                         .IsRequired();
@@ -52,20 +50,6 @@ namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
                     b.HasKey("ID");
                 });
 
-            modelBuilder.Entity("iVM.Model.FillUp", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("EventOccuredID");
-
-                    b.Property<decimal>("LiterCost");
-
-                    b.Property<decimal>("LitresValue");
-
-                    b.HasKey("ID");
-                });
-
             modelBuilder.Entity("iVM.Model.User", b =>
                 {
                     b.Property<int>("ID")
@@ -82,13 +66,6 @@ namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
                     b.HasOne("iVM.Model.EventType")
                         .WithMany()
                         .HasForeignKey("EventTypeID");
-                });
-
-            modelBuilder.Entity("iVM.Model.FillUp", b =>
-                {
-                    b.HasOne("iVM.Model.EventOccured")
-                        .WithMany()
-                        .HasForeignKey("EventOccuredID");
                 });
         }
     }

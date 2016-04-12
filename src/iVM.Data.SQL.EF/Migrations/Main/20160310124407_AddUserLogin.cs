@@ -1,6 +1,6 @@
 using Microsoft.Data.Entity.Migrations;
 
-namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
+namespace iVM.Data.SQL.EF.SQLdatabase.Migrations.Main
 {
   public partial class AddUserLogin : Migration
     {

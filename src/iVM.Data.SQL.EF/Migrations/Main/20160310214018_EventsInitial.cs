@@ -2,7 +2,7 @@ using Microsoft.Data.Entity.Migrations;
 using System;
 using System.Linq;
 
-namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
+namespace iVM.Data.SQL.EF.SQLdatabase.Migrations.Main
 {
   public partial class EventsInitial : Migration
   {

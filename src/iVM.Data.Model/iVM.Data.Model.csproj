@@ -51,6 +51,11 @@
     <Compile Include="Models\FillUp.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Motorcycle.cs" />
+    <Compile Include="Models\Vehicle\CategoryToType.cs" />
+    <Compile Include="Models\Vehicle\Model.cs" />
+    <Compile Include="Models\Vehicle\Brand.cs" />
+    <Compile Include="Models\Vehicle\Type.cs" />
+    <Compile Include="Models\Vehicle\Category.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="Models\RepairType.cs" />

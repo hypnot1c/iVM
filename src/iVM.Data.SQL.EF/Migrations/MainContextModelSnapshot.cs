@@ -1,13 +1,10 @@
-using System;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
-using Microsoft.Data.Entity.Metadata;
-using Microsoft.Data.Entity.Migrations;
-using iVM.Data.SQL.EF.SQLdatabase;
+using System;
 
-namespace iVM.Data.SQL.EF.SQLdatabase.Migrations
+namespace iVM.Data.SQL.EF.SQLdatabase.Migrations.Main
 {
-    [DbContext(typeof(MainContext))]
+  [DbContext(typeof(MainContext))]
     partial class MainContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
