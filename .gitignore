@@ -50,3 +50,4 @@ Temporary Items
 # Compile items
 src/iVM*/bin/
 src/iVM*/obj/
+packages/

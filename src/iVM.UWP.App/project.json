@@ -1,14 +1,14 @@
 ﻿{
   "dependencies": {
-    "Caliburn.Micro": "3.0.0",
-    "Caliburn.Micro.Core": "3.0.0",
+    "Caliburn.Micro": "3.0.1",
+    "Caliburn.Micro.Core": "3.0.1",
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework.Sqlite": "7.0.0-rc1-final",
     "FontAwesome.UWP": "4.5.0.8",
-    "Microsoft.ApplicationInsights": "1.0.0",
-    "Microsoft.ApplicationInsights.PersistenceChannel": "1.0.0",
-    "Microsoft.ApplicationInsights.WindowsApps": "1.0.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
+    "Microsoft.ApplicationInsights": "2.0.1",
+    "Microsoft.ApplicationInsights.PersistenceChannel": "1.2.3",
+    "Microsoft.ApplicationInsights.WindowsApps": "1.1.1",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
   },
   "frameworks": {
     "uap10.0": {}
