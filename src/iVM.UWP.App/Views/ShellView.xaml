@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
   xmlns:fa="using:FontAwesome.UWP"
-  xmlns:cm="using:Caliburn.Micro">
+  xmlns:cm="using:Caliburn.Micro"
+  Background="{ThemeResource DefaultBgColor}">
 
   <Page.Resources>
     <ResourceDictionary>
@@ -16,8 +17,8 @@
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Page.Resources>
-
-  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  
+  <Grid Background="{ThemeResource DefaultBgColor}">
     <Grid.RowDefinitions>
       <RowDefinition Height="1*" />
       <RowDefinition Height="Auto" />
