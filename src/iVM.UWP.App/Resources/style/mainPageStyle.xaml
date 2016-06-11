@@ -6,5 +6,6 @@
   <Style TargetType="Button" x:Name="btnMenuItem">
     <Setter Property="Height" Value="50"/>
     <Setter Property="Width" Value="Auto"/>
+    <Setter Property="Foreground" Value="White"/>
   </Style>
 </ResourceDictionary>
