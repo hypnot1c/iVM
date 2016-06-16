@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39b40365-9aba-43d0-913f-5364ee6703ab}</ProjectGuid>
+    <ProjectGuid>{39B40365-9ABA-43D0-913F-5364EE6703AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>iVM.Core.Entity</RootNamespace>
@@ -37,8 +37,21 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="Entitties\Events\EventOccuredEntity.cs" />
+    <Compile Include="Entitties\Events\EventScheduledEntity.cs" />
+    <Compile Include="Entitties\Events\FillUpEntity.cs" />
+    <Compile Include="Entitties\Events\MaintenanceEntity.cs" />
+    <Compile Include="Entitties\Events\RepairEntity.cs" />
+    <Compile Include="Entitties\Events\MaintenanceScheduledEntity.cs" />
+    <Compile Include="Entitties\Events\RepairScheduledEntity.cs" />
+    <Compile Include="Entitties\UserEntity.cs" />
+    <Compile Include="Entitties\Vehicles\CarEntity.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EventType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entitties\Vehicles\VehicleEntity.cs" />
+    <Compile Include="RepairBaseEntity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -48,5 +61,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
 </Project>

@@ -38,13 +38,10 @@
     <None Include="Diagrams\EntitiesDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseModel.cs" />
     <Compile Include="Models\Maintenance.cs" />
     <Compile Include="Models\MaintenanceScheduled.cs" />
     <Compile Include="Models\Bicycle.cs" />
-    <Compile Include="MaintenanceBase.cs" />
     <Compile Include="Models\Car.cs" />
-    <Compile Include="Event.cs" />
     <Compile Include="Models\EventOccured.cs" />
     <Compile Include="Models\EventScheduled.cs" />
     <Compile Include="Models\EventType.cs" />
@@ -57,11 +54,7 @@
     <Compile Include="Models\Vehicle\Type.cs" />
     <Compile Include="Models\Vehicle\Category.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vehicle.cs" />
-    <Compile Include="Models\RepairType.cs" />
     <Compile Include="Models\Repair.cs" />
-    <Compile Include="RepairBase.cs" />
-    <Compile Include="Models\RepairScheduled.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\iVM.Core.Entity\iVM.Core.Entity.csproj">

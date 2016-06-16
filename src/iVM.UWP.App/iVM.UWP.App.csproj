@@ -186,6 +186,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\iVM.Core.Entity\iVM.Core.Entity.csproj">
+      <Project>{39b40365-9aba-43d0-913f-5364ee6703ab}</Project>
+      <Name>iVM.Core.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\iVM.Core.UI\iVM.Core.UI.csproj">
       <Project>{3b69b4d1-12c2-4048-b898-8a5164757556}</Project>
       <Name>iVM.Core.UI</Name>
@@ -193,14 +197,6 @@
     <ProjectReference Include="..\iVM.Core\iVM.Core.csproj">
       <Project>{fb1b2de1-b288-44ce-b504-ac5c7fec3dfb}</Project>
       <Name>iVM.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Data.Model\iVM.Data.Model.csproj">
-      <Project>{c510242c-989b-45da-b779-9e47c47d7bca}</Project>
-      <Name>iVM.Data.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Data.SQL.EF\iVM.Data.SQL.EF.csproj">
-      <Project>{43164ba4-1966-4a16-8fe1-0879237ece4f}</Project>
-      <Name>iVM.Data.SQL.EF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
