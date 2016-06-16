@@ -1,7 +1,8 @@
-﻿namespace iVM.Data.Model
+﻿using iVM.Core.Entity;
+
+namespace iVM.Data.Model
 {
-  public class User: BaseModel
+  public class User: UserEntity
   {
-    public string Login { get; set; }
   }
 }

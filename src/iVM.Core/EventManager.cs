@@ -1,4 +1,4 @@
-﻿using iVM.Data.Model;
+﻿using iVM.Core.Entity;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +13,7 @@ namespace iVM.Core.UWP
       this.dataRepository = dataRepository;
     }
 
-    public IEnumerable<EventOccured> EventsOccured
+    public IEnumerable<EventOccuredEntity> EventsOccured
     {
       get
       {
@@ -39,16 +39,16 @@ namespace iVM.Core.UWP
       }
     }
 
-    public void FillUpAdd(EventOccured _evOccured, FillUp _fillUp)
+    public void FillUpAdd(FillUpEntity _fillUp)
     {
-      this.dataRepository.FillUpAdd(_evOccured, _fillUp);
-      this.dataRepository.SaveChanges();
+      //this.dataRepository.FillUpAdd(_evOccured, _fillUp);
+      //this.dataRepository.SaveChanges();
     }
 
-    public void RepairAdd(EventOccured _evOccured, Repair _repair)
+    public void RepairAdd(RepairEntity _repair)
     {
-      this.dataRepository.RepairAdd(_evOccured, _repair);
-      this.dataRepository.SaveChanges();
+      //this.dataRepository.RepairAdd(_evOccured, _repair);
+      //this.dataRepository.SaveChanges();
     }
   }
 }

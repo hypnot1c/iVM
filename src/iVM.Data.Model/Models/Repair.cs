@@ -1,9 +1,9 @@
-﻿namespace iVM.Data.Model
+﻿using iVM.Core.Entity;
+
+namespace iVM.Data.Model
 {
-  public class Repair : RepairBase
+  public class Repair : RepairEntity
   {
-    public string ServiceStationName { get; set; }
-    public int EventOccuredID { get; set; }
-    public EventOccured EventOccured { get; set; }
+
   }
 }

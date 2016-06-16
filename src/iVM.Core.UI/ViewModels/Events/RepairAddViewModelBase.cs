@@ -1,5 +1,5 @@
 ﻿using Caliburn.Micro;
-using iVM.Data.Model;
+using iVM.Core.Entity;
 using System;
 using System.ComponentModel;
 
@@ -7,13 +7,13 @@ namespace iVM.Core.UI.ViewModels
 {
   public class RepairAddViewModelBase: BaseViewModel
   {
-    protected readonly EventOccured _evOccured;
-    protected readonly Repair _repair;
+    protected readonly EventOccuredEntity _evOccured;
+    protected readonly RepairEntity _repair;
 
     public RepairAddViewModelBase(IEventAggregator eventAggregator): base(eventAggregator)
     {
-      this._evOccured = new EventOccured();
-      this._repair = new Repair();
+      this._evOccured = new EventOccuredEntity();
+      this._repair = new RepairEntity();
     }
 
     private DateTime _date;
