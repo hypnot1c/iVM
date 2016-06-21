@@ -1,6 +1,6 @@
 ﻿namespace iVM.Core.Entity
 {
-  public abstract class Event: BaseEntity
+  public abstract class EventEntity: BaseEntity
   {
     public EventType Type { get; set; }
     public string Name { get; set; }

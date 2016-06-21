@@ -1,6 +1,6 @@
 ﻿namespace iVM.Core.Entity.Entitties
 {
-  public class EventScheduledEntity: Event
+  public class EventScheduledEntity: EventEntity
   {
   }
 }

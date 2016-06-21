@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace iVM.Data.SQL.EF
 {
-  public partial class SQLdataRepository : IDataRepository
+  public partial class SQLdataRepository : IRepository
   {
     public IQueryable<FillUp> FillUps
     {

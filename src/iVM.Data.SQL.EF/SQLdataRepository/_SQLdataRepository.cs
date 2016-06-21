@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace iVM.Data.SQL.EF
 {
-  public partial class SQLdataRepository : IDataRepository
+  public partial class SQLdataRepository : IRepository
   {
     public MainContext db { get; set; }
     public VehicleContext vehicleDB { get; set; }

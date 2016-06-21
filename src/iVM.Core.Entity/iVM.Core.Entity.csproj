@@ -47,7 +47,7 @@
     <Compile Include="Entitties\Events\RepairScheduledEntity.cs" />
     <Compile Include="Entitties\UserEntity.cs" />
     <Compile Include="Entitties\Vehicles\CarEntity.cs" />
-    <Compile Include="Event.cs" />
+    <Compile Include="EventEntity.cs" />
     <Compile Include="EventType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entitties\Vehicles\VehicleEntity.cs" />
