@@ -5,11 +5,11 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39B40365-9ABA-43D0-913F-5364EE6703AB}</ProjectGuid>
+    <ProjectGuid>{016C266E-97B4-4577-A317-AFD1BB5B3E3A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>iVM.Core.Entity</RootNamespace>
-    <AssemblyName>iVM.Core.Entity</AssemblyName>
+    <RootNamespace>iVM.Vehicle.Model</RootNamespace>
+    <AssemblyName>iVM.Vehicle.Model</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,25 +35,15 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\iVM.Core.Entity\iVM.Core.Entity.csproj">
+      <Project>{39b40365-9aba-43d0-913f-5364ee6703ab}</Project>
+      <Name>iVM.Core.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseEntity.cs" />
-    <Compile Include="Entities\Events\EventOccuredEntity.cs" />
-    <Compile Include="Entities\Events\EventScheduledEntity.cs" />
-    <Compile Include="Entities\Events\FillUpEntity.cs" />
-    <Compile Include="Entities\Events\MaintenanceEntity.cs" />
-    <Compile Include="Entities\Events\RepairEntity.cs" />
-    <Compile Include="Entities\Events\MaintenanceScheduledEntity.cs" />
-    <Compile Include="Entities\Events\RepairScheduledEntity.cs" />
-    <Compile Include="Entities\UserEntity.cs" />
-    <Compile Include="Entities\Vehicles\BrandEntity.cs" />
-    <Compile Include="Entities\Vehicles\CarEntity.cs" />
-    <Compile Include="Entities\Vehicles\ModelEntity.cs" />
-    <Compile Include="EventEntity.cs" />
-    <Compile Include="EventType.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="VehicleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entities\Vehicles\VehicleEntity.cs" />
-    <Compile Include="RepairBaseEntity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

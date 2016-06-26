@@ -1,7 +1,6 @@
 ﻿{
   "dependencies": {
     "Caliburn.Micro": "3.0.1",
-    "Caliburn.Micro.Core": "3.0.1",
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework.Sqlite": "7.0.0-rc1-final",
     "FontAwesome.UWP": "4.5.0.8",

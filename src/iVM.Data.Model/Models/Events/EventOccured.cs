@@ -1,10 +1,9 @@
-﻿using iVM.Core.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace iVM.Data.Model
 {
-    public class EventOccured: EventEntity
+  public class EventOccured: EventModel
   {
     public DateTime Date { get; set; }
     public ulong Mileage { get; set; }

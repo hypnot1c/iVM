@@ -38,13 +38,15 @@
     <None Include="Diagrams\EntitiesDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="EventModel.cs" />
     <Compile Include="Models\Events\Maintenance.cs" />
     <Compile Include="Models\Events\MaintenanceScheduled.cs" />
     <Compile Include="Models\Vehicles\Bicycle.cs" />
     <Compile Include="Models\Vehicles\Car.cs" />
     <Compile Include="Models\Events\EventOccured.cs" />
     <Compile Include="Models\Events\EventScheduled.cs" />
-    <Compile Include="Models\Events\EventType.cs" />
+    <Compile Include="EventType.cs" />
     <Compile Include="Models\Events\FillUp.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vehicles\Motorcycle.cs" />

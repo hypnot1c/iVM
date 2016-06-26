@@ -1,6 +1,4 @@
 ﻿using Caliburn.Micro;
-using iVM.Core;
-using iVM.Core.UWP;
 using iVM.UWP.App.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -36,19 +34,19 @@ namespace iVM
       _container.RegisterWinRTServices();
  
       // Make sure to register your containers here
-      _container
-        .PerRequest<IDataRepository, IDataRepository>()
-        .PerRequest<IEventManager, EventManager>()
-        .PerRequest<ShellViewModel>()
-        .PerRequest<EventListViewModel>()
-        .PerRequest<EventTypeSelectViewModel>()
-        .PerRequest<FillUpAddViewModel>()
-        .PerRequest<RepairAddViewModel>();
+      //_container
+      //  .PerRequest<IDataRepository, IDataRepository>()
+      //  .PerRequest<IEventManager, EventManager>()
+      //  .PerRequest<ShellViewModel>()
+      //  .PerRequest<EventListViewModel>()
+      //  .PerRequest<EventTypeSelectViewModel>()
+      //  .PerRequest<FillUpAddViewModel>()
+      //  .PerRequest<RepairAddViewModel>();
 
-      _eventAggregator = _container.GetInstance<IEventAggregator>();
+      this._eventAggregator = _container.GetInstance<IEventAggregator>();
 
-      var db = _container.GetInstance<IDataRepository>();
-      db.Migrate();
+      //var db = _container.GetInstance<IDataRepository>();
+      //db.Migrate();
     }
 
     /// <summary> 
