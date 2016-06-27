@@ -1,6 +1,6 @@
 ﻿namespace iVM.Core.Entity
 {
-  public class BrandEntity : BaseEntity
+  public class VehicleModelEntity : BaseEntity
   {
     public string Name { get; set; }
   }

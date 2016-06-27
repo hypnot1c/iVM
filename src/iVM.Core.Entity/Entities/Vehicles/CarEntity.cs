@@ -3,7 +3,7 @@
   public class CarEntity : VehicleEntity
   {
     public int BrandId { get; set; }
-    public BrandEntity Brand { get; set; }
+    public VehicleBrandEntity Brand { get; set; }
 
   }
 }
