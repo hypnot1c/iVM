@@ -32,16 +32,17 @@ namespace iVM
       _container = new WinRTContainer();
       
       _container.RegisterWinRTServices();
- 
+
       // Make sure to register your containers here
-      //_container
+      _container
       //  .PerRequest<IDataRepository, IDataRepository>()
       //  .PerRequest<IEventManager, EventManager>()
-      //  .PerRequest<ShellViewModel>()
+        .PerRequest<ShellViewModel>()
       //  .PerRequest<EventListViewModel>()
       //  .PerRequest<EventTypeSelectViewModel>()
       //  .PerRequest<FillUpAddViewModel>()
       //  .PerRequest<RepairAddViewModel>();
+        .PerRequest<VehicleAddViewModel>();
 
       this._eventAggregator = _container.GetInstance<IEventAggregator>();
 
@@ -59,7 +60,7 @@ namespace iVM
     {
       // I am launching my main view here
       //DisplayRootViewFor<ShellViewModel>();
-      DisplayRootViewFor<ShellViewModel>();
+      DisplayRootViewFor<VehicleAddViewModel>();
       //SystemNavigationManager.GetForCurrentView().BackRequested += MainPage_BackRequested;
       //if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
       //{
