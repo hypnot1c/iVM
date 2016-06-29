@@ -28,6 +28,7 @@ namespace iVM.Core.UI.ViewModels
     }
 
     private IObservableCollection<VehicleModelEntity> _vehicleModels;
+
     public IObservableCollection<VehicleModelEntity> VehicleModels
     {
       get { return this._vehicleModels; }
@@ -38,12 +39,10 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
-    public VehicleModelEntity vehicleModel { get; set; }
-
-
-    public VehicleAddViewModelBase(IEventAggregator eventAggregator) : base(eventAggregator)
+    private readonly IRepository<VehicleBrandEntity> vehicleRepository;
+    public VehicleAddViewModelBase(IEventAggregator eventAggregator, IRepository<VehicleBrandEntity> vehicleRepository) : base(eventAggregator)
     {
-
+      this.vehicleRepository = vehicleRepository;
     }
   }
 }

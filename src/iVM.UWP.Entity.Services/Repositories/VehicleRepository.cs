@@ -1,13 +1,80 @@
-﻿using iVM.Core.Entity;
-using Microsoft.EntityFrameworkCore;
+﻿using iVM.Core;
+using iVM.Core.Entity;
+using iVM.Vehicle.Data.EF;
+using iVM.Vehicle.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace iVM.UWP.Entity.Services
 {
-  public class VehicleRepository : EFRepository<VehicleEntity>
+  public class VehicleBrandRepository : IRepository<VehicleBrandEntity>
   {
-    public VehicleRepository(DbContext dbContext) : base(dbContext)
+    private VehicleContext _ctxVehicle;
+    public VehicleBrandRepository(VehicleContext vehicleContext)
     {
-
+      this._ctxVehicle = vehicleContext;
     }
+
+    public void Add(VehicleBrandEntity entity)
+    {
+      var vb = new VehicleBrandModel
+      {
+        Id = entity.ID,
+        Title = entity.Name
+      };
+      this._ctxVehicle.VehicleBrands.Add(vb);
+      this._ctxVehicle.SaveChanges();
+    }
+
+    public VehicleBrandEntity Get(int id)
+    {
+      throw new NotImplementedException();
+    }
+
+    public IEnumerable<VehicleBrandEntity> GetAll()
+    {
+      return this._ctxVehicle.VehicleBrands.Select(vb => new VehicleBrandEntity() { ID = vb.Id, Name = vb.Title });
+    }
+
+    public void Remove(int Id)
+    {
+      throw new NotImplementedException();
+    }
+
+    #region IDisposable Support
+    private bool disposedValue = false; // To detect redundant calls
+
+    protected virtual void Dispose(bool disposing)
+    {
+      if (!disposedValue)
+      {
+        if (disposing)
+        {
+          // TODO: dispose managed state (managed objects).
+        }
+
+        // TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
+        // TODO: set large fields to null.
+
+        disposedValue = true;
+      }
+    }
+
+    // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
+    // ~VehicleRepository() {
+    //   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+    //   Dispose(false);
+    // }
+
+    // This code added to correctly implement the disposable pattern.
+    public void Dispose()
+    {
+      // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+      Dispose(true);
+      // TODO: uncomment the following line if the finalizer is overridden above.
+      // GC.SuppressFinalize(this);
+    }
+    #endregion
   }
 }

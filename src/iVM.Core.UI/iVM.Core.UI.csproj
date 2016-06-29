@@ -55,6 +55,10 @@
       <Project>{39b40365-9aba-43d0-913f-5364ee6703ab}</Project>
       <Name>iVM.Core.Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\iVM.Core\iVM.Core.csproj">
+      <Project>{FB1B2DE1-B288-44CE-B504-AC5C7FEC3DFB}</Project>
+      <Name>iVM.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\Events\" />

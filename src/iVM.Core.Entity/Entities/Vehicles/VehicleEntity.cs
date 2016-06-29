@@ -1,6 +1,6 @@
 ﻿namespace iVM.Core.Entity
 {
-  public class VehicleEntity: BaseEntity
+  public abstract class VehicleEntity: BaseEntity
   {
     public string Title { get; set; }
 

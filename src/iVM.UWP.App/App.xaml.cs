@@ -1,5 +1,9 @@
 ﻿using Caliburn.Micro;
+using iVM.Core;
+using iVM.Core.Entity;
 using iVM.UWP.App.ViewModels;
+using iVM.UWP.Entity.Services;
+using iVM.Vehicle.Data.EF;
 using System;
 using System.Collections.Generic;
 using Windows.ApplicationModel;
@@ -35,7 +39,8 @@ namespace iVM
 
       // Make sure to register your containers here
       _container
-      //  .PerRequest<IDataRepository, IDataRepository>()
+        .Singleton<VehicleContext, VehicleContext>()
+        .PerRequest<IRepository<VehicleBrandEntity>, VehicleBrandRepository>()
       //  .PerRequest<IEventManager, EventManager>()
         .PerRequest<ShellViewModel>()
       //  .PerRequest<EventListViewModel>()
@@ -46,6 +51,9 @@ namespace iVM
 
       this._eventAggregator = _container.GetInstance<IEventAggregator>();
 
+      var vehicleBrandRepository = _container.GetInstance<IRepository<VehicleBrandEntity>>();
+      vehicleBrandRepository.Add(new VehicleBrandEntity { ID = 1, Name = "Peugeot" });
+      vehicleBrandRepository.Add(new VehicleBrandEntity { ID = 2, Name = "Volkswagen" });
       //var db = _container.GetInstance<IDataRepository>();
       //db.Migrate();
     }

@@ -108,7 +108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Repositories\VehicleRepository.cs" />
-    <Compile Include="EFRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\iVM.UWP.Entity.Services.rd.xml" />
   </ItemGroup>
@@ -124,6 +123,14 @@
     <ProjectReference Include="..\iVM.Core\iVM.Core.csproj">
       <Project>{fb1b2de1-b288-44ce-b504-ac5c7fec3dfb}</Project>
       <Name>iVM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iVM.Vehicle.Data.EF\iVM.Vehicle.Data.EF.csproj">
+      <Project>{dfd01018-353c-43d2-a437-08df0fc67434}</Project>
+      <Name>iVM.Vehicle.Data.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iVM.Vehicle.Model\iVM.Vehicle.Model.csproj">
+      <Project>{016c266e-97b4-4577-a317-afd1bb5b3e3a}</Project>
+      <Name>iVM.Vehicle.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
