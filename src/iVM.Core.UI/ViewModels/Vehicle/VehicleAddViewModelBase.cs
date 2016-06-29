@@ -43,6 +43,7 @@ namespace iVM.Core.UI.ViewModels
 
     public VehicleAddViewModelBase(IEventAggregator eventAggregator) : base(eventAggregator)
     {
+
     }
   }
 }
