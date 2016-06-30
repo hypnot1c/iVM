@@ -46,7 +46,15 @@ namespace iVM.UWP.App.ViewModels
     public void SetupNavigationService(Frame frame)
     {
       _navigationService = _container.RegisterNavigationService(frame);
-      //_navigationService.For<VehicleAddViewModel>().Navigate();
+      var IsFirstVisit = VehicleService.UserVehicles.Length;
+      if (IsFirstVisit)
+      {
+        _navigationService.For<VehicleAddViewModel>().Navigate();
+      }
+      else
+      {
+        //_navigationService.For<Event>().Navigate();
+      }
       //if (_resume)
       //  _navigationService.ResumeState();
     }

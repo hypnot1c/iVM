@@ -16,6 +16,17 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
+    protected VehicleBrandEntity _selectedVehicleBrand;
+    public VehicleBrandEntity SelectedVehicleBrand
+    {
+      get { return this._selectedVehicleBrand; }
+      set
+      {
+        this._selectedVehicleBrand = value;
+        this.NotifyOfPropertyChange(() => this.SelectedVehicleBrand);
+      }
+    }
+
     private IObservableCollection<VehicleBrandEntity> _vehicleBrands;
     public IObservableCollection<VehicleBrandEntity> VehicleBrands
     {
@@ -24,6 +35,7 @@ namespace iVM.Core.UI.ViewModels
       {
         this._vehicleBrands = value;
         this.NotifyOfPropertyChange(() => this.VehicleBrands);
+
       }
     }
 
@@ -40,7 +52,9 @@ namespace iVM.Core.UI.ViewModels
     }
 
     private readonly IRepository<VehicleBrandEntity> vehicleRepository;
-    public VehicleAddViewModelBase(IEventAggregator eventAggregator, IRepository<VehicleBrandEntity> vehicleRepository) : base(eventAggregator)
+    public VehicleAddViewModelBase(
+      IEventAggregator eventAggregator, 
+      IRepository<VehicleBrandEntity> vehicleRepository) : base(eventAggregator)
     {
       this.vehicleRepository = vehicleRepository;
     }

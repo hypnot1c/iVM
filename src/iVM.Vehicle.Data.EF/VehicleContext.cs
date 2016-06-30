@@ -35,5 +35,12 @@ namespace iVM.Vehicle.Data.EF
     //{
     //  modelBuilder.Entity<VehicleModel>(VehicleModelModelConfiguration.Configure);
     //}
+
+    public void FillDummyData()
+    {
+      this.Add(new VehicleBrandModel { Id = 1, Title = "Peugeot" });
+      this.Add(new VehicleBrandModel { Id = 2, Title = "Volkswagen" });
+      this.SaveChanges();
+    }
   }
 }

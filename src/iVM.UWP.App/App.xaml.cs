@@ -41,21 +41,13 @@ namespace iVM
       _container
         .Singleton<VehicleContext, VehicleContext>()
         .PerRequest<IRepository<VehicleBrandEntity>, VehicleBrandRepository>()
-      //  .PerRequest<IEventManager, EventManager>()
         .PerRequest<ShellViewModel>()
-      //  .PerRequest<EventListViewModel>()
-      //  .PerRequest<EventTypeSelectViewModel>()
-      //  .PerRequest<FillUpAddViewModel>()
-      //  .PerRequest<RepairAddViewModel>();
         .PerRequest<VehicleAddViewModel>();
 
       this._eventAggregator = _container.GetInstance<IEventAggregator>();
 
-      var vehicleBrandRepository = _container.GetInstance<IRepository<VehicleBrandEntity>>();
-      vehicleBrandRepository.Add(new VehicleBrandEntity { ID = 1, Name = "Peugeot" });
-      vehicleBrandRepository.Add(new VehicleBrandEntity { ID = 2, Name = "Volkswagen" });
-      //var db = _container.GetInstance<IDataRepository>();
-      //db.Migrate();
+      var vehicleContext = _container.GetInstance<VehicleContext>();
+      vehicleContext.FillDummyData();
     }
 
     /// <summary> 
@@ -67,13 +59,12 @@ namespace iVM
     protected override void OnLaunched(LaunchActivatedEventArgs e)
     {
       // I am launching my main view here
-      //DisplayRootViewFor<ShellViewModel>();
-      DisplayRootViewFor<VehicleAddViewModel>();
+      DisplayRootViewFor<ShellViewModel>();
       //SystemNavigationManager.GetForCurrentView().BackRequested += MainPage_BackRequested;
-      //if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
-      //{
-      //  _eventAggregator.PublishOnUIThread(new ResumeStateMessage());
-      //}
+      if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+      {
+        _eventAggregator.PublishOnUIThread("ResumeMessage");
+      }
     }
 
     /// <summary>
