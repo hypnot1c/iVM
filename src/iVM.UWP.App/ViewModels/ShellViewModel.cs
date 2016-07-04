@@ -12,6 +12,20 @@ namespace iVM.UWP.App.ViewModels
     protected INavigationService _navigationService;
 
     private List<ActionButton> _actionButtons;
+
+    private bool _isFirstVisit;
+    public bool IsFirstVisit
+    {
+      get
+      {
+        return this._isFirstVisit;
+      }
+      set
+      {
+        this._isFirstVisit = value;
+        this.NotifyOfPropertyChange(() => this.IsFirstVisit);
+      }
+    }
     public List<ActionButton> ActionButtons
     {
       get
@@ -31,6 +45,7 @@ namespace iVM.UWP.App.ViewModels
       _container = container;
       _eventAggregator = eventAggregator;
       this._actionButtons = new List<ActionButton>();
+      this.IsFirstVisit = true;
     }
 
     protected override void OnActivate()
@@ -46,14 +61,13 @@ namespace iVM.UWP.App.ViewModels
     public void SetupNavigationService(Frame frame)
     {
       _navigationService = _container.RegisterNavigationService(frame);
-      var IsFirstVisit = VehicleService.UserVehicles.Length;
-      if (IsFirstVisit)
+      if (this.IsFirstVisit)
       {
         _navigationService.For<VehicleAddViewModel>().Navigate();
       }
       else
       {
-        //_navigationService.For<Event>().Navigate();
+        //_navigationService.For<>().Navigate();
       }
       //if (_resume)
       //  _navigationService.ResumeState();
