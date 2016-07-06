@@ -81,6 +81,6 @@
         </DataTemplate>
       </ItemsControl.ItemTemplate>
     </ItemsControl>
-    <Button Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Visibility="{Binding IsFirstVisit, Converter={StaticResource boolToVis}}" Width="50" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="Button_Click"></Button>
+    <Button Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" Width="50" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="Button_Click"></Button>
   </Grid>
 </Page>
