@@ -18,16 +18,9 @@ namespace iVM.UWP.App.ViewModels
       this.VehicleTypes = new BindableCollection<VehicleTypeEntity>() { new VehicleTypeEntity() { Name = "Car" } };
       this.VehicleBrands = new BindableCollection<VehicleBrandEntity>();
       this.VehicleBrands.AddRange(vehicleRepository.GetAll());
-    }
 
-    protected override void viewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-    {
-      switch (e.PropertyName)
-      {
-        case nameof(this.SelectedVehicleBrand) :
-          //this._navService.For<ShellViewModel>().Navigate();
-          break;
-      }
+      this.IsFirstStep = true;
+      this.IsSecondStep = false;
     }
   }
 }

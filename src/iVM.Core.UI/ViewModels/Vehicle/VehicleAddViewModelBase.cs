@@ -1,10 +1,23 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity;
+using System.ComponentModel;
 
 namespace iVM.Core.UI.ViewModels
 {
   public class VehicleAddViewModelBase : BaseViewModel
   {
+
+    protected VehicleTypeEntity _selectedVehicleType;
+    public VehicleTypeEntity SelectedVehicleType
+    {
+      get { return this._selectedVehicleType; }
+      set
+      {
+        this._selectedVehicleType = value;
+        this.NotifyOfPropertyChange(() => this.SelectedVehicleType);
+      }
+    }
+
     private IObservableCollection<VehicleTypeEntity> _vehicleTypes;
     public IObservableCollection<VehicleTypeEntity> VehicleTypes
     {
@@ -51,12 +64,48 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
+    private bool _isFirstStep;
+    public bool IsFirstStep
+    {
+      get { return _isFirstStep; }
+      set
+      {
+        _isFirstStep = value;
+        this.NotifyOfPropertyChange(() => this.IsFirstStep);
+      }
+    }
+    private bool _isSecondStep;
+    public bool IsSecondStep
+    {
+      get { return _isSecondStep; }
+      set
+      {
+        _isSecondStep = value;
+        this.NotifyOfPropertyChange(() => this.IsSecondStep);
+      }
+    }
+
+    protected override void viewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+    {
+      switch (e.PropertyName)
+      {
+        case nameof(this.SelectedVehicleBrand):
+          //this._navService.For<ShellViewModel>().Navigate();
+          break;
+        case nameof(this.SelectedVehicleType):
+          this.IsFirstStep = false;
+          this.IsSecondStep = true;
+          break;
+      }
+    }
+
     private readonly IRepository<VehicleBrandEntity> vehicleRepository;
     public VehicleAddViewModelBase(
-      IEventAggregator eventAggregator, 
+      IEventAggregator eventAggregator,
       IRepository<VehicleBrandEntity> vehicleRepository) : base(eventAggregator)
     {
       this.vehicleRepository = vehicleRepository;
     }
+
   }
 }
