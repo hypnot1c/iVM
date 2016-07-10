@@ -1,6 +1,27 @@
-﻿namespace iVM.Core.Entity.Services
+﻿using System.Collections.Generic;
+
+namespace iVM.Core.Entity.Services
 {
-  interface IVehicleService
+  public class VehicleService
   {
+    private readonly IRepository<VehicleBrandEntity> vehicleBrandRepository;
+    private readonly IRepository<VehicleTypeEntity> vehicleTypeRepository;
+
+    public VehicleService(
+      IRepository<VehicleTypeEntity> vehicleTypeRepository,
+      IRepository<VehicleBrandEntity> vehicleBrandRepository
+      )
+    {
+      this.vehicleTypeRepository = vehicleTypeRepository;
+      this.vehicleBrandRepository = vehicleBrandRepository;
+    }
+    IEnumerable<VehicleBrandEntity> GetAllBrands()
+    {
+      return this.vehicleBrandRepository.GetAll();
+    }
+    IEnumerable<VehicleTypeEntity> GetAllTypes()
+    {
+      return this.vehicleTypeRepository.GetAll();
+    }
   }
 }

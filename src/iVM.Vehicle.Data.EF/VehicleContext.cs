@@ -38,8 +38,13 @@ namespace iVM.Vehicle.Data.EF
 
     public void FillDummyData()
     {
+      // Add Peugeot data
       this.Add(new VehicleBrandModel { Id = 1, Title = "Peugeot" });
       this.Add(new VehicleBrandModel { Id = 2, Title = "Volkswagen" });
+
+      this.Add(new VehicleModel { Id = 1, BrandId = 1, Type = VehicleType.Car, Name = "406" });
+      this.Add(new VehicleModel { Id = 2, BrandId = 2, Type = VehicleType.Car, Name = "Passat" });
+
       this.SaveChanges();
     }
   }

@@ -51,6 +51,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\iVM.Core.Entity.Services\iVM.Core.Entity.Services.csproj">
+      <Project>{44670be0-6e21-4dce-926a-f56be1001a13}</Project>
+      <Name>iVM.Core.Entity.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\iVM.Core.Entity\iVM.Core.Entity.csproj">
       <Project>{39b40365-9aba-43d0-913f-5364ee6703ab}</Project>
       <Name>iVM.Core.Entity</Name>

@@ -1,6 +1,9 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity;
+using iVM.Core.Entity.Services;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 
 namespace iVM.Core.UI.ViewModels
 {
@@ -18,8 +21,8 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
-    private IObservableCollection<VehicleTypeEntity> _vehicleTypes;
-    public IObservableCollection<VehicleTypeEntity> VehicleTypes
+    private IEnumerable<VehicleTypeEntity> _vehicleTypes;
+    public IEnumerable<VehicleTypeEntity> VehicleTypes
     {
       get { return this._vehicleTypes; }
       set
@@ -40,8 +43,8 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
-    private IObservableCollection<VehicleBrandEntity> _vehicleBrands;
-    public IObservableCollection<VehicleBrandEntity> VehicleBrands
+    private IEnumerable<VehicleBrandEntity> _vehicleBrands;
+    public IEnumerable<VehicleBrandEntity> VehicleBrands
     {
       get { return this._vehicleBrands; }
       set
@@ -52,11 +55,29 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
-    private IObservableCollection<VehicleModelEntity> _vehicleModels;
-
-    public IObservableCollection<VehicleModelEntity> VehicleModels
+    protected VehicleBrandEntity _selectedVehicleModel;
+    public VehicleBrandEntity SelectedVehicleModel
     {
-      get { return this._vehicleModels; }
+      get { return this._selectedVehicleModel; }
+      set
+      {
+        this._selectedVehicleModel = value;
+        this.NotifyOfPropertyChange(() => this.SelectedVehicleModel);
+      }
+    }
+
+    private IEnumerable<VehicleModelEntity> _vehicleModels;
+
+    public IEnumerable<VehicleModelEntity> VehicleModels
+    {
+      get
+      {
+        if (this.SelectedVehicleBrand != null && this.SelectedVehicleType != null)
+        {
+          return this._vehicleModels.Where(m => m.BrandId == this.SelectedVehicleBrand.ID && m.vehicleTypeId == this.SelectedVehicleType.ID);
+        }
+        return this._vehicleModels;
+      }
       set
       {
         this._vehicleModels = value;
@@ -85,12 +106,24 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
+    private bool _isThirdStep;
+    public bool IsThirdStep
+    {
+      get { return _isThirdStep; }
+      set
+      {
+        _isThirdStep = value;
+        this.NotifyOfPropertyChange(() => this.IsThirdStep);
+      }
+    }
+
     protected override void viewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
     {
       switch (e.PropertyName)
       {
         case nameof(this.SelectedVehicleBrand):
-          //this._navService.For<ShellViewModel>().Navigate();
+          this.IsSecondStep = false;
+          this.IsThirdStep = true;
           break;
         case nameof(this.SelectedVehicleType):
           this.IsFirstStep = false;
@@ -99,12 +132,12 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
-    private readonly IRepository<VehicleBrandEntity> vehicleRepository;
+    private readonly IVehicleService vehicleService;
     public VehicleAddViewModelBase(
       IEventAggregator eventAggregator,
-      IRepository<VehicleBrandEntity> vehicleRepository) : base(eventAggregator)
+      IVehicleService vehicleService) : base(eventAggregator)
     {
-      this.vehicleRepository = vehicleRepository;
+      this.vehicleService = vehicleService;
     }
 
   }

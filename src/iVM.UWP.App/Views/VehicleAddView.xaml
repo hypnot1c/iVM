@@ -37,7 +37,7 @@
         </DataTemplate>
       </ListBox.ItemTemplate>
     </ListBox>
-    <ListBox Grid.Row="2" x:Name="VehicleModels" SelectedItem="{Binding SelectedModel, Mode=TwoWay}" Visibility="Collapsed" VerticalAlignment="Center">
+    <ListBox Grid.Row="2" x:Name="VehicleModels" SelectedItem="{Binding SelectedModel, Mode=TwoWay}" Visibility="{Binding IsThirdStep, Converter={StaticResource boolToVis}}" VerticalAlignment="Center">
       <ListBox.ItemContainerStyle>
         <Style TargetType="ListBoxItem">
           <Setter Property="HorizontalContentAlignment" Value="Center"/>
