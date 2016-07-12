@@ -113,6 +113,10 @@
     <EmbeddedResource Include="Properties\iVM.Vehicle.Data.EF.rd.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\iVM.Core\iVM.Core.csproj">
+      <Project>{fb1b2de1-b288-44ce-b504-ac5c7fec3dfb}</Project>
+      <Name>iVM.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\iVM.Vehicle.Model\iVM.Vehicle.Model.csproj">
       <Project>{016c266e-97b4-4577-a317-afd1bb5b3e3a}</Project>
       <Name>iVM.Vehicle.Model</Name>

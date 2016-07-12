@@ -1,13 +1,14 @@
-﻿using iVM.Core.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace iVM.Core
 {
-  public interface IRepository<TEntity> : IDisposable where TEntity : BaseEntity
+  public interface IRepository<TEntity> : IDisposable where TEntity : class
   {
     IEnumerable<TEntity> GetAll();
     TEntity Get(int id);
+    IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
     void Add(TEntity entity);
     void Remove(int Id);
   }
