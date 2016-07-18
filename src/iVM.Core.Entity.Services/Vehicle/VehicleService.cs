@@ -15,11 +15,11 @@ namespace iVM.Core.Entity.Services
       this.vehicleTypeRepository = vehicleTypeRepository;
       this.vehicleBrandRepository = vehicleBrandRepository;
     }
-    IEnumerable<VehicleBrandEntity> GetAllBrands()
+    public IEnumerable<VehicleBrandEntity> GetAllBrands()
     {
       return this.vehicleBrandRepository.GetAll();
     }
-    IEnumerable<VehicleTypeEntity> GetAllTypes()
+    public IEnumerable<VehicleTypeEntity> GetAllTypes()
     {
       return this.vehicleTypeRepository.GetAll();
     }

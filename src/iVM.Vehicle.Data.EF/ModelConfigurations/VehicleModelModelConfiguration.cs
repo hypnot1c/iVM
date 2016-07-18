@@ -1,5 +1,5 @@
 ﻿using iVM.Vehicle.Model;
-using Microsoft.Data.Entity.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace iVM.Vehicle.Data.EF.ModelConfigurations
 {

@@ -132,10 +132,10 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
-    private readonly IVehicleService vehicleService;
+    private readonly VehicleService vehicleService;
     public VehicleAddViewModelBase(
       IEventAggregator eventAggregator,
-      IVehicleService vehicleService) : base(eventAggregator)
+      VehicleService vehicleService) : base(eventAggregator)
     {
       this.vehicleService = vehicleService;
     }

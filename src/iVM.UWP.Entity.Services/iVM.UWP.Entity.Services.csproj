@@ -107,7 +107,8 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repositories\VehicleRepository.cs" />
+    <Compile Include="Repositories\VehicleTypeRepository.cs" />
+    <Compile Include="Repositories\VehicleBrandRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\iVM.UWP.Entity.Services.rd.xml" />
   </ItemGroup>

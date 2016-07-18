@@ -5,6 +5,7 @@ using iVM.Vehicle.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace iVM.UWP.Entity.Services
 {
@@ -74,6 +75,12 @@ namespace iVM.UWP.Entity.Services
       Dispose(true);
       // TODO: uncomment the following line if the finalizer is overridden above.
       // GC.SuppressFinalize(this);
+    }
+
+    public IEnumerable<VehicleBrandEntity> Find(Expression<Func<VehicleBrandEntity, bool>> predicate)
+    {
+      //return this._ctxVehicle.VehicleBrands.Select(v => v.ToEntity()).Where(predicate);
+      throw new NotImplementedException();
     }
     #endregion
   }
