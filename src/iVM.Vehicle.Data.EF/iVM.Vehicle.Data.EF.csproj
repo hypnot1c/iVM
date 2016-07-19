@@ -107,6 +107,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelConfigurations\VehicleBrandModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\VehicleModelModelConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VehicleContext.cs" />

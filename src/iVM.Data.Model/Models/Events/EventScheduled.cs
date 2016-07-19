@@ -1,6 +1,6 @@
 ﻿namespace iVM.Data.Model
 {
-  public class EventScheduled: Event
+  public class EventScheduled: EventModel
   {
 
   }

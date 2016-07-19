@@ -1,8 +1,6 @@
-﻿using iVM.Core.Entity;
-
-namespace iVM.Data.Model
+﻿namespace iVM.Data.Model
 {
-  public class Repair : RepairEntity
+  public class Repair : BaseModel
   {
 
   }

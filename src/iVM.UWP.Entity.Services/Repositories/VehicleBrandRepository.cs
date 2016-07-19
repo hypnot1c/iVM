@@ -2,7 +2,6 @@
 using iVM.Core.Repositories;
 using iVM.Vehicle.Data.EF;
 using iVM.Vehicle.Model;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +50,7 @@ namespace iVM.UWP.Entity.Services
     public IEnumerable<VehicleBrandEntity> GetBrandsByType(int id)
     {
       return this._ctxVehicle.VehicleBrands
-        .Include(b => b.VehicleTypes)
+        //.Include(b => b.VehicleTypes)
         .Where(b => b.VehicleTypes.Any(t => (int)t == id))
         .Select(b => new VehicleBrandEntity
         {
@@ -59,7 +58,7 @@ namespace iVM.UWP.Entity.Services
           Name = b.Title
         }
         )
-        .AsEnumerable();
+        .ToList();
     }
 
     #region IDisposable Support

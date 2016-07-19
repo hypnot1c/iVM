@@ -24,6 +24,7 @@ namespace iVM.Core.UI.ViewModels
       switch (e.PropertyName)
       {
         case nameof(this.SelectedVehicleBrand):
+          this.VehicleModels = this.vehicleService.GetModelsByBrandAndType(this._selectedVehicleType.ID, this._selectedVehicleBrand.ID);
           this.IsSecondStep = false;
           this.IsThirdStep = true;
           break;

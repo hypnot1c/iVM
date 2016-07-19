@@ -1,6 +1,8 @@
-﻿using iVM.Vehicle.Model;
+﻿using iVM.Vehicle.Data.EF.ModelConfigurations;
+using iVM.Vehicle.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 
 namespace iVM.Vehicle.Data.EF
 {
@@ -31,16 +33,17 @@ namespace iVM.Vehicle.Data.EF
         .UseInternalServiceProvider(serviceProvider);
     }
 
-    //protected override void OnModelCreating(ModelBuilder modelBuilder)
-    //{
-    //  modelBuilder.Entity<VehicleModel>(VehicleModelModelConfiguration.Configure);
-    //}
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+      modelBuilder.Entity<VehicleModel>(VehicleModelModelConfiguration.Configure);
+      modelBuilder.Entity<VehicleBrandModel>(VehicleBrandModelConfiguration.Configure);
+    }
 
     public void FillDummyData()
     {
       // Add Peugeot data
-      this.Add(new VehicleBrandModel { Id = 1, Title = "Peugeot" });
-      this.Add(new VehicleBrandModel { Id = 2, Title = "Volkswagen" });
+      this.Add(new VehicleBrandModel { Id = 1, Title = "Peugeot", VehicleTypes = new List<VehicleType> { VehicleType.Unknown, VehicleType.Car } });
+      this.Add(new VehicleBrandModel { Id = 2, Title = "Volkswagen", VehicleTypes = new List<VehicleType> { VehicleType.Unknown, VehicleType.Car } });
 
       this.Add(new VehicleModel { Id = 1, BrandId = 1, Type = VehicleType.Car, Name = "406" });
       this.Add(new VehicleModel { Id = 2, BrandId = 2, Type = VehicleType.Car, Name = "Passat" });

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace iVM.Data.Model
+﻿namespace iVM.Data.Model
 {
-  public class MaintenanceScheduled : MaintenanceBase
+  public class MaintenanceScheduled : BaseModel
   {
   }
 }

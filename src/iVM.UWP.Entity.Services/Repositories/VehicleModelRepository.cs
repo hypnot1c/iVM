@@ -4,45 +4,60 @@ using iVM.Vehicle.Data.EF;
 using iVM.Vehicle.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace iVM.UWP.Entity.Services
 {
-  public class VehicleTypeRepository : IVehicleTypeRepository
+  public class VehicleModelRepository : IVehicleModelRepository
   {
     private VehicleContext _ctxVehicle;
-    public VehicleTypeRepository(VehicleContext vehicleContext)
+    public VehicleModelRepository(VehicleContext vehicleContext)
     {
       this._ctxVehicle = vehicleContext;
     }
 
-    public void Add(VehicleTypeEntity entity)
+    public void Add(VehicleModelEntity entity)
     {
-      throw new NotImplementedException();
-    }
-
-    public VehicleTypeEntity Get(int id)
-    {
-      throw new NotImplementedException();
-    }
-
-    public IEnumerable<VehicleTypeEntity> GetAll()
-    {
-      var res = new List<VehicleTypeEntity>();
-      foreach(VehicleType type in Enum.GetValues(typeof(VehicleType)))
+      var vb = new VehicleBrandModel
       {
-        res.Add(new VehicleTypeEntity() { ID = (int)type, Name = type.ToString() });
-      }
-      return res;
+        Id = entity.ID,
+        Title = entity.Name
+      };
+      this._ctxVehicle.VehicleBrands.Add(vb);
+      this._ctxVehicle.SaveChanges();
     }
-
     public void Remove(int Id)
     {
       throw new NotImplementedException();
     }
-    public IEnumerable<VehicleTypeEntity> Find(Expression<Func<VehicleTypeEntity, bool>> predicate)
+    public IEnumerable<VehicleModelEntity> GetAll()
+    {
+      return this._ctxVehicle.VehicleBrands.Select(vb => new VehicleModelEntity() { ID = vb.Id, Name = vb.Title });
+    }
+
+    public VehicleModelEntity Get(int id)
     {
       throw new NotImplementedException();
+    }
+
+    public IEnumerable<VehicleModelEntity> Find(Expression<Func<VehicleModelEntity, bool>> predicate)
+    {
+      //return this._ctxVehicle.VehicleBrands.Select(v => v.ToEntity()).Where(predicate);
+      throw new NotImplementedException();
+    }
+
+    public IEnumerable<VehicleModelEntity> GetModelsByBrandAndType(int typeId, int brandId)
+    {
+      return this._ctxVehicle.VehicleModels
+        .Where(vm => (int)vm.Type == typeId && vm.BrandId == brandId)
+        .Select(vm => new VehicleModelEntity
+        {
+          BrandId = vm.BrandId,
+          vehicleTypeId = (int)vm.Type,
+          ID = vm.Id,
+          Name = vm.Name
+        });
     }
 
     #region IDisposable Support
@@ -78,7 +93,6 @@ namespace iVM.UWP.Entity.Services
       // TODO: uncomment the following line if the finalizer is overridden above.
       // GC.SuppressFinalize(this);
     }
-
     #endregion
   }
 }
