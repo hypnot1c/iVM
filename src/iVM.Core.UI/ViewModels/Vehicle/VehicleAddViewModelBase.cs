@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Core.Entity.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,6 +10,50 @@ namespace iVM.Core.UI.ViewModels
 {
   public class VehicleAddViewModelBase : BaseViewModel
   {
+    public VehicleAddViewModelBase(
+      IEventAggregator eventAggregator,
+      VehicleService vehicleService) : base(eventAggregator)
+    {
+      this.vehicleService = vehicleService;
+      this.VehicleTypes = this.vehicleService.GetAllTypes();
+      this.IsFirstStep = true;
+      this.IsSecondStep = false;
+    }
+    protected override void viewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+    {
+      switch (e.PropertyName)
+      {
+        case nameof(this.SelectedVehicleBrand):
+          this.IsSecondStep = false;
+          this.IsThirdStep = true;
+          break;
+        case nameof(this.SelectedVehicleType):
+          this.VehicleBrands = this.vehicleService.GetBrandsByType(this.SelectedVehicleType.ID);
+          this.IsFirstStep = false;
+          this.IsSecondStep = true;
+          break;
+      }
+    }
+
+    public void Add()
+    {
+      try
+      {
+        var vehicle = VehicleEntity.CreateVehicle(this._selectedVehicleType);
+        vehicle.Brand = this._selectedVehicleBrand;
+        vehicle.Model = this._selectedVehicleModel;
+        vehicle.Type = this._selectedVehicleType;
+        vehicle.Title = $"{this._selectedVehicleBrand.Name} {this._selectedVehicleModel.Name}";
+
+        this.vehicleService.AddVehicleToUser(vehicle);
+      }
+      catch(Exception ex)
+      {
+
+      }
+    }
+
+    private readonly VehicleService vehicleService;
 
     protected VehicleTypeEntity _selectedVehicleType;
     public VehicleTypeEntity SelectedVehicleType
@@ -55,8 +100,8 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
-    protected VehicleBrandEntity _selectedVehicleModel;
-    public VehicleBrandEntity SelectedVehicleModel
+    protected VehicleModelEntity _selectedVehicleModel;
+    public VehicleModelEntity SelectedVehicleModel
     {
       get { return this._selectedVehicleModel; }
       set
@@ -117,28 +162,15 @@ namespace iVM.Core.UI.ViewModels
       }
     }
 
-    protected override void viewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+    private bool _isFinalStep;
+    public bool IsFinalStep
     {
-      switch (e.PropertyName)
+      get { return _isFinalStep; }
+      set
       {
-        case nameof(this.SelectedVehicleBrand):
-          this.IsSecondStep = false;
-          this.IsThirdStep = true;
-          break;
-        case nameof(this.SelectedVehicleType):
-          this.IsFirstStep = false;
-          this.IsSecondStep = true;
-          break;
+        _isFinalStep = value;
+        this.NotifyOfPropertyChange(() => this.IsFinalStep);
       }
     }
-
-    private readonly VehicleService vehicleService;
-    public VehicleAddViewModelBase(
-      IEventAggregator eventAggregator,
-      VehicleService vehicleService) : base(eventAggregator)
-    {
-      this.vehicleService = vehicleService;
-    }
-
   }
 }

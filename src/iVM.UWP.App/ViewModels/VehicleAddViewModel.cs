@@ -14,10 +14,6 @@ namespace iVM.UWP.App.ViewModels
       VehicleService vehicleService) : base(eventAggregator, vehicleService)
     {
       this._navService = navigationService;
-      this.VehicleTypes = vehicleService.GetAllTypes();
-      this.VehicleBrands = vehicleService.GetAllBrands();
-      this.IsFirstStep = true;
-      this.IsSecondStep = false;
     }
   }
 }

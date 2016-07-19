@@ -111,6 +111,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\iVM.Data.EF.rd.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\iVM.Data.Model\iVM.Data.Model.csproj">
+      <Project>{C510242C-989B-45DA-B779-9E47C47D7BCA}</Project>
+      <Name>iVM.Data.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

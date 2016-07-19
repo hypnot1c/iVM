@@ -1,65 +1,49 @@
 ﻿using iVM.Core.Entity;
 using iVM.Core.Repositories;
-using iVM.Vehicle.Data.EF;
-using iVM.Vehicle.Model;
-using Microsoft.EntityFrameworkCore;
+using iVM.Data.EF;
+using iVM.Data.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 
 namespace iVM.UWP.Entity.Services
 {
-  public class VehicleBrandRepository : IVehicleBrandRepository
+  public class VehicleRepository : IVehicleRepository
   {
-    private VehicleContext _ctxVehicle;
-    public VehicleBrandRepository(VehicleContext vehicleContext)
+    private MainContext _ctxMain;
+    public VehicleRepository(MainContext mainContext)
     {
-      this._ctxVehicle = vehicleContext;
+      this._ctxMain = mainContext;
     }
 
-    public void Add(VehicleBrandEntity entity)
+    public void Add(VehicleEntity entity)
     {
-      var vb = new VehicleBrandModel
+      var vehicle = new VehicleModel
       {
-        Id = entity.ID,
-        Title = entity.Name
+        Model_vehicleModelId = entity.Model.ID,
+        Type_vehicleTypeId = entity.Type.ID
       };
-      this._ctxVehicle.VehicleBrands.Add(vb);
-      this._ctxVehicle.SaveChanges();
+
+      this._ctxMain.Vehicles.Add(vehicle);
     }
     public void Remove(int Id)
     {
       throw new NotImplementedException();
     }
-    public IEnumerable<VehicleBrandEntity> GetAll()
-    {
-      return this._ctxVehicle.VehicleBrands.Select(vb => new VehicleBrandEntity() { ID = vb.Id, Name = vb.Title });
-    }
-
-    public VehicleBrandEntity Get(int id)
+    public IEnumerable<VehicleEntity> GetAll()
     {
       throw new NotImplementedException();
     }
 
-    public IEnumerable<VehicleBrandEntity> Find(Expression<Func<VehicleBrandEntity, bool>> predicate)
+    public VehicleEntity Get(int id)
+    {
+      throw new NotImplementedException();
+    }
+
+    public IEnumerable<VehicleEntity> Find(Expression<Func<VehicleEntity, bool>> predicate)
     {
       //return this._ctxVehicle.VehicleBrands.Select(v => v.ToEntity()).Where(predicate);
       throw new NotImplementedException();
-    }
-
-    public IEnumerable<VehicleBrandEntity> GetBrandsByType(int id)
-    {
-      return this._ctxVehicle.VehicleBrands
-        .Include(b => b.VehicleTypes)
-        .Where(b => b.VehicleTypes.Any(t => (int)t == id))
-        .Select(b => new VehicleBrandEntity
-        {
-          ID = b.Id,
-          Name = b.Title
-        }
-        )
-        .AsEnumerable();
     }
 
     #region IDisposable Support

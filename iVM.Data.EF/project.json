@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "EntityFramework.SQLite": "7.0.0-rc1-final",
+    "Microsoft.EntityFrameworkCore.InMemory": "1.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
   },
   "frameworks": {

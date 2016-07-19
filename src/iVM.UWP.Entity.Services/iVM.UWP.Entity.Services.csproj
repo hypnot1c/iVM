@@ -107,12 +107,17 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="Repositories\VehicleTypeRepository.cs" />
     <Compile Include="Repositories\VehicleBrandRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\iVM.UWP.Entity.Services.rd.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\iVM.Data.EF\iVM.Data.EF.csproj">
+      <Project>{5C6D83FC-E82C-4472-AFBB-DC1300BED8FF}</Project>
+      <Name>iVM.Data.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\iVM.Core.Entity.Services\iVM.Core.Entity.Services.csproj">
       <Project>{44670be0-6e21-4dce-926a-f56be1001a13}</Project>
       <Name>iVM.Core.Entity.Services</Name>
@@ -124,6 +129,10 @@
     <ProjectReference Include="..\iVM.Core\iVM.Core.csproj">
       <Project>{fb1b2de1-b288-44ce-b504-ac5c7fec3dfb}</Project>
       <Name>iVM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iVM.Data.Model\iVM.Data.Model.csproj">
+      <Project>{C510242C-989B-45DA-B779-9E47C47D7BCA}</Project>
+      <Name>iVM.Data.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\iVM.Vehicle.Data.EF\iVM.Vehicle.Data.EF.csproj">
       <Project>{dfd01018-353c-43d2-a437-08df0fc67434}</Project>

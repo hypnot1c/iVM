@@ -1,5 +1,5 @@
-﻿using iVM.Core;
-using iVM.Core.Entity;
+﻿using iVM.Core.Entity;
+using iVM.Core.Repositories;
 using iVM.Vehicle.Data.EF;
 using iVM.Vehicle.Model;
 using System;
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 
 namespace iVM.UWP.Entity.Services
 {
-  public class VehicleTypeRepository : IRepository<VehicleTypeEntity>
+  public class VehicleTypeRepository : IVehicleTypeRepository
   {
     private VehicleContext _ctxVehicle;
     public VehicleTypeRepository(VehicleContext vehicleContext)
