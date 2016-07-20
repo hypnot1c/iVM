@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity.Services;
 using iVM.Core.Repositories;
+using iVM.Data.EF;
 using iVM.UWP.App.ViewModels;
 using iVM.UWP.Entity.Services;
 using iVM.Vehicle.Data.EF;
@@ -40,9 +41,11 @@ namespace iVM
       // Make sure to register your containers here
       _container
         .Singleton<VehicleContext, VehicleContext>()
+        .Singleton<MainContext, MainContext>()
         .PerRequest<IVehicleTypeRepository, VehicleTypeRepository>()
         .PerRequest<IVehicleBrandRepository, VehicleBrandRepository>()
         .PerRequest<IVehicleModelRepository, VehicleModelRepository>()
+        .PerRequest<IVehicleRepository, VehicleRepository>()
         .PerRequest<VehicleService, VehicleService>()
         .PerRequest<ShellViewModel>()
         .PerRequest<VehicleAddViewModel>();

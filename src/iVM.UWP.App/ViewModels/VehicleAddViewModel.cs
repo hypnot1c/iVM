@@ -15,5 +15,11 @@ namespace iVM.UWP.App.ViewModels
     {
       this._navService = navigationService;
     }
+
+    public override void Add()
+    {
+      base.Add();
+      this._navService.For<EventListViewModel>().Navigate();
+    }
   }
 }

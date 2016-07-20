@@ -10,8 +10,6 @@
   <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid.RowDefinitions>
       <RowDefinition Height="*" />
-      <RowDefinition Height="*" />
-      <RowDefinition Height="*" />
     </Grid.RowDefinitions>
     <ListBox Grid.Row="0" x:Name="VehicleTypes" SelectedItem="{Binding SelectedVehicleType, Mode=TwoWay}" Visibility="{Binding IsFirstStep, Converter={StaticResource boolToVis}}" VerticalAlignment="Center">
       <ListBox.ItemContainerStyle>
@@ -25,7 +23,7 @@
         </DataTemplate>
       </ListBox.ItemTemplate>
     </ListBox>
-    <ListBox Grid.Row="1" x:Name="VehicleBrands" SelectedItem="{Binding SelectedVehicleBrand, Mode=TwoWay}" Visibility="{Binding IsSecondStep, Converter={StaticResource boolToVis}}" VerticalAlignment="Center">
+    <ListBox Grid.Row="0" x:Name="VehicleBrands" SelectedItem="{Binding SelectedVehicleBrand, Mode=TwoWay}" Visibility="{Binding IsSecondStep, Converter={StaticResource boolToVis}}" VerticalAlignment="Center">
       <ListBox.ItemContainerStyle>
         <Style TargetType="ListBoxItem">
           <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -37,7 +35,7 @@
         </DataTemplate>
       </ListBox.ItemTemplate>
     </ListBox>
-    <ListBox Grid.Row="2" x:Name="VehicleModels" SelectedItem="{Binding SelectedModel, Mode=TwoWay}" Visibility="{Binding IsThirdStep, Converter={StaticResource boolToVis}}" VerticalAlignment="Center">
+    <ListBox Grid.Row="0" x:Name="VehicleModels" SelectedItem="{Binding SelectedVehicleModel, Mode=TwoWay}" Visibility="{Binding IsThirdStep, Converter={StaticResource boolToVis}}" VerticalAlignment="Center">
       <ListBox.ItemContainerStyle>
         <Style TargetType="ListBoxItem">
           <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -49,5 +47,12 @@
         </DataTemplate>
       </ListBox.ItemTemplate>
     </ListBox>
+    <StackPanel Grid.Row="0" Visibility="{Binding IsFinalStep, Converter={StaticResource boolToVis}}">
+      <TextBlock Text="Is This Correct?" />
+      <TextBlock Name="SelectedVehicleType_Name" />
+      <TextBlock Name="SelectedVehicleBrand_Name" />
+      <TextBlock Name="SelectedVehicleModel_Name" />
+      <Button Name="Add">Add</Button>
+    </StackPanel>
   </Grid>
 </Page>

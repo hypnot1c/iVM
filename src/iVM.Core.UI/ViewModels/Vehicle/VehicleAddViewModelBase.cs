@@ -23,20 +23,24 @@ namespace iVM.Core.UI.ViewModels
     {
       switch (e.PropertyName)
       {
-        case nameof(this.SelectedVehicleBrand):
-          this.VehicleModels = this.vehicleService.GetModelsByBrandAndType(this._selectedVehicleType.ID, this._selectedVehicleBrand.ID);
-          this.IsSecondStep = false;
-          this.IsThirdStep = true;
-          break;
         case nameof(this.SelectedVehicleType):
           this.VehicleBrands = this.vehicleService.GetBrandsByType(this.SelectedVehicleType.ID);
           this.IsFirstStep = false;
           this.IsSecondStep = true;
           break;
+        case nameof(this.SelectedVehicleBrand):
+          this.VehicleModels = this.vehicleService.GetModelsByBrandAndType(this._selectedVehicleType.ID, this._selectedVehicleBrand.ID);
+          this.IsSecondStep = false;
+          this.IsThirdStep = true;
+          break;
+        case nameof(this.SelectedVehicleModel):
+          this.IsThirdStep = false;
+          this.IsFinalStep = true;
+          break;
       }
     }
 
-    public void Add()
+    public virtual void Add()
     {
       try
       {

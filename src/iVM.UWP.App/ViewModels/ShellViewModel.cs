@@ -2,6 +2,7 @@
 using iVM.Events;
 using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 namespace iVM.UWP.App.ViewModels
 {
@@ -45,7 +46,11 @@ namespace iVM.UWP.App.ViewModels
       _container = container;
       _eventAggregator = eventAggregator;
       this._actionButtons = new List<ActionButton>();
-      this.IsNotFirstVisit = false;
+    }
+
+    private void _navigationService_Navigated(object sender, NavigationEventArgs e)
+    {
+      this.IsNotFirstVisit = e.Content.GetType().Name != "VehicleAddView";
     }
 
     protected override void OnActivate()
@@ -61,6 +66,8 @@ namespace iVM.UWP.App.ViewModels
     public void SetupNavigationService(Frame frame)
     {
       _navigationService = _container.RegisterNavigationService(frame);
+      this._navigationService.Navigated += _navigationService_Navigated;
+
       if (!this.IsNotFirstVisit)
       {
         _navigationService.For<VehicleAddViewModel>().Navigate();

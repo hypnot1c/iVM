@@ -105,6 +105,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Events\EventListViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\VehicleAddViewModel.cs" />
     <Compile Include="Views\FillUpAddView.xaml.cs">
@@ -206,6 +207,10 @@
       <Project>{fb1b2de1-b288-44ce-b504-ac5c7fec3dfb}</Project>
       <Name>iVM.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\iVM.Data.EF\iVM.Data.EF.csproj">
+      <Project>{5C6D83FC-E82C-4472-AFBB-DC1300BED8FF}</Project>
+      <Name>iVM.Data.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\iVM.UWP.Entity.Services\iVM.UWP.Entity.Services.csproj">
       <Project>{7cf6d525-b244-42c3-9d7b-009b6246b95f}</Project>
       <Name>iVM.UWP.Entity.Services</Name>
@@ -215,9 +220,7 @@
       <Name>iVM.Vehicle.Data.EF</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\Events\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
