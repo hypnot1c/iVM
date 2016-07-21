@@ -17,7 +17,19 @@
   </Page.Resources>
 
   <Grid>
-    <ListView x:Name="Events">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+    </Grid.RowDefinitions>
+    <CommandBar>
+      <CommandBar.Content>
+        <TextBlock Text="Title" />
+      </CommandBar.Content>
+      <CommandBar.PrimaryCommands>
+        <AppBarButton Icon="Add" Label="Add"/>
+      </CommandBar.PrimaryCommands>
+    </CommandBar>
+    <ListView Grid.Row="1" x:Name="Events">
       <ListView.ItemTemplate>
         <DataTemplate>
           <StackPanel>

@@ -17,70 +17,49 @@
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Page.Resources>
-  
+
   <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="1*" />
-    </Grid.RowDefinitions>
-    <SplitView Grid.Row="1" x:Name="mainMenu" DisplayMode="CompactOverlay" CompactPaneLength="0" OpenPaneLength="150" PanePlacement="Left">
+    <SplitView x:Name="mainMenu" Margin="0,0,0,0" HorizontalAlignment="Stretch" DisplayMode="CompactOverlay" CompactPaneLength="{Binding CollapsedPanelLength}" OpenPaneLength="150" PanePlacement="Left">
       <SplitView.Pane>
-        <ListBox x:Name="NavigateTo">
-          <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
-            <Grid HorizontalAlignment="Stretch">
-              <Grid.ColumnDefinitions >
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="Auto" />
-              </Grid.ColumnDefinitions>
-              <TextBlock Grid.Column="0" Text="Statistic" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-              <fa:FontAwesome Grid.Column="1" Width="50" Icon="AreaChart" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Grid>
-          </ListBoxItem>
-          <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
-            <Grid HorizontalAlignment="Stretch">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="Auto" />
-              </Grid.ColumnDefinitions>
-              <TextBlock Grid.Column="0" Text="Events" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-              <fa:FontAwesome Grid.Column="1" Width="50" Icon="Calendar" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Grid>
-          </ListBoxItem>
-          <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
-            <Grid HorizontalAlignment="Stretch">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="Auto" />
-              </Grid.ColumnDefinitions>
-              <TextBlock Grid.Column="0" Text="Home" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-              <fa:FontAwesome Grid.Column="1" Width="50" Icon="Home" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Grid>
-          </ListBoxItem>
-        </ListBox>
+        <StackPanel>
+          <Button HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" Width="50" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="Button_Click"></Button>
+          <ListBox x:Name="NavigateTo">
+            <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
+              <Grid HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions >
+                  <ColumnDefinition Width="Auto" />
+                  <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <fa:FontAwesome Grid.Column="0" Width="50" Icon="Home" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="Home" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+              </Grid>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
+              <Grid HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto" />
+                  <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <fa:FontAwesome Grid.Column="0" Width="50" Icon="Calendar" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="Events" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+              </Grid>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
+              <Grid HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto" />
+                  <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <fa:FontAwesome Grid.Column="0" Width="50" Icon="AreaChart" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="Statistic" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+              </Grid>
+            </ListBoxItem>
+          </ListBox>
+        </StackPanel>
       </SplitView.Pane>
       <SplitView.Content>
         <Frame cm:Message.Attach="[Event Loaded] = [SetupNavigationService($source)]" DataContext="{x:Null}" />
       </SplitView.Content>
     </SplitView>
-    <!--<Button Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Width="50">
-      <fa:FontAwesome Icon="Automobile" />
-    </Button>
-    <TextBlock Grid.Row="1" Text="Peugeot 406" VerticalAlignment="Center" Margin="55,0,0,0" FontSize="14" />-->
-    <ItemsControl Grid.Row="0" x:Name="ActionButtons" Margin="50,0,0,0">
-      <ItemsControl.ItemsPanel>
-        <ItemsPanelTemplate>
-          <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-          </StackPanel>
-        </ItemsPanelTemplate>
-      </ItemsControl.ItemsPanel>
-      <ItemsControl.ItemTemplate>
-        <DataTemplate>
-          <Button cm:Message.Attach="[Event Click] = [onActionButton_Click($dataContext)]" HorizontalAlignment="Right" Style="{StaticResource btnMenuItem}" Width="50">
-            <fa:FontAwesome Icon="{Binding Icon}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-          </Button>
-        </DataTemplate>
-      </ItemsControl.ItemTemplate>
-    </ItemsControl>
-    <Button Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" Width="50" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="Button_Click"></Button>
   </Grid>
 </Page>

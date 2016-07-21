@@ -14,6 +14,18 @@ namespace iVM.UWP.App.ViewModels
 
     private List<ActionButton> _actionButtons;
 
+    private int _collapsedPanelLength;
+
+    public int CollapsedPanelLength
+    {
+      get { return _collapsedPanelLength; }
+      set
+      {
+        _collapsedPanelLength = value;
+        this.NotifyOfPropertyChange(() => this.CollapsedPanelLength);
+      }
+    }
+
     private bool _isNotFirstVisit;
     public bool IsNotFirstVisit
     {
@@ -43,14 +55,17 @@ namespace iVM.UWP.App.ViewModels
 
     public ShellViewModel(WinRTContainer container, IEventAggregator eventAggregator)
     {
-      _container = container;
-      _eventAggregator = eventAggregator;
+      this._container = container;
+      this._eventAggregator = eventAggregator;
+      this.CollapsedPanelLength = 0;
       this._actionButtons = new List<ActionButton>();
+      this.IsNotFirstVisit = true;
     }
 
     private void _navigationService_Navigated(object sender, NavigationEventArgs e)
     {
       this.IsNotFirstVisit = e.Content.GetType().Name != "VehicleAddView";
+      this.CollapsedPanelLength = this.IsNotFirstVisit ? 50 : 0;
     }
 
     protected override void OnActivate()
@@ -74,7 +89,7 @@ namespace iVM.UWP.App.ViewModels
       }
       else
       {
-        //_navigationService.For<>().Navigate();
+        _navigationService.For<EventListViewModel>().Navigate();
       }
       //if (_resume)
       //  _navigationService.ResumeState();
