@@ -1,5 +1,4 @@
 ﻿using Caliburn.Micro;
-using iVM.Data.Model;
 using System;
 using System.ComponentModel;
 
@@ -7,8 +6,8 @@ namespace iVM.Core.UI.ViewModels
 {
   public class FillUpAddViewModelBase : BaseViewModel
   {
-    protected readonly EventOccured _evOccured;
-    protected readonly FillUp _fillUp;
+    //protected readonly EventOccured _evOccured;
+    //protected readonly FillUp _fillUp;
 
     private DateTime _date;
     public DateTime Date
@@ -47,32 +46,32 @@ namespace iVM.Core.UI.ViewModels
 
     public FillUpAddViewModelBase(IEventAggregator eventAggregator) : base(eventAggregator)
     {
-      this._evOccured = new EventOccured();
-      this._fillUp = new FillUp();
+      //this._evOccured = new EventOccured();
+      //this._fillUp = new FillUp();
       this.Date = DateTime.Now;
     }
 
     protected override void viewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
     {
-      base.viewModel_PropertyChanged(sender, e);
-      switch (e.PropertyName)
-      {
-        case nameof(this.Date):
-          this._evOccured.Date = this.Date;
-          break;
-        case nameof(this.Litres):
-          this._fillUp.LitresValue = Decimal.Parse(this.Litres);
-          break;
-        case nameof(this.Expense):
-          this._evOccured.Expense = Decimal.Parse(this.Expense);
-          break;
-        case nameof(this.LiterCost):
-          this._fillUp.LiterCost = Decimal.Parse(this.LiterCost);
-          break;
-        case nameof(this.Mileage):
-          this._evOccured.Mileage = this.Mileage;
-          break;
-      }
+      //base.viewModel_PropertyChanged(sender, e);
+      //switch (e.PropertyName)
+      //{
+      //  case nameof(this.Date):
+      //    this._evOccured.Date = this.Date;
+      //    break;
+      //  case nameof(this.Litres):
+      //    this._fillUp.LitresValue = Decimal.Parse(this.Litres);
+      //    break;
+      //  case nameof(this.Expense):
+      //    this._evOccured.Expense = Decimal.Parse(this.Expense);
+      //    break;
+      //  case nameof(this.LiterCost):
+      //    this._fillUp.LiterCost = Decimal.Parse(this.LiterCost);
+      //    break;
+      //  case nameof(this.Mileage):
+      //    this._evOccured.Mileage = this.Mileage;
+      //    break;
+      //}
     }
 
     protected virtual void Save()

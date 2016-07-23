@@ -99,6 +99,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumToListConverter.cs" />
     <Compile Include="Events\ViewActionButtonsEvent.cs" />
     <Compile Include="Helpers\UserDeviceHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -106,6 +107,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Events\EventListViewModel.cs" />
+    <Compile Include="ViewModels\Events\EventTypeSelectViewModel.cs" />
+    <Compile Include="ViewModels\Events\FillUpAddViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\VehicleAddViewModel.cs" />
     <Compile Include="Views\FillUpAddView.xaml.cs">

@@ -1,19 +1,12 @@
 ﻿using Caliburn.Micro;
-using FontAwesome.UWP;
-using iVM.Core;
 using iVM.Core.UI.ViewModels;
-using iVM.Events;
 using System;
-using System.Collections.Generic;
 
 namespace iVM.UWP.App.ViewModels
 {
   public class FillUpAddViewModel : FillUpAddViewModelBase
   {
-    private readonly IEventManager _eventManager;
     protected INavigationService _navigationService;
-
-    public List<ActionButton> ActionButtons { get; private set; }
 
     private DateTimeOffset _dateOffset;
     public DateTimeOffset DateOffset {
@@ -25,27 +18,21 @@ namespace iVM.UWP.App.ViewModels
       }
     }
 
-    public FillUpAddViewModel(IEventManager eventManager, IEventAggregator eventAggregator, INavigationService navigationService): base(eventAggregator)
+    public FillUpAddViewModel(
+      IEventAggregator eventAggregator, 
+      INavigationService navigationService): base(eventAggregator)
     {
-      this._eventManager = eventManager;
       this._navigationService = navigationService;
-      this.ActionButtons = new List<ActionButton>
-      {
-        new ActionButton { Icon = FontAwesomeIcon.Save, OnClick = this.Save }
-      };
     }
 
     protected override void OnActivate()
     {
       base.OnActivate();
-      this._evAggregator.PublishOnCurrentThread(new ViewActionButtonsEvent(this.ActionButtons));
     }
 
     protected override void Save()
     {
-      this._evOccured.Name = "Заправка";
-      this._eventManager.FillUpAdd(this._evOccured, this._fillUp);
-
+      base.Save();
       //if (this._navigationService.CanGoBack)
       //  this._navigationService.GoBack();
       //else

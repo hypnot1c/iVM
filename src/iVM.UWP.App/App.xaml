@@ -11,6 +11,7 @@
         <ResourceDictionary Source="Themes/ThemesDictionary.xaml"/>
       </ResourceDictionary.MergedDictionaries>
       <conv:BooleanToVisibilityConverter x:Key="boolToVis" />
+      <conv:EnumToListConverter x:Key="enumToList" />
     </ResourceDictionary>
   </cm:CaliburnApplication.Resources>
 </cm:CaliburnApplication>

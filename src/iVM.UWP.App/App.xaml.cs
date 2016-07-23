@@ -49,7 +49,10 @@ namespace iVM
         .PerRequest<VehicleService, VehicleService>()
         .PerRequest<ShellViewModel>()
         .PerRequest<VehicleAddViewModel>()
-        .PerRequest<EventListViewModel>();
+        .PerRequest<EventListViewModel>()
+        .PerRequest<EventTypeSelectViewModel>()
+        .PerRequest<FillUpAddViewModel>()
+        ;
 
       this._eventAggregator = _container.GetInstance<IEventAggregator>();
 

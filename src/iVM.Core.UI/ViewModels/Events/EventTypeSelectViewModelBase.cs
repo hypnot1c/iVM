@@ -1,23 +1,30 @@
 ﻿using Caliburn.Micro;
-using iVM.Data.Model;
+using iVM.Core.Entity;
+using iVM.Core.Entity.Services;
+using System;
 
 namespace iVM.Core.UI.ViewModels
 {
   public abstract class EventTypeSelectViewModelBase : BaseViewModel
   {
-    private IObservableCollection<EventType> _eventTypes;
-    public IObservableCollection<EventType> EventTypes
+    public EventTypeSelectViewModelBase(
+      IEventAggregator eventAggregator,
+      EventService eventService) : base(eventAggregator)
     {
-      get { return this._eventTypes; }
+    }
+
+    public Type EventTypes { get { return typeof(EventType); } }
+
+    private string _selectedEventType;
+    public string SelectedEventType
+    {
+      get { return this._selectedEventType; }
       set
       {
-        this._eventTypes = value;
-        this.NotifyOfPropertyChange(() => this.EventTypes);
+        this._selectedEventType = value;
+        this.NotifyOfPropertyChange(() => this.SelectedEventType);
       }
     }
 
-    public EventTypeSelectViewModelBase(IEventAggregator eventAggregator) : base(eventAggregator)
-    {
-    }
   }
 }

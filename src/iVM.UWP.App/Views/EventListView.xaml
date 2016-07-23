@@ -26,7 +26,7 @@
         <TextBlock Text="Title" />
       </CommandBar.Content>
       <CommandBar.PrimaryCommands>
-        <AppBarButton Icon="Add" Label="Add"/>
+        <AppBarButton Name="EventAdd" Icon="Add" Label="Add"/>
       </CommandBar.PrimaryCommands>
     </CommandBar>
     <ListView Grid.Row="1" x:Name="Events">
