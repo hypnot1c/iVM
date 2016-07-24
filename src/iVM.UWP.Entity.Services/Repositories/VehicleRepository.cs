@@ -1,9 +1,10 @@
 ﻿using iVM.Core.Entity;
-using iVM.Core.Repositories;
+using iVM.Core.Entity.Services;
 using iVM.Data.EF;
 using iVM.Data.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace iVM.UWP.Entity.Services
@@ -20,8 +21,8 @@ namespace iVM.UWP.Entity.Services
     {
       var vehicle = new VehicleModel
       {
-        Model_vehicleModelId = entity.Model.ID,
-        Type_vehicleTypeId = entity.Type.ID
+        Model_vehicleModelId = entity.Model.Id,
+        Type_vehicleTypeId = entity.Type.Id
       };
 
       this._ctxMain.Vehicles.Add(vehicle);
@@ -37,7 +38,12 @@ namespace iVM.UWP.Entity.Services
 
     public VehicleEntity Get(int id)
     {
-      throw new NotImplementedException();
+      var vm = this._ctxMain.Vehicles.SingleOrDefault(v => v.Id == id);
+
+      return new CarEntity
+      {
+        Id = vm.Id
+      };
     }
 
     public IEnumerable<VehicleEntity> Find(Expression<Func<VehicleEntity, bool>> predicate)

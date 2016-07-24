@@ -12,6 +12,7 @@
       </ResourceDictionary.MergedDictionaries>
       <conv:BooleanToVisibilityConverter x:Key="boolToVis" />
       <conv:EnumToListConverter x:Key="enumToList" />
+      <conv:DecimalToStringConverter x:Key="decimalToStr" />
     </ResourceDictionary>
   </cm:CaliburnApplication.Resources>
 </cm:CaliburnApplication>

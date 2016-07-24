@@ -1,6 +1,6 @@
 ﻿namespace iVM.Data.Model
 {
-  public class FillUp : BaseModel
+  public class FillUpModel : BaseModel
   {
     public int EventOccuredID { get; set; }
     public EventOccured EventOccured { get; set; }

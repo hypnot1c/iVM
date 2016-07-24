@@ -107,6 +107,8 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigurationService.cs" />
+    <Compile Include="Repositories\Event\FillUpRepository.cs" />
     <Compile Include="Repositories\VehicleModelRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="Repositories\VehicleTypeRepository.cs" />

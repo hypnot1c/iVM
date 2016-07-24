@@ -1,5 +1,5 @@
 ﻿using iVM.Core.Entity;
-using iVM.Core.Repositories;
+using iVM.Core.Entity.Services;
 using iVM.Vehicle.Data.EF;
 using iVM.Vehicle.Model;
 using System;
@@ -31,7 +31,7 @@ namespace iVM.UWP.Entity.Services
       var res = new List<VehicleTypeEntity>();
       foreach(VehicleType type in Enum.GetValues(typeof(VehicleType)))
       {
-        res.Add(new VehicleTypeEntity() { ID = (int)type, Name = type.ToString() });
+        res.Add(new VehicleTypeEntity() { Id = (int)type, Name = type.ToString() });
       }
       return res;
     }

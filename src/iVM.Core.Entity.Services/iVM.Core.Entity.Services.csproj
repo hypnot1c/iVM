@@ -46,16 +46,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Event\EventService.cs" />
+    <Compile Include="Repositories\Event\IFillUpRepository.cs" />
     <Compile Include="Repositories\Vehicle\IVehicleBrandRepository.cs" />
     <Compile Include="Repositories\Vehicle\IVehicleModelRepository.cs" />
     <Compile Include="Repositories\Vehicle\IVehicleRepository.cs" />
     <Compile Include="Repositories\Vehicle\IVehicleTypeRepository.cs" />
+    <Compile Include="User\IConfigurationService.cs" />
+    <Compile Include="User\SessionService.cs" />
     <Compile Include="Vehicle\VehicleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\Event\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

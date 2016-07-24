@@ -3,11 +3,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace iVM.Vehicle.Data.EF.ModelConfigurations
 {
-  public class VehicleModelModelConfiguration
+  public class VehicleBrandModelConfiguration
   {
-    public static void Configure(EntityTypeBuilder<VehicleModel> builder)
+    public static void Configure(EntityTypeBuilder<VehicleBrandModel> builder)
     {
       builder.HasKey(p => p.Id);
+      builder.Ignore(p => p.VehicleTypes);
     }
   }
 }

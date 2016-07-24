@@ -35,7 +35,7 @@ namespace iVM.Vehicle.Data.EF
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<VehicleModel>(VehicleModelModelConfiguration.Configure);
+      modelBuilder.Entity<VehicleModel>(VehicleModelConfiguration.Configure);
       modelBuilder.Entity<VehicleBrandModel>(VehicleBrandModelConfiguration.Configure);
     }
 

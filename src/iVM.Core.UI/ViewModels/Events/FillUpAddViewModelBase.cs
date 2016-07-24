@@ -1,4 +1,6 @@
 ﻿using Caliburn.Micro;
+using iVM.Core.Entity;
+using iVM.Core.Entity.Services;
 using System;
 using System.ComponentModel;
 
@@ -6,8 +8,9 @@ namespace iVM.Core.UI.ViewModels
 {
   public class FillUpAddViewModelBase : BaseViewModel
   {
-    //protected readonly EventOccured _evOccured;
-    //protected readonly FillUp _fillUp;
+    private readonly EventService _eventService;
+    private readonly SessionService _sessionService;
+    protected readonly FillUpEntity _fillUp;
 
     private DateTime _date;
     public DateTime Date
@@ -16,38 +19,44 @@ namespace iVM.Core.UI.ViewModels
       set { this._date = value; NotifyOfPropertyChange(() => this.Date); }
     }
 
-    private string _litres;
-    public string Litres
+    private decimal _litres;
+    public decimal Litres
     {
       get { return this._litres; }
       set { this._litres = value; NotifyOfPropertyChange(() => this.Litres); }
     }
 
-    private string _expense;
-    public string Expense
+    private decimal _expense;
+    public decimal Expense
     {
       get { return this._expense; }
       set { this._expense = value; NotifyOfPropertyChange(() => this.Expense); }
     }
 
-    private string _literCost;
-    public string LiterCost
+    private decimal _literCost;
+    public decimal LiterCost
     {
       get { return this._literCost; }
       set { this._literCost = value; NotifyOfPropertyChange(() => this.LiterCost); }
     }
 
     private ulong _mileage;
+
     public ulong Mileage
     {
       get { return this._mileage; }
       set { this._mileage = value; NotifyOfPropertyChange(() => this.Mileage); }
     }
 
-    public FillUpAddViewModelBase(IEventAggregator eventAggregator) : base(eventAggregator)
+    public FillUpAddViewModelBase(
+      IEventAggregator eventAggregator,
+      EventService eventService,
+      SessionService sessionService
+      ) : base(eventAggregator)
     {
-      //this._evOccured = new EventOccured();
-      //this._fillUp = new FillUp();
+      this._eventService = eventService;
+      this._sessionService = sessionService;
+      this._fillUp = new FillUpEntity();
       this.Date = DateTime.Now;
     }
 
@@ -76,7 +85,14 @@ namespace iVM.Core.UI.ViewModels
 
     protected virtual void Save()
     {
-      throw new NotImplementedException();
+      this._fillUp.Litres = this.Litres;
+      this._fillUp.LiterCost = this.LiterCost;
+      this._fillUp.Expense = this.Expense;
+      this._fillUp.Name = "Fill up";
+      this._fillUp.OccuredDate = this.Date;
+      this._fillUp.Vehicle = this._sessionService.CurrentVehicle;
+      this._fillUp.Mileage = this.Mileage;
+      this._eventService.AddFillUp(this._fillUp);
     }
   }
 }

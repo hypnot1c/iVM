@@ -8,35 +8,39 @@
     mc:Ignorable="d"
   xmlns:fa="using:FontAwesome.UWP"
   xmlns:cm="using:Caliburn.Micro">
-  
+
   <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid>
       <Grid.RowDefinitions>
-        <RowDefinition />
-        <RowDefinition />
-        <RowDefinition />
-        <RowDefinition />
-        <RowDefinition />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
-      <StackPanel Grid.Row="0">
-        <TextBlock Text="Litres" />
-        <TextBox Name="Litres" InputScope="Number" />
-      </StackPanel>
-      <StackPanel Grid.Row="1">
-        <TextBlock Text="Expense" />
-        <TextBox Name="Expense" InputScope="Number" />
-      </StackPanel>
-      <StackPanel Grid.Row="2">
-        <TextBlock Text="Litre cost" />
-        <TextBox Name="LiterCost" InputScope="Number" />
-      </StackPanel>
-      <StackPanel Grid.Row="3">
-        <TextBlock Text="Date" />
-        <DatePicker x:Name="DateOffset" />
-      </StackPanel>
-      <StackPanel Grid.Row="4">
-        <TextBlock Text="Mileage" />
-        <TextBox Name="Mileage" InputScope="Number" />
+      <TextBox Grid.Row="0" Text="{Binding Litres, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Litres count..." InputScope="Number" />
+      <TextBox Grid.Row="1" Text="{Binding Expense, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Expense..." InputScope="Number" />
+      <TextBox Grid.Row="2" Text="{Binding LiterCost, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Liter cost..." InputScope="Number" />
+      <DatePicker Grid.Row="3" x:Name="DateOffset" />
+      <TextBox Grid.Row="4" Name="Mileage" PlaceholderText="Mileage..." InputScope="Number" />
+      <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
+        <Button Name="Save">
+          <Button.Content>
+            <StackPanel Orientation="Horizontal">
+              <fa:FontAwesome Icon="Save" />
+              <TextBlock>Save</TextBlock>
+            </StackPanel>
+          </Button.Content>
+        </Button>
+        <Button Name="Cancel">
+          <Button.Content>
+            <StackPanel Orientation="Horizontal">
+              <fa:FontAwesome Icon="Undo" />
+              <TextBlock>Cancel</TextBlock>
+            </StackPanel>
+          </Button.Content>
+        </Button>
       </StackPanel>
     </Grid>
   </Grid>

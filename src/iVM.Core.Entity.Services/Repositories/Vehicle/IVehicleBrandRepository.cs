@@ -1,7 +1,6 @@
-﻿using iVM.Core.Entity;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace iVM.Core.Repositories
+namespace iVM.Core.Entity.Services
 {
   public interface IVehicleBrandRepository : IRepository<VehicleBrandEntity>
   {

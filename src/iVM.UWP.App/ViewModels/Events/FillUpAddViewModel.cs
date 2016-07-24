@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using iVM.Core.Entity.Services;
 using iVM.Core.UI.ViewModels;
 using System;
 
@@ -6,7 +7,7 @@ namespace iVM.UWP.App.ViewModels
 {
   public class FillUpAddViewModel : FillUpAddViewModelBase
   {
-    protected INavigationService _navigationService;
+    protected INavigationService _navService;
 
     private DateTimeOffset _dateOffset;
     public DateTimeOffset DateOffset {
@@ -20,9 +21,12 @@ namespace iVM.UWP.App.ViewModels
 
     public FillUpAddViewModel(
       IEventAggregator eventAggregator, 
-      INavigationService navigationService): base(eventAggregator)
+      INavigationService navigationService,
+      EventService eventService,
+      SessionService sessionService): base(eventAggregator, eventService, sessionService)
     {
-      this._navigationService = navigationService;
+      this._navService = navigationService;
+      this.DateOffset = DateTimeOffset.Now;
     }
 
     protected override void OnActivate()
@@ -36,8 +40,20 @@ namespace iVM.UWP.App.ViewModels
       //if (this._navigationService.CanGoBack)
       //  this._navigationService.GoBack();
       //else
-      this._navigationService.For<EventListViewModel>().Navigate();
+      this._navService.For<EventListViewModel>().Navigate();
       //throw new NotImplementedException();
+    }
+
+    public void Cancel()
+    {
+      if (this._navService.CanGoBack)
+      {
+        this._navService.GoBack();
+      }
+      else
+      {
+        this._navService.For<EventListViewModel>().Navigate();
+      }
     }
   }
 }

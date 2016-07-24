@@ -9,7 +9,7 @@
 
     public static VehicleEntity CreateVehicle(VehicleTypeEntity _selectedVehicleType)
     {
-      switch(_selectedVehicleType.ID)
+      switch(_selectedVehicleType.Id)
       {
         case 1:
         default:

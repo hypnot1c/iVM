@@ -1,4 +1,5 @@
 ﻿using iVM.Data.Model;
+using iVM.Vehicle.Data.EF.ModelConfigurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -8,6 +9,8 @@ namespace iVM.Data.EF
   {
 
     public DbSet<VehicleModel> Vehicles { get; set; }
+    public DbSet<EventOccured> EventsOccured { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       //if (!optionsBuilder.IsConfigured)
@@ -30,15 +33,17 @@ namespace iVM.Data.EF
         .UseInternalServiceProvider(serviceProvider);
     }
 
-    //protected override void OnModelCreating(ModelBuilder modelBuilder)
-    //{
-    //  modelBuilder.Entity<VehicleModel>(VehicleModelModelConfiguration.Configure);
-    //}
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+      modelBuilder.Entity<VehicleModel>(VehicleModelConfiguration.Configure);
+    }
 
     public void FillDummyData()
     {
       // Add some data
-      
+      this.Add(new VehicleModel { Id = 1, Model_vehicleModelId = 1, Type_vehicleTypeId = 1 });
+
+      this.SaveChanges();
     }
   }
 }

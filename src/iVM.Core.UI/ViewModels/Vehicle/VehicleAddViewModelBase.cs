@@ -24,12 +24,12 @@ namespace iVM.Core.UI.ViewModels
       switch (e.PropertyName)
       {
         case nameof(this.SelectedVehicleType):
-          this.VehicleBrands = this.vehicleService.GetBrandsByType(this.SelectedVehicleType.ID);
+          this.VehicleBrands = this.vehicleService.GetBrandsByType(this.SelectedVehicleType.Id);
           this.IsFirstStep = false;
           this.IsSecondStep = true;
           break;
         case nameof(this.SelectedVehicleBrand):
-          this.VehicleModels = this.vehicleService.GetModelsByBrandAndType(this._selectedVehicleType.ID, this._selectedVehicleBrand.ID);
+          this.VehicleModels = this.vehicleService.GetModelsByBrandAndType(this._selectedVehicleType.Id, this._selectedVehicleBrand.Id);
           this.IsSecondStep = false;
           this.IsThirdStep = true;
           break;
@@ -124,7 +124,7 @@ namespace iVM.Core.UI.ViewModels
       {
         if (this.SelectedVehicleBrand != null && this.SelectedVehicleType != null)
         {
-          return this._vehicleModels.Where(m => m.BrandId == this.SelectedVehicleBrand.ID && m.vehicleTypeId == this.SelectedVehicleType.ID);
+          return this._vehicleModels.Where(m => m.BrandId == this.SelectedVehicleBrand.Id && m.vehicleTypeId == this.SelectedVehicleType.Id);
         }
         return this._vehicleModels;
       }

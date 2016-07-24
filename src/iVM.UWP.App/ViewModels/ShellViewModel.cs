@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Events;
 using System.Collections.Generic;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -60,10 +61,19 @@ namespace iVM.UWP.App.ViewModels
       this.CollapsedPanelLength = 0;
       this._actionButtons = new List<ActionButton>();
       this.IsNotFirstVisit = true;
+
+      // Register a handler for BackRequested events and set the
+      // visibility of the Back button
+      SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
     }
 
     private void _navigationService_Navigated(object sender, NavigationEventArgs e)
     {
+      SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+            ((Frame)sender).CanGoBack ?
+            AppViewBackButtonVisibility.Visible :
+            AppViewBackButtonVisibility.Collapsed;
+
       this.IsNotFirstVisit = e.Content.GetType().Name != "VehicleAddView";
       this.CollapsedPanelLength = this.IsNotFirstVisit ? 50 : 0;
     }
@@ -80,34 +90,31 @@ namespace iVM.UWP.App.ViewModels
 
     public void SetupNavigationService(Frame frame)
     {
-      _navigationService = _container.RegisterNavigationService(frame);
+      this._navigationService = _container.RegisterNavigationService(frame);
       this._navigationService.Navigated += _navigationService_Navigated;
 
-      if (!this.IsNotFirstVisit)
-      {
-        _navigationService.For<VehicleAddViewModel>().Navigate();
-      }
-      else
-      {
-        _navigationService.For<EventListViewModel>().Navigate();
-      }
-      //if (_resume)
-      //  _navigationService.ResumeState();
+      this.NavigateTo();
     }
 
     public void NavigateTo()
     {
-      //_navigationService.For<EventListViewModel>().Navigate();
+      //if (_resume)
+      //  _navigationService.ResumeState();
+      var firstView = this.IsNotFirstVisit ? typeof(EventListViewModel) : typeof(VehicleAddViewModel);
+      this._navigationService.NavigateToViewModel(firstView);
     }
 
     public void Handle(ViewActionButtonsEvent message)
     {
-      this.ActionButtons = message.ActionButtons;
     }
 
-    private void onActionButton_Click(ActionButton source)
+    private void OnBackRequested(object sender, BackRequestedEventArgs e)
     {
-      source.OnClick();
+      if (this._navigationService.CanGoBack && !e.Handled)
+      {
+        e.Handled = true;
+        this._navigationService.GoBack();
+      }
     }
   }
 }

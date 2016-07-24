@@ -9,11 +9,11 @@ namespace iVM.Data.Model
     public ulong Mileage { get; set; }
     public decimal Expense { get; set; }
     public decimal Profit { get; set; }
-    public ICollection<FillUp> FillUps { get; set; }
+    public ICollection<FillUpModel> FillUps { get; set; }
     public ICollection<Repair> Repairs { get; set; }
     public EventOccured()
     {
-      this.FillUps = new List<FillUp>();
+      this.FillUps = new HashSet<FillUpModel>();
       this.Repairs = new List<Repair>();
     }
   }

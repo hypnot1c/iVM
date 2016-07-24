@@ -1,5 +1,4 @@
-﻿using iVM.Core.Repositories;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace iVM.Core.Entity.Services
 {
@@ -22,6 +21,13 @@ namespace iVM.Core.Entity.Services
       this.vehicleBrandRepository = vehicleBrandRepository;
       this.vehicleRepository = vehicleRepository;
     }
+
+    internal VehicleEntity GetVehicle(int Id)
+    {
+      var vehicle = this.vehicleRepository.Get(Id);
+      return vehicle;
+    }
+
     public IEnumerable<VehicleBrandEntity> GetAllBrands()
     {
       return this.vehicleBrandRepository.GetAll();

@@ -1,6 +1,4 @@
-﻿using iVM.Core.Entity;
-
-namespace iVM.Core.Repositories
+﻿namespace iVM.Core.Entity.Services
 {
   public interface IVehicleTypeRepository : IRepository<VehicleTypeEntity>
   {

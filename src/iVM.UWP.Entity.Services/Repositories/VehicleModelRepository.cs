@@ -1,5 +1,5 @@
 ﻿using iVM.Core.Entity;
-using iVM.Core.Repositories;
+using iVM.Core.Entity.Services;
 using iVM.Vehicle.Data.EF;
 using iVM.Vehicle.Model;
 using System;
@@ -21,7 +21,7 @@ namespace iVM.UWP.Entity.Services
     {
       var vb = new VehicleBrandModel
       {
-        Id = entity.ID,
+        Id = entity.Id,
         Title = entity.Name
       };
       this._ctxVehicle.VehicleBrands.Add(vb);
@@ -33,7 +33,7 @@ namespace iVM.UWP.Entity.Services
     }
     public IEnumerable<VehicleModelEntity> GetAll()
     {
-      return this._ctxVehicle.VehicleBrands.Select(vb => new VehicleModelEntity() { ID = vb.Id, Name = vb.Title });
+      return this._ctxVehicle.VehicleBrands.Select(vb => new VehicleModelEntity() { Id = vb.Id, Name = vb.Title });
     }
 
     public VehicleModelEntity Get(int id)
@@ -55,7 +55,7 @@ namespace iVM.UWP.Entity.Services
         {
           BrandId = vm.BrandId,
           vehicleTypeId = (int)vm.Type,
-          ID = vm.Id,
+          Id = vm.Id,
           Name = vm.Name
         });
     }
