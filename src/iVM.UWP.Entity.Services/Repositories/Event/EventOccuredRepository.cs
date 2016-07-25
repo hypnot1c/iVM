@@ -4,11 +4,11 @@ using iVM.Data.Model;
 
 namespace iVM.UWP.Entity.Services
 {
-  public class FillUpRepository : EFRepository<FillUpModel>, IFillUpRepository
+  public class EventOccuredRepository : EFRepository<EventOccured>, IEventOccuredRepository
   {
     public MainContext MainContext { get { return this.context as MainContext; } }
 
-    public FillUpRepository(MainContext mainContext) : base(mainContext)
+    public EventOccuredRepository(MainContext mainContext) : base(mainContext)
     {
     }
   }

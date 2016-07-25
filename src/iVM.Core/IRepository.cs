@@ -9,7 +9,7 @@ namespace iVM.Core
     void Add(TEntity entity);
     void Remove(int Id);
     IEnumerable<TEntity> GetAll();
-    TEntity Get(int id);
+    TEntity Get(int Id);
     IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
   }
 }

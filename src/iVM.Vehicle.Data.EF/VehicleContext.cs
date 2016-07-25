@@ -11,6 +11,7 @@ namespace iVM.Vehicle.Data.EF
     public DbSet<VehicleModel> VehicleModels { get; set; }
     public DbSet<VehicleBrandModel> VehicleBrands { get; set; }
 
+    public DbSet<VehicleTypeModel> VehicleTypes { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       //if (!optionsBuilder.IsConfigured)
@@ -37,16 +38,20 @@ namespace iVM.Vehicle.Data.EF
     {
       modelBuilder.Entity<VehicleModel>(VehicleModelConfiguration.Configure);
       modelBuilder.Entity<VehicleBrandModel>(VehicleBrandModelConfiguration.Configure);
+      modelBuilder.Entity<VehicleTypeModel>(VehicleTypeModelConfiguration.Configure);
     }
 
     public void FillDummyData()
     {
       // Add Peugeot data
-      this.Add(new VehicleBrandModel { Id = 1, Title = "Peugeot", VehicleTypes = new List<VehicleType> { VehicleType.Unknown, VehicleType.Car } });
-      this.Add(new VehicleBrandModel { Id = 2, Title = "Volkswagen", VehicleTypes = new List<VehicleType> { VehicleType.Unknown, VehicleType.Car } });
+      this.Add(new VehicleBrandModel { Id = 1, Title = "Peugeot", VehicleTypes = new List<VehicleTypeModel> {
+        { new VehicleTypeModel { Id = 0, Name = "Unknown" } },
+        { new VehicleTypeModel { Id = 1, Name = "Car" } }
+      } });
+      //this.Add(new VehicleBrandModel { Id = 2, Title = "Volkswagen", VehicleTypes = new List<VehicleTypeModel> { 0, 1 } });
 
-      this.Add(new VehicleModel { Id = 1, BrandId = 1, Type = VehicleType.Car, Name = "406" });
-      this.Add(new VehicleModel { Id = 2, BrandId = 2, Type = VehicleType.Car, Name = "Passat" });
+      this.Add(new VehicleModel { Id = 1, Brand_BrandId = 1, Type_TypeId = 1, Name = "406" });
+      //this.Add(new VehicleModel { Id = 2, Brand_BrandId = 2, Type_TypeId = 1, Name = "Passat" });
 
       this.SaveChanges();
     }

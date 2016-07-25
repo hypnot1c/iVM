@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
+    <Compile Include="VehicleTypeModel.cs" />
     <Compile Include="VehicleBrandModel.cs" />
     <Compile Include="VehicleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

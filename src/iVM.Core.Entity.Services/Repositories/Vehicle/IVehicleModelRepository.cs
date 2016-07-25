@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using iVM.Vehicle.Model;
+using System.Collections.Generic;
 
 namespace iVM.Core.Entity.Services
 {
-  public interface IVehicleModelRepository : IRepository<VehicleModelEntity>
+  public interface IVehicleModelRepository : IRepository<VehicleModel>
   {
-    IEnumerable<VehicleModelEntity> GetModelsByBrandAndType(int typeId, int brandId);
+    IEnumerable<VehicleModel> GetModelsByBrandAndType(int typeId, int brandId);
   }
 }

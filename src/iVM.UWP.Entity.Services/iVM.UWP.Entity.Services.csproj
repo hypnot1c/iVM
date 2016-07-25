@@ -108,10 +108,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigurationService.cs" />
+    <Compile Include="EFRepository.cs" />
+    <Compile Include="Helpers\EFHelper.cs" />
+    <Compile Include="Repositories\Event\EventOccuredRepository.cs" />
     <Compile Include="Repositories\Event\FillUpRepository.cs" />
+    <Compile Include="Repositories\VehicleTypeRepository.cs" />
     <Compile Include="Repositories\VehicleModelRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
-    <Compile Include="Repositories\VehicleTypeRepository.cs" />
     <Compile Include="Repositories\VehicleBrandRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\iVM.UWP.Entity.Services.rd.xml" />

@@ -1,6 +1,8 @@
-﻿namespace iVM.Core.Entity.Services
+﻿using iVM.Data.Model;
+
+namespace iVM.Core.Entity.Services
 {
-  public interface IFillUpRepository : IRepository<FillUpEntity>
+  public interface IFillUpRepository : IRepository<FillUpModel>
   {
   }
 }
