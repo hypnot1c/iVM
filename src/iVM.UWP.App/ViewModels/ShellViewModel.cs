@@ -60,7 +60,7 @@ namespace iVM.UWP.App.ViewModels
       this._eventAggregator = eventAggregator;
       this.CollapsedPanelLength = 0;
       this._actionButtons = new List<ActionButton>();
-      this.IsNotFirstVisit = false;
+      this.IsNotFirstVisit = true;
 
       // Register a handler for BackRequested events and set the
       // visibility of the Back button

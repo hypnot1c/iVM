@@ -41,8 +41,7 @@ namespace iVM.Data.EF
     public void FillDummyData()
     {
       // Add some data
-      this.Add(new VehicleModel { Id = 1, Model_vehicleModelId = 1, Type_vehicleTypeId = 1 });
-
+      this.Add(new VehicleModel { Id = 1, Model_vehicleModelId = 1, Type_vehicleTypeId = 2 });
       this.SaveChanges();
     }
   }

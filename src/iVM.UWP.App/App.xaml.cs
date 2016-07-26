@@ -47,6 +47,7 @@ namespace iVM
         .PerRequest<IVehicleModelRepository, VehicleModelRepository>()
         .PerRequest<IVehicleRepository, VehicleRepository>()
         .PerRequest<IFillUpRepository, FillUpRepository>()
+        .PerRequest<IEventOccuredRepository, EventOccuredRepository>()
         .PerRequest<SessionService, SessionService>()
         .PerRequest<EventService, EventService>()
         .PerRequest<VehicleService, VehicleService>()

@@ -8,6 +8,7 @@ namespace iVM.Vehicle.Data.EF.ModelConfigurations
     public static void Configure(EntityTypeBuilder<VehicleTypeModel> builder)
     {
       builder.HasKey(p => p.Id);
+      builder.HasMany(b => b.VehicleBrands);
     }
   }
 }

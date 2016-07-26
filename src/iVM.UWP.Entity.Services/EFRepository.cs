@@ -31,7 +31,7 @@ namespace iVM.UWP.Entity.Services
       return this.context.Set<TEintity>().Where(predicate).ToList();
     }
 
-    public TEintity Get(int Id)
+    public virtual TEintity Get(int Id)
     {
       return this.context.Set<TEintity>().Find(Id);
     }

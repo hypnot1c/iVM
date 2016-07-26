@@ -60,6 +60,7 @@
     <Compile Include="Repositories\Vehicle\IVehicleModelRepository.cs" />
     <Compile Include="Repositories\Vehicle\IVehicleRepository.cs" />
     <Compile Include="Repositories\Vehicle\IVehicleTypeRepository.cs" />
+    <Compile Include="UnitsOfWork\IVehicleOfWork.cs" />
     <Compile Include="User\IConfigurationService.cs" />
     <Compile Include="User\SessionService.cs" />
     <Compile Include="Vehicle\VehicleService.cs" />

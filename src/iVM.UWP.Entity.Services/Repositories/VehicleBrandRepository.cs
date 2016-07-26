@@ -15,7 +15,7 @@ namespace iVM.UWP.Entity.Services
     public IEnumerable<VehicleBrandModel> GetBrandsByType(int id)
     {
       return this.VehicleContext.VehicleBrands
-        .Where(b => b.VehicleTypes.Any(t => t.Id == id))
+        .Where(b => b.VehicleTypes.Any(t => t.TypeId == id))
         .ToList()
         ;
     }
