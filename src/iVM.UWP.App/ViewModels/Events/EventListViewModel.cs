@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using iVM.Core.Entity.Services;
 using iVM.Core.UI.ViewModels;
 
 namespace iVM.UWP.App.ViewModels
@@ -9,7 +10,9 @@ namespace iVM.UWP.App.ViewModels
 
     public EventListViewModel(
       IEventAggregator eventAggregator,
-      INavigationService navigationService) : base(eventAggregator)
+      INavigationService navigationService,
+      EventService eventService
+      ) : base(eventAggregator, eventService)
     {
       this._navService = navigationService;
     }

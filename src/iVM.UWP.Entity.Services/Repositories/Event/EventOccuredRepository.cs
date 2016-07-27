@@ -1,6 +1,7 @@
 ﻿using iVM.Core.Entity.Services;
 using iVM.Data.EF;
 using iVM.Data.Model;
+using System.Linq;
 
 namespace iVM.UWP.Entity.Services
 {
@@ -10,6 +11,11 @@ namespace iVM.UWP.Entity.Services
 
     public EventOccuredRepository(MainContext mainContext) : base(mainContext)
     {
+    }
+
+    public override EventOccured Get(int Id)
+    {
+      return this.MainContext.EventsOccured.SingleOrDefault(e => e.Id == Id);
     }
   }
 }

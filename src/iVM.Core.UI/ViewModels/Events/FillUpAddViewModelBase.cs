@@ -19,6 +19,15 @@ namespace iVM.Core.UI.ViewModels
       set { this._date = value; NotifyOfPropertyChange(() => this.Date); }
     }
 
+    private string _title;
+
+    public string Title
+    {
+      get { return _title; }
+      set { _title = value; NotifyOfPropertyChange(() => this.Title); }
+    }
+
+
     private decimal _litres;
     public decimal Litres
     {
@@ -88,7 +97,7 @@ namespace iVM.Core.UI.ViewModels
       this._fillUp.Litres = this.Litres;
       this._fillUp.LiterCost = this.LiterCost;
       this._fillUp.Expense = this.Expense;
-      this._fillUp.Name = "Fill up";
+      this._fillUp.Name = this.Title;
       this._fillUp.OccuredDate = this.Date;
       this._fillUp.Vehicle = this._sessionService.CurrentVehicle;
       this._fillUp.Mileage = this.Mileage;

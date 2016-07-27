@@ -6,45 +6,39 @@ namespace iVM.Core.Entity.Services
 {
   public class VehicleService
   {
-    private readonly IVehicleBrandRepository vehicleBrandRepository;
-    private readonly IVehicleTypeRepository vehicleTypeRepository;
-    private readonly IVehicleRepository vehicleRepository;
-    private readonly IVehicleModelRepository vehicleModelRepository;
+    private readonly IVehicleUnitOfWork _vehicleUoW;
+    private readonly IMainUnitOfWork _mainUoW;
 
     public VehicleService(
-      IVehicleModelRepository vehicleModelRepository,
-      IVehicleTypeRepository vehicleTypeRepository,
-      IVehicleBrandRepository vehicleBrandRepository,
-      IVehicleRepository vehicleRepository
+      IVehicleUnitOfWork vehicleUoW,
+      IMainUnitOfWork mainUoW
       )
     {
-      this.vehicleModelRepository = vehicleModelRepository;
-      this.vehicleTypeRepository = vehicleTypeRepository;
-      this.vehicleBrandRepository = vehicleBrandRepository;
-      this.vehicleRepository = vehicleRepository;
+      this._vehicleUoW = vehicleUoW;
+      this._mainUoW = mainUoW;
     }
 
     internal VehicleEntity GetVehicle(int Id)
     {
-      var vehicle = this.vehicleRepository.Get(Id);
-      var type = this.vehicleTypeRepository.Get(vehicle.Type_vehicleTypeId);
+      var vehicle = this._mainUoW.Vehicles.Get(Id);
+      var type = this._vehicleUoW.VehicleTypes.Get(vehicle.Type_vehicleTypeId);
       return VehicleEntity.CreateVehicle(new VehicleTypeEntity { Id = type.Id, Name = type.Name });
     }
 
     public IEnumerable<VehicleBrandEntity> GetAllBrands()
     {
-      return this.vehicleBrandRepository.GetAll()
+      return this._vehicleUoW.VehcileBrands.GetAll()
         .Select(m => new VehicleBrandEntity { Id = m.Id, Name = m.Title });
     }
     public IEnumerable<VehicleTypeEntity> GetAllTypes()
     {
-      return this.vehicleTypeRepository.GetAll()
+      return this._vehicleUoW.VehicleTypes.GetAll()
         .Select(m => new VehicleTypeEntity { Id = m.Id, Name = m.Name });
     }
 
     public IEnumerable<VehicleModelEntity> GetModelsByBrandAndType(int typeId, int brandId)
     {
-      return this.vehicleModelRepository.GetModelsByBrandAndType(typeId, brandId)
+      return this._vehicleUoW.VehicleModels.GetModelsByBrandAndType(typeId, brandId)
         .Select(m => new VehicleModelEntity
         {
           Id = m.Id,
@@ -56,7 +50,7 @@ namespace iVM.Core.Entity.Services
 
     public IEnumerable<VehicleBrandEntity> GetBrandsByType(int Id)
     {
-      return this.vehicleBrandRepository.GetBrandsByType(Id)
+      return this._vehicleUoW.VehcileBrands.GetBrandsByType(Id)
         .Select(b => new VehicleBrandEntity { Id = b.Id, Name = b.Title });
     }
 
@@ -68,7 +62,7 @@ namespace iVM.Core.Entity.Services
         Model_vehicleModelId = vehicle.Model.Id,
         Type_vehicleTypeId = vehicle.Type.Id
       };
-      this.vehicleRepository.Add(vm);
+      this._mainUoW.Vehicles.Add(vm);
     }
   }
 }

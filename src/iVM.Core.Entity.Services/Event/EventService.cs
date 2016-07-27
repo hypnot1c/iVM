@@ -1,19 +1,20 @@
 ﻿using iVM.Data.Model;
+using System.Collections.Generic;
 
 namespace iVM.Core.Entity.Services
 {
   public class EventService
   {
-    private readonly IEventOccuredRepository _eventOccuredRepository;
-    private readonly IFillUpRepository _fillUpRepository;
+    private readonly IMainUnitOfWork _mainUoW;
+    private readonly IVehicleUnitOfWork _vehicleUoW;
 
     public EventService(
-      IEventOccuredRepository eventOccuredRepository,
-      IFillUpRepository fillUpRepository
+      IVehicleUnitOfWork vehicleUoW,
+      IMainUnitOfWork mainUoW
       )
     {
-      this._eventOccuredRepository = eventOccuredRepository;
-      this._fillUpRepository = fillUpRepository;
+      this._vehicleUoW = vehicleUoW;
+      this._mainUoW = mainUoW;
     }
 
     public void AddFillUp(FillUpEntity fillUp)
@@ -21,11 +22,13 @@ namespace iVM.Core.Entity.Services
       var eo = new EventOccured
       {
         Date = fillUp.OccuredDate,
+        Title = fillUp.Name,
         Expense = fillUp.Expense,
         Profit = fillUp.Profit,
         Mileage = fillUp.Mileage
       };
-      this._eventOccuredRepository.Add(eo);
+      this._mainUoW.EventsOccured.Add(eo);
+      this._mainUoW.Save();
       var fu = new FillUpModel
       {
         Id = fillUp.Id,
@@ -33,7 +36,25 @@ namespace iVM.Core.Entity.Services
         LiterCost = fillUp.LiterCost,
         LitresValue = fillUp.Litres
       };
-      this._fillUpRepository.Add(fu);
+      this._mainUoW.FillUps.Add(fu);
+      this._mainUoW.Save();
+    }
+
+    public IEnumerable<EventEntity> GetOccuredEvents()
+    {
+      var events = new List<EventEntity>();
+      var fillUps = this._mainUoW.FillUps.GetAll();
+      foreach (var fu in fillUps)
+      {
+        var ev = this._mainUoW.EventsOccured.Get(fu.EventOccuredID);
+        var elm = new FillUpEntity
+        {
+          OccuredDate = ev.Date,
+          Name = ev.Title
+        };
+        events.Add(elm);
+      }
+      return events;
     }
   }
 }

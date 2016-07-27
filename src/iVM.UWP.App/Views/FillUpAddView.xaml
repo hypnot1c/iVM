@@ -18,13 +18,15 @@
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
-      <TextBox Grid.Row="0" Text="{Binding Litres, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Litres count..." InputScope="Number" />
-      <TextBox Grid.Row="1" Text="{Binding Expense, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Expense..." InputScope="Number" />
-      <TextBox Grid.Row="2" Text="{Binding LiterCost, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Liter cost..." InputScope="Number" />
-      <DatePicker Grid.Row="3" x:Name="DateOffset" />
-      <TextBox Grid.Row="4" Name="Mileage" PlaceholderText="Mileage..." InputScope="Number" />
-      <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
+      <TextBox Grid.Row="0" Name="Title" PlaceholderText="Title..." InputScope="Text" />
+      <TextBox Grid.Row="1" Text="{Binding Litres, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Litres count..." InputScope="Number" />
+      <TextBox Grid.Row="2" Text="{Binding Expense, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Expense..." InputScope="Number" />
+      <TextBox Grid.Row="3" Text="{Binding LiterCost, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Liter cost..." InputScope="Number" />
+      <DatePicker Grid.Row="4" Name="DateOffset" />
+      <TextBox Grid.Row="5" Name="Mileage" PlaceholderText="Mileage..." InputScope="Number" />
+      <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right">
         <Button Name="Save">
           <Button.Content>
             <StackPanel Orientation="Horizontal">

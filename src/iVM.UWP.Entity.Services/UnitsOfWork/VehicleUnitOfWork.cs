@@ -6,39 +6,54 @@ namespace iVM.UWP.Entity.Services
 {
   public class VehicleUnitOfWork : IVehicleUnitOfWork
   {
-    private readonly VehicleContext context;
+    private readonly VehicleContext _context;
 
     public VehicleUnitOfWork(VehicleContext context)
     {
-      this.context = context;
+      this._context = context;
     }
+    private IVehicleBrandRepository _vehicleBrands;
     public IVehicleBrandRepository VehcileBrands
     {
       get
       {
-        throw new NotImplementedException();
+        if(this._vehicleBrands == null)
+        {
+          this._vehicleBrands = new VehicleBrandRepository(this._context);
+        }
+        return this._vehicleBrands;
       }
     }
 
+    private IVehicleModelRepository _vehicleModels;
     public IVehicleModelRepository VehicleModels
     {
       get
       {
-        throw new NotImplementedException();
+        if (this._vehicleModels == null)
+        {
+          this._vehicleModels = new VehicleModelRepository(this._context);
+        }
+        return this._vehicleModels;
       }
     }
 
+    private IVehicleTypeRepository _vehicleTypes;
     public IVehicleTypeRepository VehicleTypes
     {
       get
       {
-        throw new NotImplementedException();
+        if (this._vehicleTypes == null)
+        {
+          this._vehicleTypes = new VehicleTypeRepository(this._context);
+        }
+        return this._vehicleTypes;
       }
     }
 
     public void Commit()
     {
-      this.context.SaveChanges();
+      this._context.SaveChanges();
     }
 
     public void Dispose()
@@ -49,6 +64,11 @@ namespace iVM.UWP.Entity.Services
     public void Rollback()
     {
       throw new NotImplementedException();
+    }
+
+    public void Save()
+    {
+      this._context.SaveChanges();
     }
   }
 }

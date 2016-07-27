@@ -40,14 +40,10 @@ namespace iVM
       // Make sure to register your containers here
       _container
         .Instance<IConfigurationService>(new ConfigurationService())
-        .Singleton<VehicleContext, VehicleContext>()
-        .Singleton<MainContext, MainContext>()
-        .PerRequest<IVehicleTypeRepository, VehicleTypeRepository>()
-        .PerRequest<IVehicleBrandRepository, VehicleBrandRepository>()
-        .PerRequest<IVehicleModelRepository, VehicleModelRepository>()
-        .PerRequest<IVehicleRepository, VehicleRepository>()
-        .PerRequest<IFillUpRepository, FillUpRepository>()
-        .PerRequest<IEventOccuredRepository, EventOccuredRepository>()
+        .Singleton<VehicleContext>()
+        .Singleton<MainContext>()
+        .PerRequest<IVehicleUnitOfWork, VehicleUnitOfWork>()
+        .PerRequest<IMainUnitOfWork, MainUnitOfWork>()
         .PerRequest<SessionService, SessionService>()
         .PerRequest<EventService, EventService>()
         .PerRequest<VehicleService, VehicleService>()

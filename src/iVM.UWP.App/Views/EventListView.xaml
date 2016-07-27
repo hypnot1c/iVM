@@ -33,7 +33,7 @@
       <ListView.ItemTemplate>
         <DataTemplate>
           <StackPanel>
-            <TextBlock Text="{Binding Date}" />
+            <TextBlock Text="{Binding OccuredDate}" />
             <TextBlock Text="{Binding Name}" />
           </StackPanel>
         </DataTemplate>

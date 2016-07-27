@@ -11,6 +11,8 @@ namespace iVM.Data.Model
     public decimal Profit { get; set; }
     public ICollection<FillUpModel> FillUps { get; set; }
     public ICollection<Repair> Repairs { get; set; }
+    public string Title { get; set; }
+
     public EventOccured()
     {
       this.FillUps = new HashSet<FillUpModel>();
