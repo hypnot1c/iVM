@@ -32,7 +32,7 @@ namespace iVM.Core.Entity.Services
       var fu = new FillUpModel
       {
         Id = fillUp.Id,
-        EventOccuredID = eo.Id,
+        EventOccuredId = eo.Id,
         LiterCost = fillUp.LiterCost,
         LitresValue = fillUp.Litres
       };
@@ -46,7 +46,7 @@ namespace iVM.Core.Entity.Services
       var fillUps = this._mainUoW.FillUps.GetAll();
       foreach (var fu in fillUps)
       {
-        var ev = this._mainUoW.EventsOccured.Get(fu.EventOccuredID);
+        var ev = this._mainUoW.EventsOccured.Get(fu.EventOccuredId);
         var elm = new FillUpEntity
         {
           OccuredDate = ev.Date,

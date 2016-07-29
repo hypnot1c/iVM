@@ -41,10 +41,8 @@
     <Compile Include="Entities\Events\EventOccuredEntity.cs" />
     <Compile Include="Entities\Events\EventScheduledEntity.cs" />
     <Compile Include="Entities\Events\FillUpEntity.cs" />
+    <Compile Include="Entities\Events\MaintanceItemEntity.cs" />
     <Compile Include="Entities\Events\MaintenanceEntity.cs" />
-    <Compile Include="Entities\Events\RepairEntity.cs" />
-    <Compile Include="Entities\Events\MaintenanceScheduledEntity.cs" />
-    <Compile Include="Entities\Events\RepairScheduledEntity.cs" />
     <Compile Include="Entities\UserEntity.cs" />
     <Compile Include="Entities\Vehicles\VehicleBrandEntity.cs" />
     <Compile Include="Entities\Vehicles\CarEntity.cs" />

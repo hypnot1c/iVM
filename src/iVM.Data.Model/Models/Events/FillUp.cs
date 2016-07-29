@@ -2,9 +2,10 @@
 {
   public class FillUpModel : BaseModel
   {
-    public int EventOccuredID { get; set; }
+    public int EventOccuredId { get; set; }
     public EventOccured EventOccured { get; set; }
     public decimal LitresValue { get; set; }
     public decimal LiterCost { get; set; }
+    public string CompanyName { get; set; }
   }
 }

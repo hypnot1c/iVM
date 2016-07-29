@@ -39,6 +39,7 @@
     <Compile Include="ViewModels\Events\EventListViewModelBase.cs" />
     <Compile Include="ViewModels\Events\EventTypeSelectViewModelBase.cs" />
     <Compile Include="ViewModels\Events\FillUpAddViewModelBase.cs" />
+    <Compile Include="ViewModels\Events\MaintanceAddViewModelBase.cs" />
     <Compile Include="ViewModels\Security\ProfileEditViewModelBase.cs" />
     <Compile Include="ViewModels\Security\SignInViewModelBase.cs" />
     <Compile Include="ViewModels\Security\SignUpViewModelBase.cs" />

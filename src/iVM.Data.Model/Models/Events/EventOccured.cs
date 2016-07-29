@@ -5,6 +5,7 @@ namespace iVM.Data.Model
 {
   public class EventOccured: EventModel
   {
+    public int Vehicle_VehicleId { get; set; }
     public DateTime Date { get; set; }
     public ulong Mileage { get; set; }
     public decimal Expense { get; set; }
