@@ -49,6 +49,7 @@ namespace iVM
         .PerRequest<VehicleService, VehicleService>()
         .PerRequest<ShellViewModel>()
         .PerRequest<VehicleAddViewModel>()
+        .PerRequest<MaintenanceAddViewModel>()
         .PerRequest<EventListViewModel>()
         .PerRequest<EventTypeSelectViewModel>()
         .PerRequest<FillUpAddViewModel>()

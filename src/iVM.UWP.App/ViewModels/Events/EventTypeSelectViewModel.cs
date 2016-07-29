@@ -34,8 +34,8 @@ namespace iVM.UWP.App.ViewModels
             case EventType.FillUp:
               this._navService.For<FillUpAddViewModel>().Navigate();
               break;
-            case EventType.Repair:
-              //this._navService.For<RepairAddViewModel>().Navigate();
+            case EventType.Maintenance:
+              this._navService.For<MaintenanceAddViewModel>().Navigate();
               break;
           }
           break;

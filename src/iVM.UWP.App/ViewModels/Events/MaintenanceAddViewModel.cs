@@ -27,6 +27,7 @@ namespace iVM.UWP.App.ViewModels
       ): base(eventAggregator, eventService)
     {
       this._navigationService = navigationService;
+      this.DateOffset = DateTimeOffset.Now;
     }
 
     protected override void Save()
