@@ -29,15 +29,16 @@
         <AppBarButton Name="EventAdd" Icon="Add" Label="Add"/>
       </CommandBar.PrimaryCommands>
     </CommandBar>
-    <ListView Grid.Row="1" x:Name="Events">
-      <ListView.ItemTemplate>
+    <GridView Grid.Row="1" Name="Events">
+      <GridView.ItemTemplate>
         <DataTemplate>
-          <StackPanel>
-            <TextBlock Text="{Binding OccuredDate}" />
+          <StackPanel Margin="5,5,5,5">
+            <Image Width="250" Height="100" />
             <TextBlock Text="{Binding Name}" />
+            <TextBlock Text="{Binding OccuredDate}" />
           </StackPanel>
         </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
+      </GridView.ItemTemplate>
+    </GridView>
   </Grid>
 </Page>
