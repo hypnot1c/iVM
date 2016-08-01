@@ -2,7 +2,7 @@
 
 namespace iVM.Core.Entity.Services
 {
-  public interface IEventOccuredRepository : IRepository<EventOccured>
+  public interface IEventOccuredRepository : IRepository<EventOccuredModel>
   {
   }
 }

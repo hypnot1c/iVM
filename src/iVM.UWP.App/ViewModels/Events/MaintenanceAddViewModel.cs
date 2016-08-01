@@ -40,8 +40,10 @@ namespace iVM.UWP.App.ViewModels
         WorkCost = Decimal.Parse(workCost)
       });
     }
+
     protected override void Save()
     {
+      base.Save();
       this._navigationService.For<EventListViewModel>().Navigate();
     }
   }

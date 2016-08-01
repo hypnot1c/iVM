@@ -1,5 +1,6 @@
 ﻿using iVM.Data.Model;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace iVM.Core.Entity.Services
 {
@@ -17,9 +18,29 @@ namespace iVM.Core.Entity.Services
       this._mainUoW = mainUoW;
     }
 
+    #region Generic events
+    public IEnumerable<EventEntity> GetOccuredEvents()
+    {
+      var events = new List<EventEntity>();
+      var fillUps = this._mainUoW.FillUps.GetAll();
+      foreach (var fu in fillUps)
+      {
+        var ev = this._mainUoW.EventsOccured.Get(fu.EventOccuredId);
+        var elm = new FillUpEntity
+        {
+          OccuredDate = ev.Date,
+          Name = ev.Title
+        };
+        events.Add(elm);
+      }
+      return events;
+    }
+    #endregion
+
+    #region Fill ups
     public void AddFillUp(FillUpEntity fillUp)
     {
-      var eo = new EventOccured
+      var eo = new EventOccuredModel
       {
         Date = fillUp.OccuredDate,
         Title = fillUp.Name,
@@ -39,22 +60,34 @@ namespace iVM.Core.Entity.Services
       this._mainUoW.FillUps.Add(fu);
       this._mainUoW.Save();
     }
+    #endregion
 
-    public IEnumerable<EventEntity> GetOccuredEvents()
+    #region Maintenances
+    public void AddMaintenance(MaintenanceEntity maintenance)
     {
-      var events = new List<EventEntity>();
-      var fillUps = this._mainUoW.FillUps.GetAll();
-      foreach (var fu in fillUps)
+      var ev = new EventOccuredModel
       {
-        var ev = this._mainUoW.EventsOccured.Get(fu.EventOccuredId);
-        var elm = new FillUpEntity
+        Vehicle_VehicleId = maintenance.Vehicle.Id,
+        Title = maintenance.Name,
+        Date = maintenance.OccuredDate,
+        Expense = maintenance.Expense,
+        Mileage = maintenance.Mileage
+      };
+      this._mainUoW.EventsOccured.Add(ev);
+      this._mainUoW.Save();
+      var maint = new MaintenanceModel
+      {
+        EventOccuredId = ev.Id,
+        ServiceStationName = maintenance.ServiceStationName,
+        ListOfWorks = maintenance.ListOfWorks.Select(i => new MaintenanceItemModel
         {
-          OccuredDate = ev.Date,
-          Name = ev.Title
-        };
-        events.Add(elm);
-      }
-      return events;
+          Title = i.Title,
+          PartsCost = i.PartCost,
+          WorkCost = i.WorkCost
+        }).ToList()
+      };
+      //TODO: Finish maintenance saving...
     }
+    #endregion
   }
 }

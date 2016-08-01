@@ -41,6 +41,7 @@
     <Compile Include="BaseModel.cs" />
     <Compile Include="EventModel.cs" />
     <Compile Include="Models\Events\Maintenance.cs" />
+    <Compile Include="Models\Events\MaintenanceItem.cs" />
     <Compile Include="Models\Events\MaintenanceScheduled.cs" />
     <Compile Include="Models\Events\EventOccured.cs" />
     <Compile Include="Models\Events\EventScheduled.cs" />

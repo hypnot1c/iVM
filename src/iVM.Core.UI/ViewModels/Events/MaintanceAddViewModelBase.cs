@@ -11,12 +11,14 @@ namespace iVM.Core.UI.ViewModels
   {
     public MaintenanceAddViewModelBase(
       IEventAggregator eventAggregator,
-      EventService eventService
+      EventService eventService,
+      SessionService sessionService
       ): base(eventAggregator)
     {
       this._eventService = eventService;
-      this.WorkItems = new BindableCollection<MaintenanceItemEntity>();
+      this._sessionService = sessionService;
       this._maintenanceEntity = new MaintenanceEntity();
+      this.WorkItems = new BindableCollection<MaintenanceItemEntity>();
     }
     private readonly EventService _eventService;
     private readonly MaintenanceEntity _maintenanceEntity;
@@ -58,6 +60,7 @@ namespace iVM.Core.UI.ViewModels
     }
 
     private IObservableCollection<MaintenanceItemEntity> _workItems;
+    private readonly SessionService _sessionService;
 
     public IObservableCollection<MaintenanceItemEntity> WorkItems
     {
@@ -95,7 +98,13 @@ namespace iVM.Core.UI.ViewModels
     }
     protected virtual void Save()
     {
-      throw new NotImplementedException();
+      this._maintenanceEntity.Name = this.Name;
+      this._maintenanceEntity.OccuredDate = this.Date;
+      this._maintenanceEntity.Mileage = this.Mileage;
+      this._maintenanceEntity.ServiceStationName = this.ServiceStationName;
+      this._maintenanceEntity.Vehicle = this._sessionService.CurrentVehicle;
+      this._maintenanceEntity.ListOfWorks = this.WorkItems;
+      this._eventService.AddMaintenance(this._maintenanceEntity);
     }
   }
 }

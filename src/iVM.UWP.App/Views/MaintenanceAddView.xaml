@@ -42,49 +42,35 @@
           </Button.Content>
         </Button>
       </StackPanel>
-      <GridView Grid.Row="6" Name="WorkItems" VerticalAlignment="Center">
-        <ColumnDefinition Width="1*" />
-        <ColumnDefinition Width="1*" />
-        <ColumnDefinition Width="1*" />
-        <GridView.Header>
-          <Grid>
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="1*" />
-              <ColumnDefinition Width="1*" />
-              <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="Title" />
-            <TextBlock Grid.Column="1" Text="PartCost" />
-            <TextBlock Grid.Column="2" Text="WorkCost" />
-          </Grid>
-        </GridView.Header>
-        <GridView.ItemTemplate>
-          <DataTemplate>
-            <StackPanel Orientation="Horizontal">
-              <TextBlock Grid.Column="0" Text="{Binding Title}" />.
-              
-              <TextBlock Grid.Column="1" Text="{Binding PartCost}" />
-              <TextBlock Grid.Column="2" Text="{Binding WorkCost}" />
-            </StackPanel>
-          </DataTemplate>
-        </GridView.ItemTemplate>
-      </GridView>
-      <!--<ListBox Grid.Row="6" ItemsSource= "{Binding WorkItems}" VerticalAlignment="Center">
-        <ListBox.ItemContainerStyle>
-          <Style TargetType="ListBoxItem">
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-          </Style>
-        </ListBox.ItemContainerStyle>
-        <ListBox.ItemTemplate>
-          <DataTemplate>
-            <StackPanel Orientation="Horizontal">
-              <TextBlock Text="{Binding Title}" />
-              <TextBlock Text="{Binding PartCost}" />
-              <TextBlock Text="{Binding WorkCost}" />
-            </StackPanel>
-          </DataTemplate>
-        </ListBox.ItemTemplate>
-      </ListBox>-->
+      <StackPanel Grid.Row="6">
+
+        <Grid  VerticalAlignment="Center">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>
+          <TextBlock Grid.Column="0" Text="Title" />
+          <TextBlock Grid.Column="1" Text="PartCost" />
+          <TextBlock Grid.Column="2" Text="WorkCost" />
+        </Grid>
+        <ItemsControl Name="WorkItems">
+          <ItemsControl.ItemTemplate>
+            <DataTemplate>
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="1*" />
+                  <ColumnDefinition Width="1*" />
+                  <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="{Binding Title}" />
+                <TextBlock Grid.Column="1" Text="{Binding PartCost}" />
+                <TextBlock Grid.Column="2" Text="{Binding WorkCost}" />
+              </Grid>
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ItemsControl>
+      </StackPanel>
     </Grid>
     <Button Grid.Row="2" HorizontalAlignment="Right">
       <Button.Content>

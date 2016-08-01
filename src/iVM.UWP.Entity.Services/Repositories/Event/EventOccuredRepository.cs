@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace iVM.UWP.Entity.Services
 {
-  public class EventOccuredRepository : EFRepository<EventOccured>, IEventOccuredRepository
+  public class EventOccuredRepository : EFRepository<EventOccuredModel>, IEventOccuredRepository
   {
     public MainContext MainContext { get { return this.context as MainContext; } }
 
@@ -13,7 +13,7 @@ namespace iVM.UWP.Entity.Services
     {
     }
 
-    public override EventOccured Get(int Id)
+    public override EventOccuredModel Get(int Id)
     {
       return this.MainContext.EventsOccured.SingleOrDefault(e => e.Id == Id);
     }

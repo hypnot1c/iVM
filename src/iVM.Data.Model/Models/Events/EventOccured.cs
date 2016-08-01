@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace iVM.Data.Model
 {
-  public class EventOccured: EventModel
+  public class EventOccuredModel: EventModel
   {
     public int Vehicle_VehicleId { get; set; }
     public DateTime Date { get; set; }
@@ -14,7 +14,7 @@ namespace iVM.Data.Model
     public ICollection<Repair> Repairs { get; set; }
     public string Title { get; set; }
 
-    public EventOccured()
+    public EventOccuredModel()
     {
       this.FillUps = new HashSet<FillUpModel>();
       this.Repairs = new List<Repair>();
