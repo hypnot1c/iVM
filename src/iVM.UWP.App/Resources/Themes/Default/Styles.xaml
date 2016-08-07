@@ -1,0 +1,17 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iVM.UWP.App.Themes.Default">
+
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Default">
+      <SolidColorBrush x:Key="BackgroundGeneral" Color="Black" />
+      <SolidColorBrush x:Key="BackgroundAmbient" Color="#FF292928" />
+      <SolidColorBrush x:Key="BackgroundYellowMain" Color="#FFDAAD31" />
+      <SolidColorBrush x:Key="BackgroundYellowLight" Color="#FFE4C369" />
+      <SolidColorBrush x:Key="BackgroundYellowFlash" Color="#FFEDD79D" />
+
+      <SolidColorBrush x:Key="TextBlackMain" Color="#FF000000" />
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>

@@ -6,54 +6,40 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-  xmlns:fa="using:FontAwesome.UWP"
-  xmlns:cm="using:Caliburn.Micro"
-  Background="{ThemeResource DefaultBgColor}">
+  xmlns:cm="using:Caliburn.Micro">
 
   <Page.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Resources/style/mainPageStyle.xaml" />
+        <ResourceDictionary Source="/Resources/Styles.xaml" />
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Page.Resources>
-
+  
   <Grid>
     <SplitView x:Name="mainMenu" Margin="0,0,0,0" HorizontalAlignment="Stretch" DisplayMode="CompactOverlay" CompactPaneLength="{Binding CollapsedPanelLength}" OpenPaneLength="150" PanePlacement="Left">
       <SplitView.Pane>
         <StackPanel>
-          <Button HorizontalAlignment="Left" Style="{StaticResource btnMenuItem}" Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" Width="50" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="Button_Click"></Button>
-          <ListBox x:Name="NavigateTo">
-            <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
-              <Grid HorizontalAlignment="Stretch">
-                <Grid.ColumnDefinitions >
-                  <ColumnDefinition Width="Auto" />
-                  <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <fa:FontAwesome Grid.Column="0" Width="50" Icon="Home" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="1" Text="Home" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-              </Grid>
-            </ListBoxItem>
-            <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
-              <Grid HorizontalAlignment="Stretch">
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="Auto" />
-                  <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <fa:FontAwesome Grid.Column="0" Width="50" Icon="Calendar" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="1" Text="Events" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-              </Grid>
-            </ListBoxItem>
-            <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0,10,0,10" Margin="0,0,0,0">
-              <Grid HorizontalAlignment="Stretch">
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="Auto" />
-                  <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <fa:FontAwesome Grid.Column="0" Width="50" Icon="AreaChart" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Grid.Column="1" Text="Statistic" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-              </Grid>
-            </ListBoxItem>
+          <ToggleButton 
+            HorizontalAlignment="Left" 
+            Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" 
+            FontFamily="{StaticResource SymbolThemeFontFamily}" 
+            Width="50" Height="50" 
+            Content="&#xE700;" 
+            Click="Button_Click" />
+          <ListBox Name="NavMenuItems" ItemContainerStyle="{StaticResource NavMenuStyle}" SelectedItem="{Binding SelectedNavMenuItem, Mode=TwoWay}">
+            <ListBox.ItemTemplate>
+              <DataTemplate>
+                <Grid HorizontalAlignment="Stretch">
+                  <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="1*"/>
+                  </Grid.ColumnDefinitions>
+                  <FontIcon Grid.Column="0" Glyph="{Binding IconAsChar}" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                  <TextBlock Grid.Column="1" Text="{Binding Title}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+              </DataTemplate>
+            </ListBox.ItemTemplate>
           </ListBox>
         </StackPanel>
       </SplitView.Pane>

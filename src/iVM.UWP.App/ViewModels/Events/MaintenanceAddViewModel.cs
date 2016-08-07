@@ -24,8 +24,9 @@ namespace iVM.UWP.App.ViewModels
     public MaintenanceAddViewModel(
       IEventAggregator eventAggregator, 
       INavigationService navigationService,
-      EventService eventService
-      ): base(eventAggregator, eventService)
+      EventService eventService,
+      SessionService sessionService
+      ): base(eventAggregator, eventService, sessionService)
     {
       this._navigationService = navigationService;
       this.DateOffset = DateTimeOffset.Now;

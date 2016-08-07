@@ -18,6 +18,6 @@ namespace iVM.Core.UI.ViewModels
       this.Events = this.eventService.GetOccuredEvents();
     }
 
-    public IEnumerable<EventEntity> Events { get; set; }
+    public IEnumerable<EventOccuredEntity> Events { get; set; }
   }
 }

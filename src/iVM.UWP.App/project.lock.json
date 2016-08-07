@@ -25,14 +25,6 @@
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         }
       },
-      "FontAwesome.UWP/4.5.0.8": {
-        "compile": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/2.1.0": {
         "dependencies": {
           "System.Collections": "4.0.10",
@@ -2334,14 +2326,6 @@
         },
         "runtime": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "FontAwesome.UWP/4.5.0.8": {
-        "compile": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.1.0": {
@@ -4725,14 +4709,6 @@
         },
         "runtime": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "FontAwesome.UWP/4.5.0.8": {
-        "compile": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.1.0": {
@@ -7157,14 +7133,6 @@
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         }
       },
-      "FontAwesome.UWP/4.5.0.8": {
-        "compile": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/2.1.0": {
         "dependencies": {
           "System.Collections": "4.0.10",
@@ -9555,14 +9523,6 @@
         },
         "runtime": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "FontAwesome.UWP/4.5.0.8": {
-        "compile": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.1.0": {
@@ -11996,14 +11956,6 @@
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
         }
       },
-      "FontAwesome.UWP/4.5.0.8": {
-        "compile": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/2.1.0": {
         "dependencies": {
           "System.Collections": "4.0.10",
@@ -14394,14 +14346,6 @@
         },
         "runtime": {
           "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll": {}
-        }
-      },
-      "FontAwesome.UWP/4.5.0.8": {
-        "compile": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/FontAwesome.UWP.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.1.0": {
@@ -16890,25 +16834,6 @@
         "lib/portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0/Caliburn.Micro.dll.mdb",
         "lib/sl5/Caliburn.Micro.XML",
         "lib/sl5/Caliburn.Micro.dll"
-      ]
-    },
-    "FontAwesome.UWP/4.5.0.8": {
-      "sha512": "HVoUY9gvrYRMxiyt+UyM8fM1SagiXVjmfyXYWCbcXwx4ydugGukf2fOoEXXfaFU4Se9TPNLTD4cp4FEHLXq6og==",
-      "type": "Package",
-      "files": [
-        "FontAwesome.UWP.nuspec",
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/net35/FontAwesome.WPF.dll",
-        "lib/net35/FontAwesome.WPF.xml",
-        "lib/net40/FontAwesome.WPF.dll",
-        "lib/net40/FontAwesome.WPF.xml",
-        "lib/uap10.0/FontAwesome.UWP.XML",
-        "lib/uap10.0/FontAwesome.UWP.dll",
-        "lib/uap10.0/FontAwesome.UWP.pri",
-        "lib/uap10.0/FontAwesome.UWP/FontAwesome.otf",
-        "package/services/metadata/core-properties/d9d18cfe2f574830ab1b15a85448a166.psmdcp",
-        "tools/install.ps1"
       ]
     },
     "Microsoft.ApplicationInsights/2.1.0": {
@@ -23294,7 +23219,6 @@
   "projectFileDependencyGroups": {
     "": [
       "Caliburn.Micro >= 3.0.1",
-      "FontAwesome.UWP >= 4.5.0.8",
       "Microsoft.ApplicationInsights >= 2.1.0",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.2.3",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.1.1",

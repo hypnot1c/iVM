@@ -108,6 +108,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainContext.cs" />
+    <Compile Include="ModelConfigurations\FillUpModelConfiguration.cs" />
+    <Compile Include="ModelConfigurations\EventOccuredModelConfiguration.cs" />
     <Compile Include="ModelConfigurations\VehicleModelConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\iVM.Data.EF.rd.xml" />

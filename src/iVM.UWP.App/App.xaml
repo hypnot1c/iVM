@@ -8,7 +8,7 @@
   <cm:CaliburnApplication.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="Themes/ThemesDictionary.xaml"/>
+        <ResourceDictionary Source="/Resources/Themes/Default/Controls.xaml" />
       </ResourceDictionary.MergedDictionaries>
       <conv:BooleanToVisibilityConverter x:Key="boolToVis" />
       <conv:EnumToListConverter x:Key="enumToList" />

@@ -9,7 +9,7 @@
   xmlns:fa="using:FontAwesome.UWP"
   xmlns:cm="using:Caliburn.Micro">
 
-  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="1*" />
       <RowDefinition Height="Auto" />
@@ -24,11 +24,11 @@
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
-      <TextBox Grid.Row="0" Name="Name" />
-      <TextBox Grid.Row="1" Name="Expense" InputScope="Number" />
-      <TextBox Grid.Row="2" Name="ServiceStationName" InputScope="Number" />
+      <TextBox Grid.Row="0" Name="Name" PlaceholderText="Name..." />
+      <TextBox Grid.Row="1" Name="Expense" InputScope="Number" PlaceholderText="Expense..." />
+      <TextBox Grid.Row="2" Name="ServiceStationName" InputScope="Number" PlaceholderText="Service station..." />
       <DatePicker Grid.Row="3" x:Name="DateOffset" />
-      <TextBox Grid.Row="4" Name="Mileage" InputScope="Number" />
+      <TextBox Grid.Row="4" Name="Mileage" InputScope="Number" PlaceholderText="Mileage" />
       <StackPanel Grid.Row="5" Orientation="Horizontal">
         <TextBox Name="workDesc" PlaceholderText="Maintenance work..." InputScope="Text" />
         <TextBox Name="partCost" PlaceholderText="Part cost..." InputScope="Number" />
@@ -36,7 +36,7 @@
         <Button cm:Message.Attach="[Event Click] = [AddWorkItem(workDesc.Text, partCost.Text, workCost.Text)]">
           <Button.Content>
             <StackPanel Orientation="Horizontal">
-              <fa:FontAwesome Icon="PlusCircle" />
+              <!--<fa:FontAwesome Icon="PlusCircle" />-->
               <TextBlock Text="Add" />
             </StackPanel>
           </Button.Content>
@@ -72,10 +72,10 @@
         </ItemsControl>
       </StackPanel>
     </Grid>
-    <Button Grid.Row="2" HorizontalAlignment="Right">
+    <Button Name="Save" Grid.Row="2" HorizontalAlignment="Right">
       <Button.Content>
         <StackPanel Orientation="Horizontal">
-          <fa:FontAwesome Icon="Save" />
+          <!--<fa:FontAwesome Icon="Save" />-->
           <TextBlock Text="Save" />
         </StackPanel>
       </Button.Content>

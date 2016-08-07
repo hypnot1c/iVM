@@ -1,5 +1,4 @@
 ﻿using Caliburn.Micro;
-using iVM.Events;
 using System.Collections.Generic;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
@@ -7,13 +6,11 @@ using Windows.UI.Xaml.Navigation;
 
 namespace iVM.UWP.App.ViewModels
 {
-  public class ShellViewModel : Screen, IHandle<ViewActionButtonsEvent>
+  public class ShellViewModel : Screen
   {
     private readonly WinRTContainer _container;
     private readonly IEventAggregator _eventAggregator;
     protected INavigationService _navigationService;
-
-    private List<ActionButton> _actionButtons;
 
     private int _collapsedPanelLength;
 
@@ -30,41 +27,52 @@ namespace iVM.UWP.App.ViewModels
     private bool _isNotFirstVisit;
     public bool IsNotFirstVisit
     {
-      get
-      {
-        return this._isNotFirstVisit;
-      }
+      get { return this._isNotFirstVisit; }
       set
       {
         this._isNotFirstVisit = value;
         this.NotifyOfPropertyChange(() => this.IsNotFirstVisit);
       }
     }
-    public List<ActionButton> ActionButtons
-    {
-      get
-      {
-        return this._actionButtons;
-      }
+
+    public IEnumerable<NavMenuItem> NavMenuItems { get; set; }
+
+    private NavMenuItem _selectedNavMenuItem;
+    public NavMenuItem SelectedNavMenuItem {
+      get { return this._selectedNavMenuItem; }
       set
       {
-        this._actionButtons = value;
-        this.NotifyOfPropertyChange(() => this.ActionButtons);
+        this._selectedNavMenuItem = value;
+        this.NotifyOfPropertyChange(() => this.SelectedNavMenuItem);
       }
     }
-
-
     public ShellViewModel(WinRTContainer container, IEventAggregator eventAggregator)
     {
+      this.PropertyChanged += ShellViewModel_PropertyChanged;
       this._container = container;
       this._eventAggregator = eventAggregator;
       this.CollapsedPanelLength = 0;
-      this._actionButtons = new List<ActionButton>();
       this.IsNotFirstVisit = true;
+
+      this.NavMenuItems = new List<NavMenuItem>
+      {
+        new NavMenuItem { Icon = Symbol.Home, Title = "Home", TargetViewModel = typeof(EventListViewModel) },
+        new NavMenuItem { Icon = Symbol.Calendar, Title = "Events", TargetViewModel = typeof(EventListViewModel) }
+      };
 
       // Register a handler for BackRequested events and set the
       // visibility of the Back button
       SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+    }
+
+    private void ShellViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+      switch(e.PropertyName)
+      {
+        case nameof(this.SelectedNavMenuItem):
+          this._navigationService.NavigateToViewModel(this.SelectedNavMenuItem.TargetViewModel);
+          break;
+      }
     }
 
     private void _navigationService_Navigated(object sender, NavigationEventArgs e)
@@ -104,10 +112,7 @@ namespace iVM.UWP.App.ViewModels
       this._navigationService.NavigateToViewModel(firstView);
     }
 
-    public void Handle(ViewActionButtonsEvent message)
-    {
-    }
-
+    
     private void OnBackRequested(object sender, BackRequestedEventArgs e)
     {
       if (this._navigationService.CanGoBack && !e.Handled)

@@ -52,6 +52,32 @@ namespace iVM.UWP.Entity.Services
       }
     }
 
+    private IMaintenanceRepository _maintenances;
+    public IMaintenanceRepository Maintenances
+    {
+      get
+      {
+        if(this._maintenances == null)
+        {
+          this._maintenances = new MaintenanceRepository(this._context);
+        }
+        return _maintenances;
+      }
+    }
+
+    private IMaintenanceItemRepository _maintenanceItems;
+    public IMaintenanceItemRepository MaintenanceItems
+    {
+      get
+      {
+        if (this._maintenanceItems == null)
+        {
+          this._maintenanceItems = new MaintenanceItemRepository(this._context);
+        }
+        return _maintenanceItems;
+      }
+    }
+
     public void Commit()
     {
       throw new NotImplementedException();

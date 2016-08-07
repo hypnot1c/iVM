@@ -3,17 +3,11 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:iVM.UWP.App.Views"
+    xmlns:elm="using:iVM.UWP.App.Resources.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-  xmlns:fa="using:FontAwesome.UWP"
-  Background="{ThemeResource DefaultBgColor}">
+    mc:Ignorable="d">
   <Page.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Resources/style/mainPageStyle.xaml" />
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
   </Page.Resources>
 
   <Grid>
@@ -29,16 +23,49 @@
         <AppBarButton Name="EventAdd" Icon="Add" Label="Add"/>
       </CommandBar.PrimaryCommands>
     </CommandBar>
-    <GridView Grid.Row="1" Name="Events">
+    <GridView Grid.Row="1" Name="Events" BorderBrush="Red" BorderThickness="1" SelectionMode="None">
+      <GridView.ItemContainerStyle>
+        <Style TargetType="GridViewItem">
+          <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+          <Setter Property="HorizontalAlignment" Value="Stretch" />
+          <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        </Style>
+      </GridView.ItemContainerStyle>
+      <GridView.ItemsPanel>
+        <ItemsPanelTemplate>
+          <elm:FillPanel />
+        </ItemsPanelTemplate>
+      </GridView.ItemsPanel>
       <GridView.ItemTemplate>
         <DataTemplate>
-          <StackPanel Margin="5,5,5,5">
-            <Image Width="250" Height="100" />
-            <TextBlock Text="{Binding Name}" />
-            <TextBlock Text="{Binding OccuredDate}" />
-          </StackPanel>
+          <Border Background="Blue"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+            <TextBlock Text="{Binding Name}"
+                            Margin="20"
+                            TextWrapping="Wrap"
+                            TextTrimming="WordEllipsis" />
+          </Border>
         </DataTemplate>
       </GridView.ItemTemplate>
     </GridView>
+    
+    
+    <!--<GridView Grid.Row="1" Name="Events" BorderBrush="Red" BorderThickness="1" SelectionMode="None">
+      <GridView.ItemsPanel>
+        <ItemsPanelTemplate>
+          <ItemsStackPanel />
+        </ItemsPanelTemplate>
+      </GridView.ItemsPanel>
+      <GridView.ItemTemplate>
+        <DataTemplate>
+          <Grid Margin="5,5,5,5" BorderBrush="Green" BorderThickness="1">
+            --><!--<Image Width="" Height="100" />--><!--
+            <TextBlock Text="{Binding Name}" />
+            <TextBlock Text="{Binding OccuredDate}" />
+          </Grid>
+        </DataTemplate>
+      </GridView.ItemTemplate>
+    </GridView>-->
   </Grid>
 </Page>

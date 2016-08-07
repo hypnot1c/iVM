@@ -9,7 +9,7 @@
   xmlns:fa="using:FontAwesome.UWP"
   xmlns:cm="using:Caliburn.Micro">
 
-  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  <Grid>
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
@@ -30,7 +30,7 @@
         <Button Name="Save">
           <Button.Content>
             <StackPanel Orientation="Horizontal">
-              <fa:FontAwesome Icon="Save" />
+              <!--<fa:FontAwesome Icon="Save" />-->
               <TextBlock>Save</TextBlock>
             </StackPanel>
           </Button.Content>
@@ -38,7 +38,7 @@
         <Button Name="Cancel">
           <Button.Content>
             <StackPanel Orientation="Horizontal">
-              <fa:FontAwesome Icon="Undo" />
+              <!--<fa:FontAwesome Icon="Undo" />-->
               <TextBlock>Cancel</TextBlock>
             </StackPanel>
           </Button.Content>

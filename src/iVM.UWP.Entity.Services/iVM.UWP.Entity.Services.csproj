@@ -111,6 +111,8 @@
     <Compile Include="EFRepository.cs" />
     <Compile Include="Helpers\EFHelper.cs" />
     <Compile Include="Repositories\Event\EventOccuredRepository.cs" />
+    <Compile Include="Repositories\Event\MaintenanceItemRepository.cs" />
+    <Compile Include="Repositories\Event\MaintenanceRepository.cs" />
     <Compile Include="Repositories\Event\FillUpRepository.cs" />
     <Compile Include="Repositories\VehicleTypeRepository.cs" />
     <Compile Include="Repositories\VehicleModelRepository.cs" />

@@ -1,6 +1,5 @@
 ﻿using iVM.Data.Model;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace iVM.Core.Entity.Services
 {
@@ -19,10 +18,11 @@ namespace iVM.Core.Entity.Services
     }
 
     #region Generic events
-    public IEnumerable<EventEntity> GetOccuredEvents()
+    public IEnumerable<EventOccuredEntity> GetOccuredEvents()
     {
-      var events = new List<EventEntity>();
+      var events = new List<EventOccuredEntity>();
       var fillUps = this._mainUoW.FillUps.GetAll();
+      var maintenances = this._mainUoW.Maintenances.GetAll();
       foreach (var fu in fillUps)
       {
         var ev = this._mainUoW.EventsOccured.Get(fu.EventOccuredId);
@@ -33,6 +33,18 @@ namespace iVM.Core.Entity.Services
         };
         events.Add(elm);
       }
+
+      foreach (var maint in maintenances)
+      {
+        var ev = this._mainUoW.EventsOccured.Get(maint.EventOccuredId);
+        var elm = new MaintenanceEntity
+        {
+          OccuredDate = ev.Date,
+          Name = ev.Title
+        };
+        events.Add(elm);
+      }
+
       return events;
     }
     #endregion
@@ -78,15 +90,21 @@ namespace iVM.Core.Entity.Services
       var maint = new MaintenanceModel
       {
         EventOccuredId = ev.Id,
-        ServiceStationName = maintenance.ServiceStationName,
-        ListOfWorks = maintenance.ListOfWorks.Select(i => new MaintenanceItemModel
-        {
-          Title = i.Title,
-          PartsCost = i.PartCost,
-          WorkCost = i.WorkCost
-        }).ToList()
+        ServiceStationName = maintenance.ServiceStationName
       };
-      //TODO: Finish maintenance saving...
+      this._mainUoW.Maintenances.Add(maint);
+      foreach(var item in maintenance.ListOfWorks)
+      {
+        var workItem = new MaintenanceItemModel
+        {
+          MaintenanceId = maint.Id,
+          Title = item.Title,
+          PartsCost = item.PartCost,
+          WorkCost = item.WorkCost
+        };
+        this._mainUoW.MaintenanceItems.Add(workItem);
+      }
+      this._mainUoW.Save();
     }
     #endregion
   }

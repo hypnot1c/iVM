@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Event\EventService.cs" />
     <Compile Include="Repositories\Event\IEventOccuredRepository.cs" />
+    <Compile Include="Repositories\Event\IMaintenanceItemRepository.cs" />
+    <Compile Include="Repositories\Event\IMaintenanceRepository.cs" />
     <Compile Include="Repositories\Event\IFillUpRepository.cs" />
     <Compile Include="Repositories\Vehicle\IVehicleBrandRepository.cs" />
     <Compile Include="Repositories\Vehicle\IVehicleModelRepository.cs" />

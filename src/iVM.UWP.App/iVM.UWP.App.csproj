@@ -104,16 +104,17 @@
     <Compile Include="Converters\DecimalToStringConverter.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToListConverter.cs" />
-    <Compile Include="Events\ViewActionButtonsEvent.cs" />
     <Compile Include="Helpers\UserDeviceHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Controls\FillPanel.cs" />
     <Compile Include="ViewModels\Events\EventListViewModel.cs" />
     <Compile Include="ViewModels\Events\EventTypeSelectViewModel.cs" />
     <Compile Include="ViewModels\Events\FillUpAddViewModel.cs" />
     <Compile Include="ViewModels\Events\MaintenanceAddViewModel.cs" />
+    <Compile Include="ViewModels\NavMenuItem.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\VehicleAddViewModel.cs" />
     <Compile Include="Views\FillUpAddView.xaml.cs">
@@ -160,15 +161,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Resources\style\mainPageStyle.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Resources\Styles.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\style\newEventStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="Themes\ThemesDictionary.xaml">
+    <Page Include="Resources\Themes\Default\Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Themes\Default\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
