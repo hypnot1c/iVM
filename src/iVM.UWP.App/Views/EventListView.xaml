@@ -26,46 +26,25 @@
     <GridView Grid.Row="1" Name="Events" BorderBrush="Red" BorderThickness="1" SelectionMode="None">
       <GridView.ItemContainerStyle>
         <Style TargetType="GridViewItem">
+          <Setter Property="BorderBrush" Value="Red" />
+          <Setter Property="BorderThickness" Value="1" />
           <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-          <Setter Property="HorizontalAlignment" Value="Stretch" />
-          <Setter Property="VerticalContentAlignment" Value="Stretch" />
         </Style>
       </GridView.ItemContainerStyle>
-      <GridView.ItemsPanel>
-        <ItemsPanelTemplate>
-          <elm:FillPanel />
-        </ItemsPanelTemplate>
-      </GridView.ItemsPanel>
-      <GridView.ItemTemplate>
-        <DataTemplate>
-          <Border Background="Blue"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch">
-            <TextBlock Text="{Binding Name}"
-                            Margin="20"
-                            TextWrapping="Wrap"
-                            TextTrimming="WordEllipsis" />
-          </Border>
-        </DataTemplate>
-      </GridView.ItemTemplate>
-    </GridView>
-    
-    
-    <!--<GridView Grid.Row="1" Name="Events" BorderBrush="Red" BorderThickness="1" SelectionMode="None">
-      <GridView.ItemsPanel>
+      <!--<GridView.ItemsPanel>
         <ItemsPanelTemplate>
           <ItemsStackPanel />
         </ItemsPanelTemplate>
-      </GridView.ItemsPanel>
+      </GridView.ItemsPanel>-->
       <GridView.ItemTemplate>
         <DataTemplate>
-          <Grid Margin="5,5,5,5" BorderBrush="Green" BorderThickness="1">
-            --><!--<Image Width="" Height="100" />--><!--
+          <StackPanel Margin="5,5,5,5" BorderBrush="Green" Width="250" BorderThickness="1">
+            <Image Width="" Height="100" />
             <TextBlock Text="{Binding Name}" />
             <TextBlock Text="{Binding OccuredDate}" />
-          </Grid>
+          </StackPanel>
         </DataTemplate>
       </GridView.ItemTemplate>
-    </GridView>-->
+    </GridView>
   </Grid>
 </Page>
