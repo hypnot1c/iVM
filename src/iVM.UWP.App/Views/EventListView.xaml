@@ -3,11 +3,49 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:iVM.UWP.App.Views"
-    xmlns:elm="using:iVM.UWP.App.Resources.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:lcl="using:iVM.UWP.App.Resources.UI.Controls"
     mc:Ignorable="d">
   <Page.Resources>
+    <DataTemplate x:Key="FillUpGridItemTemplate">
+      <Grid HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+          <RowDefinition />
+          <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <FontIcon Grid.Column="0" 
+                  Grid.RowSpan="2" 
+                  Glyph="&#xEBB2;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding OccuredDate}" />
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Name}" />
+      </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="MaintenanceGridItemTemplate">
+      <Grid HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+          <RowDefinition />
+          <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <FontIcon Grid.Column="0" 
+                  Grid.RowSpan="2" 
+                  Glyph="&#xE90F;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding OccuredDate}" />
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Name}" />
+      </Grid>
+    </DataTemplate>
+    <lcl:OccuredEventDataTemplateSelector 
+      x:Name="EventListTmplSelector"
+      FillUpDataTemplate="{StaticResource FillUpGridItemTemplate}"
+      MaintenanceDataTemplate="{StaticResource MaintenanceGridItemTemplate}"/>
   </Page.Resources>
 
   <Grid>
@@ -23,28 +61,21 @@
         <AppBarButton Name="EventAdd" Icon="Add" Label="Add"/>
       </CommandBar.PrimaryCommands>
     </CommandBar>
-    <GridView Grid.Row="1" Name="Events" BorderBrush="Red" BorderThickness="1" SelectionMode="None">
+    <GridView Grid.Row="1" Name="Events" SelectionMode="None"
+              ItemTemplateSelector="{StaticResource EventListTmplSelector}"
+              >
       <GridView.ItemContainerStyle>
         <Style TargetType="GridViewItem">
-          <Setter Property="BorderBrush" Value="Red" />
-          <Setter Property="BorderThickness" Value="1" />
+          <Setter Property="Margin" Value="0,2,0,2" />
+          <Setter Property="HorizontalAlignment" Value="Stretch" />
           <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         </Style>
       </GridView.ItemContainerStyle>
-      <!--<GridView.ItemsPanel>
+      <GridView.ItemsPanel>
         <ItemsPanelTemplate>
           <ItemsStackPanel />
         </ItemsPanelTemplate>
-      </GridView.ItemsPanel>-->
-      <GridView.ItemTemplate>
-        <DataTemplate>
-          <StackPanel Margin="5,5,5,5" BorderBrush="Green" Width="250" BorderThickness="1">
-            <Image Width="" Height="100" />
-            <TextBlock Text="{Binding Name}" />
-            <TextBlock Text="{Binding OccuredDate}" />
-          </StackPanel>
-        </DataTemplate>
-      </GridView.ItemTemplate>
+      </GridView.ItemsPanel>
     </GridView>
   </Grid>
 </Page>

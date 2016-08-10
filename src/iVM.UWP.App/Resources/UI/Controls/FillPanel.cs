@@ -2,7 +2,7 @@
 using Windows.Foundation;
 using Windows.UI.Xaml.Controls;
 
-namespace iVM.UWP.App.Resources.Controls
+namespace iVM.UWP.App.Resources.UI.Controls
 {
   public class FillPanel : Panel
   {

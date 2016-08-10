@@ -2,6 +2,7 @@
 using iVM.Core.Entity;
 using iVM.Core.Entity.Services;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace iVM.Core.UI.ViewModels
 {
@@ -15,7 +16,7 @@ namespace iVM.Core.UI.ViewModels
       ) : base(eventAggregator)
     {
       this.eventService = eventService;
-      this.Events = this.eventService.GetOccuredEvents();
+      this.Events = this.eventService.GetOccuredEvents().OrderByDescending(e => e.OccuredDate);
     }
 
     public IEnumerable<EventOccuredEntity> Events { get; set; }

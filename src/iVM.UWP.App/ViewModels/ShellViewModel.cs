@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using System.Collections.Generic;
+using System.Linq;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -59,7 +60,7 @@ namespace iVM.UWP.App.ViewModels
         new NavMenuItem { Icon = Symbol.Home, Title = "Home", TargetViewModel = typeof(EventListViewModel) },
         new NavMenuItem { Icon = Symbol.Calendar, Title = "Events", TargetViewModel = typeof(EventListViewModel) }
       };
-
+      this._selectedNavMenuItem = this.NavMenuItems.First();
       // Register a handler for BackRequested events and set the
       // visibility of the Back button
       SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
@@ -108,7 +109,7 @@ namespace iVM.UWP.App.ViewModels
     {
       //if (_resume)
       //  _navigationService.ResumeState();
-      var firstView = this.IsNotFirstVisit ? typeof(EventListViewModel) : typeof(VehicleAddViewModel);
+      var firstView = this.IsNotFirstVisit ? this.SelectedNavMenuItem.TargetViewModel : typeof(VehicleAddViewModel);
       this._navigationService.NavigateToViewModel(firstView);
     }
 

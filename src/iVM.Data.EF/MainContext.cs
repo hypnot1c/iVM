@@ -71,6 +71,12 @@ namespace iVM.Data.EF
       this.Add(new FillUpModel { EventOccuredId = 10, CompanyName = "Gazpromneft", LitresValue = 64.81M, LiterCost = 38.30M });
       this.Add(new FillUpModel { EventOccuredId = 11, CompanyName = "Gazpromneft", LitresValue = 30.00M, LiterCost = 39.70M });
 
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Title = "Repair 1", Date = DateTime.ParseExact("09.08.2016", "dd.MM.yyyy", null), Mileage = 190000, Expense = 7980M });
+
+      this.Add(new MaintenanceModel { EventOccuredId = 12, ServiceStationName = "На речном" });
+
+      this.Add(new MaintenanceItemModel { MaintenanceId = 1, Title = "Замена масла", PartsCost = 4000, WorkCost = 3980 });
+
       this.SaveChanges();
     }
   }
