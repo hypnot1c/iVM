@@ -15,18 +15,13 @@
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Page.Resources>
-  
+
   <Grid>
-    <SplitView x:Name="mainMenu" Margin="0,0,0,0" HorizontalAlignment="Stretch" DisplayMode="CompactOverlay" CompactPaneLength="{Binding CollapsedPanelLength}" OpenPaneLength="150" PanePlacement="Left">
+    <SplitView x:Name="mainMenu" Margin="0,0,0,0" HorizontalAlignment="Stretch" DisplayMode="CompactOverlay" 
+               CompactPaneLength="{Binding CollapsedPanelLength}" OpenPaneLength="150" PanePlacement="Left"
+               IsPaneOpen="{Binding IsChecked, ElementName=menuToggle}">
       <SplitView.Pane>
-        <StackPanel>
-          <ToggleButton 
-            HorizontalAlignment="Left" 
-            Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" 
-            FontFamily="{StaticResource SymbolThemeFontFamily}" 
-            Width="50" Height="50" 
-            Content="&#xE700;" 
-            Click="Button_Click" />
+        <StackPanel Margin="0,48,0,0">
           <ListBox Name="NavMenuItems" ItemContainerStyle="{StaticResource NavMenuStyle}" SelectedItem="{Binding SelectedNavMenuItem, Mode=TwoWay}">
             <ListBox.ItemTemplate>
               <DataTemplate>
@@ -47,5 +42,12 @@
         <Frame cm:Message.Attach="[Event Loaded] = [SetupNavigationService($source)]" DataContext="{x:Null}" />
       </SplitView.Content>
     </SplitView>
+    <ToggleButton x:Name="menuToggle"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" 
+            FontFamily="{StaticResource SymbolThemeFontFamily}" 
+            Width="48" Height="48" 
+            Content="&#xE700;" />
   </Grid>
 </Page>

@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Core.Entity.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,9 +17,9 @@ namespace iVM.Core.UI.ViewModels
       ) : base(eventAggregator)
     {
       this.eventService = eventService;
-      this.Events = this.eventService.GetOccuredEvents().OrderByDescending(e => e.OccuredDate);
+      this.Events = this.eventService.GetOccuredEvents().OrderByDescending(e => e.OccuredDate).GroupBy(x => x.OccuredDate);
     }
 
-    public IEnumerable<EventOccuredEntity> Events { get; set; }
+    public IEnumerable<IGrouping<DateTime, EventOccuredEntity>> Events { get; set; }
   }
 }

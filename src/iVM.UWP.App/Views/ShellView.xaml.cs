@@ -11,10 +11,5 @@ namespace iVM.UWP.App.Views
     {
       this.InitializeComponent();
     }
-
-    private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-    {
-      mainMenu.IsPaneOpen = !mainMenu.IsPaneOpen;
-    }
   }
 }

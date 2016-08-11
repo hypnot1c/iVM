@@ -84,7 +84,8 @@ namespace iVM.UWP.App.ViewModels
             AppViewBackButtonVisibility.Collapsed;
 
       this.IsNotFirstVisit = e.Content.GetType().Name != "VehicleAddView";
-      this.CollapsedPanelLength = this.IsNotFirstVisit ? 50 : 0;
+      //this.CollapsedPanelLength = this.IsNotFirstVisit ? 50 : 0;
+      this.CollapsedPanelLength = 0;
     }
 
     protected override void OnActivate()
