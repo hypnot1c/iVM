@@ -21,8 +21,13 @@
         <FontIcon Grid.Column="0" 
                   Grid.RowSpan="2" 
                   Glyph="&#xEBB2;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding OccuredDate}" />
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Name}" />
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding OccuredDate, Converter={StaticResource dateTimeToStr} }" HorizontalAlignment="Right" />
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Name}" HorizontalAlignment="Left" />
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
+          <TextBlock Text="{Binding Litres, Converter={StaticResource decimalToStr}}" />
+          <TextBlock Text="L." />
+        </StackPanel>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Expense, Converter={StaticResource decimalToStr}}" HorizontalAlignment="Right" />
       </Grid>
     </DataTemplate>
     <DataTemplate x:Key="MaintenanceGridItemTemplate">
@@ -38,8 +43,9 @@
         <FontIcon Grid.Column="0" 
                   Grid.RowSpan="2" 
                   Glyph="&#xE90F;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding OccuredDate}" />
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Name}" />
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding OccuredDate, Converter={StaticResource dateTimeToStr}}" HorizontalAlignment="Right" />
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Name}" HorizontalAlignment="Left" />
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Expense, Converter={StaticResource decimalToStr}}" HorizontalAlignment="Right" />
       </Grid>
     </DataTemplate>
     <lcl:OccuredEventDataTemplateSelector 
@@ -66,7 +72,7 @@
               >
       <GridView.ItemContainerStyle>
         <Style TargetType="GridViewItem">
-          <Setter Property="Margin" Value="0,2,0,2" />
+          <Setter Property="Margin" Value="0,2,15,2" />
           <Setter Property="HorizontalAlignment" Value="Stretch" />
           <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         </Style>

@@ -29,6 +29,8 @@ namespace iVM.Core.Entity.Services
         var elm = new FillUpEntity
         {
           OccuredDate = ev.Date,
+          Expense = ev.Expense,
+          Litres = fu.LitresValue,
           Name = ev.Title
         };
         events.Add(elm);
@@ -40,6 +42,8 @@ namespace iVM.Core.Entity.Services
         var elm = new MaintenanceEntity
         {
           OccuredDate = ev.Date,
+          Expense = ev.Expense,
+          ServiceStationName = maint.ServiceStationName,
           Name = ev.Title
         };
         events.Add(elm);

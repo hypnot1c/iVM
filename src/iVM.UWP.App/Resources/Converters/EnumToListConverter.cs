@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Windows.UI.Xaml.Data;
 
-namespace iVM.Converters
+namespace iVM.UWP.App.Resources.Converters
 {
   public class EnumToListConverter : IValueConverter
   {

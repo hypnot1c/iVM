@@ -101,9 +101,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converters\DecimalToStringConverter.cs" />
-    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Converters\EnumToListConverter.cs" />
+    <Compile Include="Resources\Converters\DateTimeConverter.cs" />
+    <Compile Include="Resources\Converters\DecimalToStringConverter.cs" />
+    <Compile Include="Resources\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Resources\Converters\EnumToListConverter.cs" />
     <Compile Include="Helpers\UserDeviceHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
