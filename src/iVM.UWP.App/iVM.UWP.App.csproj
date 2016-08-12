@@ -117,6 +117,7 @@
     <Compile Include="ViewModels\Events\FillUpAddViewModel.cs" />
     <Compile Include="ViewModels\Events\MaintenanceAddViewModel.cs" />
     <Compile Include="ViewModels\NavMenuItem.cs" />
+    <Compile Include="ViewModels\PivotViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\VehicleAddViewModel.cs" />
     <Compile Include="Views\FillUpAddView.xaml.cs">
@@ -130,6 +131,9 @@
     </Compile>
     <Compile Include="Views\MaintenanceAddView.xaml.cs">
       <DependentUpon>MaintenanceAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PivotView.xaml.cs">
+      <DependentUpon>PivotView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -191,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MaintenanceAddView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PivotView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

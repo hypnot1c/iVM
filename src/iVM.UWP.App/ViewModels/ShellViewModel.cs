@@ -57,8 +57,9 @@ namespace iVM.UWP.App.ViewModels
 
       this.NavMenuItems = new List<NavMenuItem>
       {
-        new NavMenuItem { Icon = Symbol.Home, Title = "Home", TargetViewModel = typeof(EventListViewModel) },
-        new NavMenuItem { Icon = Symbol.Calendar, Title = "Events", TargetViewModel = typeof(EventListViewModel) }
+        new NavMenuItem { Icon = Symbol.Home, Title = "Home", TargetViewModel = typeof(PivotViewModel) }
+        //new NavMenuItem { Icon = Symbol.Home, Title = "Home", TargetViewModel = typeof(EventListViewModel) },
+        //new NavMenuItem { Icon = Symbol.Calendar, Title = "Events", TargetViewModel = typeof(EventListViewModel) }
       };
       this._selectedNavMenuItem = this.NavMenuItems.First();
       // Register a handler for BackRequested events and set the
@@ -102,8 +103,13 @@ namespace iVM.UWP.App.ViewModels
     {
       this._navigationService = _container.RegisterNavigationService(frame);
       this._navigationService.Navigated += _navigationService_Navigated;
-
+      this._navigationService.NavigationFailed += _navigationService_NavigationFailed;
       this.NavigateTo();
+    }
+
+    private void _navigationService_NavigationFailed(object sender, NavigationFailedEventArgs e)
+    {
+      throw new System.NotImplementedException();
     }
 
     public void NavigateTo()

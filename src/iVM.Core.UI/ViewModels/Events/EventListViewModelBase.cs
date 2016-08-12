@@ -18,6 +18,7 @@ namespace iVM.Core.UI.ViewModels
     {
       this.eventService = eventService;
       this.Events = this.eventService.GetOccuredEvents().OrderByDescending(e => e.OccuredDate).GroupBy(x => x.OccuredDate);
+      this.DisplayName = "Events";
     }
 
     public IEnumerable<IGrouping<DateTime, EventOccuredEntity>> Events { get; set; }
