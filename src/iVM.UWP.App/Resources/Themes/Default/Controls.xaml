@@ -9,17 +9,13 @@
 
   <ResourceDictionary.ThemeDictionaries>
     <ResourceDictionary x:Key="Default">
-      <Style TargetType="Page">
+      <!--<Style TargetType="Page">
         <Setter Property="Background" Value="{StaticResource BackgroundGeneral}" />
       </Style>
 
       <Style TargetType="SplitView">
         <Setter Property="Background" Value="{StaticResource BackgroundGeneral}" />
       </Style>
-
-      <!--<Style TargetType="StackPanel">
-        <Setter Property="Background" Value="{StaticResource BackgroundGeneral}" />
-      </Style>-->
 
       <Style TargetType="CommandBar">
         <Setter Property="Background" Value="{StaticResource BackgroundAmbient}" />
@@ -143,7 +139,7 @@
             </ControlTemplate>
           </Setter.Value>
         </Setter>
-      </Style>
+      </Style>-->
 
       
     </ResourceDictionary>

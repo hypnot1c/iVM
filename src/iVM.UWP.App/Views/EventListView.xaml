@@ -66,7 +66,7 @@
               ItemTemplateSelector="{StaticResource EventListTmplSelector}">
       <GridView.ItemContainerStyle>
         <Style TargetType="GridViewItem">
-          <!--<Setter Property="Margin" Value="0,2,15,2" />-->
+          <Setter Property="Margin" Value="15,0" />
           <Setter Property="HorizontalAlignment" Value="Stretch" />
           <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         </Style>
@@ -75,7 +75,7 @@
         <GroupStyle>
           <GroupStyle.HeaderTemplate>
             <DataTemplate>
-              <TextBlock FontSize="12" Text="{Binding Key, Converter={StaticResource dateTimeToStr}}" />
+              <TextBlock FontSize="16" Text="{Binding Key, Converter={StaticResource dateTimeToStr}}" />
             </DataTemplate>
           </GroupStyle.HeaderTemplate>
         </GroupStyle>
@@ -86,10 +86,7 @@
         </ItemsPanelTemplate>
       </GridView.ItemsPanel>
     </GridView>
-    <CommandBar Grid.Row="1" Margin="0,0,0,0">
-      <CommandBar.Content>
-        <TextBlock Text="Title" />
-      </CommandBar.Content>
+    <CommandBar Grid.Row="1">
       <CommandBar.PrimaryCommands>
         <AppBarButton Name="EventAdd" Icon="Add" Label="Add"/>
       </CommandBar.PrimaryCommands>

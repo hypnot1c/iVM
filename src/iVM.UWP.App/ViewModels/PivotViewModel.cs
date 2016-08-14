@@ -13,12 +13,5 @@ namespace iVM.UWP.App.ViewModels
       this.Items.Add(eventListVm);
       this.ActivateItem(eventListVm);
     }
-
-    protected override void OnInitialize()
-    {
-      base.OnInitialize();
-      //var item = this.Items.First();
-      //this.ActivateItem(item);
-    }
   }
 }

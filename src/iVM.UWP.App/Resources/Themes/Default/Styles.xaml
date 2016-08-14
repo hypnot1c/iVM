@@ -5,13 +5,19 @@
 
   <ResourceDictionary.ThemeDictionaries>
     <ResourceDictionary x:Key="Default">
-      <SolidColorBrush x:Key="BackgroundGeneral" Color="Black" />
+      <Thickness x:Key="PivotItemMargin">0</Thickness>
+      <Color x:Key="ColorMain">#FFFFB900</Color>
+      <Color x:Key="ForegroundColorAlt">#FF000000</Color>
+      
+      <SolidColorBrush x:Key="SystemControlHighlightListLowBrush" Color="{StaticResource ColorMain}" />
+      <SolidColorBrush x:Key="SystemControlHighlightAltBaseHighBrush" Color="{StaticResource ForegroundColorAlt}" />
+      <!--<SolidColorBrush x:Key="BackgroundGeneral" Color="Black" />
       <SolidColorBrush x:Key="BackgroundAmbient" Color="#FF292928" />
       <SolidColorBrush x:Key="BackgroundYellowMain" Color="#FFDAAD31" />
       <SolidColorBrush x:Key="BackgroundYellowLight" Color="#FFE4C369" />
       <SolidColorBrush x:Key="BackgroundYellowFlash" Color="#FFEDD79D" />
 
-      <SolidColorBrush x:Key="TextBlackMain" Color="#FF000000" />
+      <SolidColorBrush x:Key="TextBlackMain" Color="#FF000000" />-->
     </ResourceDictionary>
   </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>

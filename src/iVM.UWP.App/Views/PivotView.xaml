@@ -8,10 +8,13 @@
   xmlns:cm="using:Caliburn.Micro"
     mc:Ignorable="d">
 
-  <Pivot x:Name="Items">
+  <Pivot x:Name="Items" Margin="0,48,0,0">
     <Pivot.HeaderTemplate>
       <DataTemplate>
-        <TextBlock Text="{Binding DisplayName}" />
+        <StackPanel Orientation="Horizontal">
+          <FontIcon Glyph="&#xE787;" Height="48" Width="48" />
+          <TextBlock Text="{Binding DisplayName}" FontSize="20" VerticalAlignment="Center" />
+        </StackPanel>
       </DataTemplate>
     </Pivot.HeaderTemplate>
     <Pivot.ItemsPanel>
@@ -21,10 +24,8 @@
     </Pivot.ItemsPanel>
     <Pivot.ItemContainerStyle>
       <Style TargetType="PivotItem">
-        <Setter Property="BorderBrush" Value="Red" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-        <Setter Property="BorderThickness" Value="1" />
       </Style>
     </Pivot.ItemContainerStyle>
   </Pivot>
