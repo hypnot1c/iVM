@@ -6,11 +6,23 @@
   <ResourceDictionary.ThemeDictionaries>
     <ResourceDictionary x:Key="Default">
       <Thickness x:Key="PivotItemMargin">0</Thickness>
-      <Color x:Key="ColorMain">#FFFFB900</Color>
-      <Color x:Key="ForegroundColorAlt">#FF000000</Color>
       
-      <SolidColorBrush x:Key="SystemControlHighlightListLowBrush" Color="{StaticResource ColorMain}" />
-      <SolidColorBrush x:Key="SystemControlHighlightAltBaseHighBrush" Color="{StaticResource ForegroundColorAlt}" />
+      <Color x:Key="AccentPrimaryColor">#FFF2C637</Color>
+
+      <Color x:Key="BackgroundPrimaryColor">#FF555555</Color>
+      
+      <Color x:Key="ForegroundHighlightColor">#FFB9B9B9</Color>
+      <Color x:Key="ForegroundSelectedColor">#FF000000</Color>
+      <Color x:Key="ForegroundPrimaryColor">#FFFFFFFF</Color>
+      
+
+      <SolidColorBrush x:Key="SystemControlBackgroundBaseLowBrush" Color="{StaticResource BackgroundPrimaryColor}" />
+      <SolidColorBrush x:Key="SystemControlForegroundBaseHighBrush" Color="{StaticResource ForegroundPrimaryColor}" />
+
+      <SolidColorBrush x:Key="SystemControlHighlightBaseHighBrush" Color="{StaticResource ForegroundHighlightColor}" />
+      <SolidColorBrush x:Key="SystemControlHighlightAccentBrush" Color="{StaticResource AccentPrimaryColor}" />
+      <SolidColorBrush x:Key="SystemControlHighlightAltChromeWhiteBrush" Color="{StaticResource ForegroundSelectedColor}" />
+      <!--<SolidColorBrush x:Key="SystemControlHighlightAltBaseHighBrush" Color="{StaticResource ForegroundColorAlt}" />-->
       <!--<SolidColorBrush x:Key="BackgroundGeneral" Color="Black" />
       <SolidColorBrush x:Key="BackgroundAmbient" Color="#FF292928" />
       <SolidColorBrush x:Key="BackgroundYellowMain" Color="#FFDAAD31" />

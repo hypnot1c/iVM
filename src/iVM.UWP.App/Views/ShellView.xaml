@@ -8,14 +8,6 @@
     mc:Ignorable="d"
   xmlns:cm="using:Caliburn.Micro">
 
-  <Page.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Resources/Styles.xaml" />
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Page.Resources>
-
   <Grid>
     <SplitView x:Name="mainMenu" Margin="0,0,0,0" HorizontalAlignment="Stretch" DisplayMode="CompactOverlay" 
                CompactPaneLength="{Binding CollapsedPanelLength}" OpenPaneLength="150" PanePlacement="Left"

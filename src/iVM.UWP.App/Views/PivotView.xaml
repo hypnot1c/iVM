@@ -22,11 +22,11 @@
         <Grid HorizontalAlignment="Stretch" />
       </ItemsPanelTemplate>
     </Pivot.ItemsPanel>
-    <Pivot.ItemContainerStyle>
+    <!--<Pivot.ItemContainerStyle>
       <Style TargetType="PivotItem">
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
       </Style>
-    </Pivot.ItemContainerStyle>
+    </Pivot.ItemContainerStyle>-->
   </Pivot>
 </Page>
