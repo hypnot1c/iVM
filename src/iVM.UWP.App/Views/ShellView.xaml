@@ -34,12 +34,9 @@
         <Frame cm:Message.Attach="[Event Loaded] = [SetupNavigationService($source)]" DataContext="{x:Null}"/>
       </SplitView.Content>
     </SplitView>
-    <ToggleButton x:Name="menuToggle"
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top"
+    <ToggleButton x:Name="menuToggle" Style="{ThemeResource menuToggleBtn}"
             Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" 
-            FontFamily="{StaticResource SymbolThemeFontFamily}" 
-            Width="48" Height="48" 
+                  IsChecked="{Binding IsPaneOpen, ElementName=mainMenu}"
             Content="&#xE700;" />
   </Grid>
 </Page>

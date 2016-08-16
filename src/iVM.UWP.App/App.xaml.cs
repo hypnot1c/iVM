@@ -28,6 +28,7 @@ namespace iVM
     {
       //WindowsAppInitializer.InitializeAsync();
       this.InitializeComponent();
+      this.RequestedTheme = Windows.UI.Xaml.ApplicationTheme.Dark;
       //this.Suspending += OnSuspending;
     }
 
