@@ -14,7 +14,7 @@
                IsPaneOpen="{Binding IsChecked, ElementName=menuToggle}">
       <SplitView.Pane>
         <StackPanel Margin="0,48,0,0">
-          <ListBox Name="NavMenuItems" SelectedItem="{Binding SelectedNavMenuItem, Mode=TwoWay}">
+          <ListBox Name="NavMenuItems" SelectedItem="{Binding SelectedNavMenuItem, Mode=TwoWay}" ItemContainerStyle="{ThemeResource navMenuItem}">
             <ListBox.ItemTemplate>
               <DataTemplate>
                 <Grid HorizontalAlignment="Stretch">
@@ -27,6 +27,7 @@
                 </Grid>
               </DataTemplate>
             </ListBox.ItemTemplate>
+            
           </ListBox>
         </StackPanel>
       </SplitView.Pane>

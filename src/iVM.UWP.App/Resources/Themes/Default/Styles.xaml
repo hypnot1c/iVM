@@ -10,6 +10,10 @@
       <Color x:Key="AccentPrimaryColor">#FFF2C637</Color>
       <Color x:Key="AccentLowColor">#FFF3CC4B</Color>
       <Color x:Key="AccentLightColor">#FFF4D15D</Color>
+
+      <Color x:Key="HighilightAccentMediumColor">#EEF2C637</Color>
+      <Color x:Key="HighilightAccentLowColor">#AAF3CC4B</Color>
+      <Color x:Key="HighilightAccentLightColor">#DDF4D15D</Color>
       
       <Color x:Key="BackgroundPrimaryColor">#FF555555</Color>
       
@@ -21,6 +25,10 @@
       <SolidColorBrush x:Key="iVMBackgroundAccentPrimaryBrush" Color="{StaticResource AccentPrimaryColor}" />
       <SolidColorBrush x:Key="iVMBackgroundAccentLowBrush" Color="{StaticResource AccentLowColor}" />
       <SolidColorBrush x:Key="iVMBackgroundAccentLightBrush" Color="{StaticResource AccentLightColor}" />
+
+      <SolidColorBrush x:Key="iVMBHighilightAccentMediumBrush" Color="{StaticResource HighilightAccentMediumColor}" />
+      <SolidColorBrush x:Key="iVMBHighilightAccentLowBrush" Color="{StaticResource HighilightAccentLowColor}" />
+      <SolidColorBrush x:Key="iVMBHighilightAccentLightBrush" Color="{StaticResource HighilightAccentLightColor}" />
 
       <SolidColorBrush x:Key="iVMForegroundSelectedBrush" Color="{StaticResource ForegroundSelectedColor}" />
       <SolidColorBrush x:Key="iVMForegroundPrimaryBrush" Color="{StaticResource ForegroundPrimaryColor}" />
