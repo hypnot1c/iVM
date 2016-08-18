@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using iVM.UWP.App.Messages;
 using System.Collections.Generic;
 using System.Linq;
 using Windows.UI.Core;
@@ -7,11 +8,12 @@ using Windows.UI.Xaml.Navigation;
 
 namespace iVM.UWP.App.ViewModels
 {
-  public class ShellViewModel : Screen
+  public class ShellViewModel : Screen, IHandle<ResumeStateMessage>, IHandle<SuspendStateMessage>
   {
     private readonly WinRTContainer _container;
     private readonly IEventAggregator _eventAggregator;
     protected INavigationService _navigationService;
+    private bool _resume;
 
     private int _collapsedPanelLength;
 
@@ -39,7 +41,8 @@ namespace iVM.UWP.App.ViewModels
     public IEnumerable<NavMenuItem> NavMenuItems { get; set; }
 
     private NavMenuItem _selectedNavMenuItem;
-    public NavMenuItem SelectedNavMenuItem {
+    public NavMenuItem SelectedNavMenuItem
+    {
       get { return this._selectedNavMenuItem; }
       set
       {
@@ -69,7 +72,7 @@ namespace iVM.UWP.App.ViewModels
 
     private void ShellViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
     {
-      switch(e.PropertyName)
+      switch (e.PropertyName)
       {
         case nameof(this.SelectedNavMenuItem):
           this._navigationService.NavigateToViewModel(this.SelectedNavMenuItem.TargetViewModel);
@@ -101,9 +104,16 @@ namespace iVM.UWP.App.ViewModels
 
     public void SetupNavigationService(Frame frame)
     {
+      if (_container.HasHandler(typeof(INavigationService), null))
+      {
+        _container.UnregisterHandler(typeof(INavigationService), null);
+      }
+
       this._navigationService = _container.RegisterNavigationService(frame);
+
       this._navigationService.Navigated += _navigationService_Navigated;
       this._navigationService.NavigationFailed += _navigationService_NavigationFailed;
+
       this.NavigateTo();
     }
 
@@ -114,13 +124,18 @@ namespace iVM.UWP.App.ViewModels
 
     public void NavigateTo()
     {
-      //if (_resume)
-      //  _navigationService.ResumeState();
-      var firstView = this.IsNotFirstVisit ? this.SelectedNavMenuItem.TargetViewModel : typeof(VehicleAddViewModel);
-      this._navigationService.NavigateToViewModel(firstView);
+      if (_resume)
+      {
+        _navigationService.ResumeState();
+      }
+      else
+      {
+        var firstView = this.IsNotFirstVisit ? this.SelectedNavMenuItem.TargetViewModel : typeof(VehicleAddViewModel);
+        this._navigationService.NavigateToViewModel(firstView);
+      }
     }
 
-    
+
     private void OnBackRequested(object sender, BackRequestedEventArgs e)
     {
       if (this._navigationService.CanGoBack && !e.Handled)
@@ -128,6 +143,16 @@ namespace iVM.UWP.App.ViewModels
         e.Handled = true;
         this._navigationService.GoBack();
       }
+    }
+
+    public void Handle(SuspendStateMessage message)
+    {
+      _navigationService.SuspendState();
+    }
+
+    public void Handle(ResumeStateMessage message)
+    {
+      _resume = true;
     }
   }
 }

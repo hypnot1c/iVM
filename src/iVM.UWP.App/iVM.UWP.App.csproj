@@ -101,6 +101,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Messages\ResumeMessage.cs" />
+    <Compile Include="Messages\SuspendMessage.cs" />
     <Compile Include="Resources\Converters\DateTimeConverter.cs" />
     <Compile Include="Resources\Converters\DecimalToStringConverter.cs" />
     <Compile Include="Resources\Converters\BooleanToVisibilityConverter.cs" />

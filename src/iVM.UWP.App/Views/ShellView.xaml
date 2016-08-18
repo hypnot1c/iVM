@@ -11,23 +11,22 @@
   <Grid>
     <SplitView x:Name="mainMenu" Margin="0,0,0,0" HorizontalAlignment="Stretch" DisplayMode="CompactOverlay" 
                CompactPaneLength="{Binding CollapsedPanelLength}" OpenPaneLength="150" PanePlacement="Left"
-               IsPaneOpen="{Binding IsChecked, ElementName=menuToggle}">
+               IsPaneOpen="{Binding IsChecked, ElementName=menuToggle, Mode=TwoWay}">
       <SplitView.Pane>
         <StackPanel Margin="0,48,0,0">
           <ListBox Name="NavMenuItems" SelectedItem="{Binding SelectedNavMenuItem, Mode=TwoWay}" ItemContainerStyle="{ThemeResource navMenuItem}">
             <ListBox.ItemTemplate>
               <DataTemplate>
-                <Grid HorizontalAlignment="Stretch">
-                  <Grid.ColumnDefinitions >
+                <Grid>
+                  <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="1*"/>
                   </Grid.ColumnDefinitions>
-                  <FontIcon Grid.Column="0" Glyph="{Binding IconAsChar}" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                  <TextBlock Grid.Column="1" Text="{Binding Title}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                  <FontIcon Grid.Column="0" Glyph="{Binding IconAsChar}" Width="48" />
+                  <TextBlock Grid.Column="1" Text="{Binding Title}" HorizontalAlignment="Left" Margin="10,0,0,0" />
                 </Grid>
               </DataTemplate>
             </ListBox.ItemTemplate>
-            
           </ListBox>
         </StackPanel>
       </SplitView.Pane>
@@ -37,7 +36,7 @@
     </SplitView>
     <ToggleButton x:Name="menuToggle" Style="{ThemeResource menuToggleBtn}"
             Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" 
-                  IsChecked="{Binding IsPaneOpen, ElementName=mainMenu}"
+                  IsChecked="{Binding IsPaneOpen, ElementName=mainMenu, Mode=TwoWay}"
             Content="&#xE700;" />
   </Grid>
 </Page>

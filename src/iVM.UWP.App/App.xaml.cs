@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity.Services;
 using iVM.Data.EF;
+using iVM.UWP.App.Messages;
 using iVM.UWP.App.ViewModels;
 using iVM.UWP.Entity.Services;
 using iVM.Vehicle.Data.EF;
@@ -73,12 +74,14 @@ namespace iVM
     /// <param name="e">Details about the launch request and process.</param>
     protected override void OnLaunched(LaunchActivatedEventArgs e)
     {
-      // I am launching my main view here
+      if (e.PreviousExecutionState == ApplicationExecutionState.Running)
+        return;
+
       DisplayRootViewFor<ShellViewModel>();
-      //SystemNavigationManager.GetForCurrentView().BackRequested += MainPage_BackRequested;
+
       if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
       {
-        _eventAggregator.PublishOnUIThread("ResumeMessage");
+        _eventAggregator.PublishOnUIThread(new ResumeStateMessage());
       }
     }
 
@@ -92,9 +95,7 @@ namespace iVM
     /// <param name="e">Details about the suspend request.</param>
     protected override void OnSuspending(object sender, SuspendingEventArgs e)
     {
-      //var deferral = e.SuspendingOperation.GetDeferral();
-      //TODO: Save application state and stop any background activity
-      //deferral.Complete();
+      _eventAggregator.PublishOnUIThread(new SuspendStateMessage(e.SuspendingOperation));
     }
 
     protected override object GetInstance(Type service, string key)
