@@ -41,6 +41,8 @@ namespace iVM.UWP.App.ViewModels
     public IEnumerable<NavMenuItem> NavMenuItems { get; set; }
 
     private NavMenuItem _selectedNavMenuItem;
+    private bool _syncNavMenu;
+
     public NavMenuItem SelectedNavMenuItem
     {
       get { return this._selectedNavMenuItem; }
@@ -75,7 +77,11 @@ namespace iVM.UWP.App.ViewModels
       switch (e.PropertyName)
       {
         case nameof(this.SelectedNavMenuItem):
-          this._navigationService.NavigateToViewModel(this.SelectedNavMenuItem.TargetViewModel);
+          if (this._syncNavMenu)
+          {
+            this._syncNavMenu = false;
+            this._navigationService.NavigateToViewModel(this.SelectedNavMenuItem.TargetViewModel);
+          }
           break;
       }
     }
@@ -89,6 +95,11 @@ namespace iVM.UWP.App.ViewModels
 
       this.IsNotFirstVisit = e.Content.GetType().Name != "VehicleAddView";
       //this.CollapsedPanelLength = this.IsNotFirstVisit ? 50 : 0;
+      if (e.Content.GetType().Name == "PivotView")
+      {
+        this._syncNavMenu = true;
+        this.SelectedNavMenuItem = this.NavMenuItems.FirstOrDefault(i => i.TargetViewModel.Name == "PivotViewModel");
+      }
       this.CollapsedPanelLength = 0;
     }
 

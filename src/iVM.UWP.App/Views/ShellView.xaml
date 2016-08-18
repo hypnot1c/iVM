@@ -34,9 +34,11 @@
         <Frame cm:Message.Attach="[Event Loaded] = [SetupNavigationService($source)]" DataContext="{x:Null}"/>
       </SplitView.Content>
     </SplitView>
-    <ToggleButton x:Name="menuToggle" Style="{ThemeResource menuToggleBtn}"
-            Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" 
-                  IsChecked="{Binding IsPaneOpen, ElementName=mainMenu, Mode=TwoWay}"
-            Content="&#xE700;" />
+    <ToggleButton 
+      x:Name="menuToggle" Style="{ThemeResource menuToggleBtn}"
+      Visibility="{Binding IsNotFirstVisit, Converter={StaticResource boolToVis}}" 
+      IsChecked="{Binding IsPaneOpen, ElementName=mainMenu, Mode=TwoWay}"
+      Content="&#xE700;"
+      />
   </Grid>
 </Page>
