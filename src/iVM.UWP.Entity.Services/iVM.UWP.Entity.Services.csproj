@@ -11,7 +11,7 @@
     <AssemblyName>iVM.UWP.Entity.Services</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -132,25 +132,9 @@
       <Project>{39b40365-9aba-43d0-913f-5364ee6703ab}</Project>
       <Name>iVM.Core.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\iVM.Core\iVM.Core.csproj">
-      <Project>{fb1b2de1-b288-44ce-b504-ac5c7fec3dfb}</Project>
-      <Name>iVM.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\iVM.Data.EF\iVM.Data.EF.csproj">
       <Project>{5c6d83fc-e82c-4472-afbb-dc1300bed8ff}</Project>
       <Name>iVM.Data.EF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Data.Model\iVM.Data.Model.csproj">
-      <Project>{C510242C-989B-45DA-B779-9E47C47D7BCA}</Project>
-      <Name>iVM.Data.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Vehicle.Data.EF\iVM.Vehicle.Data.EF.csproj">
-      <Project>{dfd01018-353c-43d2-a437-08df0fc67434}</Project>
-      <Name>iVM.Vehicle.Data.EF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Vehicle.Model\iVM.Vehicle.Model.csproj">
-      <Project>{016c266e-97b4-4577-a317-afd1bb5b3e3a}</Project>
-      <Name>iVM.Vehicle.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

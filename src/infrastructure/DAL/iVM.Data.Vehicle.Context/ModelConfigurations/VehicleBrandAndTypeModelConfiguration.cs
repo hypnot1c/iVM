@@ -1,11 +1,12 @@
-﻿using iVM.Vehicle.Model;
+﻿using iVM.Data.Vehicle.Model;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace iVM.Vehicle.Data.EF.ModelConfigurations
 {
-  public class VehicleBrandAndTypeModelConfiguration
+  public class VehicleBrandAndTypeModelConfiguration : IEntityTypeConfiguration<VehicleBrandAndTypeModel>
   {
-    public static void Configure(EntityTypeBuilder<VehicleBrandAndTypeModel> builder)
+    public void Configure(EntityTypeBuilder<VehicleBrandAndTypeModel> builder)
     {
       builder.HasKey(p => new { p.BrandId, p.TypeId });
       builder.HasOne(b => b.Brand);

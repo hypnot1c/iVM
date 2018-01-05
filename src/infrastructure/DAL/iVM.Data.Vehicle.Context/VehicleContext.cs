@@ -1,18 +1,18 @@
-﻿using iVM.Vehicle.Data.EF.ModelConfigurations;
-using iVM.Vehicle.Model;
+﻿using DataBaseContextExtensions;
+using iVM.Data.Vehicle.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
-namespace iVM.Vehicle.Data.EF
+namespace iVM.Data.Vehicle.Context
 {
-  public class VehicleContext: DbContext
+  public class VehicleContext : DbContext
   {
-    public DbSet<VehicleModel> VehicleModels { get; set; }
-    public DbSet<VehicleBrandModel> VehicleBrands { get; set; }
-
-    public DbSet<VehicleTypeModel> VehicleTypes { get; set; }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public VehicleContext(DbContextOptions<VehicleContext> options) : base(options)
     {
+
+    }
+
       //if (!optionsBuilder.IsConfigured)
       //{
       //  string databaseFilePath = "iVM.Vehicle.db";
@@ -25,20 +25,17 @@ namespace iVM.Vehicle.Data.EF
 
       //  optionsBuilder.UseSqlite($"Data source={dat abaseFilePath}");
       //}
-      var serviceProvider = new ServiceCollection()
-                .AddEntityFrameworkInMemoryDatabase()
-                .BuildServiceProvider();
+      //var serviceProvider = new ServiceCollection()
+      //          .AddEntityFrameworkInMemoryDatabase()
+      //          .BuildServiceProvider();
 
-      optionsBuilder.UseInMemoryDatabase()
-        .UseInternalServiceProvider(serviceProvider);
-    }
+      //optionsBuilder.UseInMemoryDatabase()
+      //  .UseInternalServiceProvider(serviceProvider);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<VehicleModel>(VehicleModelConfiguration.Configure);
-      modelBuilder.Entity<VehicleBrandModel>(VehicleBrandModelConfiguration.Configure);
-      modelBuilder.Entity<VehicleTypeModel>(VehicleTypeModelConfiguration.Configure);
-      modelBuilder.Entity<VehicleBrandAndTypeModel>(VehicleBrandAndTypeModelConfiguration.Configure);
+      base.OnModelCreating(modelBuilder);
+      modelBuilder.UseEntityTypeConfiguration(typeof(VehicleContext).GetTypeInfo().Assembly);
     }
 
     public void FillDummyData()
@@ -58,5 +55,10 @@ namespace iVM.Vehicle.Data.EF
 
       this.SaveChanges();
     }
+
+    public DbSet<VehicleModel> VehicleModels { get; set; }
+    public DbSet<VehicleBrandModel> VehicleBrands { get; set; }
+
+    public DbSet<VehicleTypeModel> VehicleTypes { get; set; }
   }
 }

@@ -39,18 +39,6 @@
       <Project>{39b40365-9aba-43d0-913f-5364ee6703ab}</Project>
       <Name>iVM.Core.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\iVM.Core\iVM.Core.csproj">
-      <Project>{fb1b2de1-b288-44ce-b504-ac5c7fec3dfb}</Project>
-      <Name>iVM.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Data.Model\iVM.Data.Model.csproj">
-      <Project>{C510242C-989B-45DA-B779-9E47C47D7BCA}</Project>
-      <Name>iVM.Data.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iVM.Vehicle.Model\iVM.Vehicle.Model.csproj">
-      <Project>{016C266E-97B4-4577-A317-AFD1BB5B3E3A}</Project>
-      <Name>iVM.Vehicle.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Event\EventService.cs" />

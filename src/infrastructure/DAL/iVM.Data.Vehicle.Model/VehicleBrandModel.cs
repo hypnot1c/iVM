@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace iVM.Vehicle.Model
+namespace iVM.Data.Vehicle.Model
 {
   public class VehicleBrandModel : BaseModel
   {
