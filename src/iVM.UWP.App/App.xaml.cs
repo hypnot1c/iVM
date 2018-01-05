@@ -1,10 +1,12 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity.Services;
 using iVM.Data.EF;
+using iVM.Data.Vehicle.Context;
 using iVM.UWP.App.Messages;
 using iVM.UWP.App.ViewModels;
 using iVM.UWP.Entity.Services;
 using iVM.Vehicle.Data.EF;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using Windows.ApplicationModel;
@@ -39,16 +41,24 @@ namespace iVM
       
       _container.RegisterWinRTServices();
 
+      _container.Handler<VehicleContext>(sc => {
+        var optionsBuilder = new DbContextOptionsBuilder<VehicleContext>();
+        optionsBuilder.UseInMemoryDatabase("vehicle");
+
+        return new VehicleContext(optionsBuilder.Options);
+      });
+
       // Make sure to register your containers here
       _container
-        .Instance<IConfigurationService>(new ConfigurationService())
-        .Singleton<VehicleContext>()
-        .Singleton<MainContext>()
-        .PerRequest<IVehicleUnitOfWork, VehicleUnitOfWork>()
-        .PerRequest<IMainUnitOfWork, MainUnitOfWork>()
-        .PerRequest<SessionService, SessionService>()
-        .PerRequest<EventService, EventService>()
-        .PerRequest<VehicleService, VehicleService>()
+        .PerRequest<VehicleContext>()
+        //.Instance<IConfigurationService>(new ConfigurationService())
+        //.Singleton<VehicleContext>()
+        //.Singleton<MainContext>()
+        //.PerRequest<IVehicleUnitOfWork, VehicleUnitOfWork>()
+        //.PerRequest<IMainUnitOfWork, MainUnitOfWork>()
+        //.PerRequest<SessionService, SessionService>()
+        //.PerRequest<EventService, EventService>()
+        //.PerRequest<VehicleService, VehicleService>()
         .PerRequest<ShellViewModel>()
         .PerRequest<PivotViewModel>()
         .PerRequest<VehicleAddViewModel>()
@@ -58,12 +68,13 @@ namespace iVM
         .PerRequest<FillUpAddViewModel>()
         ;
 
+
       this._eventAggregator = _container.GetInstance<IEventAggregator>();
 
       var vehicleContext = _container.GetInstance<VehicleContext>();
       vehicleContext.FillDummyData();
-      var mainContext = _container.GetInstance<MainContext>();
-      mainContext.FillDummyData();
+      //var mainContext = _container.GetInstance<MainContext>();
+      //mainContext.FillDummyData();
     }
 
     /// <summary> 
