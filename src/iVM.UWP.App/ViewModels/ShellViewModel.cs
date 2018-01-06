@@ -141,7 +141,8 @@ namespace iVM.UWP.App.ViewModels
       }
       else
       {
-        var firstView = this.IsNotFirstVisit ? this.SelectedNavMenuItem.TargetViewModel : typeof(VehicleAddViewModel);
+        //var firstView = this.IsNotFirstVisit ? this.SelectedNavMenuItem.TargetViewModel : typeof(VehicleAddViewModel);
+        var firstView = this.SelectedNavMenuItem.TargetViewModel;
         this._navigationService.NavigateToViewModel(firstView);
       }
     }

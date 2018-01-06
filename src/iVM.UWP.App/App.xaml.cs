@@ -1,11 +1,8 @@
 ﻿using Caliburn.Micro;
-using iVM.Core.Entity.Services;
-using iVM.Data.EF;
+using iVM.Data.Master.Context;
 using iVM.Data.Vehicle.Context;
 using iVM.UWP.App.Messages;
 using iVM.UWP.App.ViewModels;
-using iVM.UWP.Entity.Services;
-using iVM.Vehicle.Data.EF;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -48,9 +45,16 @@ namespace iVM
         return new VehicleContext(optionsBuilder.Options);
       });
 
+      _container.Handler<MasterContext>(sc => {
+        var optionsBuilder = new DbContextOptionsBuilder<MasterContext>();
+        optionsBuilder.UseInMemoryDatabase("master");
+
+        return new MasterContext(optionsBuilder.Options);
+      });
+
       // Make sure to register your containers here
       _container
-        .PerRequest<VehicleContext>()
+        //.PerRequest<VehicleContext>()
         //.Instance<IConfigurationService>(new ConfigurationService())
         //.Singleton<VehicleContext>()
         //.Singleton<MainContext>()
@@ -61,8 +65,8 @@ namespace iVM
         //.PerRequest<VehicleService, VehicleService>()
         .PerRequest<ShellViewModel>()
         .PerRequest<PivotViewModel>()
-        .PerRequest<VehicleAddViewModel>()
-        .PerRequest<MaintenanceAddViewModel>()
+        //.PerRequest<VehicleAddViewModel>()
+        //.PerRequest<MaintenanceAddViewModel>()
         .PerRequest<EventListViewModel>()
         .PerRequest<EventTypeSelectViewModel>()
         .PerRequest<FillUpAddViewModel>()
@@ -73,8 +77,8 @@ namespace iVM
 
       var vehicleContext = _container.GetInstance<VehicleContext>();
       vehicleContext.FillDummyData();
-      //var mainContext = _container.GetInstance<MainContext>();
-      //mainContext.FillDummyData();
+      var mainContext = _container.GetInstance<MasterContext>();
+      mainContext.FillDummyData();
     }
 
     /// <summary> 

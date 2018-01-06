@@ -1,7 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity;
-using iVM.Core.Entity.Services;
 using iVM.Core.UI.ViewModels;
+using iVM.Data.Master.Context;
 using System;
 
 namespace iVM.UWP.App.ViewModels
@@ -13,7 +13,8 @@ namespace iVM.UWP.App.ViewModels
     public EventTypeSelectViewModel(
       IEventAggregator eventAggregator,
       INavigationService navigationService,
-      EventService eventService) : base(eventAggregator, eventService)
+      MasterContext masterContext
+      ) : base(eventAggregator, masterContext)
     {
       this._navService = navigationService;
     }
@@ -23,7 +24,7 @@ namespace iVM.UWP.App.ViewModels
       base.OnActivate();
     }
 
-    protected override void viewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+    protected override void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
     {
       switch (e.PropertyName)
       {
@@ -34,9 +35,9 @@ namespace iVM.UWP.App.ViewModels
             case EventType.FillUp:
               this._navService.For<FillUpAddViewModel>().Navigate();
               break;
-            case EventType.Maintenance:
-              this._navService.For<MaintenanceAddViewModel>().Navigate();
-              break;
+            //case EventType.Maintenance:
+            //  this._navService.For<MaintenanceAddViewModel>().Navigate();
+            //  break;
           }
           break;
       }

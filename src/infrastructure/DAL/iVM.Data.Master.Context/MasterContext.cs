@@ -1,8 +1,6 @@
 ﻿using DataBaseContextExtensions;
 using iVM.Data.Master.Model;
-using iVM.Vehicle.Data.EF.ModelConfigurations;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Reflection;
 
@@ -10,7 +8,11 @@ namespace iVM.Data.Master.Context
 {
   public class MasterContext : DbContext
   {
-//if (!optionsBuilder.IsConfigured)
+    public MasterContext(DbContextOptions<MasterContext> options) : base(options)
+    {
+
+    }
+    //if (!optionsBuilder.IsConfigured)
     //{
     //  string databaseFilePath = "iVM.Vehicle.db";
     //  try

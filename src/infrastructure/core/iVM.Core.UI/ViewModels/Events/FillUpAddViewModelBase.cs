@@ -1,6 +1,6 @@
 ﻿using Caliburn.Micro;
-using iVM.Core.Entity;
-using iVM.Core.Entity.Services;
+using iVM.Data.Master.Context;
+using iVM.Data.Master.Model;
 using System;
 using System.ComponentModel;
 
@@ -8,9 +8,17 @@ namespace iVM.Core.UI.ViewModels
 {
   public class FillUpAddViewModelBase : BaseViewModel
   {
-    private readonly EventService _eventService;
-    private readonly SessionService _sessionService;
-    protected readonly FillUpEntity _fillUp;
+
+    public FillUpAddViewModelBase(
+      IEventAggregator eventAggregator,
+      MasterContext masterContext
+      ) : base(eventAggregator)
+    {
+      this.Date = DateTime.Now;
+      this.masterContext = masterContext;
+    }
+
+    private readonly MasterContext masterContext;
 
     private DateTime _date;
     public DateTime Date
@@ -57,19 +65,8 @@ namespace iVM.Core.UI.ViewModels
       set { this._mileage = value; NotifyOfPropertyChange(() => this.Mileage); }
     }
 
-    public FillUpAddViewModelBase(
-      IEventAggregator eventAggregator,
-      EventService eventService,
-      SessionService sessionService
-      ) : base(eventAggregator)
-    {
-      this._eventService = eventService;
-      this._sessionService = sessionService;
-      this._fillUp = new FillUpEntity();
-      this.Date = DateTime.Now;
-    }
 
-    protected override void viewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+    protected override void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
     {
       //base.viewModel_PropertyChanged(sender, e);
       //switch (e.PropertyName)
@@ -94,14 +91,21 @@ namespace iVM.Core.UI.ViewModels
 
     protected virtual void Save()
     {
-      this._fillUp.Litres = this.Litres;
-      this._fillUp.LiterCost = this.LiterCost;
-      this._fillUp.Expense = this.Expense;
-      this._fillUp.Name = this.Title;
-      this._fillUp.OccuredDate = this.Date;
-      this._fillUp.Vehicle = this._sessionService.CurrentVehicle;
-      this._fillUp.Mileage = this.Mileage;
-      this._eventService.AddFillUp(this._fillUp);
+      var fillUp = new FillUpModel();
+      fillUp.LitresValue = this.Litres;
+      fillUp.LiterCost = this.LiterCost;
+
+      var @event = new EventOccuredModel();
+      @event.Expense = this.Expense;
+      @event.Title = this.Title;
+      @event.Date = this.Date;
+      @event.Mileage = this.Mileage;
+
+      fillUp.EventOccured = @event;
+
+      @event.Vehicle_VehicleId = 1; //TODO: Get from session
+
+      this.masterContext.FillUps.Add(fillUp);
     }
   }
 }

@@ -8,4 +8,9 @@
     <PackageReference Include="Caliburn.Micro.Core" Version="3.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\iVM.Data.Master.Context\iVM.Data.Master.Context.csproj" />
+    <ProjectReference Include="..\iVM.Core.Entity\iVM.Core.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

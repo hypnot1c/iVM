@@ -1,6 +1,6 @@
 ﻿using Caliburn.Micro;
-using iVM.Core.Entity;
-using iVM.Core.Entity.Services;
+using iVM.Data.Master.Context;
+using iVM.Data.Master.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +9,19 @@ namespace iVM.Core.UI.ViewModels
 {
   public class EventListViewModelBase : BaseViewModel
   {
-    protected readonly EventService eventService;
 
     public EventListViewModelBase(
       IEventAggregator eventAggregator,
-      EventService eventService
+      MasterContext masterContext
       ) : base(eventAggregator)
     {
-      this.eventService = eventService;
-      this.Events = this.eventService.GetOccuredEvents().OrderByDescending(e => e.OccuredDate).GroupBy(x => x.OccuredDate);
+      this.masterContext = masterContext;
+      this.Events = this.masterContext.EventsOccured.OrderByDescending(e => e.CorrectionDate).GroupBy(x => x.CorrectionDate);
       this.DisplayName = "Events";
     }
 
-    public IEnumerable<IGrouping<DateTime, EventOccuredEntity>> Events { get; set; }
+    private readonly MasterContext masterContext;
+
+    public IEnumerable<IGrouping<DateTimeOffset, EventOccuredModel>> Events { get; set; }
   }
 }

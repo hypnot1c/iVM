@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity;
-using iVM.Core.Entity.Services;
+using iVM.Data.Master.Context;
+using iVM.Data.Master.Model;
 using System;
 
 namespace iVM.Core.UI.ViewModels
@@ -9,7 +10,7 @@ namespace iVM.Core.UI.ViewModels
   {
     public EventTypeSelectViewModelBase(
       IEventAggregator eventAggregator,
-      EventService eventService) : base(eventAggregator)
+      MasterContext masterContext) : base(eventAggregator)
     {
     }
 

@@ -25756,10 +25756,7 @@
       }
     },
     "dependencies": {
-      "Microsoft.NETCore.UniversalWindowsPlatform": {
-        "target": "Package",
-        "version": "[6.0.5, )"
-      }
+      "Microsoft.NETCore.UniversalWindowsPlatform": "[6.0.5, )"
     },
     "frameworks": {
       "uap10.0.10240": {}

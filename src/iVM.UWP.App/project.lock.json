@@ -1002,12 +1002,31 @@
           "Microsoft.EntityFrameworkCore": "2.0.1"
         }
       },
+      "iVM.Core.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
+      },
       "iVM.Core.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Caliburn.Micro.Core": "3.2.0"
+          "Caliburn.Micro.Core": "3.2.0",
+          "iVM.Core.Entity": "1.0.0",
+          "iVM.Data.Master.Context": "1.0.0"
         }
+      },
+      "iVM.Data.Master.Context/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DataBaseContextExtensions": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "iVM.Data.Master.Model": "1.0.0"
+        }
+      },
+      "iVM.Data.Master.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
       },
       "iVM.Data.Vehicle.Context/1.0.0": {
         "type": "project",
@@ -2310,12 +2329,31 @@
           "Microsoft.EntityFrameworkCore": "2.0.1"
         }
       },
+      "iVM.Core.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
+      },
       "iVM.Core.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Caliburn.Micro.Core": "3.2.0"
+          "Caliburn.Micro.Core": "3.2.0",
+          "iVM.Core.Entity": "1.0.0",
+          "iVM.Data.Master.Context": "1.0.0"
         }
+      },
+      "iVM.Data.Master.Context/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DataBaseContextExtensions": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "iVM.Data.Master.Model": "1.0.0"
+        }
+      },
+      "iVM.Data.Master.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
       },
       "iVM.Data.Vehicle.Context/1.0.0": {
         "type": "project",
@@ -3734,12 +3772,31 @@
           "Microsoft.EntityFrameworkCore": "2.0.1"
         }
       },
+      "iVM.Core.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
+      },
       "iVM.Core.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Caliburn.Micro.Core": "3.2.0"
+          "Caliburn.Micro.Core": "3.2.0",
+          "iVM.Core.Entity": "1.0.0",
+          "iVM.Data.Master.Context": "1.0.0"
         }
+      },
+      "iVM.Data.Master.Context/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DataBaseContextExtensions": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "iVM.Data.Master.Model": "1.0.0"
+        }
+      },
+      "iVM.Data.Master.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
       },
       "iVM.Data.Vehicle.Context/1.0.0": {
         "type": "project",
@@ -5042,12 +5099,31 @@
           "Microsoft.EntityFrameworkCore": "2.0.1"
         }
       },
+      "iVM.Core.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
+      },
       "iVM.Core.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Caliburn.Micro.Core": "3.2.0"
+          "Caliburn.Micro.Core": "3.2.0",
+          "iVM.Core.Entity": "1.0.0",
+          "iVM.Data.Master.Context": "1.0.0"
         }
+      },
+      "iVM.Data.Master.Context/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DataBaseContextExtensions": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "iVM.Data.Master.Model": "1.0.0"
+        }
+      },
+      "iVM.Data.Master.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
       },
       "iVM.Data.Vehicle.Context/1.0.0": {
         "type": "project",
@@ -6466,12 +6542,31 @@
           "Microsoft.EntityFrameworkCore": "2.0.1"
         }
       },
+      "iVM.Core.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
+      },
       "iVM.Core.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Caliburn.Micro.Core": "3.2.0"
+          "Caliburn.Micro.Core": "3.2.0",
+          "iVM.Core.Entity": "1.0.0",
+          "iVM.Data.Master.Context": "1.0.0"
         }
+      },
+      "iVM.Data.Master.Context/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DataBaseContextExtensions": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "iVM.Data.Master.Model": "1.0.0"
+        }
+      },
+      "iVM.Data.Master.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
       },
       "iVM.Data.Vehicle.Context/1.0.0": {
         "type": "project",
@@ -7774,12 +7869,31 @@
           "Microsoft.EntityFrameworkCore": "2.0.1"
         }
       },
+      "iVM.Core.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
+      },
       "iVM.Core.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Caliburn.Micro.Core": "3.2.0"
+          "Caliburn.Micro.Core": "3.2.0",
+          "iVM.Core.Entity": "1.0.0",
+          "iVM.Data.Master.Context": "1.0.0"
         }
+      },
+      "iVM.Data.Master.Context/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DataBaseContextExtensions": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "iVM.Data.Master.Model": "1.0.0"
+        }
+      },
+      "iVM.Data.Master.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
       },
       "iVM.Data.Vehicle.Context/1.0.0": {
         "type": "project",
@@ -9198,12 +9312,31 @@
           "Microsoft.EntityFrameworkCore": "2.0.1"
         }
       },
+      "iVM.Core.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
+      },
       "iVM.Core.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Caliburn.Micro.Core": "3.2.0"
+          "Caliburn.Micro.Core": "3.2.0",
+          "iVM.Core.Entity": "1.0.0",
+          "iVM.Data.Master.Context": "1.0.0"
         }
+      },
+      "iVM.Data.Master.Context/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DataBaseContextExtensions": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "iVM.Data.Master.Model": "1.0.0"
+        }
+      },
+      "iVM.Data.Master.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0"
       },
       "iVM.Data.Vehicle.Context/1.0.0": {
         "type": "project",
@@ -15594,10 +15727,25 @@
       "path": "../infrastructure/DAL/DataBaseContextExtensions/DataBaseContextExtensions.csproj",
       "msbuildProject": "../infrastructure/DAL/DataBaseContextExtensions/DataBaseContextExtensions.csproj"
     },
+    "iVM.Core.Entity/1.0.0": {
+      "type": "project",
+      "path": "../infrastructure/core/iVM.Core.Entity/iVM.Core.Entity.csproj",
+      "msbuildProject": "../infrastructure/core/iVM.Core.Entity/iVM.Core.Entity.csproj"
+    },
     "iVM.Core.UI/1.0.0": {
       "type": "project",
       "path": "../infrastructure/core/iVM.Core.UI/iVM.Core.UI.csproj",
       "msbuildProject": "../infrastructure/core/iVM.Core.UI/iVM.Core.UI.csproj"
+    },
+    "iVM.Data.Master.Context/1.0.0": {
+      "type": "project",
+      "path": "../infrastructure/DAL/iVM.Data.Master.Context/iVM.Data.Master.Context.csproj",
+      "msbuildProject": "../infrastructure/DAL/iVM.Data.Master.Context/iVM.Data.Master.Context.csproj"
+    },
+    "iVM.Data.Master.Model/1.0.0": {
+      "type": "project",
+      "path": "../infrastructure/DAL/iVM.Data.Master.Model/iVM.Data.Master.Model.csproj",
+      "msbuildProject": "../infrastructure/DAL/iVM.Data.Master.Model/iVM.Data.Master.Model.csproj"
     },
     "iVM.Data.Vehicle.Context/1.0.0": {
       "type": "project",
@@ -15655,6 +15803,12 @@
             },
             "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj": {
               "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj"
+            },
+            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj"
+            },
+            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj"
             }
           }
         }
@@ -15666,10 +15820,7 @@
       "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3, )",
       "Microsoft.ApplicationInsights.WindowsApps": "[1.1.1, )",
       "Microsoft.EntityFrameworkCore": "[2.0.1, )",
-      "Microsoft.EntityFrameworkCore.InMemory": {
-        "target": "Package",
-        "version": "[2.0.1, )"
-      },
+      "Microsoft.EntityFrameworkCore.InMemory": "[2.0.1, )",
       "Microsoft.NETCore.UniversalWindowsPlatform": "[6.0.5, )"
     },
     "frameworks": {

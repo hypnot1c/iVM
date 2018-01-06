@@ -2,7 +2,7 @@
 
 namespace iVM.Data.Master.Model
 {
-  public class EventType: BaseModel
+  public class EventTypeModel : BaseModel
   {
     public string Name { get; set; }
     public byte[] Icon { get; set; }

@@ -1,6 +1,6 @@
 ﻿using Caliburn.Micro;
-using iVM.Core.Entity.Services;
 using iVM.Core.UI.ViewModels;
+using iVM.Data.Master.Context;
 using System;
 
 namespace iVM.UWP.App.ViewModels
@@ -22,8 +22,8 @@ namespace iVM.UWP.App.ViewModels
     public FillUpAddViewModel(
       IEventAggregator eventAggregator, 
       INavigationService navigationService,
-      EventService eventService,
-      SessionService sessionService): base(eventAggregator, eventService, sessionService)
+      MasterContext masterContext
+      ): base(eventAggregator, masterContext)
     {
       this._navService = navigationService;
       this.DateOffset = DateTimeOffset.Now;

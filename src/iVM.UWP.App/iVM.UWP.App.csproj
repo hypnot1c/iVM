@@ -214,9 +214,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\infrastructure\core\iVM.Core.Entity\iVM.Core.Entity.csproj">
+      <Project>{A92212F1-0FC5-4ED7-9545-AD3CBF1F3469}</Project>
+      <Name>iVM.Core.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\infrastructure\core\iVM.Core.UI\iVM.Core.UI.csproj">
       <Project>{fbd3d46b-b3d7-4de3-ab0b-e73549054499}</Project>
       <Name>iVM.Core.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\infrastructure\DAL\iVM.Data.Master.Context\iVM.Data.Master.Context.csproj">
+      <Project>{B941CCFA-3B89-4319-9F5B-18EF87B56462}</Project>
+      <Name>iVM.Data.Master.Context</Name>
     </ProjectReference>
     <ProjectReference Include="..\infrastructure\DAL\iVM.Data.Vehicle.Context\iVM.Data.Vehicle.Context.csproj">
       <Project>{7BF0233F-0FDA-4E20-869A-4216CDA55C46}</Project>

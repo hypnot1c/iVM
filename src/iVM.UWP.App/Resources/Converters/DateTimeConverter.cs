@@ -8,7 +8,7 @@ namespace iVM.UWP.App.Resources.Converters
   {
     public object Convert(object value, Type targetType, object parameter, string language)
     {
-      var date = value as DateTime?;
+      var date = value as DateTimeOffset?;
       var formatString = parameter as string;
       if(String.IsNullOrWhiteSpace(formatString))
       {
