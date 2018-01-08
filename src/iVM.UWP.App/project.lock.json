@@ -14101,7 +14101,7 @@
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
-      "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
+      "sha512": "eXDc/eSkxJmMZm19UfSy9rV8AyrZYmDcVmYcQh1F/vl6jKwJBYHCcopc2g6PakB3QWqGZsbpffLLHiOtr5o7Vg==",
       "type": "package",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "files": [
@@ -15771,23 +15771,23 @@
     "UAP,Version=v10.0.16299": []
   },
   "packageFolders": {
-    "C:\\Users\\ahmed\\.nuget\\packages\\": {},
+    "C:\\Users\\Ahmed\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\iVM.UWP.App\\iVM.UWP.App.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\iVM.UWP.App\\iVM.UWP.App.csproj",
       "projectName": "iVM.UWP.App",
-      "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\iVM.UWP.App\\iVM.UWP.App.csproj",
-      "projectJsonPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\iVM.UWP.App\\project.json",
-      "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\iVM.UWP.App\\obj\\",
+      "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\iVM.UWP.App\\iVM.UWP.App.csproj",
+      "projectJsonPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\iVM.UWP.App\\project.json",
+      "packagesPath": "C:\\Users\\Ahmed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\iVM.UWP.App\\obj\\",
       "projectStyle": "ProjectJson",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -15798,17 +15798,17 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.UI\\iVM.Core.UI.csproj": {
-              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.UI\\iVM.Core.UI.csproj"
+            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj": {
+              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj"
             },
-            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj": {
-              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj"
+            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.UI\\iVM.Core.UI.csproj": {
+              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.UI\\iVM.Core.UI.csproj"
             },
-            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj": {
-              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj"
+            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj": {
+              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj"
             },
-            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj": {
-              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj"
+            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj": {
+              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj"
             }
           }
         }

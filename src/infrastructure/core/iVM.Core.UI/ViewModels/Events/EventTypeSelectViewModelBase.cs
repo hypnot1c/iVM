@@ -1,7 +1,6 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Data.Master.Context;
-using iVM.Data.Master.Model;
 using System;
 
 namespace iVM.Core.UI.ViewModels

@@ -10,14 +10,20 @@ namespace iVM.Data.Master.Model
     public ulong Mileage { get; set; }
     public decimal Expense { get; set; }
     public decimal Profit { get; set; }
-    public ICollection<FillUpModel> FillUps { get; set; }
-    public ICollection<Repair> Repairs { get; set; }
     public string Title { get; set; }
+
+    public int EntityId { get; set; }
+    public EventType Type { get; set; }
 
     public EventOccuredModel()
     {
-      this.FillUps = new HashSet<FillUpModel>();
-      this.Repairs = new List<Repair>();
+      this.Date = DateTime.UtcNow;
     }
+  }
+
+  public enum EventType
+  {
+    Other = 0,
+    FillUp = 1
   }
 }

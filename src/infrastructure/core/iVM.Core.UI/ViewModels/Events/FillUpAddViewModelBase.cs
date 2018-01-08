@@ -91,21 +91,21 @@ namespace iVM.Core.UI.ViewModels
 
     protected virtual void Save()
     {
-      var fillUp = new FillUpModel();
-      fillUp.LitresValue = this.Litres;
-      fillUp.LiterCost = this.LiterCost;
+      //var fillUp = new FillUpModel();
+      //fillUp.LitresValue = this.Litres;
+      //fillUp.LiterCost = this.LiterCost;
 
-      var @event = new EventOccuredModel();
-      @event.Expense = this.Expense;
-      @event.Title = this.Title;
-      @event.Date = this.Date;
-      @event.Mileage = this.Mileage;
+      //var @event = new EventOccuredModel();
+      //@event.Expense = this.Expense;
+      //@event.Title = this.Title;
+      //@event.Date = this.Date;
+      //@event.Mileage = this.Mileage;
 
-      fillUp.EventOccured = @event;
+      //fillUp.EventOccured = @event;
 
-      @event.Vehicle_VehicleId = 1; //TODO: Get from session
+      //@event.Vehicle_VehicleId = 1; //TODO: Get from session
 
-      this.masterContext.FillUps.Add(fillUp);
+      //this.masterContext.FillUps.Add(fillUp);
     }
   }
 }
