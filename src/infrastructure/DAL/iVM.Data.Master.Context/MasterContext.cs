@@ -43,17 +43,19 @@ namespace iVM.Data.Master.Context
       this.Add(new VehicleModel { Model_vehicleModelId = 1, Type_vehicleTypeId = 2 });
 
       this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 1, Title = "Gazpromneft", Date = DateTime.ParseExact("17.07.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1964.68M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 2, Title = "Gazpromneft", Date = DateTime.ParseExact("15.07.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1221M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 3, Title = "Gazpromneft", Date = DateTime.ParseExact("13.07.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1149M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 4, Title = "Gazpromneft", Date = DateTime.ParseExact("03.07.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1143M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 5, Title = "Gazpromneft", Date = DateTime.ParseExact("19.06.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1134M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 6, Title = "Gazpromneft", Date = DateTime.ParseExact("11.06.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1430.1M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 7, Title = "Gazpromneft", Date = DateTime.ParseExact("05.06.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 2153.49M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 8, Title = "Gazpromneft", Date = DateTime.ParseExact("28.05.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1128M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 9, Title = "Gazpromneft", Date = DateTime.ParseExact("15.05.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1137M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 10, Title = "Gazpromneft", Date = DateTime.ParseExact("08.05.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 2482.44M });
-      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 11, Title = "Gazpromneft", Date = DateTime.ParseExact("03.05.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1191M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 2, Title = "Gazpromneft", Date = DateTime.ParseExact("17.07.2016", "dd.MM.yyyy", null), Mileage = 186100, Expense = 1964.68M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 3, Title = "Gazpromneft", Date = DateTime.ParseExact("15.07.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1221M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 4, Title = "Gazpromneft", Date = DateTime.ParseExact("13.07.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1149M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 5, Title = "Gazpromneft", Date = DateTime.ParseExact("03.07.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1143M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 6, Title = "Gazpromneft", Date = DateTime.ParseExact("19.06.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1134M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 7, Title = "Gazpromneft", Date = DateTime.ParseExact("11.06.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1430.1M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 8, Title = "Gazpromneft", Date = DateTime.ParseExact("05.06.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 2153.49M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 9, Title = "Gazpromneft", Date = DateTime.ParseExact("28.05.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1128M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 10, Title = "Gazpromneft", Date = DateTime.ParseExact("15.05.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1137M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 11, Title = "Gazpromneft", Date = DateTime.ParseExact("08.05.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 2482.44M });
+      this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 12, Title = "Gazpromneft", Date = DateTime.ParseExact("03.05.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1191M });
 
+      this.Add(new FillUpModel { CompanyName = "Gazpromneft", LitresValue = 51.29M, LiterCost = 38.31M });
       this.Add(new FillUpModel { CompanyName = "Gazpromneft", LitresValue = 51.29M, LiterCost = 38.31M });
       this.Add(new FillUpModel { CompanyName = "Gazpromneft", LitresValue = 31.87M, LiterCost = 38.31M });
       this.Add(new FillUpModel { CompanyName = "Gazpromneft", LitresValue = 30.00M, LiterCost = 38.30M });

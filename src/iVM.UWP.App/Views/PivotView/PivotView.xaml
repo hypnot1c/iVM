@@ -7,7 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+  <Pivot x:Name="Items" Margin="0,48,0,0">
+    <Pivot.HeaderTemplate>
+      <DataTemplate>
+        <StackPanel Orientation="Horizontal">
+          <FontIcon Glyph="&#xE787;" Height="48" Width="48" />
+          <TextBlock Text="{Binding DisplayName}" FontSize="20" VerticalAlignment="Center" />
+        </StackPanel>
+      </DataTemplate>
+    </Pivot.HeaderTemplate>
+    <Pivot.ItemsPanel>
+      <ItemsPanelTemplate>
+        <Grid HorizontalAlignment="Stretch" />
+      </ItemsPanelTemplate>
+    </Pivot.ItemsPanel>
+  </Pivot>
 </Page>

@@ -10,8 +10,8 @@
   <ResourceDictionary.ThemeDictionaries>
     <ResourceDictionary x:Key="Default">
       <Style TargetType="ToggleButton" x:Key="menuToggleBtn">
-        <Setter Property="Background" Value="{StaticResource iVMBackgroundAccentPrimaryBrush}" />
-        <Setter Property="Foreground" Value="{StaticResource iVMForegroundSelectedBrush}" />
+        <!--<Setter Property="Background" Value="{StaticResource iVMBackgroundAccentPrimaryBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource iVMForegroundSelectedBrush}" />-->
         <Setter Property="FontFamily" Value="{StaticResource SymbolThemeFontFamily}" />
         <Setter Property="FontSize" Value="20" />
         <Setter Property="Width" Value="48" />
@@ -19,7 +19,7 @@
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Top" />
 
-        <Setter Property="Template">
+        <!--<Setter Property="Template">
           <Setter.Value>
             <ControlTemplate TargetType="ToggleButton">
               <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
@@ -72,7 +72,7 @@
                         </ObjectAnimationUsingKeyFrames>
                       </Storyboard>
                     </VisualState>
-                    <!--<VisualState x:Name="Checked">
+                    --><!--<VisualState x:Name="Checked">
                       <Storyboard>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
                                                Storyboard.TargetProperty="Background">
@@ -190,7 +190,7 @@
                           <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledTransparentBrush}" />
                         </ObjectAnimationUsingKeyFrames>
                       </Storyboard>
-                    </VisualState>-->
+                    </VisualState>--><!--
                   </VisualStateGroup>
                 </VisualStateManager.VisualStateGroups>
                 <ContentPresenter x:Name="ContentPresenter"
@@ -206,10 +206,10 @@
               </Grid>
             </ControlTemplate>
           </Setter.Value>
-        </Setter>
+        </Setter>-->
       </Style>
 
-      <Style TargetType="ListBoxItem" x:Key="navMenuItem">
+      <!--<Style TargetType="ListBoxItem" x:Key="navMenuItem">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="TabNavigation" Value="Local" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -341,7 +341,7 @@
             </ControlTemplate>
           </Setter.Value>
         </Setter>
-      </Style>
+      </Style>-->
       
       <!--<Style TargetType="Page">
         <Setter Property="Background" Value="{StaticResource BackgroundGeneral}" />

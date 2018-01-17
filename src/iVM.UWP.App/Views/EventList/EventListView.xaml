@@ -30,28 +30,6 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Expense, Converter={StaticResource decimalToStr}}" HorizontalAlignment="Right" />
       </Grid>
     </DataTemplate>
-    <DataTemplate x:Key="MaintenanceGridItemTemplate">
-      <Grid HorizontalAlignment="Stretch">
-        <Grid.RowDefinitions>
-          <RowDefinition />
-          <RowDefinition />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="1*" />
-          <ColumnDefinition Width="3*" />
-        </Grid.ColumnDefinitions>
-        <FontIcon Grid.Column="0" 
-                  Grid.RowSpan="2" 
-                  Glyph="&#xE90F;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding OccuredDate, Converter={StaticResource dateTimeToStr}}" HorizontalAlignment="Right" />
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Name}" HorizontalAlignment="Left" />
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Expense, Converter={StaticResource decimalToStr}}" HorizontalAlignment="Right" />
-      </Grid>
-    </DataTemplate>
-    <lcl:OccuredEventDataTemplateSelector 
-      x:Name="EventListTmplSelector"
-      FillUpDataTemplate="{StaticResource FillUpGridItemTemplate}"
-      MaintenanceDataTemplate="{StaticResource MaintenanceGridItemTemplate}"/>
 
     <CollectionViewSource x:Key="eventsCollection" Source="{Binding Events}" IsSourceGrouped="True"/>
   </Page.Resources>
@@ -63,7 +41,7 @@
     </Grid.RowDefinitions>
     <GridView Grid.Row="0" SelectionMode="None"
               ItemsSource="{Binding Source={StaticResource eventsCollection}}"
-              ItemTemplateSelector="{StaticResource EventListTmplSelector}">
+              ItemTemplate="{Binding Source={StaticResource FillUpGridItemTemplate}}">
       <GridView.ItemContainerStyle>
         <Style TargetType="GridViewItem">
           <Setter Property="Margin" Value="15,0" />

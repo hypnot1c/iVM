@@ -4,7 +4,7 @@
     xmlns:local="using:iVM.UWP.App.Themes.Default">
 
   <ResourceDictionary.ThemeDictionaries>
-    <ResourceDictionary x:Key="Default">
+    <!--<ResourceDictionary x:Key="Default">
       <Thickness x:Key="PivotItemMargin">0</Thickness>
       
       <Color x:Key="AccentPrimaryColor">#FFF2C637</Color>
@@ -32,6 +32,6 @@
 
       <SolidColorBrush x:Key="iVMForegroundSelectedBrush" Color="{StaticResource ForegroundSelectedColor}" />
       <SolidColorBrush x:Key="iVMForegroundPrimaryBrush" Color="{StaticResource ForegroundPrimaryColor}" />
-    </ResourceDictionary>
+    </ResourceDictionary>-->
   </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>

@@ -93,6 +93,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="project.json" />
+    <Content Include="Assets\icons\fillup.svg" />
     <Content Include="settings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -123,7 +124,7 @@
     <Compile Include="Views\FillUpAddView.xaml.cs">
       <DependentUpon>FillUpAddView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EventListView.xaml.cs">
+    <Compile Include="Views\EventList\EventListView.xaml.cs">
       <DependentUpon>EventListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EventTypeSelectView.xaml.cs">
@@ -176,11 +177,15 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="Views\EventList\EventListView.DeviceFamily-Desktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\FillUpAddView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\EventListView.xaml">
+    <Page Include="Views\EventList\EventListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -189,10 +194,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PivotView\PivotView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\PivotView\PivotView.DeviceFamily-Mobile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

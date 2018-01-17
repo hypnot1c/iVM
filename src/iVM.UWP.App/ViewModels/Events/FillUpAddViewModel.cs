@@ -10,7 +10,8 @@ namespace iVM.UWP.App.ViewModels
     protected INavigationService _navService;
 
     private DateTimeOffset _dateOffset;
-    public DateTimeOffset DateOffset {
+    public DateTimeOffset DateOffset
+    {
       get { return this._dateOffset; }
       set
       {
@@ -20,10 +21,10 @@ namespace iVM.UWP.App.ViewModels
     }
 
     public FillUpAddViewModel(
-      IEventAggregator eventAggregator, 
+      IEventAggregator eventAggregator,
       INavigationService navigationService,
       MasterContext masterContext
-      ): base(eventAggregator, masterContext)
+      ) : base(eventAggregator, masterContext)
     {
       this._navService = navigationService;
       this.DateOffset = DateTimeOffset.Now;
@@ -37,11 +38,14 @@ namespace iVM.UWP.App.ViewModels
     protected override void Save()
     {
       base.Save();
-      //if (this._navigationService.CanGoBack)
-      //  this._navigationService.GoBack();
-      //else
-      this._navService.For<EventListViewModel>().Navigate();
-      //throw new NotImplementedException();
+      if (this._navService.CanGoBack)
+      {
+        this._navService.GoBack();
+      }
+      else
+      {
+        this._navService.For<EventListViewModel>().Navigate();
+      }
     }
 
     public void Cancel()
