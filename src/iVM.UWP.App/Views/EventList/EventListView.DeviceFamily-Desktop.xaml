@@ -14,26 +14,25 @@
         <Grid.RowDefinitions>
           <RowDefinition />
           <RowDefinition />
+          <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
           <ColumnDefinition />
           <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="0" Grid.Row="1" Source="Assets/fillup.svg" />
-        <!--<TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding OccuredDate, Converter={StaticResource dateTimeToStr} }" />
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Name}" />
+        <Image Grid.Column="0" Grid.Row="1" Width="64" Source="ms-appx:///Assets/fillup.svg" />
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
           <TextBlock Text="{Binding Litres, Converter={StaticResource decimalToStr}}" />
           <TextBlock Text="L." />
         </StackPanel>
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Expense, Converter={StaticResource decimalToStr}}" />-->
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Text="{Binding Expense, Converter={StaticResource decimalToStr}}" />
       </Grid>
     </DataTemplate>
 
     <CollectionViewSource x:Key="eventsCollection" Source="{Binding Events}" IsSourceGrouped="True"/>
   </Page.Resources>
 
-  <Grid>
+  <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
     <controls:AdaptiveGridView Grid.Row="0" Name="AdaptiveGridViewControl"
           DesiredWidth="200"
           ItemsSource="{Binding Source={StaticResource eventsCollection}}"

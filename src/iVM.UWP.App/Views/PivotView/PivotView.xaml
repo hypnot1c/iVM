@@ -16,7 +16,7 @@
         </StackPanel>
       </DataTemplate>
     </Pivot.HeaderTemplate>
-    <Pivot.ItemsPanel>
+    <Pivot.ItemsPanel> 
       <ItemsPanelTemplate>
         <Grid HorizontalAlignment="Stretch" />
       </ItemsPanelTemplate>
