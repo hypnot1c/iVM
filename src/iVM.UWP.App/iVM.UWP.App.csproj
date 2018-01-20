@@ -93,7 +93,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="project.json" />
-    <Content Include="Assets\fillup.svg" />
+    <Content Include="Assets\icons\fillup_64x64.png" />
     <Content Include="settings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -104,6 +104,7 @@
     </Compile>
     <Compile Include="Messages\ResumeMessage.cs" />
     <Compile Include="Messages\SuspendMessage.cs" />
+    <Compile Include="Resources\Converters\MonthConverter.cs" />
     <Compile Include="Resources\Converters\DateTimeConverter.cs" />
     <Compile Include="Resources\Converters\DecimalToStringConverter.cs" />
     <Compile Include="Resources\Converters\BooleanToVisibilityConverter.cs" />
@@ -121,7 +122,7 @@
     <Compile Include="ViewModels\NavMenuItem.cs" />
     <Compile Include="ViewModels\PivotViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
-    <Compile Include="Views\FillUpAddView.xaml.cs">
+    <Compile Include="Views\FillUpAdd\FillUpAddView.xaml.cs">
       <DependentUpon>FillUpAddView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EventList\EventListView.xaml.cs">
@@ -181,7 +182,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\FillUpAddView.xaml">
+    <Page Include="Views\FillUpAdd\FillUpAddView.DeviceFamily-Desktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FillUpAdd\FillUpAddView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -220,9 +225,7 @@
       <Name>iVM.Data.Vehicle.Context</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\icons\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

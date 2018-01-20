@@ -7,19 +7,30 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-  <Pivot x:Name="Items" Margin="0,48,0,0">
-    <Pivot.HeaderTemplate>
-      <DataTemplate>
-        <StackPanel Orientation="Horizontal">
-          <FontIcon Glyph="&#xE787;" Height="48" Width="48" />
-          <TextBlock Text="{Binding DisplayName}" FontSize="20" VerticalAlignment="Center" />
-        </StackPanel>
-      </DataTemplate>
-    </Pivot.HeaderTemplate>
-    <Pivot.ItemsPanel> 
-      <ItemsPanelTemplate>
-        <Grid HorizontalAlignment="Stretch" />
-      </ItemsPanelTemplate>
-    </Pivot.ItemsPanel>
-  </Pivot>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <CommandBar Grid.Row="0">
+      <CommandBar.PrimaryCommands>
+        <AppBarButton Name="EventAdd" Icon="Add" Label="Add"/>
+      </CommandBar.PrimaryCommands>
+    </CommandBar>
+    <Pivot Grid.Row="1" x:Name="Items" VerticalAlignment="Top" BorderBrush="Red" BorderThickness="1">
+      <Pivot.HeaderTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <FontIcon Glyph="&#xE787;" Height="48" Width="48" />
+            <TextBlock Text="{Binding DisplayName}" FontSize="20" VerticalAlignment="Center" />
+          </StackPanel>
+        </DataTemplate>
+      </Pivot.HeaderTemplate>
+      <Pivot.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Grid HorizontalAlignment="Stretch" />
+        </ItemsPanelTemplate>
+      </Pivot.ItemsPanel>
+    </Pivot>
+  </Grid>
 </Page>

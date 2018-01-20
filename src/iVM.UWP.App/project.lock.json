@@ -278,7 +278,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -1686,14 +1686,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.Net.Native.Compiler": "2.0.2",
           "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.5"
+          "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -2186,7 +2186,7 @@
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -3437,14 +3437,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.Net.Native.Compiler": "2.0.2",
           "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.5"
+          "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -3972,7 +3972,7 @@
           "runtimes/aot/lib/netcore50/System.Runtime.Extensions.dll": {}
         }
       },
-      "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -5231,14 +5231,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.Net.Native.Compiler": "2.0.2",
           "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.5"
+          "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -5738,7 +5738,7 @@
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -6982,14 +6982,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.Net.Native.Compiler": "2.0.2",
           "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.5"
+          "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -7524,7 +7524,7 @@
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -8776,14 +8776,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.Net.Native.Compiler": "2.0.2",
           "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.5"
+          "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -9290,7 +9290,7 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -10527,14 +10527,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.Net.Native.Compiler": "2.0.2",
           "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.5"
+          "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -11076,7 +11076,7 @@
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
+      "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -14370,15 +14370,15 @@
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
-      "sha512": "suR2zL+dQAcOxs2rokFV8KGbECXLDhB8U333NMYNtftqLFnfTMVX0qFVG8f34q3dALEuq/vlrZ/RCCL3NOEApg==",
+    "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "sha512": "T758N2M9bvyDA/9KeguVHOiUdhmAlCsmihVgKKwmf4MhnSybB8AsjwgmrCemqQVq7a6G7wffW7OkT0pSM2kNzQ==",
       "type": "package",
-      "path": "microsoft.netcore.universalwindowsplatform/6.0.5",
+      "path": "microsoft.netcore.universalwindowsplatform/6.0.6",
       "files": [
         "LICENSE.TXT",
+        "Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
+        "Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
-        "microsoft.netcore.universalwindowsplatform.6.0.5.nupkg.sha512",
-        "microsoft.netcore.universalwindowsplatform.nuspec",
         "ref/netcore50/_._",
         "ref/uap10.0.15138/Microsoft.CSharp.dll",
         "ref/uap10.0.15138/Microsoft.CSharp.xml",
@@ -15558,16 +15558,16 @@
         "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll"
       ]
     },
-    "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
-      "sha512": "QM1Mq6C4V3ycqf0/8NLXJ9CjUu3jRGtf76tPOcdEjARDW8zDVyynOYiV5x5deuZS/nHaKHe51lsZGuqdqMohBQ==",
+    "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "sha512": "Q4qwkiwdajYNEhVLDM7nFJDP7IMdrKpHbwI1oiJOL3d6iTV422JFfo8kbyYh8k8oOTfKfrHv/UkcIRPk9FjTbg==",
       "type": "package",
-      "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.0.5",
+      "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.0.6",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.0.5.nupkg.sha512",
-        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
+        "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -15751,16 +15751,16 @@
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
-      "sha512": "dTPIIlo1DK2iJ5dDUO3m/xHa4FhDD0zFyVvj2IaDEUa33QwNN59Bavg2snmIlLZZaFxTP7tl284bgJ5cGSLt9A==",
+    "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "sha512": "6y4QrQ+l0Oo6K06hWwVS+uNSLFE+tbBCuUBIaN9c3wB0DLWjn2A7rPKjBqoPBJoNK/NdeGPqR0AOXOKb+taauQ==",
       "type": "package",
-      "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.0.5",
+      "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.0.6",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.6.0.5.nupkg.sha512",
-        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
+        "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -15927,16 +15927,16 @@
         "runtimes/win10-arm/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
-      "sha512": "AWZIFcu8xoZitu3ZdEgbis5NTnXUZ0DrGlekieo9+qwjgnC1aOju6PJYPNQzaH11x6jFGCyU9DKrazu6olRu/Q==",
+    "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "sha512": "2mHmIyGr7MdGDisXckIUdJW1DbdHqFRb1P/d1XCOvohrF4mZEU2vr6f3m8JrcI4p5JqbxQBJVAS5LCNq0+FSww==",
       "type": "package",
-      "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.0.5",
+      "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.0.6",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.6.0.5.nupkg.sha512",
-        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
+        "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -16120,16 +16120,16 @@
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
-      "sha512": "I774FxmdywBPYipSE0Og5HajYt0eBto8tw9QNlsZt0jVNShltEqBq7LC2MkRkWkf2VDrJEY0jU6I320jLTfwZA==",
+    "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "sha512": "KJ7TjMExpj9+k30/Zed+spk38SkMtdRyckzSKj0040WMMnnXStsU1iAATDD0h4rcTbiMdACaBlIHl3i7p98C7Q==",
       "type": "package",
-      "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.0.5",
+      "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.0.6",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.6.0.5.nupkg.sha512",
-        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
+        "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -16296,16 +16296,16 @@
         "runtimes/win10-x64/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
-      "sha512": "TRA8QnE7CN7oVXPMybL/ZojpOzkond2euO19YYzicwZjrvRrudy3OXTAQlPbtE2xFQ0Va2U4A9gcrsiCyxXEJA==",
+    "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "sha512": "ULbHfUEHeo41/DBR0O9Ps57mzYApjlOZZlOJOUjc6kDHR0TLLDU0lv5eXl88M2ouhCz0OlA4Nw1Hk3w4wNGRBQ==",
       "type": "package",
-      "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.0.5",
+      "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.0.6",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.6.0.5.nupkg.sha512",
-        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
+        "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -16489,16 +16489,16 @@
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.5": {
-      "sha512": "wc1xGboXkp6PQpxnEtXVZEYATCU2n2Z3YoCq4Zq9QtreDF+RfO4ubFEAj/9K9agnW5CdtWr7J2nsFLk0veafgg==",
+    "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "sha512": "0KoE35RdKGERCqE6LgqJu/kmZy5YS3fttRvcfYt/FhPgzG9/ZbVZ5NfhBuXIAus1eCFQ40xQ2FifgxLhdotXLQ==",
       "type": "package",
-      "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.0.5",
+      "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.0.6",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.0.5.nupkg.sha512",
-        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.nuspec",
+        "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
+        "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -17160,7 +17160,7 @@
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
-      "sha512": "eXDc/eSkxJmMZm19UfSy9rV8AyrZYmDcVmYcQh1F/vl6jKwJBYHCcopc2g6PakB3QWqGZsbpffLLHiOtr5o7Vg==",
+      "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
       "type": "package",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "files": [
@@ -19239,7 +19239,7 @@
       ]
     },
     "Win2D.uwp/1.21.0": {
-      "sha512": "4ddgs6Mt4cDVOPcKE+gV02Rn8G9nhp8C9S94A/msxULD2ysq6Q/z3CmeyATJhJNVfhumWUaXzx0B3v39vB5A4Q==",
+      "sha512": "4Ds/p7HgysgV67pBo/+w7Lidj08Hfa4GD9Zg9HdN3/zLfzRPttHrIn2TUiOUZCgH4eLVJwzOk114ntv4bveS1Q==",
       "type": "package",
       "path": "win2d.uwp/1.21.0",
       "files": [
@@ -19300,29 +19300,29 @@
       "Microsoft.ApplicationInsights.WindowsApps >= 1.1.1",
       "Microsoft.EntityFrameworkCore >= 2.0.1",
       "Microsoft.EntityFrameworkCore.InMemory >= 2.0.1",
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.5",
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.6",
       "Microsoft.Toolkit.Uwp.UI.Controls >= 2.1.1"
     ],
     "UAP,Version=v10.0.16299": []
   },
   "packageFolders": {
-    "C:\\Users\\Ahmed\\.nuget\\packages\\": {},
+    "C:\\Users\\ahmed\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\iVM.UWP.App\\iVM.UWP.App.csproj",
+      "projectUniqueName": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\iVM.UWP.App\\iVM.UWP.App.csproj",
       "projectName": "iVM.UWP.App",
-      "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\iVM.UWP.App\\iVM.UWP.App.csproj",
-      "projectJsonPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\iVM.UWP.App\\project.json",
-      "packagesPath": "C:\\Users\\Ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\iVM.UWP.App\\obj\\",
+      "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\iVM.UWP.App\\iVM.UWP.App.csproj",
+      "projectJsonPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\iVM.UWP.App\\project.json",
+      "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\iVM.UWP.App\\obj\\",
       "projectStyle": "ProjectJson",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -19333,17 +19333,17 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj": {
-              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj"
+            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj"
             },
-            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.UI\\iVM.Core.UI.csproj": {
-              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.UI\\iVM.Core.UI.csproj"
+            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.UI\\iVM.Core.UI.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\core\\iVM.Core.UI\\iVM.Core.UI.csproj"
             },
-            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj": {
-              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj"
+            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Master.Context\\iVM.Data.Master.Context.csproj"
             },
-            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj": {
-              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj"
+            "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj"
             }
           }
         }
@@ -19356,7 +19356,7 @@
       "Microsoft.ApplicationInsights.WindowsApps": "[1.1.1, )",
       "Microsoft.EntityFrameworkCore": "[2.0.1, )",
       "Microsoft.EntityFrameworkCore.InMemory": "[2.0.1, )",
-      "Microsoft.NETCore.UniversalWindowsPlatform": "[6.0.5, )",
+      "Microsoft.NETCore.UniversalWindowsPlatform": "[6.0.6, )",
       "Microsoft.Toolkit.Uwp.UI.Controls": "[2.1.1, )"
     },
     "frameworks": {

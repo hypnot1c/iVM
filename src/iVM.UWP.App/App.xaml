@@ -15,6 +15,7 @@
       <conv:EnumToListConverter x:Key="enumToList" />
       <conv:DecimalToStringConverter x:Key="decimalToStr" />
       <conv:DateTimeConverter x:Key="dateTimeToStr" />
+      <conv:MonthConverter x:Key="monthNumToStr" />
     </ResourceDictionary>
   </cm:CaliburnApplication.Resources>
 </cm:CaliburnApplication>

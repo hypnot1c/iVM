@@ -1,8 +1,6 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Data.Master.Context;
-using iVM.Data.Master.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,7 +17,7 @@ namespace iVM.Core.UI.ViewModels
       this.masterContext = masterContext;
       var eventsOccured = this.masterContext.EventsOccured.OrderByDescending(e => e.Date).Take(20).ToList();
 
-      this.Events = eventsOccured.GroupBy(eo => eo.Date, eo => {
+      this.Events = eventsOccured.Select(eo => {
         switch(eo.Type)
         {
           case Data.Master.Model.EventType.FillUp:
@@ -45,6 +43,6 @@ namespace iVM.Core.UI.ViewModels
 
     private readonly MasterContext masterContext;
 
-    public IEnumerable<IGrouping<DateTime, EventOccuredEntity>> Events { get; set; }
+    public IEnumerable<EventOccuredEntity> Events { get; set; }
   }
 }
