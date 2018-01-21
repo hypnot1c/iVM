@@ -40,7 +40,7 @@ namespace iVM.Data.Master.Context
     public void FillDummyData()
     {
       // Add some data
-      this.Add(new VehicleModel { Model_vehicleModelId = 1, Type_vehicleTypeId = 2 });
+      this.Add(new VehicleModel { Model_vehicleModelId = 1, Type_vehicleTypeId = 2, Mileage = 128000 });
 
       this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 1, Title = "Gazpromneft", Date = DateTime.ParseExact("17.07.2016", "dd.MM.yyyy", null), Mileage = 186000, Expense = 1964.68M });
       this.Add(new EventOccuredModel { Vehicle_VehicleId = 1, Type = EventType.FillUp, EntityId = 2, Title = "Gazpromneft", Date = DateTime.ParseExact("17.07.2016", "dd.MM.yyyy", null), Mileage = 186100, Expense = 1964.68M });

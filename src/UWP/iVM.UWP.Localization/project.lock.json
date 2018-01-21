@@ -18302,7 +18302,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.0.2": {
-      "sha512": "fRHBvQs9Z/ZSUAqaSotK1UPol/lwybTgdeTXR4eVw3rVDgzUnWGTUsK0A418oR7NrimNL1TQu/IM0RDa26s0qg==",
+      "sha512": "P6r5Nlv4EwL0bUNcUXFizV7TaZkSpkFRCiq40cK8rnoRVA3kKRuV2DBv7W8hU5UOxZwV4KeTcZTpXmNF2rJTXw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.0.2",
       "files": [
@@ -25730,23 +25730,23 @@
     "UAP,Version=v10.0.10240": []
   },
   "packageFolders": {
-    "C:\\Users\\ahmed\\.nuget\\packages\\": {},
+    "C:\\Users\\Ahmed\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\UWP\\iVM.UWP.Localization\\iVM.UWP.Localization.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\UWP\\iVM.UWP.Localization\\iVM.UWP.Localization.csproj",
       "projectName": "iVM.UWP.Localization",
-      "projectPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\UWP\\iVM.UWP.Localization\\iVM.UWP.Localization.csproj",
-      "projectJsonPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\UWP\\iVM.UWP.Localization\\project.json",
-      "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmed\\Documents\\Develop\\_projects\\my\\iVM\\src\\UWP\\iVM.UWP.Localization\\obj\\",
+      "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\UWP\\iVM.UWP.Localization\\iVM.UWP.Localization.csproj",
+      "projectJsonPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\UWP\\iVM.UWP.Localization\\project.json",
+      "packagesPath": "C:\\Users\\Ahmed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\UWP\\iVM.UWP.Localization\\obj\\",
       "projectStyle": "ProjectJson",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

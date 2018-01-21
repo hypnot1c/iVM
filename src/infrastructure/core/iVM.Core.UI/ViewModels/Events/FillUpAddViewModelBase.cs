@@ -1,4 +1,6 @@
 ﻿using Caliburn.Micro;
+using iVM.Core.Entity;
+using iVM.Core.Entity.Services;
 using iVM.Data.Master.Context;
 using iVM.Data.Master.Model;
 using System;
@@ -11,15 +13,18 @@ namespace iVM.Core.UI.ViewModels
 
     public FillUpAddViewModelBase(
       IEventAggregator eventAggregator,
+      UserSessionService userSessionService,
       MasterContext masterContext
       ) : base(eventAggregator)
     {
       this.Date = DateTime.Now;
       this.masterContext = masterContext;
+      this.userSessionService = userSessionService;
+      this.Mileage = this.userSessionService.CurrentVehicle.Mileage;
     }
 
     private readonly MasterContext masterContext;
-
+    private readonly UserSessionService userSessionService;
     private DateTime _date;
     public DateTime Date
     {
@@ -69,7 +74,7 @@ namespace iVM.Core.UI.ViewModels
     protected override void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
     {
       base.ViewModel_PropertyChanged(sender, e);
-      switch(e.PropertyName)
+      switch (e.PropertyName)
       {
         case nameof(this.Expense):
         case nameof(this.Litres):
@@ -86,25 +91,17 @@ namespace iVM.Core.UI.ViewModels
     {
       //using (var tran = await this.masterContext.Database.BeginTransactionAsync())
       //{
-        var fillUp = new FillUpModel();
-        fillUp.LitresValue = this.Litres;
-        fillUp.LiterCost = this.LiterCost;
+      var fillUp = new FillUpEntity();
+      fillUp.Expense = this.Expense;
+      fillUp.Litres = this.Litres;
+      fillUp.LiterCost = this.LiterCost;
+      fillUp.Name = this.Title;
+      fillUp.OccuredDate = this.Date;
+      fillUp.Mileage = this.Mileage;
 
-        await this.masterContext.FillUps.AddAsync(fillUp);
-        await this.masterContext.SaveChangesAsync();
+      fillUp.Vehicle = this.userSessionService.CurrentVehicle;
 
-        var @event = new EventOccuredModel();
-        @event.Expense = this.Expense;
-        @event.Title = this.Title;
-        @event.Date = this.Date;
-        @event.Mileage = this.Mileage;
-        @event.EntityId = fillUp.Id;
-        @event.Type = EventType.FillUp;
-
-        @event.Vehicle_VehicleId = 1; //TODO: Get from session
-
-        await this.masterContext.EventsOccured.AddAsync(@event);
-        await this.masterContext.SaveChangesAsync();
+      await this.masterContext.FillUp_CreateAsync(fillUp);
       //  tran.Commit();
       //}
     }

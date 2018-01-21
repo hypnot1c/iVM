@@ -3,6 +3,7 @@
   public abstract class VehicleEntity: BaseEntity
   {
     public string Title { get; set; }
+    public ulong Mileage { get; set; }
     public VehicleBrandEntity Brand { get; set; }
     public VehicleModelEntity Model { get; set; }
     public VehicleTypeEntity Type { get; set; }

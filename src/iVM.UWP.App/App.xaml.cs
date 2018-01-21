@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using iVM.Core.Entity.Services;
 using iVM.Data.Master.Context;
 using iVM.Data.Vehicle.Context;
 using iVM.UWP.App.Messages;
@@ -60,7 +61,7 @@ namespace iVM
         //.Singleton<MainContext>()
         //.PerRequest<IVehicleUnitOfWork, VehicleUnitOfWork>()
         //.PerRequest<IMainUnitOfWork, MainUnitOfWork>()
-        //.PerRequest<SessionService, SessionService>()
+        .Singleton<UserSessionService>()
         //.PerRequest<EventService, EventService>()
         //.PerRequest<VehicleService, VehicleService>()
         .PerRequest<ShellViewModel>()

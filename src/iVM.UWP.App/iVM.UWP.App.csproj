@@ -209,6 +209,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\infrastructure\core\iVM.Core.Entity.Services\iVM.Core.Entity.Services.csproj">
+      <Project>{318FDCC7-ABF3-43C9-A8C4-4786DA201F34}</Project>
+      <Name>iVM.Core.Entity.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\infrastructure\core\iVM.Core.Entity\iVM.Core.Entity.csproj">
       <Project>{A92212F1-0FC5-4ED7-9545-AD3CBF1F3469}</Project>
       <Name>iVM.Core.Entity</Name>
@@ -226,7 +230,9 @@
       <Name>iVM.Data.Vehicle.Context</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Infrastructure\Services\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

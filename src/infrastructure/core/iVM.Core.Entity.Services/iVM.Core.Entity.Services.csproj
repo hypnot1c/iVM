@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\iVM.Data.Master.Context\iVM.Data.Master.Context.csproj" />
+    <ProjectReference Include="..\iVM.Core.Entity\iVM.Core.Entity.csproj" />
+  </ItemGroup>
+
 </Project>
