@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System;
+using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -12,6 +13,12 @@ namespace iVM.UWP.App.Views
     public FillUpAddView()
     {
       this.InitializeComponent();
+    }
+
+    private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+      var showLitreCost = !String.IsNullOrWhiteSpace(this.Expense.Text) && !String.IsNullOrWhiteSpace(this.Litres.Text);
+      this.LiterCostText.Visibility = showLitreCost ? Windows.UI.Xaml.Visibility.Visible : Windows.UI.Xaml.Visibility.Collapsed;
     }
   }
 }

@@ -28,7 +28,7 @@ namespace iVM.UWP.App.Resources.Converters
     public object ConvertBack(object value, Type targetType, object parameter, string language)
     {
       decimal decimalValue = Decimal.Zero;
-      if(value is string)
+      if(value is string && !String.IsNullOrWhiteSpace((string)value))
       {
         decimalValue = Decimal.Parse((string)value);
       }

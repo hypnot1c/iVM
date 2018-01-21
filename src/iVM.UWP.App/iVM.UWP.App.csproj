@@ -94,6 +94,7 @@
     </Content>
     <None Include="project.json" />
     <Content Include="Assets\icons\fillup_64x64.png" />
+    <Content Include="Assets\icons\fillup_32x32.png" />
     <Content Include="settings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

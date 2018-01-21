@@ -2,6 +2,7 @@
 using iVM.Data.Master.Context;
 using iVM.Data.Master.Model;
 using System;
+using System.ComponentModel;
 
 namespace iVM.Core.UI.ViewModels
 {
@@ -63,6 +64,23 @@ namespace iVM.Core.UI.ViewModels
       get { return this._mileage; }
       set { this._mileage = value; NotifyOfPropertyChange(() => this.Mileage); }
     }
+
+
+    protected override void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+    {
+      base.ViewModel_PropertyChanged(sender, e);
+      switch(e.PropertyName)
+      {
+        case nameof(this.Expense):
+        case nameof(this.Litres):
+          if (this.Litres > 0)
+          {
+            this.LiterCost = this.Expense / this.Litres;
+          }
+          break;
+      }
+    }
+
 
     protected async virtual void Save()
     {
