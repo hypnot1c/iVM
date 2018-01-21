@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using iVM.Core.Entity.Services;
 using iVM.UWP.App.Messages;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace iVM.UWP.App.ViewModels
   {
     private readonly WinRTContainer _container;
     private readonly IEventAggregator _eventAggregator;
+    private readonly UserSessionService userSessionService;
     protected INavigationService _navigationService;
     private bool _resume;
 
@@ -24,17 +26,6 @@ namespace iVM.UWP.App.ViewModels
       {
         _collapsedPanelLength = value;
         this.NotifyOfPropertyChange(() => this.CollapsedPanelLength);
-      }
-    }
-
-    private bool _isNotFirstVisit;
-    public bool IsNotFirstVisit
-    {
-      get { return this._isNotFirstVisit; }
-      set
-      {
-        this._isNotFirstVisit = value;
-        this.NotifyOfPropertyChange(() => this.IsNotFirstVisit);
       }
     }
 
@@ -52,13 +43,17 @@ namespace iVM.UWP.App.ViewModels
         this.NotifyOfPropertyChange(() => this.SelectedNavMenuItem);
       }
     }
-    public ShellViewModel(WinRTContainer container, IEventAggregator eventAggregator)
+    public ShellViewModel(
+      WinRTContainer container, 
+      IEventAggregator eventAggregator,
+      UserSessionService userSessionService
+      )
     {
       this.PropertyChanged += ShellViewModel_PropertyChanged;
       this._container = container;
       this._eventAggregator = eventAggregator;
+      this.userSessionService = userSessionService;
       this.CollapsedPanelLength = 0;
-      this.IsNotFirstVisit = true;
 
       this.NavMenuItems = new List<NavMenuItem>
       {
@@ -93,7 +88,6 @@ namespace iVM.UWP.App.ViewModels
             AppViewBackButtonVisibility.Visible :
             AppViewBackButtonVisibility.Collapsed;
 
-      this.IsNotFirstVisit = e.Content.GetType().Name != "VehicleAddView";
       //this.CollapsedPanelLength = this.IsNotFirstVisit ? 50 : 0;
       if (e.Content.GetType().Name == "PivotView")
       {
@@ -141,9 +135,7 @@ namespace iVM.UWP.App.ViewModels
       }
       else
       {
-        //var firstView = this.IsNotFirstVisit ? this.SelectedNavMenuItem.TargetViewModel : typeof(VehicleAddViewModel);
-        var firstView = this.SelectedNavMenuItem.TargetViewModel;
-        this._navigationService.NavigateToViewModel(firstView);
+        this._navigationService.NavigateToViewModel(this.SelectedNavMenuItem.TargetViewModel);
       }
     }
 

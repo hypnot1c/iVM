@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.UI.Core;
+using Windows.UI.Xaml.Controls;
 
 namespace iVM
 {
@@ -36,17 +38,19 @@ namespace iVM
     protected override void Configure()
     {
       _container = new WinRTContainer();
-      
+
       _container.RegisterWinRTServices();
 
-      _container.Handler<VehicleContext>(sc => {
+      _container.Handler<VehicleContext>(sc =>
+      {
         var optionsBuilder = new DbContextOptionsBuilder<VehicleContext>();
         optionsBuilder.UseInMemoryDatabase("vehicle");
 
         return new VehicleContext(optionsBuilder.Options);
       });
 
-      _container.Handler<MasterContext>(sc => {
+      _container.Handler<MasterContext>(sc =>
+      {
         var optionsBuilder = new DbContextOptionsBuilder<MasterContext>();
         optionsBuilder.UseInMemoryDatabase("master");
 
@@ -55,19 +59,11 @@ namespace iVM
 
       // Make sure to register your containers here
       _container
-        //.PerRequest<VehicleContext>()
         //.Instance<IConfigurationService>(new ConfigurationService())
-        //.Singleton<VehicleContext>()
-        //.Singleton<MainContext>()
-        //.PerRequest<IVehicleUnitOfWork, VehicleUnitOfWork>()
-        //.PerRequest<IMainUnitOfWork, MainUnitOfWork>()
         .Singleton<UserSessionService>()
-        //.PerRequest<EventService, EventService>()
-        //.PerRequest<VehicleService, VehicleService>()
+        .PerRequest<WelcomeViewModel>()
         .PerRequest<ShellViewModel>()
         .PerRequest<PivotViewModel>()
-        //.PerRequest<VehicleAddViewModel>()
-        //.PerRequest<MaintenanceAddViewModel>()
         .PerRequest<EventListViewModel>()
         .PerRequest<EventTypeSelectViewModel>()
         .PerRequest<FillUpAddViewModel>()
@@ -76,10 +72,23 @@ namespace iVM
 
       this._eventAggregator = _container.GetInstance<IEventAggregator>();
 
-      var vehicleContext = _container.GetInstance<VehicleContext>();
-      vehicleContext.FillDummyData();
-      var mainContext = _container.GetInstance<MasterContext>();
-      mainContext.FillDummyData();
+      //var vehicleContext = _container.GetInstance<VehicleContext>();
+      //vehicleContext.FillDummyData();
+      //var mainContext = _container.GetInstance<MasterContext>();
+      //mainContext.FillDummyData();
+    }
+
+    protected override void PrepareViewFirst(Frame rootFrame)
+    {
+      var navigationService = _container.RegisterNavigationService(rootFrame);
+      var navigationManager = SystemNavigationManager.GetForCurrentView();
+
+      navigationService.Navigated += (s, e) =>
+      {
+        navigationManager.AppViewBackButtonVisibility = navigationService.CanGoBack ?
+                  AppViewBackButtonVisibility.Visible :
+                  AppViewBackButtonVisibility.Collapsed;
+      };
     }
 
     /// <summary> 
@@ -93,7 +102,7 @@ namespace iVM
       if (e.PreviousExecutionState == ApplicationExecutionState.Running)
         return;
 
-      DisplayRootViewFor<ShellViewModel>();
+      DisplayRootViewFor<WelcomeViewModel>();
 
       if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
       {

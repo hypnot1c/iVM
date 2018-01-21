@@ -16,14 +16,24 @@ namespace iVM.Core.Entity.Services
 
       var vehicleModel = this.masterContext.Vehicles.SingleOrDefault(v => v.Id == 1);
 
-      var car = new CarEntity();
-      car.Id = vehicleModel.Id;
-      car.Mileage = vehicleModel.Mileage;
+      if (vehicleModel != null)
+      {
+        var car = new CarEntity();
+        car.Id = vehicleModel.Id;
+        car.Mileage = vehicleModel.Mileage;
 
-      this.CurrentVehicle = car;
+        this.CurrentVehicle = car;
+      }
     }
     private readonly MasterContext masterContext;
 
+    public bool IsFirstLaunch
+    {
+      get
+      {
+        return !this.masterContext.Vehicles.Any();
+      }
+    }
     public VehicleEntity CurrentVehicle { get; set; }
   }
 }
