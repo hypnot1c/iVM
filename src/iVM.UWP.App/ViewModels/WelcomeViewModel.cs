@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using iVM.Core.Entity.Services;
+using iVM.UWP.App.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,5 +23,10 @@ namespace iVM.UWP.App.ViewModels
     }
 
     private readonly INavigationService navigationService;
+
+    public void AddNewVehicle()
+    {
+      this.navigationService.Navigate<VehicleTypeSelectView>();
+    }
   }
 }

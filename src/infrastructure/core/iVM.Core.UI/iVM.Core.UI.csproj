@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\DAL\iVM.Data.Master.Context\iVM.Data.Master.Context.csproj" />
+    <ProjectReference Include="..\..\DAL\iVM.Data.Vehicle.Context\iVM.Data.Vehicle.Context.csproj" />
     <ProjectReference Include="..\iVM.Core.Entity.Services\iVM.Core.Entity.Services.csproj" />
     <ProjectReference Include="..\iVM.Core.Entity\iVM.Core.Entity.csproj" />
   </ItemGroup>

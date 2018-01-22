@@ -1388,7 +1388,8 @@
           "Caliburn.Micro.Core": "3.2.0",
           "iVM.Core.Entity": "1.0.0",
           "iVM.Core.Entity.Services": "1.0.0",
-          "iVM.Data.Master.Context": "1.0.0"
+          "iVM.Data.Master.Context": "1.0.0",
+          "iVM.Data.Vehicle.Context": "1.0.0"
         }
       },
       "iVM.Data.Master.Context/1.0.0": {
@@ -3148,7 +3149,8 @@
           "Caliburn.Micro.Core": "3.2.0",
           "iVM.Core.Entity": "1.0.0",
           "iVM.Core.Entity.Services": "1.0.0",
-          "iVM.Data.Master.Context": "1.0.0"
+          "iVM.Data.Master.Context": "1.0.0",
+          "iVM.Data.Vehicle.Context": "1.0.0"
         }
       },
       "iVM.Data.Master.Context/1.0.0": {
@@ -4951,7 +4953,8 @@
           "Caliburn.Micro.Core": "3.2.0",
           "iVM.Core.Entity": "1.0.0",
           "iVM.Core.Entity.Services": "1.0.0",
-          "iVM.Data.Master.Context": "1.0.0"
+          "iVM.Data.Master.Context": "1.0.0",
+          "iVM.Data.Vehicle.Context": "1.0.0"
         }
       },
       "iVM.Data.Master.Context/1.0.0": {
@@ -6711,7 +6714,8 @@
           "Caliburn.Micro.Core": "3.2.0",
           "iVM.Core.Entity": "1.0.0",
           "iVM.Core.Entity.Services": "1.0.0",
-          "iVM.Data.Master.Context": "1.0.0"
+          "iVM.Data.Master.Context": "1.0.0",
+          "iVM.Data.Vehicle.Context": "1.0.0"
         }
       },
       "iVM.Data.Master.Context/1.0.0": {
@@ -8514,7 +8518,8 @@
           "Caliburn.Micro.Core": "3.2.0",
           "iVM.Core.Entity": "1.0.0",
           "iVM.Core.Entity.Services": "1.0.0",
-          "iVM.Data.Master.Context": "1.0.0"
+          "iVM.Data.Master.Context": "1.0.0",
+          "iVM.Data.Vehicle.Context": "1.0.0"
         }
       },
       "iVM.Data.Master.Context/1.0.0": {
@@ -10274,7 +10279,8 @@
           "Caliburn.Micro.Core": "3.2.0",
           "iVM.Core.Entity": "1.0.0",
           "iVM.Core.Entity.Services": "1.0.0",
-          "iVM.Data.Master.Context": "1.0.0"
+          "iVM.Data.Master.Context": "1.0.0",
+          "iVM.Data.Vehicle.Context": "1.0.0"
         }
       },
       "iVM.Data.Master.Context/1.0.0": {
@@ -12077,7 +12083,8 @@
           "Caliburn.Micro.Core": "3.2.0",
           "iVM.Core.Entity": "1.0.0",
           "iVM.Core.Entity.Services": "1.0.0",
-          "iVM.Data.Master.Context": "1.0.0"
+          "iVM.Data.Master.Context": "1.0.0",
+          "iVM.Data.Vehicle.Context": "1.0.0"
         }
       },
       "iVM.Data.Master.Context/1.0.0": {
@@ -19401,6 +19408,9 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
+            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity.Services\\iVM.Core.Entity.Services.csproj": {
+              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity.Services\\iVM.Core.Entity.Services.csproj"
+            },
             "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj": {
               "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity\\iVM.Core.Entity.csproj"
             },
@@ -19412,9 +19422,6 @@
             },
             "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj": {
               "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\DAL\\iVM.Data.Vehicle.Context\\iVM.Data.Vehicle.Context.csproj"
-            },
-            "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity.Services\\iVM.Core.Entity.Services.csproj": {
-              "projectPath": "C:\\Users\\Ahmed\\Documents\\GitHub\\iVM\\src\\infrastructure\\core\\iVM.Core.Entity.Services\\iVM.Core.Entity.Services.csproj"
             }
           }
         }

@@ -7,7 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock Grid.Row="0" Margin="0,10,0,10" HorizontalAlignment="Center" FontSize="42">Welcome</TextBlock>
+    <TextBlock Grid.Row="1" Margin="0,10,0,10" HorizontalAlignment="Center" FontSize="28">first of wall, add your vehicle</TextBlock>
+    <Button Grid.Row="2" Margin="0,10,0,10" HorizontalAlignment="Center" Name="AddNewVehicle">Add vehicle</Button>
+  </Grid>
 </Page>

@@ -4,6 +4,7 @@ using iVM.Data.Master.Context;
 using iVM.Data.Vehicle.Context;
 using iVM.UWP.App.Messages;
 using iVM.UWP.App.ViewModels;
+using iVM.UWP.App.Views;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -62,6 +63,7 @@ namespace iVM
         //.Instance<IConfigurationService>(new ConfigurationService())
         .Singleton<UserSessionService>()
         .PerRequest<WelcomeViewModel>()
+        .PerRequest<VehicleTypeSelectViewModel>()
         .PerRequest<ShellViewModel>()
         .PerRequest<PivotViewModel>()
         .PerRequest<EventListViewModel>()
@@ -72,8 +74,8 @@ namespace iVM
 
       this._eventAggregator = _container.GetInstance<IEventAggregator>();
 
-      //var vehicleContext = _container.GetInstance<VehicleContext>();
-      //vehicleContext.FillDummyData();
+      var vehicleContext = _container.GetInstance<VehicleContext>();
+      vehicleContext.FillDummyData();
       //var mainContext = _container.GetInstance<MasterContext>();
       //mainContext.FillDummyData();
     }
@@ -102,7 +104,7 @@ namespace iVM
       if (e.PreviousExecutionState == ApplicationExecutionState.Running)
         return;
 
-      DisplayRootViewFor<WelcomeViewModel>();
+      DisplayRootView<WelcomeView>();
 
       if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
       {

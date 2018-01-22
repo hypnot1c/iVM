@@ -32,11 +32,6 @@ namespace iVM.UWP.App.ViewModels
       this.DateOffset = DateTimeOffset.Now;
     }
 
-    protected override void OnActivate()
-    {
-      base.OnActivate();
-    }
-
     protected override void Save()
     {
       base.Save();
