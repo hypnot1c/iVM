@@ -1,13 +1,13 @@
 ﻿{
   "dependencies": {
-    "Caliburn.Micro": "3.2.0",
-    "Microsoft.ApplicationInsights": "2.4.0",
+    "Caliburn.Micro": "4.0.0-alpha.1",
+    "Microsoft.ApplicationInsights": "2.5.1",
     "Microsoft.ApplicationInsights.PersistenceChannel": "1.2.3",
     "Microsoft.ApplicationInsights.WindowsApps": "1.1.1",
     "Microsoft.EntityFrameworkCore": "2.0.1",
     "Microsoft.EntityFrameworkCore.InMemory": "2.0.1",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6",
-    "Microsoft.Toolkit.Uwp.UI.Controls": "2.1.1"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7",
+    "Microsoft.Toolkit.Uwp.UI.Controls": "2.2.0"
   },
   "frameworks": {
     "uap10.0.16299": {}

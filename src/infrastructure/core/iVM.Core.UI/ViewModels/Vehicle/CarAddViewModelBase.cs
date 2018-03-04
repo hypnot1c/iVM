@@ -52,7 +52,7 @@ namespace iVM.Core.UI.ViewModels.Vehicle
       var car = new CarEntity();
       car.Mileage = this.Miliage;
       car.Title = this.Name;
-      car.
+      //car.
     }
   }
 }

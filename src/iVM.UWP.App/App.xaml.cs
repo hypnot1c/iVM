@@ -108,7 +108,7 @@ namespace iVM
 
       if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
       {
-        _eventAggregator.PublishOnUIThread(new ResumeStateMessage());
+        _eventAggregator.PublishOnUIThreadAsync(new ResumeStateMessage());
       }
     }
 
@@ -122,7 +122,7 @@ namespace iVM
     /// <param name="e">Details about the suspend request.</param>
     protected override void OnSuspending(object sender, SuspendingEventArgs e)
     {
-      _eventAggregator.PublishOnUIThread(new SuspendStateMessage(e.SuspendingOperation));
+      _eventAggregator.PublishOnUIThreadAsync(new SuspendStateMessage(e.SuspendingOperation));
     }
 
     protected override object GetInstance(Type service, string key)

@@ -19,7 +19,7 @@ namespace iVM.Core.UI
 
     protected override void OnActivate()
     {
-      _evAggregator.Subscribe(this);
+      _evAggregator.SubscribeOnPublishedThread(this);
     }
 
     protected override void OnDeactivate(bool close)
