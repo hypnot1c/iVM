@@ -38,11 +38,20 @@ namespace iVM.Core.UI.ViewModels.Vehicle
       set { this._name = value; NotifyOfPropertyChange(() => this.Name); }
     }
 
+    private ulong _miliage;
+    public ulong Miliage
+    {
+      get { return this._miliage; }
+      set { this._miliage = value; NotifyOfPropertyChange(() => this.Miliage); }
+    }
+
     private readonly MasterContext masterContext;
 
     public virtual void Save()
     {
       var car = new CarEntity();
+      car.Mileage = this.Miliage;
+      car.Title = this.Name;
       car.
     }
   }
