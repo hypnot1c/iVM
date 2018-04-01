@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Data.Master.Context;
+using iVM.Data.Vehicle.Context;
 
 namespace iVM.Core.UI.ViewModels.Vehicle
 {
@@ -11,10 +9,12 @@ namespace iVM.Core.UI.ViewModels.Vehicle
   {
     public CarAddViewModelBase(
       IEventAggregator eventAggregator,
-      MasterContext masterContext
+      MasterContext masterContext,
+      VehicleContext vehicleContext
       ) : base(eventAggregator)
     {
       this.masterContext = masterContext;
+      this.vehicleContext = vehicleContext;
     }
 
     private int _brandId;
@@ -45,7 +45,8 @@ namespace iVM.Core.UI.ViewModels.Vehicle
       set { this._miliage = value; NotifyOfPropertyChange(() => this.Miliage); }
     }
 
-    private readonly MasterContext masterContext;
+    protected readonly MasterContext masterContext;
+    protected readonly VehicleContext vehicleContext;
 
     public virtual void Save()
     {

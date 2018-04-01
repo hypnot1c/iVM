@@ -1,4 +1,4 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using iVM.Core.UI.ViewModels.Vehicle;
 using iVM.Data.Vehicle.Context;
 using System;
@@ -13,6 +13,7 @@ namespace iVM.UWP.App.ViewModels
   {
     protected INavigationService _navService;
 
+
     public VehicleTypeSelectViewModel(
       INavigationService navigationService,
       IEventAggregator eventAggregator, 
@@ -20,6 +21,24 @@ namespace iVM.UWP.App.ViewModels
       ) : base(eventAggregator, masterContext)
     {
       this._navService = navigationService;
+
+      this.NavMenuItems = new List<NavMenuItem>
+      {
+        new NavMenuItem { Title = "Car", TargetViewModel = typeof(CarAddViewModel) }
+      };
+    }
+
+    public List<NavMenuItem> NavMenuItems { get; set; }
+    private NavMenuItem _selectedNavMenuItem;
+    public NavMenuItem SelectedNavMenuItem
+    {
+      get { return this._selectedNavMenuItem; }
+      set
+      {
+        this._selectedNavMenuItem = value;
+        this.NotifyOfPropertyChange(() => this.SelectedNavMenuItem);
+        this._navService.NavigateToViewModel(this._selectedNavMenuItem.TargetViewModel);
+      }
     }
   }
 }

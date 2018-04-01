@@ -25574,7 +25574,6 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
-    "version": "1.0.0",
     "restore": {
       "projectUniqueName": "D:\\develop\\projects\\my\\iVM\\src\\UWP\\iVM.UWP.Localization\\iVM.UWP.Localization.csproj",
       "projectName": "iVM.UWP.Localization",

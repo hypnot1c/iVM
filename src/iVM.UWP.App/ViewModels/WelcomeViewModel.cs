@@ -1,28 +1,31 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using iVM.Core.Entity.Services;
 using iVM.UWP.App.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iVM.UWP.App.ViewModels
 {
   public class WelcomeViewModel : Screen
   {
 
-    public WelcomeViewModel(INavigationService navigationService, UserSessionService userSessionService)
+    public WelcomeViewModel(
+      INavigationService navigationService,
+      UserSessionService userSessionService
+      )
     {
       this.navigationService = navigationService;
+      this.userSessionService = userSessionService;
+    }
 
-      if(!userSessionService.IsFirstLaunch)
+    private readonly INavigationService navigationService;
+    private readonly UserSessionService userSessionService;
+
+    public void DetectView()
+    {
+      if (!this.userSessionService.IsFirstLaunch)
       {
         this.navigationService.NavigateToViewModel<ShellViewModel>();
       }
     }
-
-    private readonly INavigationService navigationService;
 
     public void AddNewVehicle()
     {

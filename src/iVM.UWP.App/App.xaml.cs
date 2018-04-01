@@ -1,4 +1,4 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using iVM.Core.Entity.Services;
 using iVM.Data.Master.Context;
 using iVM.Data.Vehicle.Context;
@@ -64,6 +64,7 @@ namespace iVM
         .Singleton<UserSessionService>()
         .PerRequest<WelcomeViewModel>()
         .PerRequest<VehicleTypeSelectViewModel>()
+        .PerRequest<CarAddViewModel>()
         .PerRequest<ShellViewModel>()
         .PerRequest<PivotViewModel>()
         .PerRequest<EventListViewModel>()

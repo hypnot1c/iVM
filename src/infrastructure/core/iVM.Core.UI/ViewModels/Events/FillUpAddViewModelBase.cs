@@ -1,8 +1,7 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Core.Entity.Services;
 using iVM.Data.Master.Context;
-using iVM.Data.Master.Model;
 using System;
 using System.ComponentModel;
 

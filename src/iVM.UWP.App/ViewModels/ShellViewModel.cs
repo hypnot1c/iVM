@@ -1,4 +1,4 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using iVM.Core.Entity.Services;
 using iVM.UWP.App.Messages;
 using System.Collections.Generic;
@@ -33,9 +33,9 @@ namespace iVM.UWP.App.ViewModels
 
         public IEnumerable<NavMenuItem> NavMenuItems { get; set; }
 
-        private NavMenuItem _selectedNavMenuItem;
         private bool _syncNavMenu;
 
+        private NavMenuItem _selectedNavMenuItem;
         public NavMenuItem SelectedNavMenuItem
         {
             get { return this._selectedNavMenuItem; }
@@ -45,6 +45,7 @@ namespace iVM.UWP.App.ViewModels
                 this.NotifyOfPropertyChange(() => this.SelectedNavMenuItem);
             }
         }
+
         public ShellViewModel(
           WinRTContainer container,
           IEventAggregator eventAggregator,

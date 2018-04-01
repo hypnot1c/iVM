@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="iVM.UWP.App.Views.FillUpAddView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -32,7 +32,11 @@
           <ColumnDefinition Width="1*" />
           <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="0" Name="Expense" Margin="0,0,10,0" Text="{Binding Expense, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Expense..." InputScope="Number" TextChanged="TextBox_TextChanged" />
+        <TextBox Grid.Row="0" Grid.Column="0"
+                 Name="Expense" PlaceholderText="Expense..." InputScope="Number"
+                 Margin="0,0,10,0"
+                 Text="{Binding Expense, Mode=TwoWay, Converter={StaticResource decimalToStr}}"
+                 TextChanged="TextBox_TextChanged" />
         <TextBox Grid.Row="0" Grid.Column="1" Name="Litres" Text="{Binding Litres, Mode=TwoWay, Converter={StaticResource decimalToStr}}" PlaceholderText="Litres count..." InputScope="Number" TextChanged="TextBox_TextChanged" />
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Name="LiterCostText" Margin="0,5,0,0" Visibility="Collapsed" HorizontalAlignment="Right" Orientation="Horizontal">
           <TextBlock Text="{Binding LiterCost, Mode=TwoWay, Converter={StaticResource decimalToStr}}" />
