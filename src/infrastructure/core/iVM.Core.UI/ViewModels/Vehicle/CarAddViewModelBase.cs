@@ -2,6 +2,11 @@ using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Data.Master.Context;
 using iVM.Data.Vehicle.Context;
+using iVM.Data.Vehicle.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace iVM.Core.UI.ViewModels.Vehicle
 {
@@ -17,18 +22,22 @@ namespace iVM.Core.UI.ViewModels.Vehicle
       this.vehicleContext = vehicleContext;
     }
 
-    private int _brandId;
-    public int BrandId
+    protected readonly MasterContext masterContext;
+    protected readonly VehicleContext vehicleContext;
+
+    private string _brandName;
+    public string BrandName
     {
-      get { return this._brandId; }
-      set { this._brandId = value; NotifyOfPropertyChange(() => this.BrandId); }
+      get { return this._brandName; }
+      set { this._brandName = value; NotifyOfPropertyChange(() => this.BrandName); }
     }
 
-    private int _modelId;
-    public int ModelId
+    private string _modelName;
+
+    public string ModelName
     {
-      get { return this._modelId; }
-      set { this._modelId = value; NotifyOfPropertyChange(() => this.ModelId); }
+      get { return this._modelName; }
+      set { this._modelName = value; NotifyOfPropertyChange(() => this.ModelName); }
     }
 
     private string _name;
@@ -45,15 +54,53 @@ namespace iVM.Core.UI.ViewModels.Vehicle
       set { this._miliage = value; NotifyOfPropertyChange(() => this.Miliage); }
     }
 
-    protected readonly MasterContext masterContext;
-    protected readonly VehicleContext vehicleContext;
-
-    public virtual void Save()
+    protected virtual async void Save()
     {
       var car = new CarEntity();
-      car.Mileage = this.Miliage;
-      car.Title = this.Name;
-      //car.
+
+      var brandId = await this.vehicleContext.VehicleBrands
+        .Where(vb => vb.Title == this.BrandName)
+        .Select(vb => vb.Id)
+        .FirstOrDefaultAsync();
+
+      var type = await this.vehicleContext.VehicleTypes.FirstOrDefaultAsync(vt => vt.Name == "Car");
+      if(brandId == 0)
+      {
+        var brand = new VehicleBrandModel
+        {
+          Title = this.BrandName
+        };
+        brand.VehicleTypes.Add(new VehicleBrandAndTypeModel { Type = type });
+        await this.vehicleContext.VehicleBrands.AddAsync(brand);
+        await this.vehicleContext.SaveChangesAsync();
+        brandId = brand.Id;
+      }
+
+      var modelId = await this.vehicleContext.VehicleModels
+        .Where(vm => vm.Brand_BrandId == brandId)
+        .Where(vm => vm.Name == this.ModelName)
+        .Select(vm => vm.Id)
+        .FirstOrDefaultAsync();
+
+      if(modelId == 0)
+      {
+        var model = new VehicleModel
+        {
+          Name = this.ModelName,
+          Type_TypeId = type.Id
+        };
+        await this.vehicleContext.VehicleModels.AddAsync(model);
+        await this.vehicleContext.SaveChangesAsync();
+        modelId = model.Id;
+      }
+      var userVehicle = new Data.Master.Model.VehicleModel
+      {
+        Type_vehicleTypeId = type.Id,
+        Model_vehicleModelId = modelId,
+        CorrectionDate = DateTime.UtcNow
+      };
+      await this.masterContext.Vehicles.AddAsync(userVehicle);
+      await this.masterContext.SaveChangesAsync();
     }
   }
 }

@@ -9,24 +9,20 @@ namespace iVM.UWP.App.ViewModels
   {
     public CarAddViewModel(
       IEventAggregator eventAggregator,
+      INavigationService navigationService,
       MasterContext masterContext,
       VehicleContext vehicleContext
       ) : base(eventAggregator, masterContext, vehicleContext)
     {
+      this._navService = navigationService;
     }
 
-    private string _brandName;
-    public string BrandName
-    {
-      get { return this._brandName; }
-      set { this._brandName = value; NotifyOfPropertyChange(() => this.BrandName); }
-    }
+    private readonly INavigationService _navService;
 
-    private string _modelName;
-    public string ModelName
+    protected override void Save()
     {
-      get { return this._modelName; }
-      set { this._modelName = value; NotifyOfPropertyChange(() => this.ModelName); }
+      base.Save();
+      this._navService.NavigateToViewModel<ShellViewModel>();
     }
   }
 }

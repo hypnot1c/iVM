@@ -1,4 +1,4 @@
-﻿using iVM.Core.Entity;
+using iVM.Core.Entity;
 using iVM.Data.Master.Context;
 using System;
 using System.Collections.Generic;
@@ -13,17 +13,6 @@ namespace iVM.Core.Entity.Services
     public UserSessionService(MasterContext masterContext)
     {
       this.masterContext = masterContext;
-
-      var vehicleModel = this.masterContext.Vehicles.SingleOrDefault(v => v.Id == 1);
-
-      if (vehicleModel != null)
-      {
-        var car = new CarEntity();
-        car.Id = vehicleModel.Id;
-        car.Mileage = vehicleModel.Mileage;
-
-        this.CurrentVehicle = car;
-      }
     }
     private readonly MasterContext masterContext;
 
@@ -34,6 +23,21 @@ namespace iVM.Core.Entity.Services
         return !this.masterContext.Vehicles.Any();
       }
     }
-    public VehicleEntity CurrentVehicle { get; set; }
+    public VehicleEntity CurrentVehicle
+    {
+      get
+      {
+        var vehicleModel = this.masterContext.Vehicles.SingleOrDefault(v => v.Id == 1);
+
+        if (vehicleModel != null)
+        {
+          var car = new CarEntity();
+          car.Id = vehicleModel.Id;
+          car.Mileage = vehicleModel.Mileage;
+          return car;
+        }
+        return null;
+      }
+    }
   }
 }
