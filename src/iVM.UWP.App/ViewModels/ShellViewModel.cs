@@ -11,7 +11,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace iVM.UWP.App.ViewModels
 {
-    public class ShellViewModel : Screen, IHandle<ResumeStateMessage>, IHandle<SuspendStateMessage>
+  public class ShellViewModel : Screen, IHandle<ResumeStateMessage>, IHandle<SuspendStateMessage>
     {
         private readonly WinRTContainer _container;
         private readonly IEventAggregator _eventAggregator;
@@ -100,17 +100,19 @@ namespace iVM.UWP.App.ViewModels
             this.CollapsedPanelLength = 0;
         }
 
-        protected override void OnActivate()
-        {
-            _eventAggregator.SubscribeOnPublishedThread(this);
-        }
+    protected override Task OnActivateAsync(CancellationToken cancellationToken)
+    {
+      _eventAggregator.SubscribeOnPublishedThread(this);
+      return Task.CompletedTask;
+    }
 
-        protected override void OnDeactivate(bool close)
-        {
-            _eventAggregator.Unsubscribe(this);
-        }
+    protected override Task OnDeactivateAsync(bool close, CancellationToken cancellationToken)
+    {
+      _eventAggregator.Unsubscribe(this);
+      return Task.CompletedTask;
+    }
 
-        public void SetupNavigationService(Frame frame)
+    public void SetupNavigationService(Frame frame)
         {
             if (_container.HasHandler(typeof(INavigationService), null))
             {

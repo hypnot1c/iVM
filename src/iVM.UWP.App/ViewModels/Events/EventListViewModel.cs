@@ -1,9 +1,11 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Core.UI.ViewModels;
 using iVM.Data.Master.Context;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace iVM.UWP.App.ViewModels
 {
@@ -23,14 +25,16 @@ namespace iVM.UWP.App.ViewModels
     private readonly INavigationService _navService;
     public IEnumerable<IGrouping<int, EventOccuredEntity>> GroupedEvents { get; set; }
 
-    protected override void OnActivate()
+    protected override Task OnActivateAsync(CancellationToken cancellationToken)
     {
       _evAggregator.SubscribeOnPublishedThread(this);
+      return Task.CompletedTask;
     }
 
-    protected override void OnDeactivate(bool close)
+    protected override Task OnDeactivateAsync(bool close, CancellationToken cancellationToken)
     {
       _evAggregator.Unsubscribe(this);
+      return Task.CompletedTask;
     }
   }
 }

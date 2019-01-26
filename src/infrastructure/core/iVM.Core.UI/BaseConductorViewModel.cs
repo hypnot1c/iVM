@@ -1,4 +1,6 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace iVM.Core.UI
 {
@@ -17,14 +19,16 @@ namespace iVM.Core.UI
       //throw new System.NotImplementedException();
     }
 
-    protected override void OnActivate()
+    protected override Task OnActivateAsync(CancellationToken cancellationToken)
     {
       _evAggregator.SubscribeOnPublishedThread(this);
+      return Task.CompletedTask;
     }
 
-    protected override void OnDeactivate(bool close)
+    protected override Task OnDeactivateAsync(bool close, CancellationToken cancellationToken)
     {
       _evAggregator.Unsubscribe(this);
+      return Task.CompletedTask;
     }
   }
 }

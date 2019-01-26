@@ -1,8 +1,10 @@
-﻿using Caliburn.Micro;
+using Caliburn.Micro;
 using iVM.Core.Entity;
 using iVM.Core.UI.ViewModels;
 using iVM.Data.Master.Context;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace iVM.UWP.App.ViewModels
 {
@@ -19,9 +21,9 @@ namespace iVM.UWP.App.ViewModels
       this._navService = navigationService;
     }
 
-    protected override void OnActivate()
+    protected async override Task OnActivateAsync(CancellationToken cancellationToken)
     {
-      base.OnActivate();
+      await base.OnActivateAsync(cancellationToken);
     }
 
     protected override void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
